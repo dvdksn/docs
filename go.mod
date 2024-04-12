@@ -14,7 +14,7 @@ require (
 
 replace (
 	github.com/docker/buildx => github.com/docker/buildx v0.13.1
-	github.com/docker/cli => github.com/docker/cli v26.0.0+incompatible
+	github.com/docker/cli => github.com/dvdksn/cli v20.10.3-0.20240412091058-81ae8862a8f7+incompatible
 	github.com/docker/compose/v2 => github.com/docker/compose/v2 v2.26.1
 	github.com/moby/buildkit => github.com/moby/buildkit v0.13.0-rc3.0.20240402103816-7cd12732690e
 	github.com/moby/moby => github.com/moby/moby v26.0.0+incompatible
