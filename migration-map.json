@@ -1,0 +1,1244 @@
+[
+  {
+    "oldPath": "manuals/enterprise/troubleshoot/troubleshoot-provisioning.md",
+    "newPath": "admin/enterprise/troubleshoot/troubleshoot-provisioning.md",
+    "oldUrl": "/enterprise/troubleshoot/troubleshoot-provisioning/",
+    "newUrl": "/admin/enterprise/troubleshoot/troubleshoot-provisioning/"
+  },
+  {
+    "oldPath": "manuals/enterprise/troubleshoot/troubleshoot-sso.md",
+    "newPath": "admin/enterprise/troubleshoot/troubleshoot-sso.md",
+    "oldUrl": "/enterprise/troubleshoot/troubleshoot-sso/",
+    "newUrl": "/admin/enterprise/troubleshoot/troubleshoot-sso/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/access-tokens.md",
+    "newPath": "admin/enterprise/security/access-tokens.mdx",
+    "oldUrl": "/enterprise/security/access-tokens/",
+    "newUrl": "/admin/enterprise/security/access-tokens/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/provisioning/scim.md",
+    "newPath": "admin/enterprise/security/provisioning/scim.mdx",
+    "oldUrl": "/enterprise/security/provisioning/scim/",
+    "newUrl": "/admin/enterprise/security/provisioning/scim/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/provisioning/group-mapping.md",
+    "newPath": "admin/enterprise/security/provisioning/group-mapping.mdx",
+    "oldUrl": "/enterprise/security/provisioning/group-mapping/",
+    "newUrl": "/admin/enterprise/security/provisioning/group-mapping/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/provisioning/just-in-time.md",
+    "newPath": "admin/enterprise/security/provisioning/just-in-time.mdx",
+    "oldUrl": "/enterprise/security/provisioning/just-in-time/",
+    "newUrl": "/admin/enterprise/security/provisioning/just-in-time/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/provisioning/_index.md",
+    "newPath": "admin/enterprise/security/provisioning/index.mdx",
+    "oldUrl": "/enterprise/security/provisioning/",
+    "newUrl": "/admin/enterprise/security/provisioning/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/single-sign-on/manage.md",
+    "newPath": "admin/enterprise/security/single-sign-on/manage.mdx",
+    "oldUrl": "/enterprise/security/single-sign-on/manage/",
+    "newUrl": "/admin/enterprise/security/single-sign-on/manage/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/single-sign-on/FAQs/users-faqs.md",
+    "newPath": "admin/enterprise/security/single-sign-on/FAQs/users-faqs.md",
+    "oldUrl": "/enterprise/security/single-sign-on/FAQs/users-faqs/",
+    "newUrl": "/admin/enterprise/security/single-sign-on/FAQs/users-faqs/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/single-sign-on/FAQs/domain-faqs.md",
+    "newPath": "admin/enterprise/security/single-sign-on/FAQs/domain-faqs.md",
+    "oldUrl": "/enterprise/security/single-sign-on/FAQs/domain-faqs/",
+    "newUrl": "/admin/enterprise/security/single-sign-on/FAQs/domain-faqs/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/single-sign-on/FAQs/general.md",
+    "newPath": "admin/enterprise/security/single-sign-on/FAQs/general.md",
+    "oldUrl": "/enterprise/security/single-sign-on/FAQs/general/",
+    "newUrl": "/admin/enterprise/security/single-sign-on/FAQs/general/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/single-sign-on/FAQs/enforcement-faqs.md",
+    "newPath": "admin/enterprise/security/single-sign-on/FAQs/enforcement-faqs.md",
+    "oldUrl": "/enterprise/security/single-sign-on/FAQs/enforcement-faqs/",
+    "newUrl": "/admin/enterprise/security/single-sign-on/FAQs/enforcement-faqs/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/single-sign-on/FAQs/idp-faqs.md",
+    "newPath": "admin/enterprise/security/single-sign-on/FAQs/idp-faqs.md",
+    "oldUrl": "/enterprise/security/single-sign-on/FAQs/idp-faqs/",
+    "newUrl": "/admin/enterprise/security/single-sign-on/FAQs/idp-faqs/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/single-sign-on/connect.md",
+    "newPath": "admin/enterprise/security/single-sign-on/connect.mdx",
+    "oldUrl": "/enterprise/security/single-sign-on/connect/",
+    "newUrl": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/single-sign-on/_index.md",
+    "newPath": "admin/enterprise/security/single-sign-on/index.mdx",
+    "oldUrl": "/enterprise/security/single-sign-on/",
+    "newUrl": "/admin/enterprise/security/single-sign-on/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/enforce-sign-in/methods.md",
+    "newPath": "admin/enterprise/security/enforce-sign-in/methods.mdx",
+    "oldUrl": "/enterprise/security/enforce-sign-in/methods/",
+    "newUrl": "/admin/enterprise/security/enforce-sign-in/methods/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/enforce-sign-in/_index.md",
+    "newPath": "admin/enterprise/security/enforce-sign-in/index.mdx",
+    "oldUrl": "/enterprise/security/enforce-sign-in/",
+    "newUrl": "/admin/enterprise/security/enforce-sign-in/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/image-access-management.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/image-access-management.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/image-access-management/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/image-access-management/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/settings-management/configure-admin-console.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/settings-management/configure-admin-console/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/settings-management/configure-admin-console/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/settings-management/configure-json-file.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/settings-management/configure-json-file/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/settings-management/settings-reference.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/settings-management/settings-reference.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/settings-management/settings-reference/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/settings-management/settings-reference/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/settings-management/compliance-reporting.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/settings-management/compliance-reporting.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/settings-management/compliance-reporting/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/settings-management/compliance-reporting/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/settings-management/_index.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/settings-management/index.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/settings-management/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/settings-management/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/air-gapped-containers.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/air-gapped-containers.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/air-gapped-containers/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/air-gapped-containers/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/registry-access-management.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/registry-access-management.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/registry-access-management/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/registry-access-management/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/namespace-access.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/namespace-access.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/namespace-access/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/namespace-access/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/faq.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/enhanced-container-isolation/faq.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/enhanced-container-isolation/faq/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/faq/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/config.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/enhanced-container-isolation/config.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/enhanced-container-isolation/config/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/config/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/_index.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/enhanced-container-isolation/index.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/enhanced-container-isolation/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/hardened-desktop/_index.md",
+    "newPath": "admin/enterprise/security/hardened-desktop/index.mdx",
+    "oldUrl": "/enterprise/security/hardened-desktop/",
+    "newUrl": "/admin/enterprise/security/hardened-desktop/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/roles-and-permissions/custom-roles.md",
+    "newPath": "admin/enterprise/security/roles-and-permissions/custom-roles.mdx",
+    "oldUrl": "/enterprise/security/roles-and-permissions/custom-roles/",
+    "newUrl": "/admin/enterprise/security/roles-and-permissions/custom-roles/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/roles-and-permissions/_index.md",
+    "newPath": "admin/enterprise/security/roles-and-permissions/index.mdx",
+    "oldUrl": "/enterprise/security/roles-and-permissions/",
+    "newUrl": "/admin/enterprise/security/roles-and-permissions/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/roles-and-permissions/core-roles.md",
+    "newPath": "admin/enterprise/security/roles-and-permissions/core-roles.mdx",
+    "oldUrl": "/enterprise/security/roles-and-permissions/core-roles/",
+    "newUrl": "/admin/enterprise/security/roles-and-permissions/core-roles/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/domain-management.md",
+    "newPath": "admin/enterprise/security/domain-management.mdx",
+    "oldUrl": "/enterprise/security/domain-management/",
+    "newUrl": "/admin/enterprise/security/domain-management/"
+  },
+  {
+    "oldPath": "manuals/enterprise/security/_index.md",
+    "newPath": "admin/enterprise/security/index.md",
+    "oldUrl": "/enterprise/security/",
+    "newUrl": "/admin/enterprise/security/"
+  },
+  {
+    "oldPath": "manuals/enterprise/enterprise-deployment/ms-store.md",
+    "newPath": "admin/enterprise/enterprise-deployment/ms-store.md",
+    "oldUrl": "/enterprise/enterprise-deployment/ms-store/",
+    "newUrl": "/admin/enterprise/enterprise-deployment/ms-store/"
+  },
+  {
+    "oldPath": "manuals/enterprise/enterprise-deployment/use-jamf-pro.md",
+    "newPath": "admin/enterprise/enterprise-deployment/use-jamf-pro.mdx",
+    "oldUrl": "/enterprise/enterprise-deployment/use-jamf-pro/",
+    "newUrl": "/admin/enterprise/enterprise-deployment/use-jamf-pro/"
+  },
+  {
+    "oldPath": "manuals/enterprise/enterprise-deployment/faq.md",
+    "newPath": "admin/enterprise/enterprise-deployment/faq.md",
+    "oldUrl": "/enterprise/enterprise-deployment/faq/",
+    "newUrl": "/admin/enterprise/enterprise-deployment/faq/"
+  },
+  {
+    "oldPath": "manuals/enterprise/enterprise-deployment/use-intune.md",
+    "newPath": "admin/enterprise/enterprise-deployment/use-intune.mdx",
+    "oldUrl": "/enterprise/enterprise-deployment/use-intune/",
+    "newUrl": "/admin/enterprise/enterprise-deployment/use-intune/"
+  },
+  {
+    "oldPath": "manuals/enterprise/enterprise-deployment/pkg-install-and-configure.md",
+    "newPath": "admin/enterprise/enterprise-deployment/pkg-install-and-configure.mdx",
+    "oldUrl": "/enterprise/enterprise-deployment/pkg-install-and-configure/",
+    "newUrl": "/admin/enterprise/enterprise-deployment/pkg-install-and-configure/"
+  },
+  {
+    "oldPath": "manuals/enterprise/enterprise-deployment/dev-box.md",
+    "newPath": "admin/enterprise/enterprise-deployment/dev-box.md",
+    "oldUrl": "/enterprise/enterprise-deployment/dev-box/",
+    "newUrl": "/admin/enterprise/enterprise-deployment/dev-box/"
+  },
+  {
+    "oldPath": "manuals/enterprise/enterprise-deployment/msi-install-and-configure.md",
+    "newPath": "admin/enterprise/enterprise-deployment/msi-install-and-configure.mdx",
+    "oldUrl": "/enterprise/enterprise-deployment/msi-install-and-configure/",
+    "newUrl": "/admin/enterprise/enterprise-deployment/msi-install-and-configure/"
+  },
+  {
+    "oldPath": "manuals/enterprise/enterprise-deployment/_index.md",
+    "newPath": "admin/enterprise/enterprise-deployment/index.md",
+    "oldUrl": "/enterprise/enterprise-deployment/",
+    "newUrl": "/admin/enterprise/enterprise-deployment/"
+  },
+  {
+    "oldPath": "manuals/security/security-announcements.md",
+    "newPath": "admin/security/security-announcements.md",
+    "oldUrl": "/security/security-announcements/",
+    "newUrl": "/admin/security/security-announcements/"
+  },
+  {
+    "oldPath": "manuals/security/access-tokens.md",
+    "newPath": "admin/security/access-tokens.md",
+    "oldUrl": "/security/access-tokens/",
+    "newUrl": "/admin/security/access-tokens/"
+  },
+  {
+    "oldPath": "manuals/security/faqs/general.md",
+    "newPath": "admin/security/faqs/general.md",
+    "oldUrl": "/security/faqs/general/",
+    "newUrl": "/admin/security/faqs/general/"
+  },
+  {
+    "oldPath": "manuals/security/faqs/networking-and-vms.md",
+    "newPath": "admin/security/faqs/networking-and-vms.md",
+    "oldUrl": "/security/faqs/networking-and-vms/",
+    "newUrl": "/admin/security/faqs/networking-and-vms/"
+  },
+  {
+    "oldPath": "manuals/security/faqs/containers.md",
+    "newPath": "admin/security/faqs/containers.md",
+    "oldUrl": "/security/faqs/containers/",
+    "newUrl": "/admin/security/faqs/containers/"
+  },
+  {
+    "oldPath": "manuals/security/2fa/recover-hub-account.md",
+    "newPath": "admin/security/2fa/recover-hub-account.md",
+    "oldUrl": "/security/2fa/recover-hub-account/",
+    "newUrl": "/admin/security/2fa/recover-hub-account/"
+  },
+  {
+    "oldPath": "manuals/security/2fa/_index.md",
+    "newPath": "admin/security/2fa/index.md",
+    "oldUrl": "/security/2fa/",
+    "newUrl": "/admin/security/2fa/"
+  },
+  {
+    "oldPath": "manuals/security/_index.md",
+    "newPath": "admin/security/index.md",
+    "oldUrl": "/security/",
+    "newUrl": "/admin/security/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/archive.md",
+    "newPath": "hub/repos/archive.md",
+    "oldUrl": "/docker-hub/repos/archive/",
+    "newUrl": "/hub/repos/archive/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/create.md",
+    "newPath": "hub/repos/create.md",
+    "oldUrl": "/docker-hub/repos/create/",
+    "newUrl": "/hub/repos/create/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/delete.md",
+    "newPath": "hub/repos/delete.md",
+    "oldUrl": "/docker-hub/repos/delete/",
+    "newUrl": "/hub/repos/delete/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/webhooks.md",
+    "newPath": "hub/repos/manage/webhooks.md",
+    "oldUrl": "/docker-hub/repos/manage/webhooks/",
+    "newUrl": "/hub/repos/manage/webhooks/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/builds/troubleshoot.md",
+    "newPath": "hub/repos/manage/builds/troubleshoot.md",
+    "oldUrl": "/docker-hub/repos/manage/builds/troubleshoot/",
+    "newUrl": "/hub/repos/manage/builds/troubleshoot/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/builds/setup.md",
+    "newPath": "hub/repos/manage/builds/setup.md",
+    "oldUrl": "/docker-hub/repos/manage/builds/setup/",
+    "newUrl": "/hub/repos/manage/builds/setup/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/builds/link-source.md",
+    "newPath": "hub/repos/manage/builds/link-source.md",
+    "oldUrl": "/docker-hub/repos/manage/builds/link-source/",
+    "newUrl": "/hub/repos/manage/builds/link-source/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/builds/manage-builds.md",
+    "newPath": "hub/repos/manage/builds/manage-builds.md",
+    "oldUrl": "/docker-hub/repos/manage/builds/manage-builds/",
+    "newUrl": "/hub/repos/manage/builds/manage-builds/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/builds/advanced.md",
+    "newPath": "hub/repos/manage/builds/advanced.md",
+    "oldUrl": "/docker-hub/repos/manage/builds/advanced/",
+    "newUrl": "/hub/repos/manage/builds/advanced/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/builds/automated-testing.md",
+    "newPath": "hub/repos/manage/builds/automated-testing.md",
+    "oldUrl": "/docker-hub/repos/manage/builds/automated-testing/",
+    "newUrl": "/hub/repos/manage/builds/automated-testing/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/builds/_index.md",
+    "newPath": "hub/repos/manage/builds/index.mdx",
+    "oldUrl": "/docker-hub/repos/manage/builds/",
+    "newUrl": "/hub/repos/manage/builds/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/vulnerability-scanning.md",
+    "newPath": "hub/repos/manage/vulnerability-scanning.md",
+    "oldUrl": "/docker-hub/repos/manage/vulnerability-scanning/",
+    "newUrl": "/hub/repos/manage/vulnerability-scanning/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/information.md",
+    "newPath": "hub/repos/manage/information.mdx",
+    "oldUrl": "/docker-hub/repos/manage/information/",
+    "newUrl": "/hub/repos/manage/information/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/hub-images/move.md",
+    "newPath": "hub/repos/manage/hub-images/move.md",
+    "oldUrl": "/docker-hub/repos/manage/hub-images/move/",
+    "newUrl": "/hub/repos/manage/hub-images/move/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/hub-images/push.md",
+    "newPath": "hub/repos/manage/hub-images/push.md",
+    "oldUrl": "/docker-hub/repos/manage/hub-images/push/",
+    "newUrl": "/hub/repos/manage/hub-images/push/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/hub-images/bulk-migrate.md",
+    "newPath": "hub/repos/manage/hub-images/bulk-migrate.md",
+    "oldUrl": "/docker-hub/repos/manage/hub-images/bulk-migrate/",
+    "newUrl": "/hub/repos/manage/hub-images/bulk-migrate/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/hub-images/oci-artifacts.md",
+    "newPath": "hub/repos/manage/hub-images/oci-artifacts.md",
+    "oldUrl": "/docker-hub/repos/manage/hub-images/oci-artifacts/",
+    "newUrl": "/hub/repos/manage/hub-images/oci-artifacts/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/hub-images/manage.md",
+    "newPath": "hub/repos/manage/hub-images/manage.mdx",
+    "oldUrl": "/docker-hub/repos/manage/hub-images/manage/",
+    "newUrl": "/hub/repos/manage/hub-images/manage/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/hub-images/tags.md",
+    "newPath": "hub/repos/manage/hub-images/tags.md",
+    "oldUrl": "/docker-hub/repos/manage/hub-images/tags/",
+    "newUrl": "/hub/repos/manage/hub-images/tags/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/hub-images/immutable-tags.md",
+    "newPath": "hub/repos/manage/hub-images/immutable-tags.mdx",
+    "oldUrl": "/docker-hub/repos/manage/hub-images/immutable-tags/",
+    "newUrl": "/hub/repos/manage/hub-images/immutable-tags/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/hub-images/_index.md",
+    "newPath": "hub/repos/manage/hub-images/index.md",
+    "oldUrl": "/docker-hub/repos/manage/hub-images/",
+    "newUrl": "/hub/repos/manage/hub-images/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/access.md",
+    "newPath": "hub/repos/manage/access.mdx",
+    "oldUrl": "/docker-hub/repos/manage/access/",
+    "newUrl": "/hub/repos/manage/access/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/trusted-content/insights-analytics.md",
+    "newPath": "hub/repos/manage/trusted-content/insights-analytics.mdx",
+    "oldUrl": "/docker-hub/repos/manage/trusted-content/insights-analytics/",
+    "newUrl": "/hub/repos/manage/trusted-content/insights-analytics/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/trusted-content/dsos-program.md",
+    "newPath": "hub/repos/manage/trusted-content/dsos-program.md",
+    "oldUrl": "/docker-hub/repos/manage/trusted-content/dsos-program/",
+    "newUrl": "/hub/repos/manage/trusted-content/dsos-program/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/trusted-content/dvp-program.md",
+    "newPath": "hub/repos/manage/trusted-content/dvp-program.md",
+    "oldUrl": "/docker-hub/repos/manage/trusted-content/dvp-program/",
+    "newUrl": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/trusted-content/official-images.md",
+    "newPath": "hub/repos/manage/trusted-content/official-images.md",
+    "oldUrl": "/docker-hub/repos/manage/trusted-content/official-images/",
+    "newUrl": "/hub/repos/manage/trusted-content/official-images/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/trusted-content/_index.md",
+    "newPath": "hub/repos/manage/trusted-content/index.md",
+    "oldUrl": "/docker-hub/repos/manage/trusted-content/",
+    "newUrl": "/hub/repos/manage/trusted-content/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/manage/export.md",
+    "newPath": "hub/repos/manage/export.md",
+    "oldUrl": "/docker-hub/repos/manage/export/",
+    "newUrl": "/hub/repos/manage/export/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/repos/_index.md",
+    "newPath": "hub/repos/index.md",
+    "oldUrl": "/docker-hub/repos/",
+    "newUrl": "/hub/repos/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/settings.md",
+    "newPath": "hub/settings.mdx",
+    "oldUrl": "/docker-hub/settings/",
+    "newUrl": "/hub/settings/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/troubleshoot.md",
+    "newPath": "hub/troubleshoot.md",
+    "oldUrl": "/docker-hub/troubleshoot/",
+    "newUrl": "/hub/troubleshoot/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/release-notes.md",
+    "newPath": "hub/release-notes.md",
+    "oldUrl": "/docker-hub/release-notes/",
+    "newUrl": "/hub/release-notes/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/quickstart.md",
+    "newPath": "hub/quickstart.mdx",
+    "oldUrl": "/docker-hub/quickstart/",
+    "newUrl": "/hub/quickstart/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/usage/pulls.md",
+    "newPath": "hub/usage/pulls.md",
+    "oldUrl": "/docker-hub/usage/pulls/",
+    "newUrl": "/hub/usage/pulls/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/usage/manage.md",
+    "newPath": "hub/usage/manage.md",
+    "oldUrl": "/docker-hub/usage/manage/",
+    "newUrl": "/hub/usage/manage/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/usage/_index.md",
+    "newPath": "hub/usage/index.md",
+    "oldUrl": "/docker-hub/usage/",
+    "newUrl": "/hub/usage/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/image-library/search.md",
+    "newPath": "hub/image-library/search.mdx",
+    "oldUrl": "/docker-hub/image-library/search/",
+    "newUrl": "/hub/image-library/search/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/image-library/trusted-content.md",
+    "newPath": "hub/image-library/trusted-content.md",
+    "oldUrl": "/docker-hub/image-library/trusted-content/",
+    "newUrl": "/hub/image-library/trusted-content/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/image-library/mirror.md",
+    "newPath": "hub/image-library/mirror.md",
+    "oldUrl": "/docker-hub/image-library/mirror/",
+    "newUrl": "/hub/image-library/mirror/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/image-library/catalogs.md",
+    "newPath": "hub/image-library/catalogs.md",
+    "oldUrl": "/docker-hub/image-library/catalogs/",
+    "newUrl": "/hub/image-library/catalogs/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/image-library/_index.md",
+    "newPath": "hub/image-library/index.md",
+    "oldUrl": "/docker-hub/image-library/",
+    "newUrl": "/hub/image-library/"
+  },
+  {
+    "oldPath": "manuals/docker-hub/_index.md",
+    "newPath": "hub/index.md",
+    "oldUrl": "/docker-hub/",
+    "newUrl": "/hub/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/convert-account.md",
+    "newPath": "admin/organizations/organization/convert-account.mdx",
+    "oldUrl": "/admin/organization/convert-account/",
+    "newUrl": "/admin/organizations/organization/convert-account/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/manage-products.md",
+    "newPath": "admin/organizations/organization/manage-products.mdx",
+    "oldUrl": "/admin/organization/manage-products/",
+    "newUrl": "/admin/organizations/organization/manage-products/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/activity-logs.md",
+    "newPath": "admin/organizations/organization/activity-logs.mdx",
+    "oldUrl": "/admin/organization/activity-logs/",
+    "newUrl": "/admin/organizations/organization/activity-logs/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/deactivate-account.md",
+    "newPath": "admin/organizations/organization/deactivate-account.mdx",
+    "oldUrl": "/admin/organization/deactivate-account/",
+    "newUrl": "/admin/organizations/organization/deactivate-account/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/general-settings.md",
+    "newPath": "admin/organizations/organization/general-settings.md",
+    "oldUrl": "/admin/organization/general-settings/",
+    "newUrl": "/admin/organizations/organization/general-settings/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/insights.md",
+    "newPath": "admin/organizations/organization/insights.mdx",
+    "oldUrl": "/admin/organization/insights/",
+    "newUrl": "/admin/organizations/organization/insights/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/members.md",
+    "newPath": "admin/organizations/organization/members.mdx",
+    "oldUrl": "/admin/organization/members/",
+    "newUrl": "/admin/organizations/organization/members/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/onboard.md",
+    "newPath": "admin/organizations/organization/onboard.mdx",
+    "oldUrl": "/admin/organization/onboard/",
+    "newUrl": "/admin/organizations/organization/onboard/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/manage-a-team.md",
+    "newPath": "admin/organizations/organization/manage-a-team.mdx",
+    "oldUrl": "/admin/organization/manage-a-team/",
+    "newUrl": "/admin/organizations/organization/manage-a-team/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/_index.md",
+    "newPath": "admin/organizations/organization/index.md",
+    "oldUrl": "/admin/organization/",
+    "newUrl": "/admin/organizations/organization/"
+  },
+  {
+    "oldPath": "manuals/admin/organization/orgs.md",
+    "newPath": "admin/organizations/organization/orgs.mdx",
+    "oldUrl": "/admin/organization/orgs/",
+    "newUrl": "/admin/organizations/organization/orgs/"
+  },
+  {
+    "oldPath": "manuals/admin/faqs/company-faqs.md",
+    "newPath": "admin/organizations/faqs/company-faqs.md",
+    "oldUrl": "/admin/faqs/company-faqs/",
+    "newUrl": "/admin/organizations/faqs/company-faqs/"
+  },
+  {
+    "oldPath": "manuals/admin/faqs/organization-faqs.md",
+    "newPath": "admin/organizations/faqs/organization-faqs.md",
+    "oldUrl": "/admin/faqs/organization-faqs/",
+    "newUrl": "/admin/organizations/faqs/organization-faqs/"
+  },
+  {
+    "oldPath": "manuals/admin/_index.md",
+    "newPath": "admin/organizations/index.md",
+    "oldUrl": "/admin/",
+    "newUrl": "/admin/organizations/"
+  },
+  {
+    "oldPath": "manuals/admin/company/organizations.md",
+    "newPath": "admin/organizations/company/organizations.mdx",
+    "oldUrl": "/admin/company/organizations/",
+    "newUrl": "/admin/organizations/company/organizations/"
+  },
+  {
+    "oldPath": "manuals/admin/company/new-company.md",
+    "newPath": "admin/organizations/company/new-company.mdx",
+    "oldUrl": "/admin/company/new-company/",
+    "newUrl": "/admin/organizations/company/new-company/"
+  },
+  {
+    "oldPath": "manuals/admin/company/users.md",
+    "newPath": "admin/organizations/company/users.mdx",
+    "oldUrl": "/admin/company/users/",
+    "newUrl": "/admin/organizations/company/users/"
+  },
+  {
+    "oldPath": "manuals/admin/company/owners.md",
+    "newPath": "admin/organizations/company/owners.mdx",
+    "oldUrl": "/admin/company/owners/",
+    "newUrl": "/admin/organizations/company/owners/"
+  },
+  {
+    "oldPath": "manuals/admin/company/_index.md",
+    "newPath": "admin/organizations/company/index.mdx",
+    "oldUrl": "/admin/company/",
+    "newUrl": "/admin/organizations/company/"
+  },
+  {
+    "oldPath": "manuals/subscription/details.md",
+    "newPath": "admin/subscription/details.md",
+    "oldUrl": "/subscription/details/",
+    "newUrl": "/admin/subscription/details/"
+  },
+  {
+    "oldPath": "manuals/subscription/setup.md",
+    "newPath": "admin/subscription/setup.md",
+    "oldUrl": "/subscription/setup/",
+    "newUrl": "/admin/subscription/setup/"
+  },
+  {
+    "oldPath": "manuals/subscription/change.md",
+    "newPath": "admin/subscription/change.md",
+    "oldUrl": "/subscription/change/",
+    "newUrl": "/admin/subscription/change/"
+  },
+  {
+    "oldPath": "manuals/subscription/scale.md",
+    "newPath": "admin/subscription/scale.md",
+    "oldUrl": "/subscription/scale/",
+    "newUrl": "/admin/subscription/scale/"
+  },
+  {
+    "oldPath": "manuals/subscription/faq.md",
+    "newPath": "admin/subscription/faq.md",
+    "oldUrl": "/subscription/faq/",
+    "newUrl": "/admin/subscription/faq/"
+  },
+  {
+    "oldPath": "manuals/subscription/desktop-license.md",
+    "newPath": "admin/subscription/desktop-license.md",
+    "oldUrl": "/subscription/desktop-license/",
+    "newUrl": "/admin/subscription/desktop-license/"
+  },
+  {
+    "oldPath": "manuals/subscription/manage-seats.md",
+    "newPath": "admin/subscription/manage-seats.md",
+    "oldUrl": "/subscription/manage-seats/",
+    "newUrl": "/admin/subscription/manage-seats/"
+  },
+  {
+    "oldPath": "manuals/subscription/_index.md",
+    "newPath": "admin/subscription/index.md",
+    "oldUrl": "/subscription/",
+    "newUrl": "/admin/subscription/"
+  },
+  {
+    "oldPath": "manuals/accounts/create-account.md",
+    "newPath": "admin/accounts/create-account.md",
+    "oldUrl": "/accounts/create-account/",
+    "newUrl": "/admin/accounts/create-account/"
+  },
+  {
+    "oldPath": "manuals/accounts/deactivate-user-account.md",
+    "newPath": "admin/accounts/deactivate-user-account.md",
+    "oldUrl": "/accounts/deactivate-user-account/",
+    "newUrl": "/admin/accounts/deactivate-user-account/"
+  },
+  {
+    "oldPath": "manuals/accounts/manage-account.md",
+    "newPath": "admin/accounts/manage-account.md",
+    "oldUrl": "/accounts/manage-account/",
+    "newUrl": "/admin/accounts/manage-account/"
+  },
+  {
+    "oldPath": "manuals/accounts/general-faqs.md",
+    "newPath": "admin/accounts/general-faqs.md",
+    "oldUrl": "/accounts/general-faqs/",
+    "newUrl": "/admin/accounts/general-faqs/"
+  },
+  {
+    "oldPath": "manuals/accounts/_index.md",
+    "newPath": "admin/accounts/index.md",
+    "oldUrl": "/accounts/",
+    "newUrl": "/admin/accounts/"
+  },
+  {
+    "oldPath": "manuals/support/_index.md",
+    "newPath": "admin/support/index.mdx",
+    "oldUrl": "/support/",
+    "newUrl": "/admin/support/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/architecture.md",
+    "newPath": "sandboxes/architecture.mdx",
+    "oldUrl": "/ai/sandboxes/architecture/",
+    "newUrl": "/sandboxes/architecture/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/troubleshooting.md",
+    "newPath": "sandboxes/troubleshooting.mdx",
+    "oldUrl": "/ai/sandboxes/troubleshooting/",
+    "newUrl": "/sandboxes/troubleshooting/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/security/defaults.md",
+    "newPath": "sandboxes/security/defaults.mdx",
+    "oldUrl": "/ai/sandboxes/security/defaults/",
+    "newUrl": "/sandboxes/security/defaults/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/security/workspace.md",
+    "newPath": "sandboxes/security/workspace.mdx",
+    "oldUrl": "/ai/sandboxes/security/workspace/",
+    "newUrl": "/sandboxes/security/workspace/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/security/credentials.md",
+    "newPath": "sandboxes/security/credentials.mdx",
+    "oldUrl": "/ai/sandboxes/security/credentials/",
+    "newUrl": "/sandboxes/security/credentials/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/security/isolation.md",
+    "newPath": "sandboxes/security/isolation.mdx",
+    "oldUrl": "/ai/sandboxes/security/isolation/",
+    "newUrl": "/sandboxes/security/isolation/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/security/policy.md",
+    "newPath": "sandboxes/security/policy.mdx",
+    "oldUrl": "/ai/sandboxes/security/policy/",
+    "newUrl": "/sandboxes/security/policy/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/security/_index.md",
+    "newPath": "sandboxes/security/index.mdx",
+    "oldUrl": "/ai/sandboxes/security/",
+    "newUrl": "/sandboxes/security/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/usage.md",
+    "newPath": "sandboxes/usage.mdx",
+    "oldUrl": "/ai/sandboxes/usage/",
+    "newUrl": "/sandboxes/usage/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/faq.md",
+    "newPath": "sandboxes/faq.mdx",
+    "oldUrl": "/ai/sandboxes/faq/",
+    "newUrl": "/sandboxes/faq/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/agents/kiro.md",
+    "newPath": "sandboxes/agents/kiro.mdx",
+    "oldUrl": "/ai/sandboxes/agents/kiro/",
+    "newUrl": "/sandboxes/agents/kiro/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/agents/claude-code.md",
+    "newPath": "sandboxes/agents/claude-code.mdx",
+    "oldUrl": "/ai/sandboxes/agents/claude-code/",
+    "newUrl": "/sandboxes/agents/claude-code/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/agents/docker-agent.md",
+    "newPath": "sandboxes/agents/docker-agent.mdx",
+    "oldUrl": "/ai/sandboxes/agents/docker-agent/",
+    "newUrl": "/sandboxes/agents/docker-agent/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/agents/custom-environments.md",
+    "newPath": "sandboxes/agents/custom-environments.mdx",
+    "oldUrl": "/ai/sandboxes/agents/custom-environments/",
+    "newUrl": "/sandboxes/agents/custom-environments/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/agents/codex.md",
+    "newPath": "sandboxes/agents/codex.mdx",
+    "oldUrl": "/ai/sandboxes/agents/codex/",
+    "newUrl": "/sandboxes/agents/codex/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/agents/gemini.md",
+    "newPath": "sandboxes/agents/gemini.mdx",
+    "oldUrl": "/ai/sandboxes/agents/gemini/",
+    "newUrl": "/sandboxes/agents/gemini/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/agents/opencode.md",
+    "newPath": "sandboxes/agents/opencode.mdx",
+    "oldUrl": "/ai/sandboxes/agents/opencode/",
+    "newUrl": "/sandboxes/agents/opencode/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/agents/copilot.md",
+    "newPath": "sandboxes/agents/copilot.mdx",
+    "oldUrl": "/ai/sandboxes/agents/copilot/",
+    "newUrl": "/sandboxes/agents/copilot/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/agents/_index.md",
+    "newPath": "sandboxes/agents/index.mdx",
+    "oldUrl": "/ai/sandboxes/agents/",
+    "newUrl": "/sandboxes/agents/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/docker-desktop.md",
+    "newPath": "sandboxes/docker-desktop.mdx",
+    "oldUrl": "/ai/sandboxes/docker-desktop/",
+    "newUrl": "/sandboxes/docker-desktop/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/get-started.md",
+    "newPath": "sandboxes/get-started.mdx",
+    "oldUrl": "/ai/sandboxes/get-started/",
+    "newUrl": "/sandboxes/get-started/"
+  },
+  {
+    "oldPath": "manuals/ai/sandboxes/_index.md",
+    "newPath": "sandboxes/index.mdx",
+    "oldUrl": "/ai/sandboxes/",
+    "newUrl": "/sandboxes/"
+  },
+  {
+    "oldPath": "manuals/ai/compose/models-and-compose.md",
+    "newPath": "compose/ai/models-and-compose.mdx",
+    "oldUrl": "/ai/compose/models-and-compose/",
+    "newUrl": "/compose/ai/models-and-compose/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/cli.md",
+    "newPath": "mcp-catalog-toolkit/cli.mdx",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/cli/",
+    "newUrl": "/mcp-catalog-toolkit/cli/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/faqs.md",
+    "newPath": "mcp-catalog-toolkit/faqs.md",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/faqs/",
+    "newUrl": "/mcp-catalog-toolkit/faqs/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/profiles.md",
+    "newPath": "mcp-catalog-toolkit/profiles.mdx",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/profiles/",
+    "newUrl": "/mcp-catalog-toolkit/profiles/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/toolkit.md",
+    "newPath": "mcp-catalog-toolkit/toolkit.mdx",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/toolkit/",
+    "newUrl": "/mcp-catalog-toolkit/toolkit/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/catalog.md",
+    "newPath": "mcp-catalog-toolkit/catalog.mdx",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/catalog/",
+    "newUrl": "/mcp-catalog-toolkit/catalog/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/mcp-gateway.md",
+    "newPath": "mcp-catalog-toolkit/mcp-gateway.md",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/mcp-gateway/",
+    "newUrl": "/mcp-catalog-toolkit/mcp-gateway/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/get-started.md",
+    "newPath": "mcp-catalog-toolkit/get-started.mdx",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/get-started/",
+    "newUrl": "/mcp-catalog-toolkit/get-started/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/e2b-sandboxes.md",
+    "newPath": "mcp-catalog-toolkit/e2b-sandboxes.mdx",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/e2b-sandboxes/",
+    "newUrl": "/mcp-catalog-toolkit/e2b-sandboxes/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/hub-mcp.md",
+    "newPath": "mcp-catalog-toolkit/hub-mcp.mdx",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/hub-mcp/",
+    "newUrl": "/mcp-catalog-toolkit/hub-mcp/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/dynamic-mcp.md",
+    "newPath": "mcp-catalog-toolkit/dynamic-mcp.mdx",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/dynamic-mcp/",
+    "newUrl": "/mcp-catalog-toolkit/dynamic-mcp/"
+  },
+  {
+    "oldPath": "manuals/ai/mcp-catalog-and-toolkit/_index.md",
+    "newPath": "mcp-catalog-toolkit/index.mdx",
+    "oldUrl": "/ai/mcp-catalog-and-toolkit/",
+    "newUrl": "/mcp-catalog-toolkit/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/rag.md",
+    "newPath": "docker-agent/rag.md",
+    "oldUrl": "/ai/docker-agent/rag/",
+    "newUrl": "/docker-agent/rag/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/local-models.md",
+    "newPath": "docker-agent/local-models.md",
+    "oldUrl": "/ai/docker-agent/local-models/",
+    "newUrl": "/docker-agent/local-models/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/best-practices.md",
+    "newPath": "docker-agent/best-practices.md",
+    "oldUrl": "/ai/docker-agent/best-practices/",
+    "newUrl": "/docker-agent/best-practices/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/model-providers.md",
+    "newPath": "docker-agent/model-providers.md",
+    "oldUrl": "/ai/docker-agent/model-providers/",
+    "newUrl": "/docker-agent/model-providers/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/integrations/acp.md",
+    "newPath": "docker-agent/integrations/acp.md",
+    "oldUrl": "/ai/docker-agent/integrations/acp/",
+    "newUrl": "/docker-agent/integrations/acp/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/integrations/mcp.md",
+    "newPath": "docker-agent/integrations/mcp.md",
+    "oldUrl": "/ai/docker-agent/integrations/mcp/",
+    "newUrl": "/docker-agent/integrations/mcp/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/integrations/a2a.md",
+    "newPath": "docker-agent/integrations/a2a.md",
+    "oldUrl": "/ai/docker-agent/integrations/a2a/",
+    "newUrl": "/docker-agent/integrations/a2a/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/integrations/_index.md",
+    "newPath": "docker-agent/integrations/index.md",
+    "oldUrl": "/ai/docker-agent/integrations/",
+    "newUrl": "/docker-agent/integrations/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/tutorial.md",
+    "newPath": "docker-agent/tutorial.md",
+    "oldUrl": "/ai/docker-agent/tutorial/",
+    "newUrl": "/docker-agent/tutorial/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/sharing-agents.md",
+    "newPath": "docker-agent/sharing-agents.md",
+    "oldUrl": "/ai/docker-agent/sharing-agents/",
+    "newUrl": "/docker-agent/sharing-agents/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/evals.md",
+    "newPath": "docker-agent/evals.md",
+    "oldUrl": "/ai/docker-agent/evals/",
+    "newUrl": "/docker-agent/evals/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/reference/examples.md",
+    "newPath": "docker-agent/reference/examples.md",
+    "oldUrl": "/ai/docker-agent/reference/examples/",
+    "newUrl": "/docker-agent/reference/examples/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/reference/cli.md",
+    "newPath": "docker-agent/reference/cli.md",
+    "oldUrl": "/ai/docker-agent/reference/cli/",
+    "newUrl": "/docker-agent/reference/cli/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/reference/config.md",
+    "newPath": "docker-agent/reference/config.md",
+    "oldUrl": "/ai/docker-agent/reference/config/",
+    "newUrl": "/docker-agent/reference/config/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/reference/toolsets.md",
+    "newPath": "docker-agent/reference/toolsets.md",
+    "oldUrl": "/ai/docker-agent/reference/toolsets/",
+    "newUrl": "/docker-agent/reference/toolsets/"
+  },
+  {
+    "oldPath": "manuals/ai/docker-agent/_index.md",
+    "newPath": "docker-agent/index.mdx",
+    "oldUrl": "/ai/docker-agent/",
+    "newUrl": "/docker-agent/"
+  },
+  {
+    "oldPath": "manuals/ai/gordon/how-to/permissions.md",
+    "newPath": "gordon/how-to/permissions.mdx",
+    "oldUrl": "/ai/gordon/how-to/permissions/",
+    "newUrl": "/gordon/how-to/permissions/"
+  },
+  {
+    "oldPath": "manuals/ai/gordon/how-to/cli.md",
+    "newPath": "gordon/how-to/cli.mdx",
+    "oldUrl": "/ai/gordon/how-to/cli/",
+    "newUrl": "/gordon/how-to/cli/"
+  },
+  {
+    "oldPath": "manuals/ai/gordon/how-to/docker-desktop.md",
+    "newPath": "gordon/how-to/docker-desktop.mdx",
+    "oldUrl": "/ai/gordon/how-to/docker-desktop/",
+    "newUrl": "/gordon/how-to/docker-desktop/"
+  },
+  {
+    "oldPath": "manuals/ai/gordon/how-to/configure-tools.md",
+    "newPath": "gordon/how-to/configure-tools.mdx",
+    "oldUrl": "/ai/gordon/how-to/configure-tools/",
+    "newUrl": "/gordon/how-to/configure-tools/"
+  },
+  {
+    "oldPath": "manuals/ai/gordon/concepts/capabilities.md",
+    "newPath": "gordon/concepts/capabilities.mdx",
+    "oldUrl": "/ai/gordon/concepts/capabilities/",
+    "newUrl": "/gordon/concepts/capabilities/"
+  },
+  {
+    "oldPath": "manuals/ai/gordon/concepts/data-privacy.md",
+    "newPath": "gordon/concepts/data-privacy.mdx",
+    "oldUrl": "/ai/gordon/concepts/data-privacy/",
+    "newUrl": "/gordon/concepts/data-privacy/"
+  },
+  {
+    "oldPath": "manuals/ai/gordon/_index.md",
+    "newPath": "gordon/index.mdx",
+    "oldUrl": "/ai/gordon/",
+    "newUrl": "/gordon/"
+  },
+  {
+    "oldPath": "manuals/ai/gordon/use-cases.md",
+    "newPath": "gordon/use-cases.mdx",
+    "oldUrl": "/ai/gordon/use-cases/",
+    "newUrl": "/gordon/use-cases/"
+  },
+  {
+    "oldPath": "manuals/ai/model-runner/examples.md",
+    "newPath": "model-runner/examples.mdx",
+    "oldUrl": "/ai/model-runner/examples/",
+    "newUrl": "/model-runner/examples/"
+  },
+  {
+    "oldPath": "manuals/ai/model-runner/ide-integrations.md",
+    "newPath": "model-runner/ide-integrations.md",
+    "oldUrl": "/ai/model-runner/ide-integrations/",
+    "newUrl": "/model-runner/ide-integrations/"
+  },
+  {
+    "oldPath": "manuals/ai/model-runner/openwebui-integration.md",
+    "newPath": "model-runner/openwebui-integration.md",
+    "oldUrl": "/ai/model-runner/openwebui-integration/",
+    "newUrl": "/model-runner/openwebui-integration/"
+  },
+  {
+    "oldPath": "manuals/ai/model-runner/inference-engines.md",
+    "newPath": "model-runner/inference-engines.md",
+    "oldUrl": "/ai/model-runner/inference-engines/",
+    "newUrl": "/model-runner/inference-engines/"
+  },
+  {
+    "oldPath": "manuals/ai/model-runner/configuration.md",
+    "newPath": "model-runner/configuration.md",
+    "oldUrl": "/ai/model-runner/configuration/",
+    "newUrl": "/model-runner/configuration/"
+  },
+  {
+    "oldPath": "manuals/ai/model-runner/get-started.md",
+    "newPath": "model-runner/get-started.mdx",
+    "oldUrl": "/ai/model-runner/get-started/",
+    "newUrl": "/model-runner/get-started/"
+  },
+  {
+    "oldPath": "manuals/ai/model-runner/_index.md",
+    "newPath": "model-runner/index.mdx",
+    "oldUrl": "/ai/model-runner/",
+    "newUrl": "/model-runner/"
+  },
+  {
+    "oldPath": "manuals/ai/model-runner/api-reference.md",
+    "newPath": "model-runner/api-reference.mdx",
+    "oldUrl": "/ai/model-runner/api-reference/",
+    "newUrl": "/model-runner/api-reference/"
+  },
+  {
+    "oldPath": "manuals/billing/tax-certificate.md",
+    "newPath": "admin/billing/tax-certificate.md",
+    "oldUrl": "/billing/tax-certificate/",
+    "newUrl": "/admin/billing/tax-certificate/"
+  },
+  {
+    "oldPath": "manuals/billing/faqs.md",
+    "newPath": "admin/billing/faqs.md",
+    "oldUrl": "/billing/faqs/",
+    "newUrl": "/admin/billing/faqs/"
+  },
+  {
+    "oldPath": "manuals/billing/details.md",
+    "newPath": "admin/billing/details.md",
+    "oldUrl": "/billing/details/",
+    "newUrl": "/admin/billing/details/"
+  },
+  {
+    "oldPath": "manuals/billing/history.md",
+    "newPath": "admin/billing/history.md",
+    "oldUrl": "/billing/history/",
+    "newUrl": "/admin/billing/history/"
+  },
+  {
+    "oldPath": "manuals/billing/payment-method.md",
+    "newPath": "admin/billing/payment-method.md",
+    "oldUrl": "/billing/payment-method/",
+    "newUrl": "/admin/billing/payment-method/"
+  },
+  {
+    "oldPath": "manuals/billing/cycle.md",
+    "newPath": "admin/billing/cycle.md",
+    "oldUrl": "/billing/cycle/",
+    "newUrl": "/admin/billing/cycle/"
+  },
+  {
+    "oldPath": "manuals/billing/3d-secure.md",
+    "newPath": "admin/billing/3d-secure.md",
+    "oldUrl": "/billing/3d-secure/",
+    "newUrl": "/admin/billing/3d-secure/"
+  },
+  {
+    "oldPath": "manuals/billing/_index.md",
+    "newPath": "admin/billing/index.md",
+    "oldUrl": "/billing/",
+    "newUrl": "/admin/billing/"
+  },
+  {
+    "oldPath": "guides/zscaler/index.md",
+    "newPath": "guides/zscaler/index.md",
+    "oldUrl": "/guides/zscaler/index/",
+    "newUrl": "/guides/zscaler/"
+  },
+  {
+    "oldPath": "guides/genai-leveraging-rag/index.md",
+    "newPath": "guides/genai-leveraging-rag/index.md",
+    "oldUrl": "/guides/genai-leveraging-rag/index/",
+    "newUrl": "/guides/genai-leveraging-rag/"
+  },
+  {
+    "oldPath": "guides/genai-video-bot/index.md",
+    "newPath": "guides/genai-video-bot/index.md",
+    "oldUrl": "/guides/genai-video-bot/index/",
+    "newUrl": "/guides/genai-video-bot/"
+  },
+  {
+    "oldPath": "guides/bake/index.md",
+    "newPath": "guides/bake/index.md",
+    "oldUrl": "/guides/bake/index/",
+    "newUrl": "/guides/bake/"
+  },
+  {
+    "oldPath": "guides/compose-bake/index.md",
+    "newPath": "guides/compose-bake/index.md",
+    "oldUrl": "/guides/compose-bake/index/",
+    "newUrl": "/guides/compose-bake/"
+  }
+]

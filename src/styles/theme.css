@@ -1,0 +1,121 @@
+/*
+ * Docker docs theme — maps Docker design tokens to Starlight CSS variables.
+ * Starlight documents its CSS custom properties at:
+ * https://starlight.astro.build/reference/css-variables/
+ */
+
+/* ── Fonts ── */
+
+@font-face {
+  font-family: "Roboto Flex";
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url("/fonts/RobotoFlex-Variable.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("/fonts/RobotoMono-Variable.woff2") format("woff2");
+}
+
+/* ── Docker color palette ── */
+
+:root {
+  /* Primary */
+  --docker-blue-400: rgba(75, 131, 241, 1);
+  --docker-blue-500: rgba(37, 96, 255, 1);
+  --docker-blue-600: rgba(13, 77, 242, 1);
+  --docker-blue-700: rgba(0, 61, 181, 1);
+
+  /* Grays */
+  --docker-gray-50: rgba(249, 250, 251, 1);
+  --docker-gray-100: rgba(231, 234, 239, 1);
+  --docker-gray-200: rgba(200, 207, 218, 1);
+  --docker-gray-300: rgba(169, 180, 198, 1);
+  --docker-gray-400: rgba(139, 153, 178, 1);
+  --docker-gray-500: rgba(108, 126, 157, 1);
+  --docker-gray-600: rgba(86, 101, 129, 1);
+  --docker-gray-700: rgba(67, 76, 95, 1);
+  --docker-gray-800: rgba(44, 51, 63, 1);
+  --docker-gray-900: rgba(30, 33, 41, 1);
+  --docker-gray-950: rgb(18, 21, 31);
+
+  /* Semantic */
+  --docker-green-600: rgba(56, 189, 125, 1);
+  --docker-red-600: rgba(244, 47, 57, 1);
+  --docker-orange-600: rgba(255, 107, 0, 1);
+  --docker-violet-500: rgba(125, 46, 255, 1);
+
+  /* Backgrounds */
+  --docker-bg-light: #f9f9fa;
+  --docker-bg-dark: #10151b;
+}
+
+/* ── Starlight theme mapping — light mode ── */
+
+:root {
+  --sl-font: "Roboto Flex", sans-serif;
+  --sl-font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --sl-color-accent-low: color-mix(in srgb, var(--docker-blue-500) 15%, white);
+  --sl-color-accent: var(--docker-blue-500);
+  --sl-color-accent-high: var(--docker-blue-700);
+
+  --sl-color-bg-nav: var(--docker-bg-light);
+  --sl-color-bg-sidebar: var(--docker-bg-light);
+  --sl-color-bg: white;
+
+  --sl-color-white: var(--docker-gray-900);
+  --sl-color-gray-1: var(--docker-gray-800);
+  --sl-color-gray-2: var(--docker-gray-700);
+  --sl-color-gray-3: var(--docker-gray-500);
+  --sl-color-gray-4: var(--docker-gray-300);
+  --sl-color-gray-5: var(--docker-gray-100);
+  --sl-color-gray-6: var(--docker-gray-50);
+  --sl-color-black: white;
+
+  --sl-color-text: var(--docker-gray-800);
+  --sl-color-text-accent: var(--docker-blue-600);
+}
+
+/* ── Starlight theme mapping — dark mode ── */
+
+:root[data-theme="dark"] {
+  --sl-color-accent-low: color-mix(
+    in srgb,
+    var(--docker-blue-400) 20%,
+    var(--docker-bg-dark)
+  );
+  --sl-color-accent: var(--docker-blue-400);
+  --sl-color-accent-high: color-mix(
+    in srgb,
+    var(--docker-blue-400) 80%,
+    white
+  );
+
+  --sl-color-bg-nav: var(--docker-bg-dark);
+  --sl-color-bg-sidebar: var(--docker-bg-dark);
+  --sl-color-bg: var(--docker-bg-dark);
+
+  --sl-color-white: rgba(231, 234, 239, 1);
+  --sl-color-gray-1: var(--docker-gray-200);
+  --sl-color-gray-2: var(--docker-gray-300);
+  --sl-color-gray-3: var(--docker-gray-400);
+  --sl-color-gray-4: var(--docker-gray-600);
+  --sl-color-gray-5: var(--docker-gray-800);
+  --sl-color-gray-6: var(--docker-gray-900);
+  --sl-color-black: var(--docker-bg-dark);
+
+  --sl-color-text: var(--docker-gray-200);
+  --sl-color-text-accent: var(--docker-blue-400);
+}
+
+/* ── Base text size ── */
+
+html {
+  font-size: 14px;
+}

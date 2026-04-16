@@ -1,0 +1,24 @@
+---
+/**
+ * Renders a site-wide version constant inline.
+ *
+ * Replaces Hugo's {{% param "key" %}} shortcode.
+ *
+ * Usage:
+ *   <Version name="docker_ce_version" />
+ */
+import { versions } from "@data/versions";
+
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+const value = versions[name];
+
+if (!value) {
+  throw new Error(`[Version] Unknown version key: "${name}"`);
+}
+---
+
+<Fragment set:text={value} />

@@ -1,35 +1,31 @@
 {
-  "name": "docker/docs",
+  "name": "@docker/docs",
   "version": "0.0.1",
-  "description": "",
+  "private": true,
+  "description": "Docker documentation — docs.docker.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/docker/docs.git"
   },
-  "keywords": [],
-  "author": "dvdksn",
-  "license": "Apache License 2.0",
-  "bugs": {
-    "url": "https://github.com/docker/docs/issues"
-  },
+  "license": "Apache-2.0",
   "homepage": "https://docs.docker.com/",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
   "dependencies": {
-    "@alpinejs/collapse": "3.15.8",
-    "@alpinejs/focus": "3.15.8",
-    "@alpinejs/persist": "3.15.8",
-    "@floating-ui/dom": "1.7.6",
-    "@material-symbols/svg-400": "0.40.2",
-    "@tailwindcss/cli": "4.2.1",
-    "@tailwindcss/typography": "0.5.19",
-    "alpinejs": "3.15.8",
+    "@astrojs/starlight": "0.34.4",
+    "astro": "5.10.1",
     "highlight.js": "11.11.1",
+    "js-yaml": "^4.1.0",
     "marked": "17.0.4",
-    "tailwindcss": "4.2.1"
+    "sharp": "^0.33.5",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "markdownlint": "0.40.0",
     "prettier": "3.8.1",
-    "prettier-plugin-go-template": "0.0.15",
-    "prettier-plugin-tailwindcss": "0.7.2"
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

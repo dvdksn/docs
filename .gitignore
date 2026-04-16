@@ -1,14 +1,27 @@
+# Hugo
 .hugo_build.lock
 hugo_stats.json
+resources
+
+# Astro
+dist
+.astro
+
+# IDE
 .idea/
 .vscode/mcp.json
 .vscode/settings.json
 .vscode/tasks.json
+
+# OS
 **/.DS_Store
 **/desktop.ini
+
+# Dependencies
 node_modules
+
+# Static output
 public
-resources
 static/pagefind
 tmp
 # Binary installed by cagent-action in CI

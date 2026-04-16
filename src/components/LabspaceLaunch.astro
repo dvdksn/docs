@@ -1,0 +1,50 @@
+---
+/**
+ * Labspace launch instructions.
+ *
+ * Renders step-by-step instructions for starting a Docker Labspace.
+ *
+ * Replaces Hugo's {{< labspace-launch image="X" >}} shortcode.
+ *
+ * Usage:
+ *   <LabspaceLaunch image="docker/labs-ai-tools-webui" />
+ *   <LabspaceLaunch image="docker/labs-ai" modelDownload />
+ */
+interface Props {
+  image: string;
+  modelDownload?: boolean;
+  browserUrl?: string;
+}
+
+const {
+  image,
+  modelDownload = false,
+  browserUrl = "http://localhost:3030",
+} = Astro.props;
+---
+
+<ol>
+  <li>
+    <p>Start the labspace:</p>
+    <pre><code class="language-console">$ docker compose -p labspace -f oci://{image} up -d</code></pre>
+    {
+      modelDownload && (
+        <blockquote>
+          <p>
+            <strong>Note:</strong> The lab may take a few minutes to launch, as
+            this lab requires an AI model that will need to be downloaded.
+          </p>
+        </blockquote>
+      )
+    }
+  </li>
+  <li>
+    <p>
+      Open your browser to <a href={browserUrl}>{browserUrl}</a>.
+    </p>
+  </li>
+  <li>
+    <p>When you're done, tear down the labspace:</p>
+    <pre><code class="language-console">$ docker compose -p labspace down</code></pre>
+  </li>
+</ol>

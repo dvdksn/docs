@@ -1,0 +1,104 @@
+---
+/**
+ * Feature availability summary bar.
+ *
+ * Reads feature metadata from src/data/summary.yaml and renders
+ * subscription tiers, availability status, version requirements.
+ *
+ * Replaces Hugo's {{< summary-bar feature_name="X" >}} shortcode.
+ *
+ * Usage:
+ *   <SummaryBar featureName="Docker Build Cloud" />
+ */
+import yaml from "js-yaml";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+interface Props {
+  featureName: string;
+}
+
+interface Feature {
+  subscription?: string[];
+  availability?: string;
+  requires?: string;
+  for?: string;
+}
+
+const { featureName } = Astro.props;
+
+const projectRoot = fileURLToPath(new URL("../..", import.meta.url));
+const summaryPath = resolve(projectRoot, "src/data/summary.yaml");
+const summaryData = yaml.load(readFileSync(summaryPath, "utf-8")) as Record<
+  string,
+  Feature
+>;
+
+const feature = summaryData[featureName];
+if (!feature) {
+  throw new Error(`[SummaryBar] Unknown feature: "${featureName}"`);
+}
+---
+
+<div class="summary-bar">
+  {
+    feature.subscription && (
+      <div class="summary-bar-row">
+        <span class="summary-bar-label">Subscription:</span>
+        <span>
+          {Array.isArray(feature.subscription)
+            ? feature.subscription.join(", ")
+            : feature.subscription}
+        </span>
+      </div>
+    )
+  }
+  {
+    feature.availability && (
+      <div class="summary-bar-row">
+        <span class="summary-bar-label">Availability:</span>
+        <span>{feature.availability}</span>
+      </div>
+    )
+  }
+  {
+    feature.requires && (
+      <div class="summary-bar-row">
+        <span class="summary-bar-label">Requires:</span>
+        <span set:html={feature.requires} />
+      </div>
+    )
+  }
+  {
+    feature.for && (
+      <div class="summary-bar-row">
+        <span class="summary-bar-label">For:</span>
+        <span>{feature.for}</span>
+      </div>
+    )
+  }
+</div>
+
+<style>
+  .summary-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .summary-bar-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .summary-bar-label {
+    font-weight: 600;
+  }
+</style>

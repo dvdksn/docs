@@ -1,0 +1,62 @@
+---
+/**
+ * Call-to-action block with header, body, and action button.
+ *
+ * Replaces Hugo's {{< cta header="X" body="Y" url="Z" cta="Click" >}} shortcode.
+ *
+ * Usage:
+ *   <CallToAction header="Ready to start?" url="/get-started/" cta="Get started">
+ *     Docker makes it easy to build and ship applications.
+ *   </CallToAction>
+ */
+interface Props {
+  header: string;
+  url: string;
+  cta: string;
+}
+
+const { header, url, cta } = Astro.props;
+---
+
+<div class="cta-block" role="alert">
+  <div class="cta-header">{header}</div>
+  <div class="cta-body">
+    <slot />
+  </div>
+  <div>
+    <a class="cta-button" href={url}>{cta}</a>
+  </div>
+</div>
+
+<style>
+  .cta-block {
+    padding: 1rem;
+    border-radius: 0.375rem;
+    background-color: var(--sl-color-accent-low);
+    margin: 1.5rem 0;
+  }
+
+  .cta-header {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-body {
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    background-color: var(--sl-color-accent);
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .cta-button:hover {
+    opacity: 0.9;
+  }
+</style>

@@ -1,0 +1,23 @@
+---
+/**
+ * Renders a release date as styled italic text.
+ *
+ * Replaces Hugo's {{< release-date date="YYYY-MM-DD" >}} shortcode.
+ *
+ * Usage:
+ *   <ReleaseDate date="2025-01-15" />
+ */
+interface Props {
+  date: string;
+}
+
+const { date } = Astro.props;
+---
+
+<em class="release-date">{date}</em>
+
+<style>
+  .release-date {
+    color: var(--sl-color-gray-3);
+  }
+</style>

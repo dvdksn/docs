@@ -1,0 +1,43 @@
+---
+/**
+ * Lazy-loaded YouTube video embed.
+ *
+ * Replaces Hugo's {{< youtube-embed "VIDEO_ID" >}} shortcode.
+ *
+ * Usage:
+ *   <YouTube id="dQw4w9WgXcQ" />
+ */
+interface Props {
+  id: string;
+  title?: string;
+}
+
+const { id, title = "YouTube video" } = Astro.props;
+---
+
+<div class="youtube-embed">
+  <iframe
+    src={`https://www.youtube-nocookie.com/embed/${id}`}
+    title={title}
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+    loading="lazy"></iframe>
+</div>
+
+<style>
+  .youtube-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    margin: 1rem 0;
+  }
+
+  .youtube-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 0.375rem;
+  }
+</style>

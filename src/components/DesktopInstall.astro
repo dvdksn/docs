@@ -1,0 +1,188 @@
+---
+/**
+ * Docker Desktop download links with platform-specific options.
+ *
+ * Replaces Hugo's {{< desktop-install-v2 >}} shortcode.
+ *
+ * Usage:
+ *   <DesktopInstall all />
+ *   <DesktopInstall win mac />
+ *   <DesktopInstall linux buildPath="/" />
+ */
+interface Props {
+  all?: boolean;
+  win?: boolean;
+  winArmRelease?: string;
+  mac?: boolean;
+  linux?: boolean;
+  buildPath?: string;
+}
+
+const {
+  all = false,
+  win = false,
+  winArmRelease,
+  mac = false,
+  linux = false,
+  buildPath = "",
+} = Astro.props;
+
+const utm = (platform: string) =>
+  `utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-${platform}`;
+
+const showWin = all || win;
+const showWinArm = !!winArmRelease;
+const showMac = all || mac;
+const showLinux = all || linux;
+---
+
+<blockquote class="desktop-install">
+  <p class="desktop-install-title">Download Docker Desktop</p>
+  <div class="desktop-install-links">
+    {
+      (showWin || showWinArm) && (
+        <ul>
+          {showWin && (
+            <li>
+              <a
+                rel="noopener"
+                href={`https://desktop.docker.com/win/main/amd64${buildPath}Docker%20Desktop%20Installer.exe?${utm("windows")}`}
+              >
+                Windows
+              </a>{" "}
+              (
+              <a
+                rel="noopener"
+                href={`https://desktop.docker.com/win/main/amd64${buildPath}checksums.txt`}
+              >
+                checksum
+              </a>
+              )
+            </li>
+          )}
+          {showWinArm && (
+            <li>
+              <a
+                rel="noopener"
+                href={`https://desktop.docker.com/win/main/arm64${buildPath}Docker%20Desktop%20Installer.exe?${utm("windows")}`}
+              >
+                Windows ARM {winArmRelease}
+              </a>{" "}
+              (
+              <a
+                rel="noopener"
+                href={`https://desktop.docker.com/win/main/arm64${buildPath}checksums.txt`}
+              >
+                checksum
+              </a>
+              )
+            </li>
+          )}
+        </ul>
+      )
+    }
+    {
+      showMac && (
+        <ul>
+          <li>
+            <a
+              rel="noopener"
+              href={`https://desktop.docker.com/mac/main/arm64${buildPath}Docker.dmg?${utm("mac-arm64")}`}
+            >
+              Mac with Apple chip
+            </a>{" "}
+            (
+            <a
+              rel="noopener"
+              href={`https://desktop.docker.com/mac/main/arm64${buildPath}checksums.txt`}
+            >
+              checksum
+            </a>
+            )
+          </li>
+          <li>
+            <a
+              rel="noopener"
+              href={`https://desktop.docker.com/mac/main/amd64${buildPath}Docker.dmg?${utm("mac-amd64")}`}
+            >
+              Mac with Intel chip
+            </a>{" "}
+            (
+            <a
+              rel="noopener"
+              href={`https://desktop.docker.com/mac/main/amd64${buildPath}checksums.txt`}
+            >
+              checksum
+            </a>
+            )
+          </li>
+        </ul>
+      )
+    }
+    {
+      showLinux && (
+        <ul>
+          <li>
+            <a
+              rel="noopener"
+              href={`https://desktop.docker.com/linux/main/amd64${buildPath}docker-desktop-amd64.deb?${utm("linux-amd64")}`}
+            >
+              Debian
+            </a>
+            {" - "}
+            <a
+              rel="noopener"
+              href={`https://desktop.docker.com/linux/main/amd64${buildPath}docker-desktop-x86_64.rpm?${utm("linux-amd64")}`}
+            >
+              RPM
+            </a>
+            {" - "}
+            <a
+              rel="noopener"
+              href={`https://desktop.docker.com/linux/main/amd64${buildPath}docker-desktop-x86_64.pkg.tar.zst?${utm("linux-amd64")}`}
+            >
+              Arch
+            </a>{" "}
+            (
+            <a
+              rel="noopener"
+              href={`https://desktop.docker.com/linux/main/amd64${buildPath}checksums.txt`}
+            >
+              checksum
+            </a>
+            )
+          </li>
+        </ul>
+      )
+    }
+  </div>
+</blockquote>
+
+<style>
+  .desktop-install {
+    border-left: 4px solid var(--sl-color-accent);
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+  }
+
+  .desktop-install-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .desktop-install-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .desktop-install-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .desktop-install-links li {
+    margin: 0.25rem 0;
+  }
+</style>

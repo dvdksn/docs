@@ -1,0 +1,40 @@
+---
+title: docker mcp
+description: Manage MCP servers and clients
+sidebar:
+  label: mcp
+---
+
+<table class="cli-meta">
+<tbody>
+<tr><th>Description</th><td>Manage MCP servers and clients</td></tr>
+</tbody></table>
+
+## Description
+
+The MCP Gateway is Docker's open-source enterprise solution for orchestrating
+Model Context Protocol (MCP) servers and clients.
+
+For more information see [Docker MCP](/ai/mcp-gateway/) and
+the public [GitHub repository](https://github.com/docker/mcp-gateway).
+
+## Options
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `-v`, `--version` |  | Print version information and quit |
+
+## Subcommands
+
+| Command | Description |
+|---------|-------------|
+| [`docker mcp catalog`](/reference/cli/docker/mcp/catalog/) | Manage MCP server OCI catalogs |
+| [`docker mcp client`](/reference/cli/docker/mcp/client/) | Manage MCP clients |
+| [`docker mcp feature`](/reference/cli/docker/mcp/feature/) | Manage experimental features |
+| [`docker mcp gateway`](/reference/cli/docker/mcp/gateway/) | Manage the MCP Server gateway |
+| [`docker mcp profile`](/reference/cli/docker/mcp/profile/) | Manage profiles |
+| [`docker mcp secret`](/reference/cli/docker/mcp/secret/) | Manage secrets in the local OS Keychain |
+| [`docker mcp server`](/reference/cli/docker/mcp/server/) | Manage servers |
+| [`docker mcp tools`](/reference/cli/docker/mcp/tools/) | Manage tools |
+| [`docker mcp version`](/reference/cli/docker/mcp/version/) | Show the version information |
+

@@ -1,0 +1,6470 @@
+[
+  {
+    "from": "/docker-hub/service-accounts/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/cloud/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/cloud/aci-compose-features/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/cloud/aci-container-features/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/cloud/aci-integration/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/cloud/ecs-architecture/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/cloud/ecs-compose-examples/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/cloud/ecs-compose-features/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/cloud/ecs-integration/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/compose/migrate/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/engine/context/aci-integration/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/engine/context/ecs-integration/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/machine/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/machine/drivers/hyper-v/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/machine/get-started/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/machine/install-machine/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/machine/overview/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/compatibility/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/configuration/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/deploying/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/deprecated/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/garbage-collection/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/help/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/insecure/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/introduction/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/notifications/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/recipes/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/recipes/apache/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/recipes/nginx/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/recipes/osx-setup-guide/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/api/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/auth/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/auth/jwt/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/auth/oauth/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/auth/scope/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/auth/token/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/deprecated-schema-v1/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/implementations/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/json/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/manifest-v2-1/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/manifest-v2-2/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/spec/menu/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/storage-drivers/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/storage-drivers/azure/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/storage-drivers/filesystem/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/storage-drivers/gcs/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/storage-drivers/inmemory/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/storage-drivers/oss/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/storage-drivers/s3/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/registry/storage-drivers/swift/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/toolbox/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/toolbox/overview/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/toolbox/toolbox_install_mac/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/toolbox/toolbox_install_windows/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/desktop/features/dev-environments/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/desktop/features/dev-environments/create-dev-env/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/desktop/features/dev-environments/set-up/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/desktop/features/dev-environments/share/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/desktop/features/dev-environments/dev-cli/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/desktop/dev-environments/",
+    "to": "/retired/"
+  },
+  {
+    "from": "/security/troubleshoot/troubleshoot-provisioning/",
+    "to": "/admin/enterprise/troubleshoot/troubleshoot-provisioning/"
+  },
+  {
+    "from": "/enterprise/troubleshoot/troubleshoot-provisioning/",
+    "to": "/admin/enterprise/troubleshoot/troubleshoot-provisioning/"
+  },
+  {
+    "from": "/security/for-admins/single-sign-on/troubleshoot/",
+    "to": "/admin/enterprise/troubleshoot/troubleshoot-sso/"
+  },
+  {
+    "from": "/security/troubleshoot/troubleshoot-sso/",
+    "to": "/admin/enterprise/troubleshoot/troubleshoot-sso/"
+  },
+  {
+    "from": "/enterprise/troubleshoot/troubleshoot-sso/",
+    "to": "/admin/enterprise/troubleshoot/troubleshoot-sso/"
+  },
+  {
+    "from": "/security/for-admins/access-tokens/",
+    "to": "/admin/enterprise/security/access-tokens/"
+  },
+  {
+    "from": "/enterprise/security/access-tokens/",
+    "to": "/admin/enterprise/security/access-tokens/"
+  },
+  {
+    "from": "/security/for-admins/scim/",
+    "to": "/admin/enterprise/security/provisioning/scim/"
+  },
+  {
+    "from": "/docker-hub/scim/",
+    "to": "/admin/enterprise/security/provisioning/scim/"
+  },
+  {
+    "from": "/security/for-admins/provisioning/scim/",
+    "to": "/admin/enterprise/security/provisioning/scim/"
+  },
+  {
+    "from": "/enterprise/security/provisioning/scim/",
+    "to": "/admin/enterprise/security/provisioning/scim/"
+  },
+  {
+    "from": "/admin/company/settings/group-mapping/",
+    "to": "/admin/enterprise/security/provisioning/group-mapping/"
+  },
+  {
+    "from": "/admin/organization/security-settings/group-mapping/",
+    "to": "/admin/enterprise/security/provisioning/group-mapping/"
+  },
+  {
+    "from": "/docker-hub/group-mapping/",
+    "to": "/admin/enterprise/security/provisioning/group-mapping/"
+  },
+  {
+    "from": "/security/for-admins/group-mapping/",
+    "to": "/admin/enterprise/security/provisioning/group-mapping/"
+  },
+  {
+    "from": "/security/for-admins/provisioning/group-mapping/",
+    "to": "/admin/enterprise/security/provisioning/group-mapping/"
+  },
+  {
+    "from": "/enterprise/security/provisioning/group-mapping/",
+    "to": "/admin/enterprise/security/provisioning/group-mapping/"
+  },
+  {
+    "from": "/security/for-admins/provisioning/just-in-time/",
+    "to": "/admin/enterprise/security/provisioning/just-in-time/"
+  },
+  {
+    "from": "/enterprise/security/provisioning/just-in-time/",
+    "to": "/admin/enterprise/security/provisioning/just-in-time/"
+  },
+  {
+    "from": "/security/for-admins/provisioning/",
+    "to": "/admin/enterprise/security/provisioning/"
+  },
+  {
+    "from": "/enterprise/security/provisioning/",
+    "to": "/admin/enterprise/security/provisioning/"
+  },
+  {
+    "from": "/admin/company/settings/sso-management/",
+    "to": "/admin/enterprise/security/single-sign-on/manage/"
+  },
+  {
+    "from": "/single-sign-on/manage/",
+    "to": "/admin/enterprise/security/single-sign-on/manage/"
+  },
+  {
+    "from": "/security/for-admins/single-sign-on/manage/",
+    "to": "/admin/enterprise/security/single-sign-on/manage/"
+  },
+  {
+    "from": "/enterprise/security/single-sign-on/manage/",
+    "to": "/admin/enterprise/security/single-sign-on/manage/"
+  },
+  {
+    "from": "/single-sign-on/users-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/users-faqs/"
+  },
+  {
+    "from": "/faq/security/single-sign-on/users-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/users-faqs/"
+  },
+  {
+    "from": "/security/faqs/single-sign-on/users-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/users-faqs/"
+  },
+  {
+    "from": "/enterprise/security/single-sign-on/FAQs/users-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/users-faqs/"
+  },
+  {
+    "from": "/single-sign-on/domain-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/domain-faqs/"
+  },
+  {
+    "from": "/faq/security/single-sign-on/domain-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/domain-faqs/"
+  },
+  {
+    "from": "/security/faqs/single-sign-on/domain-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/domain-faqs/"
+  },
+  {
+    "from": "/enterprise/security/single-sign-on/FAQs/domain-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/domain-faqs/"
+  },
+  {
+    "from": "/single-sign-on/faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/general/"
+  },
+  {
+    "from": "/faq/security/single-sign-on/faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/general/"
+  },
+  {
+    "from": "/single-sign-on/saml-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/general/"
+  },
+  {
+    "from": "/faq/security/single-sign-on/saml-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/general/"
+  },
+  {
+    "from": "/security/faqs/single-sign-on/saml-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/general/"
+  },
+  {
+    "from": "/security/faqs/single-sign-on/faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/general/"
+  },
+  {
+    "from": "/enterprise/security/single-sign-on/FAQs/general/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/general/"
+  },
+  {
+    "from": "/single-sign-on/enforcement-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/enforcement-faqs/"
+  },
+  {
+    "from": "/faq/security/single-sign-on/enforcement-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/enforcement-faqs/"
+  },
+  {
+    "from": "/security/faqs/single-sign-on/enforcement-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/enforcement-faqs/"
+  },
+  {
+    "from": "/enterprise/security/single-sign-on/FAQs/enforcement-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/enforcement-faqs/"
+  },
+  {
+    "from": "/single-sign-on/idp-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/idp-faqs/"
+  },
+  {
+    "from": "/faq/security/single-sign-on/idp-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/idp-faqs/"
+  },
+  {
+    "from": "/security/faqs/single-sign-on/idp-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/idp-faqs/"
+  },
+  {
+    "from": "/enterprise/security/single-sign-on/FAQs/idp-faqs/",
+    "to": "/admin/enterprise/security/single-sign-on/FAQs/idp-faqs/"
+  },
+  {
+    "from": "/security/for-admins/single-sign-on/connect/",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/docker-hub/domains/",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/docker-hub/sso-connection/",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/docker-hub/enforcing-sso/",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/single-sign-on/configure/",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/admin/company/settings/sso-configuration/",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/admin/organization/security-settings/sso-configuration/",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/security/for-admins/single-sign-on/configure/",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/enterprise/security/single-sign-on/configure",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/enterprise/security/single-sign-on/connect/",
+    "to": "/admin/enterprise/security/single-sign-on/connect/"
+  },
+  {
+    "from": "/single-sign-on/",
+    "to": "/admin/enterprise/security/single-sign-on/"
+  },
+  {
+    "from": "/admin/company/settings/sso/",
+    "to": "/admin/enterprise/security/single-sign-on/"
+  },
+  {
+    "from": "/admin/organization/security-settings/sso-management/",
+    "to": "/admin/enterprise/security/single-sign-on/"
+  },
+  {
+    "from": "/security/for-admins/single-sign-on/",
+    "to": "/admin/enterprise/security/single-sign-on/"
+  },
+  {
+    "from": "/enterprise/security/single-sign-on/",
+    "to": "/admin/enterprise/security/single-sign-on/"
+  },
+  {
+    "from": "/security/for-admins/enforce-sign-in/methods/",
+    "to": "/admin/enterprise/security/enforce-sign-in/methods/"
+  },
+  {
+    "from": "/enterprise/security/enforce-sign-in/methods/",
+    "to": "/admin/enterprise/security/enforce-sign-in/methods/"
+  },
+  {
+    "from": "/security/for-admins/configure-sign-in/",
+    "to": "/admin/enterprise/security/enforce-sign-in/"
+  },
+  {
+    "from": "/docker-hub/configure-sign-in/",
+    "to": "/admin/enterprise/security/enforce-sign-in/"
+  },
+  {
+    "from": "/security/for-admins/enforce-sign-in/",
+    "to": "/admin/enterprise/security/enforce-sign-in/"
+  },
+  {
+    "from": "/enterprise/security/enforce-sign-in/",
+    "to": "/admin/enterprise/security/enforce-sign-in/"
+  },
+  {
+    "from": "/docker-hub/image-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/image-access-management/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/image-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/image-access-management/"
+  },
+  {
+    "from": "/admin/organization/image-access/",
+    "to": "/admin/enterprise/security/hardened-desktop/image-access-management/"
+  },
+  {
+    "from": "/security/for-admins/image-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/image-access-management/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/image-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/image-access-management/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/image-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/image-access-management/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/settings-management/configure-admin-console/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/configure-admin-console/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/settings-management/configure-admin-console/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/configure-admin-console/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/settings-management/configure/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/settings-management/configure/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/settings-management/configure-json-file/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/settings-management/configure-json-file/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/settings-management/settings-reference/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/settings-reference/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/settings-management/settings-reference/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/settings-reference/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/settings-management/compliance-reporting/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/compliance-reporting/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/settings-management/compliance-reporting/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/compliance-reporting/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/settings-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/settings-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/settings-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/settings-management/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/settings-management/air-gapped-containers/",
+    "to": "/admin/enterprise/security/hardened-desktop/air-gapped-containers/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/air-gapped-containers/",
+    "to": "/admin/enterprise/security/hardened-desktop/air-gapped-containers/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/air-gapped-containers/",
+    "to": "/admin/enterprise/security/hardened-desktop/air-gapped-containers/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/air-gapped-containers/",
+    "to": "/admin/enterprise/security/hardened-desktop/air-gapped-containers/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/registry-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/registry-access-management/"
+  },
+  {
+    "from": "/admin/organization/registry-access/",
+    "to": "/admin/enterprise/security/hardened-desktop/registry-access-management/"
+  },
+  {
+    "from": "/docker-hub/registry-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/registry-access-management/"
+  },
+  {
+    "from": "/security/for-admins/registry-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/registry-access-management/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/registry-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/registry-access-management/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/registry-access-management/",
+    "to": "/admin/enterprise/security/hardened-desktop/registry-access-management/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/namespace-access/",
+    "to": "/admin/enterprise/security/hardened-desktop/namespace-access/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/enhanced-container-isolation/limitations/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/limitations/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/enable-eci/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/enhanced-container-isolation/faq/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/faq/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/enhanced-container-isolation/faq/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/faq/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/enhanced-container-isolation/faq/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/faq/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/enhanced-container-isolation/config/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/config/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/enhanced-container-isolation/config/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/config/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/enhanced-container-isolation/config/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/config/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/enhanced-container-isolation/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/enhanced-container-isolation/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/"
+  },
+  {
+    "from": "/security/hardened-desktop/enhanced-container-isolation/how-eci-works",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/"
+  },
+  {
+    "from": "/security/hardened-desktop/enhanced-container-isolation/features-benefits",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/enhanced-container-isolation/",
+    "to": "/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/"
+  },
+  {
+    "from": "/desktop/hardened-desktop/",
+    "to": "/admin/enterprise/security/hardened-desktop/"
+  },
+  {
+    "from": "/security/for-admins/hardened-desktop/",
+    "to": "/admin/enterprise/security/hardened-desktop/"
+  },
+  {
+    "from": "/enterprise/security/hardened-desktop/",
+    "to": "/admin/enterprise/security/hardened-desktop/"
+  },
+  {
+    "from": "/enterprise/security/roles-and-permissions/custom-roles/",
+    "to": "/admin/enterprise/security/roles-and-permissions/custom-roles/"
+  },
+  {
+    "from": "/admin/organization/roles/",
+    "to": "/admin/enterprise/security/roles-and-permissions/"
+  },
+  {
+    "from": "/security/for-admins/roles-and-permissions/",
+    "to": "/admin/enterprise/security/roles-and-permissions/"
+  },
+  {
+    "from": "/enterprise/security/roles-and-permissions/",
+    "to": "/admin/enterprise/security/roles-and-permissions/"
+  },
+  {
+    "from": "/docker-hub/roles-and-permissions/",
+    "to": "/admin/enterprise/security/roles-and-permissions/core-roles/"
+  },
+  {
+    "from": "/security/for-admins/roles-and-permissions/",
+    "to": "/admin/enterprise/security/roles-and-permissions/core-roles/"
+  },
+  {
+    "from": "/enterprise/security/roles-and-permissions/",
+    "to": "/admin/enterprise/security/roles-and-permissions/core-roles/"
+  },
+  {
+    "from": "/enterprise/security/roles-and-permissions/core-roles/",
+    "to": "/admin/enterprise/security/roles-and-permissions/core-roles/"
+  },
+  {
+    "from": "/security/for-admins/domain-management/",
+    "to": "/admin/enterprise/security/domain-management/"
+  },
+  {
+    "from": "/docker-hub/domain-audit/",
+    "to": "/admin/enterprise/security/domain-management/"
+  },
+  {
+    "from": "/enterprise/security/domain-management/",
+    "to": "/admin/enterprise/security/domain-management/"
+  },
+  {
+    "from": "/enterprise/security/",
+    "to": "/admin/enterprise/security/"
+  },
+  {
+    "from": "/desktop/setup/install/enterprise-deployment/ms-store/",
+    "to": "/admin/enterprise/enterprise-deployment/ms-store/"
+  },
+  {
+    "from": "/enterprise/enterprise-deployment/ms-store/",
+    "to": "/admin/enterprise/enterprise-deployment/ms-store/"
+  },
+  {
+    "from": "/desktop/setup/install/enterprise-deployment/use-jamf-pro/",
+    "to": "/admin/enterprise/enterprise-deployment/use-jamf-pro/"
+  },
+  {
+    "from": "/enterprise/enterprise-deployment/use-jamf-pro/",
+    "to": "/admin/enterprise/enterprise-deployment/use-jamf-pro/"
+  },
+  {
+    "from": "/desktop/install/msi/faq/",
+    "to": "/admin/enterprise/enterprise-deployment/faq/"
+  },
+  {
+    "from": "/desktop/setup/install/msi/faq/",
+    "to": "/admin/enterprise/enterprise-deployment/faq/"
+  },
+  {
+    "from": "/desktop/setup/install/enterprise-deployment/faq/",
+    "to": "/admin/enterprise/enterprise-deployment/faq/"
+  },
+  {
+    "from": "/enterprise/enterprise-deployment/faq/",
+    "to": "/admin/enterprise/enterprise-deployment/faq/"
+  },
+  {
+    "from": "/desktop/install/msi/use-intune/",
+    "to": "/admin/enterprise/enterprise-deployment/use-intune/"
+  },
+  {
+    "from": "/desktop/setup/install/msi/use-intune/",
+    "to": "/admin/enterprise/enterprise-deployment/use-intune/"
+  },
+  {
+    "from": "/desktop/setup/install/enterprise-deployment/use-intune/",
+    "to": "/admin/enterprise/enterprise-deployment/use-intune/"
+  },
+  {
+    "from": "/enterprise/enterprise-deployment/use-intune/",
+    "to": "/admin/enterprise/enterprise-deployment/use-intune/"
+  },
+  {
+    "from": "/desktop/setup/install/enterprise-deployment/pkg-install-and-configure/",
+    "to": "/admin/enterprise/enterprise-deployment/pkg-install-and-configure/"
+  },
+  {
+    "from": "/enterprise/enterprise-deployment/pkg-install-and-configure/",
+    "to": "/admin/enterprise/enterprise-deployment/pkg-install-and-configure/"
+  },
+  {
+    "from": "/desktop/features/dev-box/",
+    "to": "/admin/enterprise/enterprise-deployment/dev-box/"
+  },
+  {
+    "from": "/desktop/setup/install/enterprise-deployment/dev-box/",
+    "to": "/admin/enterprise/enterprise-deployment/dev-box/"
+  },
+  {
+    "from": "/enterprise/enterprise-deployment/dev-box/",
+    "to": "/admin/enterprise/enterprise-deployment/dev-box/"
+  },
+  {
+    "from": "/desktop/install/msi/install-and-configure/",
+    "to": "/admin/enterprise/enterprise-deployment/msi-install-and-configure/"
+  },
+  {
+    "from": "/desktop/setup/install/msi/install-and-configure/",
+    "to": "/admin/enterprise/enterprise-deployment/msi-install-and-configure/"
+  },
+  {
+    "from": "/desktop/install/msi/",
+    "to": "/admin/enterprise/enterprise-deployment/msi-install-and-configure/"
+  },
+  {
+    "from": "/desktop/setup/install/msi/",
+    "to": "/admin/enterprise/enterprise-deployment/msi-install-and-configure/"
+  },
+  {
+    "from": "/desktop/setup/install/enterprise-deployment/msi-install-and-configure/",
+    "to": "/admin/enterprise/enterprise-deployment/msi-install-and-configure/"
+  },
+  {
+    "from": "/enterprise/enterprise-deployment/msi-install-and-configure/",
+    "to": "/admin/enterprise/enterprise-deployment/msi-install-and-configure/"
+  },
+  {
+    "from": "/enterprise/enterprise-deployment/",
+    "to": "/admin/enterprise/enterprise-deployment/"
+  },
+  {
+    "from": "/security/security-announcements/",
+    "to": "/admin/security/security-announcements/"
+  },
+  {
+    "from": "/docker-hub/access-tokens/",
+    "to": "/admin/security/access-tokens/"
+  },
+  {
+    "from": "/security/for-developers/access-tokens/",
+    "to": "/admin/security/access-tokens/"
+  },
+  {
+    "from": "/security/access-tokens/",
+    "to": "/admin/security/access-tokens/"
+  },
+  {
+    "from": "/faq/security/general/",
+    "to": "/admin/security/faqs/general/"
+  },
+  {
+    "from": "/security/faqs/general/",
+    "to": "/admin/security/faqs/general/"
+  },
+  {
+    "from": "/faq/security/networking-and-vms/",
+    "to": "/admin/security/faqs/networking-and-vms/"
+  },
+  {
+    "from": "/security/faqs/networking-and-vms/",
+    "to": "/admin/security/faqs/networking-and-vms/"
+  },
+  {
+    "from": "/faq/security/containers/",
+    "to": "/admin/security/faqs/containers/"
+  },
+  {
+    "from": "/security/faqs/containers/",
+    "to": "/admin/security/faqs/containers/"
+  },
+  {
+    "from": "/docker-hub/2fa/recover-hub-account/",
+    "to": "/admin/security/2fa/recover-hub-account/"
+  },
+  {
+    "from": "/security/for-developers/2fa/recover-hub-account/",
+    "to": "/admin/security/2fa/recover-hub-account/"
+  },
+  {
+    "from": "/security/2fa/new-recovery-code/",
+    "to": "/admin/security/2fa/recover-hub-account/"
+  },
+  {
+    "from": "/security/2fa/recover-hub-account/",
+    "to": "/admin/security/2fa/recover-hub-account/"
+  },
+  {
+    "from": "/docker-hub/2fa/",
+    "to": "/admin/security/2fa/"
+  },
+  {
+    "from": "/security/2fa/disable-2fa/",
+    "to": "/admin/security/2fa/"
+  },
+  {
+    "from": "/security/for-developers/2fa/",
+    "to": "/admin/security/2fa/"
+  },
+  {
+    "from": "/security/for-developers/2fa/disable-2fa/",
+    "to": "/admin/security/2fa/"
+  },
+  {
+    "from": "/security/2fa/",
+    "to": "/admin/security/2fa/"
+  },
+  {
+    "from": "/security/",
+    "to": "/admin/security/"
+  },
+  {
+    "from": "/build/cloud/setup/",
+    "to": "/build-cloud/setup/"
+  },
+  {
+    "from": "/build/cloud/usage/",
+    "to": "/build-cloud/usage/"
+  },
+  {
+    "from": "/build/cloud/optimization/",
+    "to": "/build-cloud/optimization/"
+  },
+  {
+    "from": "/build/cloud/ci/",
+    "to": "/build-cloud/ci/"
+  },
+  {
+    "from": "/build/cloud/faq/",
+    "to": "/build-cloud/"
+  },
+  {
+    "from": "/build/cloud/",
+    "to": "/build-cloud/"
+  },
+  {
+    "from": "/docker-hub/repos/archive/",
+    "to": "/hub/repos/archive/"
+  },
+  {
+    "from": "/docker-hub/repos/create/",
+    "to": "/hub/repos/create/"
+  },
+  {
+    "from": "/docker-hub/repos/delete/",
+    "to": "/hub/repos/delete/"
+  },
+  {
+    "from": "/docker-hub/webhooks/",
+    "to": "/hub/repos/manage/webhooks/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/webhooks/",
+    "to": "/hub/repos/manage/webhooks/"
+  },
+  {
+    "from": "/docker-hub/builds/troubleshoot/",
+    "to": "/hub/repos/manage/builds/troubleshoot/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/builds/troubleshoot/",
+    "to": "/hub/repos/manage/builds/troubleshoot/"
+  },
+  {
+    "from": "/docker-hub/builds/automated-build/",
+    "to": "/hub/repos/manage/builds/setup/"
+  },
+  {
+    "from": "/docker-hub/builds/classic/",
+    "to": "/hub/repos/manage/builds/setup/"
+  },
+  {
+    "from": "/docker-hub/builds/",
+    "to": "/hub/repos/manage/builds/setup/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/builds/setup/",
+    "to": "/hub/repos/manage/builds/setup/"
+  },
+  {
+    "from": "/docker-hub/github/",
+    "to": "/hub/repos/manage/builds/link-source/"
+  },
+  {
+    "from": "/docker-hub/bitbucket/",
+    "to": "/hub/repos/manage/builds/link-source/"
+  },
+  {
+    "from": "/docker-hub/builds/link-source/",
+    "to": "/hub/repos/manage/builds/link-source/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/builds/link-source/",
+    "to": "/hub/repos/manage/builds/link-source/"
+  },
+  {
+    "from": "/docker-hub/builds/manage-builds/",
+    "to": "/hub/repos/manage/builds/manage-builds/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/builds/manage-builds/",
+    "to": "/hub/repos/manage/builds/manage-builds/"
+  },
+  {
+    "from": "/docker-hub/builds/advanced/",
+    "to": "/hub/repos/manage/builds/advanced/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/builds/advanced/",
+    "to": "/hub/repos/manage/builds/advanced/"
+  },
+  {
+    "from": "/docker-hub/builds/automated-testing/",
+    "to": "/hub/repos/manage/builds/automated-testing/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/builds/automated-testing/",
+    "to": "/hub/repos/manage/builds/automated-testing/"
+  },
+  {
+    "from": "/docker-hub/builds/how-builds-work/",
+    "to": "/hub/repos/manage/builds/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/builds/",
+    "to": "/hub/repos/manage/builds/"
+  },
+  {
+    "from": "/docker-hub/vulnerability-scanning/",
+    "to": "/hub/repos/manage/vulnerability-scanning/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/vulnerability-scanning/",
+    "to": "/hub/repos/manage/vulnerability-scanning/"
+  },
+  {
+    "from": "/docker-hub/repos/categories/",
+    "to": "/hub/repos/manage/information/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/information/",
+    "to": "/hub/repos/manage/information/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/hub-images/move/",
+    "to": "/hub/repos/manage/hub-images/move/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/hub-images/push/",
+    "to": "/hub/repos/manage/hub-images/push/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/hub-images/bulk-migrate/",
+    "to": "/hub/repos/manage/hub-images/bulk-migrate/"
+  },
+  {
+    "from": "/docker-hub/oci-artifacts/",
+    "to": "/hub/repos/manage/hub-images/oci-artifacts/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/hub-images/oci-artifacts/",
+    "to": "/hub/repos/manage/hub-images/oci-artifacts/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/hub-images/manage/",
+    "to": "/hub/repos/manage/hub-images/manage/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/hub-images/tags/",
+    "to": "/hub/repos/manage/hub-images/tags/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/hub-images/immutable-tags/",
+    "to": "/hub/repos/manage/hub-images/immutable-tags/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/hub-images/",
+    "to": "/hub/repos/manage/hub-images/"
+  },
+  {
+    "from": "/docker-hub/repos/access/",
+    "to": "/hub/repos/manage/access/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/access/",
+    "to": "/hub/repos/manage/access/"
+  },
+  {
+    "from": "/docker-hub/publish/insights-analytics/",
+    "to": "/hub/repos/manage/trusted-content/insights-analytics/"
+  },
+  {
+    "from": "/docker-hub/insights-analytics/",
+    "to": "/hub/repos/manage/trusted-content/insights-analytics/"
+  },
+  {
+    "from": "/trusted-content/insights-analytics/",
+    "to": "/hub/repos/manage/trusted-content/insights-analytics/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/trusted-content/insights-analytics/",
+    "to": "/hub/repos/manage/trusted-content/insights-analytics/"
+  },
+  {
+    "from": "/docker-hub/dsos-program/",
+    "to": "/hub/repos/manage/trusted-content/dsos-program/"
+  },
+  {
+    "from": "/trusted-content/dsos-program/",
+    "to": "/hub/repos/manage/trusted-content/dsos-program/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/trusted-content/dsos-program/",
+    "to": "/hub/repos/manage/trusted-content/dsos-program/"
+  },
+  {
+    "from": "/docker-hub/publish/publish/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/publish/customer_faq/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/publish/publisher_faq/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/publish/certify-images/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/publish/certify-plugins-logging/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/publish/trustchain/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/publish/byol/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/publish/publisher-center-migration/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/publish/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/publish/repository-logos/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/dvp-program/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/trusted-content/dvp-program/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/trusted-content/dvp-program/",
+    "to": "/hub/repos/manage/trusted-content/dvp-program/"
+  },
+  {
+    "from": "/trusted-content/official-images/contributing/",
+    "to": "/hub/repos/manage/trusted-content/official-images/"
+  },
+  {
+    "from": "/docker-hub/official_repos/",
+    "to": "/hub/repos/manage/trusted-content/official-images/"
+  },
+  {
+    "from": "/docker-hub/official_images/",
+    "to": "/hub/repos/manage/trusted-content/official-images/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/trusted-content/official-images/",
+    "to": "/hub/repos/manage/trusted-content/official-images/"
+  },
+  {
+    "from": "/trusted-content/",
+    "to": "/hub/repos/manage/trusted-content/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/trusted-content/",
+    "to": "/hub/repos/manage/trusted-content/"
+  },
+  {
+    "from": "/docker-hub/repos/manage/export/",
+    "to": "/hub/repos/manage/export/"
+  },
+  {
+    "from": "/engine/tutorials/dockerrepos/",
+    "to": "/hub/repos/"
+  },
+  {
+    "from": "/docker-hub/repos/configure/",
+    "to": "/hub/repos/"
+  },
+  {
+    "from": "/docker-hub/repos/",
+    "to": "/hub/repos/"
+  },
+  {
+    "from": "/docker-hub/repos/settings/",
+    "to": "/hub/settings/"
+  },
+  {
+    "from": "/docker-hub/settings/",
+    "to": "/hub/settings/"
+  },
+  {
+    "from": "/docker-hub/troubleshoot/",
+    "to": "/hub/troubleshoot/"
+  },
+  {
+    "from": "/docker-hub/release-notes/",
+    "to": "/hub/release-notes/"
+  },
+  {
+    "from": "/docker-hub/quickstart/",
+    "to": "/hub/quickstart/"
+  },
+  {
+    "from": "/docker-hub/usage/storage/",
+    "to": "/hub/usage/pulls/"
+  },
+  {
+    "from": "/docker-hub/usage/repositories/",
+    "to": "/hub/usage/pulls/"
+  },
+  {
+    "from": "/docker-hub/usage/pulls/",
+    "to": "/hub/usage/pulls/"
+  },
+  {
+    "from": "/docker-hub/usage/manage/",
+    "to": "/hub/usage/manage/"
+  },
+  {
+    "from": "/docker-hub/download-rate-limit/",
+    "to": "/hub/usage/"
+  },
+  {
+    "from": "/docker-hub/usage/",
+    "to": "/hub/usage/"
+  },
+  {
+    "from": "/docker-hub/image-library/search/",
+    "to": "/hub/image-library/search/"
+  },
+  {
+    "from": "/trusted-content/official-images/using/",
+    "to": "/hub/image-library/trusted-content/"
+  },
+  {
+    "from": "/trusted-content/official-images/",
+    "to": "/hub/image-library/trusted-content/"
+  },
+  {
+    "from": "/docker-hub/image-library/trusted-content/",
+    "to": "/hub/image-library/trusted-content/"
+  },
+  {
+    "from": "/engine/admin/registry_mirror/",
+    "to": "/hub/image-library/mirror/"
+  },
+  {
+    "from": "/registry/recipes/mirror/",
+    "to": "/hub/image-library/mirror/"
+  },
+  {
+    "from": "/docker-hub/mirror/",
+    "to": "/hub/image-library/mirror/"
+  },
+  {
+    "from": "/docker-hub/image-library/mirror/",
+    "to": "/hub/image-library/mirror/"
+  },
+  {
+    "from": "/docker-hub/image-library/catalogs/",
+    "to": "/hub/image-library/catalogs/"
+  },
+  {
+    "from": "/docker-hub/image-library/",
+    "to": "/hub/image-library/"
+  },
+  {
+    "from": "/docker-hub/overview/",
+    "to": "/hub/"
+  },
+  {
+    "from": "/docker-hub/",
+    "to": "/hub/"
+  },
+  {
+    "from": "/dhi/how-to/debug/",
+    "to": "/dhi/troubleshoot/"
+  },
+  {
+    "from": "/dhi/about/available/",
+    "to": "/dhi/explore/available/"
+  },
+  {
+    "from": "/dhi/about/build-process/",
+    "to": "/dhi/explore/build-process/"
+  },
+  {
+    "from": "/dhi/about/responsibility/",
+    "to": "/dhi/explore/responsibility/"
+  },
+  {
+    "from": "/dhi/about/what/",
+    "to": "/dhi/explore/what/"
+  },
+  {
+    "from": "/dhi/about/test/",
+    "to": "/dhi/explore/test/"
+  },
+  {
+    "from": "/dhi/about/feedback/",
+    "to": "/dhi/explore/feedback/"
+  },
+  {
+    "from": "/dhi/about/",
+    "to": "/dhi/explore/"
+  },
+  {
+    "from": "/dhi/how-to/compare/",
+    "to": "/dhi/how-to/explore/"
+  },
+  {
+    "from": "/dhi/how-to/els/",
+    "to": "/dhi/how-to/use/"
+  },
+  {
+    "from": "/dhi/how-to/k8s/",
+    "to": "/dhi/how-to/use/"
+  },
+  {
+    "from": "/dhi/features/secure/",
+    "to": "/dhi/features/"
+  },
+  {
+    "from": "/dhi/features/integration/",
+    "to": "/dhi/features/"
+  },
+  {
+    "from": "/dhi/features/support/",
+    "to": "/dhi/features/"
+  },
+  {
+    "from": "/dhi/features/patching/",
+    "to": "/dhi/features/"
+  },
+  {
+    "from": "/dhi/features/flexible/",
+    "to": "/dhi/features/"
+  },
+  {
+    "from": "/dhi/features/helm/",
+    "to": "/dhi/features/"
+  },
+  {
+    "from": "/dhi/how-to/migrate/",
+    "to": "/dhi/migration/"
+  },
+  {
+    "from": "/compose/compose-plugin/",
+    "to": "/compose/install/linux/"
+  },
+  {
+    "from": "/compose/compose-linux/",
+    "to": "/compose/install/linux/"
+  },
+  {
+    "from": "/compose/install/compose-plugin/",
+    "to": "/compose/install/linux/"
+  },
+  {
+    "from": "/compose/compose-desktop/",
+    "to": "/compose/install/"
+  },
+  {
+    "from": "/compose/install/other/",
+    "to": "/compose/install/"
+  },
+  {
+    "from": "/compose/install/compose-desktop/",
+    "to": "/compose/install/"
+  },
+  {
+    "from": "/compose/faq/",
+    "to": "/compose/support-and-feedback/faq/"
+  },
+  {
+    "from": "/compose/feedback/",
+    "to": "/compose/support-and-feedback/feedback/"
+  },
+  {
+    "from": "/compose/compose-file/02-model/",
+    "to": "/compose/intro/compose-application-model/"
+  },
+  {
+    "from": "/compose/compose-yaml-file/",
+    "to": "/compose/intro/compose-application-model/"
+  },
+  {
+    "from": "/compose/compose-application-model/",
+    "to": "/compose/intro/compose-application-model/"
+  },
+  {
+    "from": "/compose/features-uses/",
+    "to": "/compose/intro/features-uses/"
+  },
+  {
+    "from": "/compose/history/",
+    "to": "/compose/intro/history/"
+  },
+  {
+    "from": "/compose/samples-for-compose/",
+    "to": "/compose/gettingstarted/"
+  },
+  {
+    "from": "/compose/support-and-feedback/samples-for-compose/",
+    "to": "/compose/gettingstarted/"
+  },
+  {
+    "from": "/compose/env-file/",
+    "to": "/compose/how-tos/environment-variables/variable-interpolation/"
+  },
+  {
+    "from": "/compose/environment-variables/env-file/",
+    "to": "/compose/how-tos/environment-variables/variable-interpolation/"
+  },
+  {
+    "from": "/compose/environment-variables/variable-interpolation/",
+    "to": "/compose/how-tos/environment-variables/variable-interpolation/"
+  },
+  {
+    "from": "/compose/environment-variables/best-practices/",
+    "to": "/compose/how-tos/environment-variables/best-practices/"
+  },
+  {
+    "from": "/compose/envvars-precedence/",
+    "to": "/compose/how-tos/environment-variables/envvars-precedence/"
+  },
+  {
+    "from": "/compose/environment-variables/envvars-precedence/",
+    "to": "/compose/how-tos/environment-variables/envvars-precedence/"
+  },
+  {
+    "from": "/compose/reference/envvars/",
+    "to": "/compose/how-tos/environment-variables/envvars/"
+  },
+  {
+    "from": "/compose/environment-variables/envvars/",
+    "to": "/compose/how-tos/environment-variables/envvars/"
+  },
+  {
+    "from": "/compose/environment-variables/",
+    "to": "/compose/how-tos/environment-variables/"
+  },
+  {
+    "from": "/compose/env/",
+    "to": "/compose/how-tos/environment-variables/set-environment-variables/"
+  },
+  {
+    "from": "/compose/link-env-deprecated/",
+    "to": "/compose/how-tos/environment-variables/set-environment-variables/"
+  },
+  {
+    "from": "/compose/environment-variables/set-environment-variables/",
+    "to": "/compose/how-tos/environment-variables/set-environment-variables/"
+  },
+  {
+    "from": "/compose/startup-order/",
+    "to": "/compose/how-tos/startup-order/"
+  },
+  {
+    "from": "/compose/networking/",
+    "to": "/compose/how-tos/networking/"
+  },
+  {
+    "from": "/compose/production/",
+    "to": "/compose/how-tos/production/"
+  },
+  {
+    "from": "/compose/profiles/",
+    "to": "/compose/how-tos/profiles/"
+  },
+  {
+    "from": "/compose/project-name/",
+    "to": "/compose/how-tos/project-name/"
+  },
+  {
+    "from": "/compose/use-secrets/",
+    "to": "/compose/how-tos/use-secrets/"
+  },
+  {
+    "from": "/compose/multiple-compose-files/include/",
+    "to": "/compose/how-tos/multiple-compose-files/include/"
+  },
+  {
+    "from": "/compose/extends/",
+    "to": "/compose/how-tos/multiple-compose-files/extends/"
+  },
+  {
+    "from": "/compose/multiple-compose-files/extends/",
+    "to": "/compose/how-tos/multiple-compose-files/extends/"
+  },
+  {
+    "from": "/compose/multiple-compose-files/merge/",
+    "to": "/compose/how-tos/multiple-compose-files/merge/"
+  },
+  {
+    "from": "/compose/multiple-compose-files/",
+    "to": "/compose/how-tos/multiple-compose-files/"
+  },
+  {
+    "from": "/compose/file-watch/",
+    "to": "/compose/how-tos/file-watch/"
+  },
+  {
+    "from": "/compose/gpu-support/",
+    "to": "/compose/how-tos/gpu-support/"
+  },
+  {
+    "from": "/compose/cli-command/",
+    "to": "/compose/"
+  },
+  {
+    "from": "/compose/networking/swarm/",
+    "to": "/compose/"
+  },
+  {
+    "from": "/compose/overview/",
+    "to": "/compose/"
+  },
+  {
+    "from": "/compose/swarm/",
+    "to": "/compose/"
+  },
+  {
+    "from": "/compose/completion/",
+    "to": "/compose/"
+  },
+  {
+    "from": "/compose/releases/migrate/",
+    "to": "/compose/"
+  },
+  {
+    "from": "/docker-hub/convert-account/",
+    "to": "/admin/organizations/organization/convert-account/"
+  },
+  {
+    "from": "/admin/organization/convert-account/",
+    "to": "/admin/organizations/organization/convert-account/"
+  },
+  {
+    "from": "/admin/organization/manage-products/",
+    "to": "/admin/organizations/organization/manage-products/"
+  },
+  {
+    "from": "/docker-hub/audit-log/",
+    "to": "/admin/organizations/organization/activity-logs/"
+  },
+  {
+    "from": "/admin/organization/activity-logs/",
+    "to": "/admin/organizations/organization/activity-logs/"
+  },
+  {
+    "from": "/docker-hub/deactivate-account/",
+    "to": "/admin/organizations/organization/deactivate-account/"
+  },
+  {
+    "from": "/admin/organization/deactivate-account/",
+    "to": "/admin/organizations/organization/deactivate-account/"
+  },
+  {
+    "from": "/admin/organization/general-settings/",
+    "to": "/admin/organizations/organization/general-settings/"
+  },
+  {
+    "from": "/admin/organization/insights/",
+    "to": "/admin/organizations/organization/insights/"
+  },
+  {
+    "from": "/docker-hub/members/",
+    "to": "/admin/organizations/organization/members/"
+  },
+  {
+    "from": "/admin/organization/members/",
+    "to": "/admin/organizations/organization/members/"
+  },
+  {
+    "from": "/docker-hub/onboard/",
+    "to": "/admin/organizations/organization/onboard/"
+  },
+  {
+    "from": "/docker-hub/onboard-team/",
+    "to": "/admin/organizations/organization/onboard/"
+  },
+  {
+    "from": "/docker-hub/onboard-business/",
+    "to": "/admin/organizations/organization/onboard/"
+  },
+  {
+    "from": "/admin/organization/onboard/",
+    "to": "/admin/organizations/organization/onboard/"
+  },
+  {
+    "from": "/docker-hub/manage-a-team/",
+    "to": "/admin/organizations/organization/manage-a-team/"
+  },
+  {
+    "from": "/admin/organization/manage-a-team/",
+    "to": "/admin/organizations/organization/manage-a-team/"
+  },
+  {
+    "from": "/admin/organization/",
+    "to": "/admin/organizations/organization/"
+  },
+  {
+    "from": "/docker-hub/orgs/",
+    "to": "/admin/organizations/organization/orgs/"
+  },
+  {
+    "from": "/admin/organization/orgs/",
+    "to": "/admin/organizations/organization/orgs/"
+  },
+  {
+    "from": "/docker-hub/company-faqs/",
+    "to": "/admin/organizations/faqs/company-faqs/"
+  },
+  {
+    "from": "/faq/admin/company-faqs/",
+    "to": "/admin/organizations/faqs/company-faqs/"
+  },
+  {
+    "from": "/admin/faqs/company-faqs/",
+    "to": "/admin/organizations/faqs/company-faqs/"
+  },
+  {
+    "from": "/docker-hub/organization-faqs/",
+    "to": "/admin/organizations/faqs/organization-faqs/"
+  },
+  {
+    "from": "/faq/admin/organization-faqs/",
+    "to": "/admin/organizations/faqs/organization-faqs/"
+  },
+  {
+    "from": "/admin/faqs/organization-faqs/",
+    "to": "/admin/organizations/faqs/organization-faqs/"
+  },
+  {
+    "from": "/docker-hub/admin-overview",
+    "to": "/admin/organizations/"
+  },
+  {
+    "from": "/admin/",
+    "to": "/admin/organizations/"
+  },
+  {
+    "from": "/admin/company/organizations/",
+    "to": "/admin/organizations/company/organizations/"
+  },
+  {
+    "from": "/docker-hub/new-company/",
+    "to": "/admin/organizations/company/new-company/"
+  },
+  {
+    "from": "/admin/company/new-company/",
+    "to": "/admin/organizations/company/new-company/"
+  },
+  {
+    "from": "/admin/company/users/",
+    "to": "/admin/organizations/company/users/"
+  },
+  {
+    "from": "/docker-hub/company-owner/",
+    "to": "/admin/organizations/company/owners/"
+  },
+  {
+    "from": "/admin/company/owners/",
+    "to": "/admin/organizations/company/owners/"
+  },
+  {
+    "from": "/docker-hub/creating-companies/",
+    "to": "/admin/organizations/company/"
+  },
+  {
+    "from": "/admin/company/",
+    "to": "/admin/organizations/company/"
+  },
+  {
+    "from": "/desktop/settings/mac/",
+    "to": "/desktop/settings-and-maintenance/settings/"
+  },
+  {
+    "from": "/desktop/settings/windows/",
+    "to": "/desktop/settings-and-maintenance/settings/"
+  },
+  {
+    "from": "/desktop/settings/linux/",
+    "to": "/desktop/settings-and-maintenance/settings/"
+  },
+  {
+    "from": "/desktop/settings/",
+    "to": "/desktop/settings-and-maintenance/settings/"
+  },
+  {
+    "from": "/desktop/backup-and-restore/",
+    "to": "/desktop/settings-and-maintenance/backup-and-restore/"
+  },
+  {
+    "from": "/docker-for-mac/release-notes/",
+    "to": "/desktop/release-notes/"
+  },
+  {
+    "from": "/docker-for-mac/edge-release-notes/",
+    "to": "/desktop/release-notes/"
+  },
+  {
+    "from": "/desktop/mac/release-notes/",
+    "to": "/desktop/release-notes/"
+  },
+  {
+    "from": "/docker-for-windows/edge-release-notes/",
+    "to": "/desktop/release-notes/"
+  },
+  {
+    "from": "/docker-for-windows/release-notes/",
+    "to": "/desktop/release-notes/"
+  },
+  {
+    "from": "/desktop/windows/release-notes/",
+    "to": "/desktop/release-notes/"
+  },
+  {
+    "from": "/desktop/linux/release-notes/",
+    "to": "/desktop/release-notes/"
+  },
+  {
+    "from": "/mackit/release-notes/",
+    "to": "/desktop/release-notes/"
+  },
+  {
+    "from": "/ee/desktop/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/enterprise/release-notes/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/enterprise/admin/install/mac/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/enterprise/admin/configure/mac-admin/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/enterprise/admin/configure/windows-admin/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/enterprise/user/mac-user/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/enterprise/user/windows-user/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/enterprise/app-designer/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/enterprise/troubleshoot/mac-issues/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/enterprise/troubleshoot/windows-issues/",
+    "to": "/desktop/enterprise/"
+  },
+  {
+    "from": "/desktop/wsl/best-practices/",
+    "to": "/desktop/features/wsl/best-practices/"
+  },
+  {
+    "from": "/desktop/wsl/use-wsl/",
+    "to": "/desktop/features/wsl/use-wsl/"
+  },
+  {
+    "from": "/docker-for-windows/wsl/",
+    "to": "/desktop/features/wsl/"
+  },
+  {
+    "from": "/docker-for-windows/wsl-tech-preview/",
+    "to": "/desktop/features/wsl/"
+  },
+  {
+    "from": "/desktop/windows/wsl/",
+    "to": "/desktop/features/wsl/"
+  },
+  {
+    "from": "/desktop/wsl/",
+    "to": "/desktop/features/wsl/"
+  },
+  {
+    "from": "/desktop/vmm/",
+    "to": "/desktop/features/vmm/"
+  },
+  {
+    "from": "/desktop/wasm/",
+    "to": "/desktop/features/wasm/"
+  },
+  {
+    "from": "/desktop/linux/networking/",
+    "to": "/desktop/features/networking/networking-how-tos/"
+  },
+  {
+    "from": "/docker-for-mac/networking/",
+    "to": "/desktop/features/networking/networking-how-tos/"
+  },
+  {
+    "from": "/mackit/networking/",
+    "to": "/desktop/features/networking/networking-how-tos/"
+  },
+  {
+    "from": "/desktop/mac/networking/",
+    "to": "/desktop/features/networking/networking-how-tos/"
+  },
+  {
+    "from": "/docker-for-win/networking/",
+    "to": "/desktop/features/networking/networking-how-tos/"
+  },
+  {
+    "from": "/docker-for-windows/networking/",
+    "to": "/desktop/features/networking/networking-how-tos/"
+  },
+  {
+    "from": "/desktop/windows/networking/",
+    "to": "/desktop/features/networking/networking-how-tos/"
+  },
+  {
+    "from": "/desktop/networking/",
+    "to": "/desktop/features/networking/networking-how-tos/"
+  },
+  {
+    "from": "/desktop/gpu/",
+    "to": "/desktop/features/gpu/"
+  },
+  {
+    "from": "/desktop/containerd/",
+    "to": "/desktop/features/containerd/"
+  },
+  {
+    "from": "/desktop/synchronized-file-sharing/",
+    "to": "/desktop/features/synchronized-file-sharing/"
+  },
+  {
+    "from": "/desktop/usbip/",
+    "to": "/desktop/features/usbip/"
+  },
+  {
+    "from": "/docker-for-mac/privileged-helper/",
+    "to": "/desktop/setup/install/mac-permission-requirements/"
+  },
+  {
+    "from": "/desktop/mac/privileged-helper/",
+    "to": "/desktop/setup/install/mac-permission-requirements/"
+  },
+  {
+    "from": "/desktop/mac/permission-requirements/",
+    "to": "/desktop/setup/install/mac-permission-requirements/"
+  },
+  {
+    "from": "/desktop/install/mac-permission-requirements/",
+    "to": "/desktop/setup/install/mac-permission-requirements/"
+  },
+  {
+    "from": "/desktop/windows/install/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/docker-ee-for-windows/install/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/docker-for-windows/install-windows-home/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/docker-for-windows/install/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/ee/docker-ee/windows/docker-ee/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/engine/installation/windows/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/engine/installation/windows/docker-ee/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/install/windows/docker-ee/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/install/windows/ee-preview/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/installation/windows/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/desktop/win/configuring-wsl/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/desktop/install/windows-install/",
+    "to": "/desktop/setup/install/windows-install/"
+  },
+  {
+    "from": "/desktop/linux/install/archlinux/",
+    "to": "/desktop/setup/install/linux/archlinux/"
+  },
+  {
+    "from": "/desktop/install/archlinux/",
+    "to": "/desktop/setup/install/linux/archlinux/"
+  },
+  {
+    "from": "/desktop/install/linux/archlinux/",
+    "to": "/desktop/setup/install/linux/archlinux/"
+  },
+  {
+    "from": "/desktop/linux/install/debian/",
+    "to": "/desktop/setup/install/linux/debian/"
+  },
+  {
+    "from": "/desktop/install/debian/",
+    "to": "/desktop/setup/install/linux/debian/"
+  },
+  {
+    "from": "/desktop/install/linux/debian/",
+    "to": "/desktop/setup/install/linux/debian/"
+  },
+  {
+    "from": "/desktop/linux/install/ubuntu/",
+    "to": "/desktop/setup/install/linux/ubuntu/"
+  },
+  {
+    "from": "/desktop/install/ubuntu/",
+    "to": "/desktop/setup/install/linux/ubuntu/"
+  },
+  {
+    "from": "/desktop/install/linux/ubuntu/",
+    "to": "/desktop/setup/install/linux/ubuntu/"
+  },
+  {
+    "from": "/desktop/linux/install/fedora/",
+    "to": "/desktop/setup/install/linux/fedora/"
+  },
+  {
+    "from": "/desktop/install/fedora/",
+    "to": "/desktop/setup/install/linux/fedora/"
+  },
+  {
+    "from": "/desktop/install/linux/fedora/",
+    "to": "/desktop/setup/install/linux/fedora/"
+  },
+  {
+    "from": "/desktop/install/linux/rhel/",
+    "to": "/desktop/setup/install/linux/rhel/"
+  },
+  {
+    "from": "/desktop/linux/install/",
+    "to": "/desktop/setup/install/linux/"
+  },
+  {
+    "from": "/desktop/install/linux-install/",
+    "to": "/desktop/setup/install/linux/"
+  },
+  {
+    "from": "/desktop/install/linux/",
+    "to": "/desktop/setup/install/linux/"
+  },
+  {
+    "from": "/desktop/windows/privileged-helper/",
+    "to": "/desktop/setup/install/windows-permission-requirements/"
+  },
+  {
+    "from": "/desktop/windows/permission-requirements/",
+    "to": "/desktop/setup/install/windows-permission-requirements/"
+  },
+  {
+    "from": "/desktop/install/windows-permission-requirements/",
+    "to": "/desktop/setup/install/windows-permission-requirements/"
+  },
+  {
+    "from": "/desktop/mac/install/",
+    "to": "/desktop/setup/install/mac-install/"
+  },
+  {
+    "from": "/docker-for-mac/install/",
+    "to": "/desktop/setup/install/mac-install/"
+  },
+  {
+    "from": "/engine/installation/mac/",
+    "to": "/desktop/setup/install/mac-install/"
+  },
+  {
+    "from": "/installation/mac/",
+    "to": "/desktop/setup/install/mac-install/"
+  },
+  {
+    "from": "/docker-for-mac/apple-m1/",
+    "to": "/desktop/setup/install/mac-install/"
+  },
+  {
+    "from": "/docker-for-mac/apple-silicon/",
+    "to": "/desktop/setup/install/mac-install/"
+  },
+  {
+    "from": "/desktop/mac/apple-silicon/",
+    "to": "/desktop/setup/install/mac-install/"
+  },
+  {
+    "from": "/desktop/install/mac-install/",
+    "to": "/desktop/setup/install/mac-install/"
+  },
+  {
+    "from": "/desktop/install/mac/",
+    "to": "/desktop/setup/install/mac-install/"
+  },
+  {
+    "from": "/desktop/allow-list/",
+    "to": "/desktop/setup/allow-list/"
+  },
+  {
+    "from": "/desktop/linux/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/desktop/linux/index/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/desktop/mac/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/desktop/mac/index/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/desktop/windows/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/desktop/windows/index/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/docker-for-mac/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/docker-for-mac/index/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/docker-for-mac/osx/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/docker-for-mac/started/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/docker-for-windows/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/docker-for-windows/index/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/docker-for-windows/started/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/mac/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/mackit/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/mackit/getting-started/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/win/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/windows/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/winkit/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/winkit/getting-started/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/desktop/get-started/",
+    "to": "/desktop/setup/sign-in/"
+  },
+  {
+    "from": "/desktop/nested-virtualization/",
+    "to": "/desktop/setup/vm-vdi/"
+  },
+  {
+    "from": "/desktop/vm-vdi/",
+    "to": "/desktop/setup/vm-vdi/"
+  },
+  {
+    "from": "/desktop/mac/release-notes/2.x/",
+    "to": "/desktop/previous-versions/2.x-mac/"
+  },
+  {
+    "from": "/desktop/mac/previous-versions/",
+    "to": "/desktop/previous-versions/3.x-mac/"
+  },
+  {
+    "from": "/docker-for-mac/previous-versions/",
+    "to": "/desktop/previous-versions/3.x-mac/"
+  },
+  {
+    "from": "/desktop/mac/release-notes/3.x/",
+    "to": "/desktop/previous-versions/3.x-mac/"
+  },
+  {
+    "from": "/desktop/mac/release-notes/edge-releases/",
+    "to": "/desktop/previous-versions/edge-releases-mac/"
+  },
+  {
+    "from": "/desktop/windows/release-notes/edge-releases/",
+    "to": "/desktop/previous-versions/edge-releases-windows/"
+  },
+  {
+    "from": "/desktop/windows/release-notes/archive/",
+    "to": "/desktop/previous-versions/archive-windows/"
+  },
+  {
+    "from": "/desktop/windows/release-notes/2.x/",
+    "to": "/desktop/previous-versions/2.x-windows/"
+  },
+  {
+    "from": "/desktop/mac/release-notes/archive/",
+    "to": "/desktop/previous-versions/archive-mac/"
+  },
+  {
+    "from": "/desktop/windows/previous-versions/",
+    "to": "/desktop/previous-versions/3.x-windows/"
+  },
+  {
+    "from": "/docker-for-windows/previous-versions/",
+    "to": "/desktop/previous-versions/3.x-windows/"
+  },
+  {
+    "from": "/desktop/windows/release-notes/3.x/",
+    "to": "/desktop/previous-versions/3.x-windows/"
+  },
+  {
+    "from": "/docker-for-windows/kubernetes/",
+    "to": "/desktop/use-desktop/kubernetes/"
+  },
+  {
+    "from": "/docker-for-mac/kubernetes/",
+    "to": "/desktop/use-desktop/kubernetes/"
+  },
+  {
+    "from": "/desktop/kubernetes/",
+    "to": "/desktop/use-desktop/kubernetes/"
+  },
+  {
+    "from": "/desktop/features/kubernetes/",
+    "to": "/desktop/use-desktop/kubernetes/"
+  },
+  {
+    "from": "/desktop/dashboard/",
+    "to": "/desktop/use-desktop/"
+  },
+  {
+    "from": "/desktop/troubleshoot/topics/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/topics/"
+  },
+  {
+    "from": "/manuals/desktop/troubleshoot-and-support/troubleshoot/workarounds/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/topics/"
+  },
+  {
+    "from": "/desktop/troubleshoot/known-issues/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/known-issues/"
+  },
+  {
+    "from": "/desktop/linux/troubleshoot/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/desktop/mac/troubleshoot/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/desktop/windows/troubleshoot/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/docker-for-mac/troubleshoot/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/mackit/troubleshoot/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/windows/troubleshoot/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/docker-for-win/troubleshoot/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/docker-for-windows/troubleshoot/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/desktop/troubleshoot/overview/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/desktop/troubleshoot/",
+    "to": "/desktop/troubleshoot-and-support/troubleshoot/"
+  },
+  {
+    "from": "/mackit/faqs/",
+    "to": "/desktop/troubleshoot-and-support/faqs/general/"
+  },
+  {
+    "from": "/docker-for-mac/faqs/",
+    "to": "/desktop/troubleshoot-and-support/faqs/general/"
+  },
+  {
+    "from": "/docker-for-windows/faqs/",
+    "to": "/desktop/troubleshoot-and-support/faqs/general/"
+  },
+  {
+    "from": "/desktop/faqs/",
+    "to": "/desktop/troubleshoot-and-support/faqs/general/"
+  },
+  {
+    "from": "/desktop/faqs/general/",
+    "to": "/desktop/troubleshoot-and-support/faqs/general/"
+  },
+  {
+    "from": "/desktop/linux/space/",
+    "to": "/desktop/troubleshoot-and-support/faqs/linuxfaqs/"
+  },
+  {
+    "from": "/desktop/faqs/linuxfaqs/",
+    "to": "/desktop/troubleshoot-and-support/faqs/linuxfaqs/"
+  },
+  {
+    "from": "/desktop/mac/space/",
+    "to": "/desktop/troubleshoot-and-support/faqs/macfaqs/"
+  },
+  {
+    "from": "/docker-for-mac/space/",
+    "to": "/desktop/troubleshoot-and-support/faqs/macfaqs/"
+  },
+  {
+    "from": "/desktop/faqs/macfaqs/",
+    "to": "/desktop/troubleshoot-and-support/faqs/macfaqs/"
+  },
+  {
+    "from": "/desktop/feedback/",
+    "to": "/desktop/troubleshoot-and-support/feedback/"
+  },
+  {
+    "from": "/desktop/opensource/",
+    "to": "/desktop/"
+  },
+  {
+    "from": "/docker-for-mac/dashboard/",
+    "to": "/desktop/"
+  },
+  {
+    "from": "/docker-for-mac/opensource/",
+    "to": "/desktop/"
+  },
+  {
+    "from": "/docker-for-windows/dashboard/",
+    "to": "/desktop/"
+  },
+  {
+    "from": "/docker-for-windows/opensource/",
+    "to": "/desktop/"
+  },
+  {
+    "from": "/scout/data-handling/",
+    "to": "/scout/deep-dive/data-handling/"
+  },
+  {
+    "from": "/scout/advisory-db-sources/",
+    "to": "/scout/deep-dive/advisory-db-sources/"
+  },
+  {
+    "from": "/scout/release-notes/",
+    "to": "/scout/release-notes/platform/"
+  },
+  {
+    "from": "/scout/reports/",
+    "to": "/scout/explore/dashboard/"
+  },
+  {
+    "from": "/scout/web-app/",
+    "to": "/scout/explore/dashboard/"
+  },
+  {
+    "from": "/scout/dashboard/",
+    "to": "/scout/explore/dashboard/"
+  },
+  {
+    "from": "/scout/metrics-exporter/",
+    "to": "/scout/explore/metrics-exporter/"
+  },
+  {
+    "from": "/scout/advanced-image-analysis/",
+    "to": "/scout/explore/analysis/"
+  },
+  {
+    "from": "/scout/image-analysis/",
+    "to": "/scout/explore/analysis/"
+  },
+  {
+    "from": "/scout/image-details-view",
+    "to": "/scout/explore/image-details-view/"
+  },
+  {
+    "from": "/scout/ci/",
+    "to": "/scout/integrations/ci/"
+  },
+  {
+    "from": "/scout/artifactory/",
+    "to": "/scout/integrations/registry/artifactory/"
+  },
+  {
+    "from": "/scout/guides/vex/",
+    "to": "/scout/how-tos/create-exceptions-vex/"
+  },
+  {
+    "from": "/engine/sbom/",
+    "to": "/scout/how-tos/view-create-sboms/"
+  },
+  {
+    "from": "/scout/sbom/",
+    "to": "/scout/how-tos/view-create-sboms/"
+  },
+  {
+    "from": "/scout/env-vars/",
+    "to": "/scout/how-tos/configure-cli/"
+  },
+  {
+    "from": "/scout/image-prefix/",
+    "to": "/scout/how-tos/artifact-types/"
+  },
+  {
+    "from": "/engine/scan/",
+    "to": "/scout/"
+  },
+  {
+    "from": "/desktop/extensions/marketplace/",
+    "to": "/extensions/marketplace/"
+  },
+  {
+    "from": "/desktop/extensions/non-marketplace/",
+    "to": "/extensions/non-marketplace/"
+  },
+  {
+    "from": "/desktop/extensions/settings-feedback/",
+    "to": "/extensions/settings-feedback/"
+  },
+  {
+    "from": "/desktop/extensions/private-marketplace/",
+    "to": "/extensions/private-marketplace/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/design/mui-best-practices/",
+    "to": "/extensions/extensions-sdk/design/mui-best-practices/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/design/design-principles/",
+    "to": "/extensions/extensions-sdk/design/design-principles/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/design/design-guidelines/",
+    "to": "/extensions/extensions-sdk/design/design-guidelines/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/design/design-overview/",
+    "to": "/extensions/extensions-sdk/design/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/design/overview/",
+    "to": "/extensions/extensions-sdk/design/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/design/",
+    "to": "/extensions/extensions-sdk/design/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/process/",
+    "to": "/extensions/extensions-sdk/process/"
+  },
+  {
+    "from": "desktop/extensions-sdk/tutorials/initialize/",
+    "to": "/extensions/extensions-sdk/quickstart/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/quickstart/",
+    "to": "/extensions/extensions-sdk/quickstart/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/extensions/share/",
+    "to": "/extensions/extensions-sdk/extensions/share/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/extensions/validation/",
+    "to": "/extensions/extensions-sdk/extensions/validate/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/build-install/",
+    "to": "/extensions/extensions-sdk/extensions/validate/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/cli/build-test-install-extension/",
+    "to": "/extensions/extensions-sdk/extensions/validate/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/extensions/validate/",
+    "to": "/extensions/extensions-sdk/extensions/validate/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/extensions/publish/",
+    "to": "/extensions/extensions-sdk/extensions/publish/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/extensions/multi-arch/",
+    "to": "/extensions/extensions-sdk/extensions/multi-arch/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/extensions/labels/",
+    "to": "/extensions/extensions-sdk/extensions/labels/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/extensions/DISTRIBUTION/",
+    "to": "/extensions/extensions-sdk/extensions/DISTRIBUTION/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/extensions/",
+    "to": "/extensions/extensions-sdk/extensions/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/extensions/METADATA",
+    "to": "/extensions/extensions-sdk/architecture/metadata/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/architecture/metadata/",
+    "to": "/extensions/extensions-sdk/architecture/metadata/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/architecture/",
+    "to": "/extensions/extensions-sdk/architecture/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/guides/security/",
+    "to": "/extensions/extensions-sdk/architecture/security/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/architecture/security/",
+    "to": "/extensions/extensions-sdk/architecture/security/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/kubernetes/",
+    "to": "/extensions/extensions-sdk/guides/kubernetes/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/guides/kubernetes/",
+    "to": "/extensions/extensions-sdk/guides/kubernetes/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/oauth2-flow/",
+    "to": "/extensions/extensions-sdk/guides/oauth2-flow/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/guides/oauth2-flow/",
+    "to": "/extensions/extensions-sdk/guides/oauth2-flow/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/guides/use-docker-socket-from-backend/",
+    "to": "/extensions/extensions-sdk/guides/use-docker-socket-from-backend/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/guides/invoke-host-binaries/",
+    "to": "/extensions/extensions-sdk/guides/invoke-host-binaries/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/test-debug/",
+    "to": "/extensions/extensions-sdk/dev/test-debug/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/test-debug/",
+    "to": "/extensions/extensions-sdk/dev/test-debug/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/cli/usage/",
+    "to": "/extensions/extensions-sdk/dev/usage/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/usage/",
+    "to": "/extensions/extensions-sdk/dev/usage/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/overview/",
+    "to": "/extensions/extensions-sdk/dev/api/overview/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/dashboard/",
+    "to": "/extensions/extensions-sdk/dev/api/dashboard/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/backend/",
+    "to": "/extensions/extensions-sdk/dev/api/backend/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/docker/",
+    "to": "/extensions/extensions-sdk/dev/api/docker/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/dashboard-routes-navigation/",
+    "to": "/extensions/extensions-sdk/dev/api/dashboard-routes-navigation/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/continuous-integration/",
+    "to": "/extensions/extensions-sdk/dev/continuous-integration/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/tutorials/minimal-frontend-extension/",
+    "to": "/extensions/extensions-sdk/build/minimal-frontend-extension/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/set-up/minimal-frontend-extension/",
+    "to": "/extensions/extensions-sdk/build/minimal-frontend-extension/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/minimal-frontend-extension/",
+    "to": "/extensions/extensions-sdk/build/minimal-frontend-extension/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/tutorials/minimal-backend-extension/",
+    "to": "/extensions/extensions-sdk/build/backend-extension-tutorial/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/minimal-backend-extension/",
+    "to": "/extensions/extensions-sdk/build/backend-extension-tutorial/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/set-up/backend-extension-tutorial/",
+    "to": "/extensions/extensions-sdk/build/backend-extension-tutorial/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/backend-extension-tutorial/",
+    "to": "/extensions/extensions-sdk/build/backend-extension-tutorial/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/tutorials/react-extension/",
+    "to": "/extensions/extensions-sdk/build/frontend-extension-tutorial/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/set-up/react-extension/",
+    "to": "/extensions/extensions-sdk/build/frontend-extension-tutorial/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/set-up/minimal-frontend-using-docker-cli/",
+    "to": "/extensions/extensions-sdk/build/frontend-extension-tutorial/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/set-up/frontend-extension-tutorial/",
+    "to": "/extensions/extensions-sdk/build/frontend-extension-tutorial/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/build/frontend-extension-tutorial/",
+    "to": "/extensions/extensions-sdk/build/frontend-extension-tutorial/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/overview/",
+    "to": "/extensions/extensions-sdk/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/",
+    "to": "/extensions/extensions-sdk/"
+  },
+  {
+    "from": "/desktop/extensions/",
+    "to": "/extensions/"
+  },
+  {
+    "from": "/subscription/details/",
+    "to": "/admin/subscription/details/"
+  },
+  {
+    "from": "/subscription/setup/",
+    "to": "/admin/subscription/setup/"
+  },
+  {
+    "from": "/docker-hub/upgrade/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/docker-hub/billing/upgrade/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/subscription/upgrade/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/subscription/downgrade/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/subscription/core-subscription/upgrade/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/subscription/core-subscription/downgrade/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/docker-hub/cancel-downgrade/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/docker-hub/billing/downgrade/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/billing/scout-billing/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/billing/subscription-management/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/subscription/change/",
+    "to": "/admin/subscription/change/"
+  },
+  {
+    "from": "/subscription/scale/",
+    "to": "/admin/subscription/scale/"
+  },
+  {
+    "from": "/subscription/faq/",
+    "to": "/admin/subscription/faq/"
+  },
+  {
+    "from": "/subscription/desktop-license/",
+    "to": "/admin/subscription/desktop-license/"
+  },
+  {
+    "from": "/docker-hub/billing/add-seats/",
+    "to": "/admin/subscription/manage-seats/"
+  },
+  {
+    "from": "/subscription/add-seats/",
+    "to": "/admin/subscription/manage-seats/"
+  },
+  {
+    "from": "/docker-hub/billing/remove-seats/",
+    "to": "/admin/subscription/manage-seats/"
+  },
+  {
+    "from": "/subscription/remove-seats/",
+    "to": "/admin/subscription/manage-seats/"
+  },
+  {
+    "from": "/subscription/core-subscription/add-seats/",
+    "to": "/admin/subscription/manage-seats/"
+  },
+  {
+    "from": "/subscription/core-subscription/remove-seats/",
+    "to": "/admin/subscription/manage-seats/"
+  },
+  {
+    "from": "/subscription/manage-seats/",
+    "to": "/admin/subscription/manage-seats/"
+  },
+  {
+    "from": "/docker-hub/billing/",
+    "to": "/admin/subscription/"
+  },
+  {
+    "from": "/docker-hub/billing/faq/",
+    "to": "/admin/subscription/"
+  },
+  {
+    "from": "/subscription/",
+    "to": "/admin/subscription/"
+  },
+  {
+    "from": "/docker-hub/accounts/",
+    "to": "/admin/accounts/create-account/"
+  },
+  {
+    "from": "/docker-id/",
+    "to": "/admin/accounts/create-account/"
+  },
+  {
+    "from": "/accounts/create-account/",
+    "to": "/admin/accounts/create-account/"
+  },
+  {
+    "from": "/accounts/deactivate-user-account/",
+    "to": "/admin/accounts/deactivate-user-account/"
+  },
+  {
+    "from": "/accounts/manage-account/",
+    "to": "/admin/accounts/manage-account/"
+  },
+  {
+    "from": "/docker-hub/general-faqs/",
+    "to": "/admin/accounts/general-faqs/"
+  },
+  {
+    "from": "/docker-hub/onboarding-faqs/",
+    "to": "/admin/accounts/general-faqs/"
+  },
+  {
+    "from": "/faq/admin/general-faqs/",
+    "to": "/admin/accounts/general-faqs/"
+  },
+  {
+    "from": "/admin/faqs/general-faqs/",
+    "to": "/admin/accounts/general-faqs/"
+  },
+  {
+    "from": "/accounts/general-faqs/",
+    "to": "/admin/accounts/general-faqs/"
+  },
+  {
+    "from": "/accounts/",
+    "to": "/admin/accounts/"
+  },
+  {
+    "from": "/support/",
+    "to": "/admin/support/"
+  },
+  {
+    "from": "/ai/sandboxes/architecture/",
+    "to": "/sandboxes/architecture/"
+  },
+  {
+    "from": "/ai/sandboxes/troubleshooting/",
+    "to": "/sandboxes/troubleshooting/"
+  },
+  {
+    "from": "/ai/sandboxes/security/defaults/",
+    "to": "/sandboxes/security/defaults/"
+  },
+  {
+    "from": "/ai/sandboxes/security/workspace/",
+    "to": "/sandboxes/security/workspace/"
+  },
+  {
+    "from": "/ai/sandboxes/security/credentials/",
+    "to": "/sandboxes/security/credentials/"
+  },
+  {
+    "from": "/ai/sandboxes/security/isolation/",
+    "to": "/sandboxes/security/isolation/"
+  },
+  {
+    "from": "/ai/sandboxes/security/policy/",
+    "to": "/sandboxes/security/policy/"
+  },
+  {
+    "from": "/ai/sandboxes/security/",
+    "to": "/sandboxes/security/"
+  },
+  {
+    "from": "/ai/sandboxes/usage/",
+    "to": "/sandboxes/usage/"
+  },
+  {
+    "from": "/ai/sandboxes/faq/",
+    "to": "/sandboxes/faq/"
+  },
+  {
+    "from": "/ai/sandboxes/agents/kiro/",
+    "to": "/sandboxes/agents/kiro/"
+  },
+  {
+    "from": "/ai/sandboxes/agents/claude-code/",
+    "to": "/sandboxes/agents/claude-code/"
+  },
+  {
+    "from": "/ai/sandboxes/agents/docker-agent/",
+    "to": "/sandboxes/agents/docker-agent/"
+  },
+  {
+    "from": "/ai/sandboxes/agents/custom-environments/",
+    "to": "/sandboxes/agents/custom-environments/"
+  },
+  {
+    "from": "/ai/sandboxes/agents/codex/",
+    "to": "/sandboxes/agents/codex/"
+  },
+  {
+    "from": "/ai/sandboxes/agents/gemini/",
+    "to": "/sandboxes/agents/gemini/"
+  },
+  {
+    "from": "/ai/sandboxes/agents/opencode/",
+    "to": "/sandboxes/agents/opencode/"
+  },
+  {
+    "from": "/ai/sandboxes/agents/copilot/",
+    "to": "/sandboxes/agents/copilot/"
+  },
+  {
+    "from": "/ai/sandboxes/agents/",
+    "to": "/sandboxes/agents/"
+  },
+  {
+    "from": "/ai/sandboxes/docker-desktop/",
+    "to": "/sandboxes/docker-desktop/"
+  },
+  {
+    "from": "/ai/sandboxes/get-started/",
+    "to": "/sandboxes/get-started/"
+  },
+  {
+    "from": "/ai/sandboxes/",
+    "to": "/sandboxes/"
+  },
+  {
+    "from": "/compose/how-tos/model-runner/",
+    "to": "/compose/ai/models-and-compose/"
+  },
+  {
+    "from": "/ai/compose/model-runner/",
+    "to": "/compose/ai/models-and-compose/"
+  },
+  {
+    "from": "/ai/compose/models-and-compose/",
+    "to": "/compose/ai/models-and-compose/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/cli/",
+    "to": "/mcp-catalog-toolkit/cli/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/faqs/",
+    "to": "/mcp-catalog-toolkit/faqs/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/profiles/",
+    "to": "/mcp-catalog-toolkit/profiles/"
+  },
+  {
+    "from": "/desktop/features/gordon/mcp/gordon-mcp-server/",
+    "to": "/mcp-catalog-toolkit/toolkit/"
+  },
+  {
+    "from": "/ai/gordon/mcp/gordon-mcp-server/",
+    "to": "/mcp-catalog-toolkit/toolkit/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/toolkit/",
+    "to": "/mcp-catalog-toolkit/toolkit/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/catalog/",
+    "to": "/mcp-catalog-toolkit/catalog/"
+  },
+  {
+    "from": "/ai/mcp-gateway/",
+    "to": "/mcp-catalog-toolkit/mcp-gateway/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/mcp-gateway/",
+    "to": "/mcp-catalog-toolkit/mcp-gateway/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/get-started/",
+    "to": "/mcp-catalog-toolkit/get-started/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/sandboxes/",
+    "to": "/mcp-catalog-toolkit/e2b-sandboxes/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/e2b-sandboxes/",
+    "to": "/mcp-catalog-toolkit/e2b-sandboxes/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/hub-mcp/",
+    "to": "/mcp-catalog-toolkit/hub-mcp/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/dynamic-mcp/",
+    "to": "/mcp-catalog-toolkit/dynamic-mcp/"
+  },
+  {
+    "from": "/ai/mcp-catalog-and-toolkit/",
+    "to": "/mcp-catalog-toolkit/"
+  },
+  {
+    "from": "/ai/docker-agent/rag/",
+    "to": "/docker-agent/rag/"
+  },
+  {
+    "from": "/ai/docker-agent/local-models/",
+    "to": "/docker-agent/local-models/"
+  },
+  {
+    "from": "/ai/docker-agent/best-practices/",
+    "to": "/docker-agent/best-practices/"
+  },
+  {
+    "from": "/ai/docker-agent/model-providers/",
+    "to": "/docker-agent/model-providers/"
+  },
+  {
+    "from": "/ai/docker-agent/integrations/acp/",
+    "to": "/docker-agent/integrations/acp/"
+  },
+  {
+    "from": "/ai/docker-agent/integrations/mcp/",
+    "to": "/docker-agent/integrations/mcp/"
+  },
+  {
+    "from": "/ai/docker-agent/integrations/a2a/",
+    "to": "/docker-agent/integrations/a2a/"
+  },
+  {
+    "from": "/ai/docker-agent/integrations/",
+    "to": "/docker-agent/integrations/"
+  },
+  {
+    "from": "/ai/docker-agent/tutorial/",
+    "to": "/docker-agent/tutorial/"
+  },
+  {
+    "from": "/ai/docker-agent/sharing-agents/",
+    "to": "/docker-agent/sharing-agents/"
+  },
+  {
+    "from": "/ai/docker-agent/evals/",
+    "to": "/docker-agent/evals/"
+  },
+  {
+    "from": "/ai/docker-agent/reference/examples/",
+    "to": "/docker-agent/reference/examples/"
+  },
+  {
+    "from": "/ai/docker-agent/reference/cli/",
+    "to": "/docker-agent/reference/cli/"
+  },
+  {
+    "from": "/ai/docker-agent/reference/config/",
+    "to": "/docker-agent/reference/config/"
+  },
+  {
+    "from": "/ai/docker-agent/reference/toolsets/",
+    "to": "/docker-agent/reference/toolsets/"
+  },
+  {
+    "from": "/ai/cagent/",
+    "to": "/docker-agent/"
+  },
+  {
+    "from": "/manuals/ai/cagent/",
+    "to": "/docker-agent/"
+  },
+  {
+    "from": "/ai/docker-agent/",
+    "to": "/docker-agent/"
+  },
+  {
+    "from": "/ai/gordon/how-to/permissions/",
+    "to": "/gordon/how-to/permissions/"
+  },
+  {
+    "from": "/ai/gordon/how-to/cli/",
+    "to": "/gordon/how-to/cli/"
+  },
+  {
+    "from": "/ai/gordon/how-to/docker-desktop/",
+    "to": "/gordon/how-to/docker-desktop/"
+  },
+  {
+    "from": "/ai/gordon/how-to/configure-tools/",
+    "to": "/gordon/how-to/configure-tools/"
+  },
+  {
+    "from": "/ai/gordon/concepts/capabilities/",
+    "to": "/gordon/concepts/capabilities/"
+  },
+  {
+    "from": "/ai/gordon/concepts/data-privacy/",
+    "to": "/gordon/concepts/data-privacy/"
+  },
+  {
+    "from": "/desktop/features/gordon/",
+    "to": "/gordon/"
+  },
+  {
+    "from": "/ai/gordon/",
+    "to": "/gordon/"
+  },
+  {
+    "from": "/ai/gordon/use-cases/",
+    "to": "/gordon/use-cases/"
+  },
+  {
+    "from": "/ai/model-runner/examples/",
+    "to": "/model-runner/examples/"
+  },
+  {
+    "from": "/ai/model-runner/ide-integrations/",
+    "to": "/model-runner/ide-integrations/"
+  },
+  {
+    "from": "/ai/model-runner/openwebui-integration/",
+    "to": "/model-runner/openwebui-integration/"
+  },
+  {
+    "from": "/ai/model-runner/inference-engines/",
+    "to": "/model-runner/inference-engines/"
+  },
+  {
+    "from": "/ai/model-runner/configuration/",
+    "to": "/model-runner/configuration/"
+  },
+  {
+    "from": "/ai/model-runner/get-started/",
+    "to": "/model-runner/get-started/"
+  },
+  {
+    "from": "/desktop/features/model-runner/",
+    "to": "/model-runner/"
+  },
+  {
+    "from": "/model-runner/",
+    "to": "/model-runner/"
+  },
+  {
+    "from": "/ai/model-runner/",
+    "to": "/model-runner/"
+  },
+  {
+    "from": "/ai/model-runner/api-reference/",
+    "to": "/model-runner/api-reference/"
+  },
+  {
+    "from": "/build/dockerfile/release-notes/",
+    "to": "/build/buildkit/dockerfile-release-notes/"
+  },
+  {
+    "from": "/build/buildkit/dockerfile-frontend/",
+    "to": "/build/buildkit/frontend/"
+  },
+  {
+    "from": "/build/dockerfile/frontend/",
+    "to": "/build/buildkit/frontend/"
+  },
+  {
+    "from": "/build/building/cache/backends/gha/",
+    "to": "/build/cache/backends/gha/"
+  },
+  {
+    "from": "/build/building/cache/backends/inline/",
+    "to": "/build/cache/backends/inline/"
+  },
+  {
+    "from": "/build/building/cache/backends/s3/",
+    "to": "/build/cache/backends/s3/"
+  },
+  {
+    "from": "/build/building/cache/backends/azblob/",
+    "to": "/build/cache/backends/azblob/"
+  },
+  {
+    "from": "/build/building/cache/backends/local/",
+    "to": "/build/cache/backends/local/"
+  },
+  {
+    "from": "/build/building/cache/backends/registry/",
+    "to": "/build/cache/backends/registry/"
+  },
+  {
+    "from": "/build/building/cache/backends/",
+    "to": "/build/cache/backends/"
+  },
+  {
+    "from": "/build/building/cache/garbage-collection/",
+    "to": "/build/cache/garbage-collection/"
+  },
+  {
+    "from": "/build/guide/mounts/",
+    "to": "/build/cache/optimize/"
+  },
+  {
+    "from": "/build/building/cache/",
+    "to": "/build/cache/"
+  },
+  {
+    "from": "/build/guide/layers/",
+    "to": "/build/cache/"
+  },
+  {
+    "from": "/build/buildx/drivers/kubernetes/",
+    "to": "/build/builders/drivers/kubernetes/"
+  },
+  {
+    "from": "/build/building/drivers/kubernetes/",
+    "to": "/build/builders/drivers/kubernetes/"
+  },
+  {
+    "from": "/build/drivers/kubernetes/",
+    "to": "/build/builders/drivers/kubernetes/"
+  },
+  {
+    "from": "/build/buildx/drivers/docker-container/",
+    "to": "/build/builders/drivers/docker-container/"
+  },
+  {
+    "from": "/build/building/drivers/docker-container/",
+    "to": "/build/builders/drivers/docker-container/"
+  },
+  {
+    "from": "/build/drivers/docker-container/",
+    "to": "/build/builders/drivers/docker-container/"
+  },
+  {
+    "from": "/build/buildx/drivers/docker/",
+    "to": "/build/builders/drivers/docker/"
+  },
+  {
+    "from": "/build/building/drivers/docker/",
+    "to": "/build/builders/drivers/docker/"
+  },
+  {
+    "from": "/build/drivers/docker/",
+    "to": "/build/builders/drivers/docker/"
+  },
+  {
+    "from": "/build/buildx/drivers/remote/",
+    "to": "/build/builders/drivers/remote/"
+  },
+  {
+    "from": "/build/building/drivers/remote/",
+    "to": "/build/builders/drivers/remote/"
+  },
+  {
+    "from": "/build/drivers/remote/",
+    "to": "/build/builders/drivers/remote/"
+  },
+  {
+    "from": "/build/buildx/drivers/",
+    "to": "/build/builders/drivers/"
+  },
+  {
+    "from": "/build/building/drivers/",
+    "to": "/build/builders/drivers/"
+  },
+  {
+    "from": "/build/buildx/multiple-builders/",
+    "to": "/build/builders/drivers/"
+  },
+  {
+    "from": "/build/drivers/",
+    "to": "/build/builders/drivers/"
+  },
+  {
+    "from": "/ci-cd/best-practices/",
+    "to": "/build/ci/"
+  },
+  {
+    "from": "/ci-cd/github-actions/",
+    "to": "/build/ci/github-actions/"
+  },
+  {
+    "from": "/build/ci/github-actions/examples/",
+    "to": "/build/ci/github-actions/"
+  },
+  {
+    "from": "/build/building/exporters/local-tar/",
+    "to": "/build/exporters/local-tar/"
+  },
+  {
+    "from": "/build/building/exporters/image-registry/",
+    "to": "/build/exporters/image-registry/"
+  },
+  {
+    "from": "/build/building/exporters/oci-docker/",
+    "to": "/build/exporters/oci-docker/"
+  },
+  {
+    "from": "/build/building/exporters/",
+    "to": "/build/exporters/"
+  },
+  {
+    "from": "/build/hellobuild/",
+    "to": "/build/concepts/dockerfile/"
+  },
+  {
+    "from": "/build/building/packaging/",
+    "to": "/build/concepts/dockerfile/"
+  },
+  {
+    "from": "/build/install-buildx/",
+    "to": "/build/concepts/overview/"
+  },
+  {
+    "from": "/build/architecture/",
+    "to": "/build/concepts/overview/"
+  },
+  {
+    "from": "/build/building/context/",
+    "to": "/build/concepts/context/"
+  },
+  {
+    "from": "/build/customize/bake/hcl-funcs/",
+    "to": "/build/bake/funcs/"
+  },
+  {
+    "from": "/build/bake/hcl-funcs/",
+    "to": "/build/bake/funcs/"
+  },
+  {
+    "from": "/build/customize/bake/build-contexts/",
+    "to": "/build/bake/contexts/"
+  },
+  {
+    "from": "/build/bake/build-contexts/",
+    "to": "/build/bake/contexts/"
+  },
+  {
+    "from": "/build/bake/configuring-build/",
+    "to": "/build/bake/overrides/"
+  },
+  {
+    "from": "/build/customize/bake/compose-file/",
+    "to": "/build/bake/compose-file/"
+  },
+  {
+    "from": "/build/bake/advanced/",
+    "to": "/build/bake/expressions/"
+  },
+  {
+    "from": "/build/customize/bake/",
+    "to": "/build/bake/"
+  },
+  {
+    "from": "/build/attestations/sbom/",
+    "to": "/build/metadata/attestations/sbom/"
+  },
+  {
+    "from": "/build/attestations/slsa-provenance/",
+    "to": "/build/metadata/attestations/slsa-provenance/"
+  },
+  {
+    "from": "/build/attestations/",
+    "to": "/build/metadata/attestations/"
+  },
+  {
+    "from": "/build/building/annotations/",
+    "to": "/build/metadata/annotations/"
+  },
+  {
+    "from": "/buildx/working-with-buildx/",
+    "to": "/build/"
+  },
+  {
+    "from": "/develop/develop-images/build_enhancements/",
+    "to": "/build/"
+  },
+  {
+    "from": "/engine/userguide/eng-image/multistage-build/",
+    "to": "/build/building/multi-stage/"
+  },
+  {
+    "from": "/develop/develop-images/multistage-build/",
+    "to": "/build/building/multi-stage/"
+  },
+  {
+    "from": "/articles/baseimages/",
+    "to": "/build/building/base-images/"
+  },
+  {
+    "from": "/engine/articles/baseimages/",
+    "to": "/build/building/base-images/"
+  },
+  {
+    "from": "/engine/userguide/eng-image/baseimages/",
+    "to": "/build/building/base-images/"
+  },
+  {
+    "from": "/develop/develop-images/baseimages/",
+    "to": "/build/building/base-images/"
+  },
+  {
+    "from": "/articles/dockerfile_best-practices/",
+    "to": "/build/building/best-practices/"
+  },
+  {
+    "from": "/engine/articles/dockerfile_best-practices/",
+    "to": "/build/building/best-practices/"
+  },
+  {
+    "from": "/engine/userguide/eng-image/dockerfile_best-practices/",
+    "to": "/build/building/best-practices/"
+  },
+  {
+    "from": "/develop/develop-images/dockerfile_best-practices/",
+    "to": "/build/building/best-practices/"
+  },
+  {
+    "from": "/develop/develop-images/guidelines/",
+    "to": "/build/building/best-practices/"
+  },
+  {
+    "from": "/develop/develop-images/instructions/",
+    "to": "/build/building/best-practices/"
+  },
+  {
+    "from": "/develop/dev-best-practices/",
+    "to": "/build/building/best-practices/"
+  },
+  {
+    "from": "/develop/security-best-practices/",
+    "to": "/build/building/best-practices/"
+  },
+  {
+    "from": "/build/buildx/multiplatform-images/",
+    "to": "/build/building/multi-platform/"
+  },
+  {
+    "from": "/desktop/multi-arch/",
+    "to": "/build/building/multi-platform/"
+  },
+  {
+    "from": "/docker-for-mac/multi-arch/",
+    "to": "/build/building/multi-platform/"
+  },
+  {
+    "from": "/mackit/multi-arch/",
+    "to": "/build/building/multi-platform/"
+  },
+  {
+    "from": "/build/guide/multi-platform/",
+    "to": "/build/building/multi-platform/"
+  },
+  {
+    "from": "/build/guide/export/",
+    "to": "/build/building/export/"
+  },
+  {
+    "from": "/build/buildkit/color-output-controls/",
+    "to": "/build/building/variables/"
+  },
+  {
+    "from": "/build/building/env-vars/",
+    "to": "/build/building/variables/"
+  },
+  {
+    "from": "/build/guide/build-args/",
+    "to": "/build/building/variables/"
+  },
+  {
+    "from": "/build/building/opentelemetry/",
+    "to": "/build/debug/opentelemetry/"
+  },
+  {
+    "from": "/datacenter/ucp/2.2/guides/admin/monitor-and-troubleshoot/troubleshoot-task-state/",
+    "to": "/engine/swarm/how-swarm-mode-works/swarm-task-states/"
+  },
+  {
+    "from": "/engine/swarm/how-swarm-mode-works/",
+    "to": "/engine/swarm/how-swarm-mode-works/nodes/"
+  },
+  {
+    "from": "/engine/swarm/manager-administration-guide/",
+    "to": "/engine/swarm/admin_guide/"
+  },
+  {
+    "from": "/api/swarm-api/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/engine/userguide/networking/overlay-standalone-swarm/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/network/overlay-standalone.swarm/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/release-notes/docker-swarm/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/api/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/configure-tls/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/discovery/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/get-swarm/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/install-manual/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/install-w-machine/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/multi-host-networking/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/multi-manager-setup/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/networking/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/overview/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/plan-for-production/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/provision-with-machine/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/reference/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/reference/create/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/reference/help/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/reference/join/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/reference/list/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/reference/manage/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/reference/swarm/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/release-notes/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/scheduler/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/scheduler/filter/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/scheduler/rescheduling/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/scheduler/strategy/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/secure-swarm-tls/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/status-code-comparison-to-docker/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/swarm-api/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/swarm_at_scale/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/swarm_at_scale/02-deploy-infra/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/swarm_at_scale/03-create-cluster/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/swarm_at_scale/04-deploy-app/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/swarm_at_scale/about/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/swarm_at_scale/deploy-app/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/swarm_at_scale/deploy-infra/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/swarm/swarm_at_scale/troubleshoot/",
+    "to": "/engine/swarm/"
+  },
+  {
+    "from": "/engine/context/working-with-contexts/",
+    "to": "/engine/manage-resources/contexts/"
+  },
+  {
+    "from": "/engine/userguide/labels-custom-metadata/",
+    "to": "/engine/manage-resources/labels/"
+  },
+  {
+    "from": "/config/labels-custom-metadata/",
+    "to": "/engine/manage-resources/labels/"
+  },
+  {
+    "from": "/engine/admin/pruning/",
+    "to": "/engine/manage-resources/pruning/"
+  },
+  {
+    "from": "/config/pruning/",
+    "to": "/engine/manage-resources/pruning/"
+  },
+  {
+    "from": "/ee/docker-ee/centos/",
+    "to": "/engine/install/centos/"
+  },
+  {
+    "from": "/engine/installation/centos/",
+    "to": "/engine/install/centos/"
+  },
+  {
+    "from": "/engine/installation/linux/centos/",
+    "to": "/engine/install/centos/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ce/centos/",
+    "to": "/engine/install/centos/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ee/centos/",
+    "to": "/engine/install/centos/"
+  },
+  {
+    "from": "/install/linux/centos/",
+    "to": "/engine/install/centos/"
+  },
+  {
+    "from": "/install/linux/docker-ce/centos/",
+    "to": "/engine/install/centos/"
+  },
+  {
+    "from": "/install/linux/docker-ee/centos/",
+    "to": "/engine/install/centos/"
+  },
+  {
+    "from": "/engine/installation/debian/",
+    "to": "/engine/install/debian/"
+  },
+  {
+    "from": "/engine/installation/linux/debian/",
+    "to": "/engine/install/debian/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ce/debian/",
+    "to": "/engine/install/debian/"
+  },
+  {
+    "from": "/install/linux/docker-ce/debian/",
+    "to": "/engine/install/debian/"
+  },
+  {
+    "from": "/engine/installation/linux/raspbian/",
+    "to": "/engine/install/raspberry-pi-os/"
+  },
+  {
+    "from": "/engine/install/raspbian/",
+    "to": "/engine/install/raspberry-pi-os/"
+  },
+  {
+    "from": "/ee/docker-ee/ubuntu/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ce/ubuntu/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ee/ubuntu/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/engine/installation/linux/ubuntu/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/engine/installation/linux/ubuntulinux/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/engine/installation/ubuntulinux/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/install/linux/docker-ce/ubuntu/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/install/linux/docker-ee/ubuntu/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/install/linux/ubuntu/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/installation/ubuntulinux/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/linux/step_one/",
+    "to": "/engine/install/ubuntu/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ee/linux-postinstall/",
+    "to": "/engine/install/linux-postinstall/"
+  },
+  {
+    "from": "/engine/installation/linux/linux-postinstall/",
+    "to": "/engine/install/linux-postinstall/"
+  },
+  {
+    "from": "/install/linux/linux-postinstall/",
+    "to": "/engine/install/linux-postinstall/"
+  },
+  {
+    "from": "/engine/installation/fedora/",
+    "to": "/engine/install/fedora/"
+  },
+  {
+    "from": "/engine/installation/linux/fedora/",
+    "to": "/engine/install/fedora/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ce/fedora/",
+    "to": "/engine/install/fedora/"
+  },
+  {
+    "from": "/install/linux/docker-ce/fedora/",
+    "to": "/engine/install/fedora/"
+  },
+  {
+    "from": "/engine/installation/binaries/",
+    "to": "/engine/install/binaries/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ce/binaries/",
+    "to": "/engine/install/binaries/"
+  },
+  {
+    "from": "/install/linux/docker-ce/binaries/",
+    "to": "/engine/install/binaries/"
+  },
+  {
+    "from": "/installation/binaries/",
+    "to": "/engine/install/binaries/"
+  },
+  {
+    "from": "/ee/docker-ee/rhel/",
+    "to": "/engine/install/rhel/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ce/rhel/",
+    "to": "/engine/install/rhel/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ee/rhel/",
+    "to": "/engine/install/rhel/"
+  },
+  {
+    "from": "/engine/installation/linux/rhel/",
+    "to": "/engine/install/rhel/"
+  },
+  {
+    "from": "/engine/installation/rhel/",
+    "to": "/engine/install/rhel/"
+  },
+  {
+    "from": "/install/linux/docker-ee/rhel/",
+    "to": "/engine/install/rhel/"
+  },
+  {
+    "from": "/installation/rhel/",
+    "to": "/engine/install/rhel/"
+  },
+  {
+    "from": "/ee/docker-ee/sles/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/ee/docker-ee/suse/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ce/sles/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ee/sles/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ee/suse/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/engine/installation/linux/sles/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/engine/installation/linux/SUSE/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/engine/installation/linux/suse/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/engine/installation/sles/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/engine/installation/SUSE/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/install/linux/docker-ce/sles/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/install/linux/docker-ee/sles/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/install/linux/docker-ee/suse/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/install/linux/sles/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/installation/sles/",
+    "to": "/engine/install/sles/"
+  },
+  {
+    "from": "/cs-engine/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/cs-engine/1.12/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/cs-engine/1.12/upgrade/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/cs-engine/1.13/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/cs-engine/1.13/upgrade/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/ee/docker-ee/oracle/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/ee/supported-platforms/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/en/latest/installation/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/frugalware/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/archlinux/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/cruxlinux/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ce/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ee/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/docker-ee/oracle/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/frugalware/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/gentoolinux/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/oracle/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/linux/other/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/engine/installation/oracle/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/enterprise/supported-platforms/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/install/linux/docker-ee/oracle/",
+    "to": "/engine/install/"
+  },
+  {
+    "from": "/articles/https/",
+    "to": "/engine/security/protect-access/"
+  },
+  {
+    "from": "/engine/articles/https/",
+    "to": "/engine/security/protect-access/"
+  },
+  {
+    "from": "/engine/security/https/",
+    "to": "/engine/security/protect-access/"
+  },
+  {
+    "from": "/articles/certificates/",
+    "to": "/engine/security/certificates/"
+  },
+  {
+    "from": "/engine/articles/certificates/",
+    "to": "/engine/security/certificates/"
+  },
+  {
+    "from": "/ee/dtr/user/access-dtr/configure-your-notary-client/",
+    "to": "/engine/security/trust/trust_delegation/"
+  },
+  {
+    "from": "/engine/security/trust/content_trust/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/notary/getting_started/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/notary/advanced_usage/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/notary/service_architecture/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/notary/running_a_service/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/notary/changelog/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/notary/reference/server-config/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/notary/reference/signer-config/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/notary/reference/client-config/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/notary/reference/common-configs/",
+    "to": "/engine/security/trust/"
+  },
+  {
+    "from": "/security/trust/trust_sandbox/",
+    "to": "/engine/security/trust/trust_sandbox/"
+  },
+  {
+    "from": "/articles/security/",
+    "to": "/engine/security/"
+  },
+  {
+    "from": "/engine/articles/security/",
+    "to": "/engine/security/"
+  },
+  {
+    "from": "/engine/security/security/",
+    "to": "/engine/security/"
+  },
+  {
+    "from": "/security/security/",
+    "to": "/engine/security/"
+  },
+  {
+    "from": "/network/ipvlan/",
+    "to": "/engine/network/drivers/ipvlan/"
+  },
+  {
+    "from": "/network/drivers/ipvlan/",
+    "to": "/engine/network/drivers/ipvlan/"
+  },
+  {
+    "from": "/config/containers/macvlan/",
+    "to": "/engine/network/drivers/macvlan/"
+  },
+  {
+    "from": "/engine/userguide/networking/get-started-macvlan/",
+    "to": "/engine/network/drivers/macvlan/"
+  },
+  {
+    "from": "/network/macvlan/",
+    "to": "/engine/network/drivers/macvlan/"
+  },
+  {
+    "from": "/network/drivers/macvlan/",
+    "to": "/engine/network/drivers/macvlan/"
+  },
+  {
+    "from": "/engine/network/tutorials/macvlan/",
+    "to": "/engine/network/drivers/macvlan/"
+  },
+  {
+    "from": "/config/containers/overlay/",
+    "to": "/engine/network/drivers/overlay/"
+  },
+  {
+    "from": "/engine/userguide/networking/overlay-security-model/",
+    "to": "/engine/network/drivers/overlay/"
+  },
+  {
+    "from": "/network/overlay/",
+    "to": "/engine/network/drivers/overlay/"
+  },
+  {
+    "from": "/network/drivers/overlay/",
+    "to": "/engine/network/drivers/overlay/"
+  },
+  {
+    "from": "/engine/network/tutorials/overlay/",
+    "to": "/engine/network/drivers/overlay/"
+  },
+  {
+    "from": "/engine/userguide/networking/get-started-overlay/",
+    "to": "/engine/network/drivers/overlay/"
+  },
+  {
+    "from": "/network/none/",
+    "to": "/engine/network/drivers/none/"
+  },
+  {
+    "from": "/network/drivers/none/",
+    "to": "/engine/network/drivers/none/"
+  },
+  {
+    "from": "/config/containers/bridges/",
+    "to": "/engine/network/drivers/bridge/"
+  },
+  {
+    "from": "/engine/userguide/networking/default_network/build-bridges/",
+    "to": "/engine/network/drivers/bridge/"
+  },
+  {
+    "from": "/engine/userguide/networking/default_network/custom-docker0/",
+    "to": "/engine/network/drivers/bridge/"
+  },
+  {
+    "from": "/engine/userguide/networking/work-with-networks/",
+    "to": "/engine/network/drivers/bridge/"
+  },
+  {
+    "from": "/network/bridge/",
+    "to": "/engine/network/drivers/bridge/"
+  },
+  {
+    "from": "/network/drivers/bridge/",
+    "to": "/engine/network/drivers/bridge/"
+  },
+  {
+    "from": "/engine/network/tutorials/standalone/",
+    "to": "/engine/network/drivers/bridge/"
+  },
+  {
+    "from": "/network/host/",
+    "to": "/engine/network/drivers/host/"
+  },
+  {
+    "from": "/network/drivers/host/",
+    "to": "/engine/network/drivers/host/"
+  },
+  {
+    "from": "/engine/network/tutorials/host/",
+    "to": "/engine/network/drivers/host/"
+  },
+  {
+    "from": "/network/iptables/",
+    "to": "/engine/network/packet-filtering-firewalls/"
+  },
+  {
+    "from": "/network/packet-filtering-firewalls/",
+    "to": "/engine/network/packet-filtering-firewalls/"
+  },
+  {
+    "from": "/userguide/dockerlinks/",
+    "to": "/engine/network/links/"
+  },
+  {
+    "from": "/engine/userguide/networking/default_network/dockerlinks/",
+    "to": "/engine/network/links/"
+  },
+  {
+    "from": "/network/links/",
+    "to": "/engine/network/links/"
+  },
+  {
+    "from": "/articles/networking/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/config/containers/container-networking/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/engine/tutorials/networkingcontainers/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/engine/userguide/networking/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/engine/userguide/networking/configure-dns/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/engine/userguide/networking/default_network/binding/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/engine/userguide/networking/default_network/configure-dns/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/engine/userguide/networking/default_network/container-communication/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/engine/userguide/networking/dockernetworks/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/network/",
+    "to": "/engine/network/"
+  },
+  {
+    "from": "/config/filter/",
+    "to": "/engine/cli/filter/"
+  },
+  {
+    "from": "/config/otel/",
+    "to": "/engine/cli/otel/"
+  },
+  {
+    "from": "/config/completion/",
+    "to": "/engine/cli/completion/"
+  },
+  {
+    "from": "/engine/admin/formatting/",
+    "to": "/engine/cli/formatting/"
+  },
+  {
+    "from": "/config/formatting/",
+    "to": "/engine/cli/formatting/"
+  },
+  {
+    "from": "/network/proxy/",
+    "to": "/engine/cli/proxy/"
+  },
+  {
+    "from": "/engine/release-notes/28.0/",
+    "to": "/engine/release-notes/28/"
+  },
+  {
+    "from": "/engine/release-notes/28.1/",
+    "to": "/engine/release-notes/28/"
+  },
+  {
+    "from": "/engine/release-notes/28.2/",
+    "to": "/engine/release-notes/28/"
+  },
+  {
+    "from": "/engine/release-notes/28.3/",
+    "to": "/engine/release-notes/28/"
+  },
+  {
+    "from": "/engine/release-notes/28.4/",
+    "to": "/engine/release-notes/28/"
+  },
+  {
+    "from": "/engine/release-notes/28.5/",
+    "to": "/engine/release-notes/28/"
+  },
+  {
+    "from": "/cs-engine/1.12/release-notes/",
+    "to": "/engine/release-notes/prior-releases/"
+  },
+  {
+    "from": "/cs-engine/1.12/release-notes/release-notes/",
+    "to": "/engine/release-notes/prior-releases/"
+  },
+  {
+    "from": "/cs-engine/1.12/release-notes/prior-release-notes/",
+    "to": "/engine/release-notes/prior-releases/"
+  },
+  {
+    "from": "/cs-engine/1.13/release-notes/",
+    "to": "/engine/release-notes/prior-releases/"
+  },
+  {
+    "from": "/ee/engine/release-notes/",
+    "to": "/engine/release-notes/prior-releases/"
+  },
+  {
+    "from": "/ee/docker-ee/release-notes/",
+    "to": "/engine/release-notes/prior-releases/"
+  },
+  {
+    "from": "/engine/release-notes/",
+    "to": "/engine/release-notes/29/"
+  },
+  {
+    "from": "/engine/release-notes/latest/",
+    "to": "/engine/release-notes/29/"
+  },
+  {
+    "from": "/release-notes/docker-ce/",
+    "to": "/engine/release-notes/29/"
+  },
+  {
+    "from": "/release-notes/docker-engine/",
+    "to": "/engine/release-notes/29/"
+  },
+  {
+    "from": "/engine/release-notes/29.0/",
+    "to": "/engine/release-notes/29/"
+  },
+  {
+    "from": "/engine/release-notes/27.1/",
+    "to": "/engine/release-notes/27/"
+  },
+  {
+    "from": "/engine/release-notes/27.2/",
+    "to": "/engine/release-notes/27/"
+  },
+  {
+    "from": "/engine/release-notes/27.3/",
+    "to": "/engine/release-notes/27/"
+  },
+  {
+    "from": "/engine/release-notes/27.4/",
+    "to": "/engine/release-notes/27/"
+  },
+  {
+    "from": "/engine/release-notes/27.5/",
+    "to": "/engine/release-notes/27/"
+  },
+  {
+    "from": "/storage/storagedriver/device-mapper-driver/",
+    "to": "/engine/storage/drivers/device-mapper-driver/"
+  },
+  {
+    "from": "/storage/storagedriver/aufs-driver/",
+    "to": "/engine/storage/drivers/aufs-driver/"
+  },
+  {
+    "from": "/storage/storagedriver/overlayfs-driver/",
+    "to": "/engine/storage/drivers/overlayfs-driver/"
+  },
+  {
+    "from": "/storage/storagedriver/btrfs-driver/",
+    "to": "/engine/storage/drivers/btrfs-driver/"
+  },
+  {
+    "from": "/storage/storagedriver/vfs-driver/",
+    "to": "/engine/storage/drivers/vfs-driver/"
+  },
+  {
+    "from": "/storage/storagedriver/zfs-driver/",
+    "to": "/engine/storage/drivers/zfs-driver/"
+  },
+  {
+    "from": "/storage/storagedriver/selectadriver/",
+    "to": "/engine/storage/drivers/select-storage-driver/"
+  },
+  {
+    "from": "/storage/storagedriver/select-storage-driver/",
+    "to": "/engine/storage/drivers/select-storage-driver/"
+  },
+  {
+    "from": "/storage/storagedriver/imagesandcontainers/",
+    "to": "/engine/storage/drivers/"
+  },
+  {
+    "from": "/storage/storagedriver/",
+    "to": "/engine/storage/drivers/"
+  },
+  {
+    "from": "/engine/userguide/storagedriver/imagesandcontainers/",
+    "to": "/engine/storage/drivers/"
+  },
+  {
+    "from": "/engine/admin/volumes/tmpfs/",
+    "to": "/engine/storage/tmpfs/"
+  },
+  {
+    "from": "/storage/tmpfs/",
+    "to": "/engine/storage/tmpfs/"
+  },
+  {
+    "from": "/storage/containerd/",
+    "to": "/engine/storage/containerd/"
+  },
+  {
+    "from": "/userguide/dockervolumes/",
+    "to": "/engine/storage/volumes/"
+  },
+  {
+    "from": "/engine/tutorials/dockervolumes/",
+    "to": "/engine/storage/volumes/"
+  },
+  {
+    "from": "/engine/userguide/dockervolumes/",
+    "to": "/engine/storage/volumes/"
+  },
+  {
+    "from": "/engine/admin/volumes/volumes/",
+    "to": "/engine/storage/volumes/"
+  },
+  {
+    "from": "/storage/volumes/",
+    "to": "/engine/storage/volumes/"
+  },
+  {
+    "from": "/engine/admin/volumes/backing-up/",
+    "to": "/engine/storage/volumes/"
+  },
+  {
+    "from": "/engine/admin/volumes/",
+    "to": "/engine/storage/"
+  },
+  {
+    "from": "/storage/",
+    "to": "/engine/storage/"
+  },
+  {
+    "from": "/engine/admin/volumes/bind-mounts/",
+    "to": "/engine/storage/bind-mounts/"
+  },
+  {
+    "from": "/storage/bind-mounts/",
+    "to": "/engine/storage/bind-mounts/"
+  },
+  {
+    "from": "/config/daemon/remote-access/",
+    "to": "/engine/daemon/remote-access/"
+  },
+  {
+    "from": "/config/containers/live-restore/",
+    "to": "/engine/daemon/live-restore/"
+  },
+  {
+    "from": "/engine/admin/live-restore/",
+    "to": "/engine/daemon/live-restore/"
+  },
+  {
+    "from": "/engine/containers/live-restore/",
+    "to": "/engine/daemon/live-restore/"
+  },
+  {
+    "from": "/engine/alternative-runtimes/",
+    "to": "/engine/daemon/alternative-runtimes/"
+  },
+  {
+    "from": "/engine/admin/prometheus/",
+    "to": "/engine/daemon/prometheus/"
+  },
+  {
+    "from": "/config/thirdparty/monitoring/",
+    "to": "/engine/daemon/prometheus/"
+  },
+  {
+    "from": "/config/thirdparty/prometheus/",
+    "to": "/engine/daemon/prometheus/"
+  },
+  {
+    "from": "/config/daemon/prometheus/",
+    "to": "/engine/daemon/prometheus/"
+  },
+  {
+    "from": "/engine/install/troubleshoot/",
+    "to": "/engine/daemon/troubleshoot/"
+  },
+  {
+    "from": "/storage/troubleshooting_volume_errors/",
+    "to": "/engine/daemon/troubleshoot/"
+  },
+  {
+    "from": "/config/daemon/troubleshooting/",
+    "to": "/engine/daemon/troubleshoot/"
+  },
+  {
+    "from": "/config/daemon/logs/",
+    "to": "/engine/daemon/logs/"
+  },
+  {
+    "from": "/engine/userguide/networking/default_network/ipv6/",
+    "to": "/engine/daemon/ipv6/"
+  },
+  {
+    "from": "/config/daemon/ipv6/",
+    "to": "/engine/daemon/ipv6/"
+  },
+  {
+    "from": "/config/daemon/start/",
+    "to": "/engine/daemon/start/"
+  },
+  {
+    "from": "/articles/host_integration/",
+    "to": "/engine/daemon/proxy/"
+  },
+  {
+    "from": "/articles/systemd/",
+    "to": "/engine/daemon/proxy/"
+  },
+  {
+    "from": "/engine/admin/systemd/",
+    "to": "/engine/daemon/proxy/"
+  },
+  {
+    "from": "/engine/articles/systemd/",
+    "to": "/engine/daemon/proxy/"
+  },
+  {
+    "from": "/config/daemon/systemd/",
+    "to": "/engine/daemon/proxy/"
+  },
+  {
+    "from": "/config/daemon/proxy/",
+    "to": "/engine/daemon/proxy/"
+  },
+  {
+    "from": "/articles/chef/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/articles/configuring/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/articles/dsc/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/articles/puppet/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/config/thirdparty/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/config/thirdparty/ansible/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/config/thirdparty/chef/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/config/thirdparty/dsc/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/config/thirdparty/puppet/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/admin/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/admin/ansible/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/admin/chef/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/admin/configuring/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/admin/dsc/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/admin/puppet/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/articles/chef/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/articles/configuring/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/articles/dsc/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/articles/puppet/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/engine/userguide/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/config/daemon/",
+    "to": "/engine/daemon/"
+  },
+  {
+    "from": "/articles/using_supervisord/",
+    "to": "/engine/containers/multi-service_container/"
+  },
+  {
+    "from": "/engine/admin/multi-service_container/",
+    "to": "/engine/containers/multi-service_container/"
+  },
+  {
+    "from": "/engine/admin/using_supervisord/",
+    "to": "/engine/containers/multi-service_container/"
+  },
+  {
+    "from": "/engine/articles/using_supervisord/",
+    "to": "/engine/containers/multi-service_container/"
+  },
+  {
+    "from": "/config/containers/multi-service_container/",
+    "to": "/engine/containers/multi-service_container/"
+  },
+  {
+    "from": "/engine/articles/host_integration/",
+    "to": "/engine/containers/start-containers-automatically/"
+  },
+  {
+    "from": "/engine/admin/host_integration/",
+    "to": "/engine/containers/start-containers-automatically/"
+  },
+  {
+    "from": "/engine/admin/start-containers-automatically/",
+    "to": "/engine/containers/start-containers-automatically/"
+  },
+  {
+    "from": "/config/containers/start-containers-automatically/",
+    "to": "/engine/containers/start-containers-automatically/"
+  },
+  {
+    "from": "/engine/admin/resource_constraints/",
+    "to": "/engine/containers/resource_constraints/"
+  },
+  {
+    "from": "/config/containers/resource_constraints/",
+    "to": "/engine/containers/resource_constraints/"
+  },
+  {
+    "from": "/articles/runmetrics/",
+    "to": "/engine/containers/runmetrics/"
+  },
+  {
+    "from": "/engine/articles/run_metrics/",
+    "to": "/engine/containers/runmetrics/"
+  },
+  {
+    "from": "/engine/articles/runmetrics/",
+    "to": "/engine/containers/runmetrics/"
+  },
+  {
+    "from": "/engine/admin/runmetrics/",
+    "to": "/engine/containers/runmetrics/"
+  },
+  {
+    "from": "/config/containers/runmetrics/",
+    "to": "/engine/containers/runmetrics/"
+  },
+  {
+    "from": "/engine/reference/logging/syslog/",
+    "to": "/engine/logging/drivers/syslog/"
+  },
+  {
+    "from": "/engine/admin/logging/syslog/",
+    "to": "/engine/logging/drivers/syslog/"
+  },
+  {
+    "from": "/config/containers/logging/syslog/",
+    "to": "/engine/logging/drivers/syslog/"
+  },
+  {
+    "from": "/engine/reference/logging/journald/",
+    "to": "/engine/logging/drivers/journald/"
+  },
+  {
+    "from": "/engine/admin/logging/journald/",
+    "to": "/engine/logging/drivers/journald/"
+  },
+  {
+    "from": "/config/containers/logging/journald/",
+    "to": "/engine/logging/drivers/journald/"
+  },
+  {
+    "from": "/engine/reference/logging/splunk/",
+    "to": "/engine/logging/drivers/splunk/"
+  },
+  {
+    "from": "/engine/admin/logging/splunk/",
+    "to": "/engine/logging/drivers/splunk/"
+  },
+  {
+    "from": "/config/containers/logging/splunk/",
+    "to": "/engine/logging/drivers/splunk/"
+  },
+  {
+    "from": "/engine/admin/logging/gcplogs/",
+    "to": "/engine/logging/drivers/gcplogs/"
+  },
+  {
+    "from": "/config/containers/logging/gcplogs/",
+    "to": "/engine/logging/drivers/gcplogs/"
+  },
+  {
+    "from": "/engine/admin/logging/etwlogs/",
+    "to": "/engine/logging/drivers/etwlogs/"
+  },
+  {
+    "from": "/config/containers/logging/etwlogs/",
+    "to": "/engine/logging/drivers/etwlogs/"
+  },
+  {
+    "from": "/engine/reference/logging/json-file/",
+    "to": "/engine/logging/drivers/json-file/"
+  },
+  {
+    "from": "/engine/admin/logging/json-file/",
+    "to": "/engine/logging/drivers/json-file/"
+  },
+  {
+    "from": "/config/containers/logging/json-file/",
+    "to": "/engine/logging/drivers/json-file/"
+  },
+  {
+    "from": "/engine/reference/logging/awslogs/",
+    "to": "/engine/logging/drivers/awslogs/"
+  },
+  {
+    "from": "/engine/admin/logging/awslogs/",
+    "to": "/engine/logging/drivers/awslogs/"
+  },
+  {
+    "from": "/config/containers/logging/awslogs/",
+    "to": "/engine/logging/drivers/awslogs/"
+  },
+  {
+    "from": "/engine/reference/logging/gelf/",
+    "to": "/engine/logging/drivers/gelf/"
+  },
+  {
+    "from": "/engine/admin/logging/gelf/",
+    "to": "/engine/logging/drivers/gelf/"
+  },
+  {
+    "from": "/config/containers/logging/gelf/",
+    "to": "/engine/logging/drivers/gelf/"
+  },
+  {
+    "from": "/engine/reference/logging/fluentd/",
+    "to": "/engine/logging/drivers/fluentd/"
+  },
+  {
+    "from": "/reference/logging/fluentd/",
+    "to": "/engine/logging/drivers/fluentd/"
+  },
+  {
+    "from": "/engine/admin/logging/fluentd/",
+    "to": "/engine/logging/drivers/fluentd/"
+  },
+  {
+    "from": "/config/containers/logging/fluentd/",
+    "to": "/engine/logging/drivers/fluentd/"
+  },
+  {
+    "from": "/engine/reference/logging/local/",
+    "to": "/engine/logging/drivers/local/"
+  },
+  {
+    "from": "/engine/admin/logging/local/",
+    "to": "/engine/logging/drivers/local/"
+  },
+  {
+    "from": "/config/containers/logging/local/",
+    "to": "/engine/logging/drivers/local/"
+  },
+  {
+    "from": "/config/containers/logging/logentries/",
+    "to": "/engine/logging/configure/"
+  },
+  {
+    "from": "/engine/reference/logging/overview/",
+    "to": "/engine/logging/configure/"
+  },
+  {
+    "from": "/engine/reference/logging/",
+    "to": "/engine/logging/configure/"
+  },
+  {
+    "from": "/engine/admin/reference/logging/",
+    "to": "/engine/logging/configure/"
+  },
+  {
+    "from": "/engine/admin/logging/logentries/",
+    "to": "/engine/logging/configure/"
+  },
+  {
+    "from": "/engine/admin/logging/overview/",
+    "to": "/engine/logging/configure/"
+  },
+  {
+    "from": "/config/containers/logging/configure/",
+    "to": "/engine/logging/configure/"
+  },
+  {
+    "from": "/config/containers/",
+    "to": "/engine/logging/configure/"
+  },
+  {
+    "from": "/engine/admin/logging/plugins/",
+    "to": "/engine/logging/plugins/"
+  },
+  {
+    "from": "/engine/reference/logging/plugins/",
+    "to": "/engine/logging/plugins/"
+  },
+  {
+    "from": "/config/containers/logging/plugins/",
+    "to": "/engine/logging/plugins/"
+  },
+  {
+    "from": "/engine/reference/logging/log_tags/",
+    "to": "/engine/logging/log_tags/"
+  },
+  {
+    "from": "/engine/admin/logging/log_tags/",
+    "to": "/engine/logging/log_tags/"
+  },
+  {
+    "from": "/config/containers/logging/log_tags/",
+    "to": "/engine/logging/log_tags/"
+  },
+  {
+    "from": "/config/containers/logging/dual-logging/",
+    "to": "/engine/logging/dual-logging/"
+  },
+  {
+    "from": "/engine/admin/logging/",
+    "to": "/engine/logging/"
+  },
+  {
+    "from": "/engine/admin/logging/view_container_logs/",
+    "to": "/engine/logging/"
+  },
+  {
+    "from": "/config/containers/logging/",
+    "to": "/engine/logging/"
+  },
+  {
+    "from": "/edge/",
+    "to": "/engine/"
+  },
+  {
+    "from": "/engine/ce-ee-node-activate/",
+    "to": "/engine/"
+  },
+  {
+    "from": "/engine/migration/",
+    "to": "/engine/"
+  },
+  {
+    "from": "/engine/misc/",
+    "to": "/engine/"
+  },
+  {
+    "from": "/linux/",
+    "to": "/engine/"
+  },
+  {
+    "from": "/billing/tax-certificate/",
+    "to": "/admin/billing/tax-certificate/"
+  },
+  {
+    "from": "/billing/faqs/",
+    "to": "/admin/billing/faqs/"
+  },
+  {
+    "from": "/billing/details/",
+    "to": "/admin/billing/details/"
+  },
+  {
+    "from": "/billing/core-billing/history/",
+    "to": "/admin/billing/history/"
+  },
+  {
+    "from": "/billing/history/",
+    "to": "/admin/billing/history/"
+  },
+  {
+    "from": "/billing/core-billing/payment-method/",
+    "to": "/admin/billing/payment-method/"
+  },
+  {
+    "from": "/billing/payment-method/",
+    "to": "/admin/billing/payment-method/"
+  },
+  {
+    "from": "/billing/cycle/",
+    "to": "/admin/billing/cycle/"
+  },
+  {
+    "from": "/billing/3d-secure/",
+    "to": "/admin/billing/3d-secure/"
+  },
+  {
+    "from": "/billing/docker-hub-pricing/",
+    "to": "/admin/billing/"
+  },
+  {
+    "from": "/billing/",
+    "to": "/admin/billing/"
+  },
+  {
+    "from": "/harmonia/",
+    "to": "/offload/"
+  },
+  {
+    "from": "/guides/use-case/kafka/",
+    "to": "/guides/kafka/"
+  },
+  {
+    "from": "/labs/docker-for-ai/mcp-gateway/",
+    "to": "/guides/lab-mcp-gateway/"
+  },
+  {
+    "from": "/language/deno/develop/",
+    "to": "/guides/deno/develop/"
+  },
+  {
+    "from": "/language/deno/deploy/",
+    "to": "/guides/deno/deploy/"
+  },
+  {
+    "from": "/language/deno/configure-ci-cd/",
+    "to": "/guides/deno/configure-ci-cd/"
+  },
+  {
+    "from": "/language/deno/containerize/",
+    "to": "/guides/deno/containerize/"
+  },
+  {
+    "from": "/guides/use-case/rag-ollama/develop/",
+    "to": "/guides/rag-ollama/develop/"
+  },
+  {
+    "from": "/guides/use-case/rag-ollama/containerize/",
+    "to": "/guides/rag-ollama/containerize/"
+  },
+  {
+    "from": "/guides/use-case/rag-ollama/",
+    "to": "/guides/rag-ollama/"
+  },
+  {
+    "from": "/language/nodejs/run-tests/",
+    "to": "/guides/nodejs/run-tests/"
+  },
+  {
+    "from": "/guides/language/nodejs/run-tests/",
+    "to": "/guides/nodejs/run-tests/"
+  },
+  {
+    "from": "/get-started/nodejs/develop/",
+    "to": "/guides/nodejs/develop/"
+  },
+  {
+    "from": "/language/nodejs/develop/",
+    "to": "/guides/nodejs/develop/"
+  },
+  {
+    "from": "/guides/language/nodejs/develop/",
+    "to": "/guides/nodejs/develop/"
+  },
+  {
+    "from": "/language/nodejs/configure-ci-cd/",
+    "to": "/guides/nodejs/configure-github-actions/"
+  },
+  {
+    "from": "/guides/language/nodejs/configure-ci-cd/",
+    "to": "/guides/nodejs/configure-github-actions/"
+  },
+  {
+    "from": "/language/nodejs/deploy/",
+    "to": "/guides/nodejs/deploy/"
+  },
+  {
+    "from": "/guides/language/nodejs/deploy/",
+    "to": "/guides/nodejs/deploy/"
+  },
+  {
+    "from": "/get-started/nodejs/build-images/",
+    "to": "/guides/nodejs/containerize/"
+  },
+  {
+    "from": "/language/nodejs/build-images/",
+    "to": "/guides/nodejs/containerize/"
+  },
+  {
+    "from": "/language/nodejs/run-containers/",
+    "to": "/guides/nodejs/containerize/"
+  },
+  {
+    "from": "/language/nodejs/containerize/",
+    "to": "/guides/nodejs/containerize/"
+  },
+  {
+    "from": "/guides/language/nodejs/containerize/",
+    "to": "/guides/nodejs/containerize/"
+  },
+  {
+    "from": "/language/nodejs/",
+    "to": "/guides/nodejs/"
+  },
+  {
+    "from": "/guides/language/nodejs/",
+    "to": "/guides/nodejs/"
+  },
+  {
+    "from": "/get-started/orchestration/",
+    "to": "/guides/orchestration/"
+  },
+  {
+    "from": "/guides/deployment-orchestration/orchestration/",
+    "to": "/guides/orchestration/"
+  },
+  {
+    "from": "/guides/zscaler/index/",
+    "to": "/guides/zscaler/"
+  },
+  {
+    "from": "/labs/docker-for-ai/cagent/",
+    "to": "/guides/lab-docker-agent/"
+  },
+  {
+    "from": "/guides/lab-cagent/",
+    "to": "/guides/lab-docker-agent/"
+  },
+  {
+    "from": "/language/python/lint-format-typing/",
+    "to": "/guides/python/lint-format-typing/"
+  },
+  {
+    "from": "/language/python/develop/",
+    "to": "/guides/python/develop/"
+  },
+  {
+    "from": "/guides/language/python/develop/",
+    "to": "/guides/python/develop/"
+  },
+  {
+    "from": "/language/python/configure-ci-cd/",
+    "to": "/guides/python/configure-github-actions/"
+  },
+  {
+    "from": "/guides/language/python/configure-ci-cd/",
+    "to": "/guides/python/configure-github-actions/"
+  },
+  {
+    "from": "/guides/python/configure-ci-cd/",
+    "to": "/guides/python/configure-github-actions/"
+  },
+  {
+    "from": "/language/python/deploy/",
+    "to": "/guides/python/deploy/"
+  },
+  {
+    "from": "/guides/language/python/deploy/",
+    "to": "/guides/python/deploy/"
+  },
+  {
+    "from": "/language/python/build-images/",
+    "to": "/guides/python/containerize/"
+  },
+  {
+    "from": "/language/python/run-containers/",
+    "to": "/guides/python/containerize/"
+  },
+  {
+    "from": "/language/python/containerize/",
+    "to": "/guides/python/containerize/"
+  },
+  {
+    "from": "/guides/language/python/containerize/",
+    "to": "/guides/python/containerize/"
+  },
+  {
+    "from": "/language/python/",
+    "to": "/guides/python/"
+  },
+  {
+    "from": "/guides/language/python/",
+    "to": "/guides/python/"
+  },
+  {
+    "from": "/get-started/golang/run-tests/",
+    "to": "/guides/golang/run-tests/"
+  },
+  {
+    "from": "/language/golang/run-tests/",
+    "to": "/guides/golang/run-tests/"
+  },
+  {
+    "from": "/guides/language/golang/run-tests/",
+    "to": "/guides/golang/run-tests/"
+  },
+  {
+    "from": "/get-started/golang/develop/",
+    "to": "/guides/golang/develop/"
+  },
+  {
+    "from": "/language/golang/develop/",
+    "to": "/guides/golang/develop/"
+  },
+  {
+    "from": "/guides/language/golang/develop/",
+    "to": "/guides/golang/develop/"
+  },
+  {
+    "from": "/language/golang/deploy/",
+    "to": "/guides/golang/deploy/"
+  },
+  {
+    "from": "/guides/language/golang/deploy/",
+    "to": "/guides/golang/deploy/"
+  },
+  {
+    "from": "/get-started/golang/run-containers/",
+    "to": "/guides/golang/run-containers/"
+  },
+  {
+    "from": "/language/golang/run-containers/",
+    "to": "/guides/golang/run-containers/"
+  },
+  {
+    "from": "/guides/language/golang/run-containers/",
+    "to": "/guides/golang/run-containers/"
+  },
+  {
+    "from": "/language/golang/configure-ci-cd/",
+    "to": "/guides/golang/configure-ci-cd/"
+  },
+  {
+    "from": "/guides/language/golang/configure-ci-cd/",
+    "to": "/guides/golang/configure-ci-cd/"
+  },
+  {
+    "from": "/get-started/golang/build-images/",
+    "to": "/guides/golang/build-images/"
+  },
+  {
+    "from": "/language/golang/build-images/",
+    "to": "/guides/golang/build-images/"
+  },
+  {
+    "from": "/guides/language/golang/build-images/",
+    "to": "/guides/golang/build-images/"
+  },
+  {
+    "from": "/language/golang/",
+    "to": "/guides/golang/"
+  },
+  {
+    "from": "/guides/language/golang/",
+    "to": "/guides/golang/"
+  },
+  {
+    "from": "/frameworks/vue/",
+    "to": "/guides/vuejs/"
+  },
+  {
+    "from": "/labs/",
+    "to": "/guides/lab-docker-for-ai-redirect/"
+  },
+  {
+    "from": "/labs/docker-for-ai/",
+    "to": "/guides/lab-docker-for-ai-redirect/"
+  },
+  {
+    "from": "/guides/use-case/jupyter/",
+    "to": "/guides/jupyter/"
+  },
+  {
+    "from": "/language/rust/develop/",
+    "to": "/guides/rust/develop/"
+  },
+  {
+    "from": "/guides/language/rust/develop/",
+    "to": "/guides/rust/develop/"
+  },
+  {
+    "from": "/language/rust/deploy/",
+    "to": "/guides/rust/deploy/"
+  },
+  {
+    "from": "/guides/language/rust/deploy/",
+    "to": "/guides/rust/deploy/"
+  },
+  {
+    "from": "/language/rust/run-containers/",
+    "to": "/guides/rust/run-containers/"
+  },
+  {
+    "from": "/guides/language/rust/run-containers/",
+    "to": "/guides/rust/run-containers/"
+  },
+  {
+    "from": "/language/rust/configure-ci-cd/",
+    "to": "/guides/rust/configure-ci-cd/"
+  },
+  {
+    "from": "/guides/language/rust/configure-ci-cd/",
+    "to": "/guides/rust/configure-ci-cd/"
+  },
+  {
+    "from": "/language/rust/build-images/",
+    "to": "/guides/rust/build-images/"
+  },
+  {
+    "from": "/guides/language/rust/build-images/",
+    "to": "/guides/rust/build-images/"
+  },
+  {
+    "from": "/language/rust/",
+    "to": "/guides/rust/"
+  },
+  {
+    "from": "/guides/language/rust/",
+    "to": "/guides/rust/"
+  },
+  {
+    "from": "/guides/use-case/nlp/named-entity-recognition/",
+    "to": "/guides/named-entity-recognition/"
+  },
+  {
+    "from": "/labs/docker-for-ai/agentic-apps/",
+    "to": "/guides/lab-agentic-apps/"
+  },
+  {
+    "from": "/language/r/develop/",
+    "to": "/guides/r/develop/"
+  },
+  {
+    "from": "/guides/language/r/develop/",
+    "to": "/guides/r/develop/"
+  },
+  {
+    "from": "/language/r/deploy/",
+    "to": "/guides/r/deploy/"
+  },
+  {
+    "from": "/guides/language/r/deploy/",
+    "to": "/guides/r/deploy/"
+  },
+  {
+    "from": "/language/r/configure-ci-cd/",
+    "to": "/guides/r/configure-ci-cd/"
+  },
+  {
+    "from": "/guides/language/r/configure-ci-cd/",
+    "to": "/guides/r/configure-ci-cd/"
+  },
+  {
+    "from": "/language/R/build-images/",
+    "to": "/guides/r/containerize/"
+  },
+  {
+    "from": "/language/R/run-containers/",
+    "to": "/guides/r/containerize/"
+  },
+  {
+    "from": "/language/r/containerize/",
+    "to": "/guides/r/containerize/"
+  },
+  {
+    "from": "/guides/language/r/containerize/",
+    "to": "/guides/r/containerize/"
+  },
+  {
+    "from": "/languages/r/",
+    "to": "/guides/r/"
+  },
+  {
+    "from": "/guides/languages/r/",
+    "to": "/guides/r/"
+  },
+  {
+    "from": "/learning-paths/docker-build-cloud/",
+    "to": "/guides/docker-build-cloud/"
+  },
+  {
+    "from": "/language/java/run-tests/",
+    "to": "/guides/java/run-tests/"
+  },
+  {
+    "from": "/guides/language/java/run-tests/",
+    "to": "/guides/java/run-tests/"
+  },
+  {
+    "from": "/language/java/develop/",
+    "to": "/guides/java/develop/"
+  },
+  {
+    "from": "/guides/language/java/develop/",
+    "to": "/guides/java/develop/"
+  },
+  {
+    "from": "/language/java/deploy/",
+    "to": "/guides/java/deploy/"
+  },
+  {
+    "from": "/guides/language/java/deploy/",
+    "to": "/guides/java/deploy/"
+  },
+  {
+    "from": "/language/java/configure-ci-cd/",
+    "to": "/guides/java/configure-ci-cd/"
+  },
+  {
+    "from": "/guides/language/java/configure-ci-cd/",
+    "to": "/guides/java/configure-ci-cd/"
+  },
+  {
+    "from": "/language/java/build-images/",
+    "to": "/guides/java/containerize/"
+  },
+  {
+    "from": "/language/java/run-containers/",
+    "to": "/guides/java/containerize/"
+  },
+  {
+    "from": "/language/java/containerize/",
+    "to": "/guides/java/containerize/"
+  },
+  {
+    "from": "/guides/language/java/containerize/",
+    "to": "/guides/java/containerize/"
+  },
+  {
+    "from": "/language/java/",
+    "to": "/guides/java/"
+  },
+  {
+    "from": "/guides/language/java/",
+    "to": "/guides/java/"
+  },
+  {
+    "from": "/language/bun/develop/",
+    "to": "/guides/bun/develop/"
+  },
+  {
+    "from": "/language/bun/deploy/",
+    "to": "/guides/bun/deploy/"
+  },
+  {
+    "from": "/language/bun/configure-ci-cd/",
+    "to": "/guides/bun/configure-ci-cd/"
+  },
+  {
+    "from": "/language/bun/containerize/",
+    "to": "/guides/bun/containerize/"
+  },
+  {
+    "from": "/scout/concepts/s3c/",
+    "to": "/guides/docker-scout/s3c/"
+  },
+  {
+    "from": "/scout/concepts/sbom/",
+    "to": "/guides/docker-scout/sbom/"
+  },
+  {
+    "from": "/learning-paths/docker-scout/",
+    "to": "/guides/docker-scout/"
+  },
+  {
+    "from": "/language/php/run-tests/",
+    "to": "/guides/php/run-tests/"
+  },
+  {
+    "from": "/guides/language/php/run-tests/",
+    "to": "/guides/php/run-tests/"
+  },
+  {
+    "from": "/language/php/develop/",
+    "to": "/guides/php/develop/"
+  },
+  {
+    "from": "/guides/language/php/develop/",
+    "to": "/guides/php/develop/"
+  },
+  {
+    "from": "/language/php/deploy/",
+    "to": "/guides/php/deploy/"
+  },
+  {
+    "from": "/guides/language/php/deploy/",
+    "to": "/guides/php/deploy/"
+  },
+  {
+    "from": "/language/php/configure-ci-cd/",
+    "to": "/guides/php/configure-ci-cd/"
+  },
+  {
+    "from": "/guides/language/php/configure-ci-cd/",
+    "to": "/guides/php/configure-ci-cd/"
+  },
+  {
+    "from": "/language/php/containerize/",
+    "to": "/guides/php/containerize/"
+  },
+  {
+    "from": "/guides/language/php/containerize/",
+    "to": "/guides/php/containerize/"
+  },
+  {
+    "from": "/language/php/",
+    "to": "/guides/php/"
+  },
+  {
+    "from": "/guides/language/php/",
+    "to": "/guides/php/"
+  },
+  {
+    "from": "/labs/docker-for-ai/ai-fundamentals/",
+    "to": "/guides/lab-ai-fundamentals/"
+  },
+  {
+    "from": "/language/dotnet/run-tests/",
+    "to": "/guides/dotnet/run-tests/"
+  },
+  {
+    "from": "/guides/language/dotnet/run-tests/",
+    "to": "/guides/dotnet/run-tests/"
+  },
+  {
+    "from": "/language/dotnet/develop/",
+    "to": "/guides/dotnet/develop/"
+  },
+  {
+    "from": "/guides/language/dotnet/develop/",
+    "to": "/guides/dotnet/develop/"
+  },
+  {
+    "from": "/language/dotnet/deploy/",
+    "to": "/guides/dotnet/deploy/"
+  },
+  {
+    "from": "/guides/language/dotnet/deploy/",
+    "to": "/guides/dotnet/deploy/"
+  },
+  {
+    "from": "/language/dotnet/configure-ci-cd/",
+    "to": "/guides/dotnet/configure-ci-cd/"
+  },
+  {
+    "from": "/guides/language/dotnet/configure-ci-cd/",
+    "to": "/guides/dotnet/configure-ci-cd/"
+  },
+  {
+    "from": "/language/dotnet/build-images/",
+    "to": "/guides/dotnet/containerize/"
+  },
+  {
+    "from": "/language/dotnet/run-containers/",
+    "to": "/guides/dotnet/containerize/"
+  },
+  {
+    "from": "/language/dotnet/containerize/",
+    "to": "/guides/dotnet/containerize/"
+  },
+  {
+    "from": "/guides/language/dotnet/containerize/",
+    "to": "/guides/dotnet/containerize/"
+  },
+  {
+    "from": "/language/dotnet/",
+    "to": "/guides/dotnet/"
+  },
+  {
+    "from": "/guides/language/dotnet/",
+    "to": "/guides/dotnet/"
+  },
+  {
+    "from": "/guides/use-case/nlp/language-translation/",
+    "to": "/guides/language-translation/"
+  },
+  {
+    "from": "/get-started/kube-deploy/",
+    "to": "/guides/kube-deploy/"
+  },
+  {
+    "from": "/guides/deployment-orchestration/kube-deploy/",
+    "to": "/guides/kube-deploy/"
+  },
+  {
+    "from": "/guides/genai-leveraging-rag/index/",
+    "to": "/guides/genai-leveraging-rag/"
+  },
+  {
+    "from": "/language/cpp/develop/",
+    "to": "/guides/cpp/develop/"
+  },
+  {
+    "from": "/guides/language/cpp/develop/",
+    "to": "/guides/cpp/develop/"
+  },
+  {
+    "from": "/language/cpp/multistage/",
+    "to": "/guides/cpp/multistage/"
+  },
+  {
+    "from": "/guides/language/cpp/multistage/",
+    "to": "/guides/cpp/multistage/"
+  },
+  {
+    "from": "/language/cpp/deploy/",
+    "to": "/guides/cpp/deploy/"
+  },
+  {
+    "from": "/guides/language/cpp/deploy/",
+    "to": "/guides/cpp/deploy/"
+  },
+  {
+    "from": "/language/cpp/configure-ci-cd/",
+    "to": "/guides/cpp/configure-ci-cd/"
+  },
+  {
+    "from": "/guides/language/cpp/configure-ci-cd/",
+    "to": "/guides/cpp/configure-ci-cd/"
+  },
+  {
+    "from": "/language/cpp/containerize/",
+    "to": "/guides/cpp/containerize/"
+  },
+  {
+    "from": "/guides/language/cpp/containerize/",
+    "to": "/guides/cpp/containerize/"
+  },
+  {
+    "from": "/language/cpp/",
+    "to": "/guides/cpp/"
+  },
+  {
+    "from": "/guides/language/cpp/",
+    "to": "/guides/cpp/"
+  },
+  {
+    "from": "/language/cpp/security/",
+    "to": "/guides/cpp/security/"
+  },
+  {
+    "from": "/guides/language/cpp/security/",
+    "to": "/guides/cpp/security/"
+  },
+  {
+    "from": "/guides/use-case/genai-video-bot/",
+    "to": "/guides/genai-video-bot/"
+  },
+  {
+    "from": "/guides/genai-video-bot/index/",
+    "to": "/guides/genai-video-bot/"
+  },
+  {
+    "from": "/guides/use-case/databases/",
+    "to": "/guides/databases/"
+  },
+  {
+    "from": "/labs/docker-for-ai/creating-ai-product-reviewer/",
+    "to": "/guides/lab-creating-ai-product-reviewer/"
+  },
+  {
+    "from": "/guides/use-case/genai-pdf-bot/develop/",
+    "to": "/guides/genai-pdf-bot/develop/"
+  },
+  {
+    "from": "/guides/use-case/genai-pdf-bot/containerize/",
+    "to": "/guides/genai-pdf-bot/containerize/"
+  },
+  {
+    "from": "/guides/use-case/genai-pdf-bot/",
+    "to": "/guides/genai-pdf-bot/"
+  },
+  {
+    "from": "/guides/use-case/nlp/text-classification/",
+    "to": "/guides/text-classification/"
+  },
+  {
+    "from": "/guides/use-case/nlp/sentiment-analysis/",
+    "to": "/guides/sentiment-analysis/"
+  },
+  {
+    "from": "/guides/bake/index/",
+    "to": "/guides/bake/"
+  },
+  {
+    "from": "/guides/use-case/nlp/text-summarization/",
+    "to": "/guides/text-summarization/"
+  },
+  {
+    "from": "/learning-paths/docker-compose/",
+    "to": "/guides/docker-compose/"
+  },
+  {
+    "from": "/frameworks/laravel/",
+    "to": "/guides/frameworks/laravel/"
+  },
+  {
+    "from": "/guides/compose-bake/index/",
+    "to": "/guides/compose-bake/"
+  },
+  {
+    "from": "/get-started/part4/",
+    "to": "/guides/swarm-deploy/"
+  },
+  {
+    "from": "/get-started/swarm-deploy/",
+    "to": "/guides/swarm-deploy/"
+  },
+  {
+    "from": "/guides/deployment-orchestration/swarm-deploy/",
+    "to": "/guides/swarm-deploy/"
+  },
+  {
+    "from": "/guides/use-case/genai-claude-code-mcp/",
+    "to": "/guides/genai-claude-code-mcp/claude-code-mcp-guide/"
+  },
+  {
+    "from": "/guides/use-case/tensorflowjs/",
+    "to": "/guides/tensorflowjs/"
+  },
+  {
+    "from": "/language/ruby/develop/",
+    "to": "/guides/ruby/develop/"
+  },
+  {
+    "from": "/guides/language/ruby/develop/",
+    "to": "/guides/ruby/develop/"
+  },
+  {
+    "from": "/language/ruby/configure-ci-cd/",
+    "to": "/guides/ruby/configure-github-actions/"
+  },
+  {
+    "from": "/guides/language/ruby/configure-ci-cd/",
+    "to": "/guides/ruby/configure-github-actions/"
+  },
+  {
+    "from": "/guides/ruby/configure-ci-cd/",
+    "to": "/guides/ruby/configure-github-actions/"
+  },
+  {
+    "from": "/language/ruby/deploy/",
+    "to": "/guides/ruby/deploy/"
+  },
+  {
+    "from": "/guides/language/ruby/deploy/",
+    "to": "/guides/ruby/deploy/"
+  },
+  {
+    "from": "/language/ruby/build-images/",
+    "to": "/guides/ruby/containerize/"
+  },
+  {
+    "from": "/language/ruby/run-containers/",
+    "to": "/guides/ruby/containerize/"
+  },
+  {
+    "from": "/language/ruby/containerize/",
+    "to": "/guides/ruby/containerize/"
+  },
+  {
+    "from": "/guides/language/ruby/containerize/",
+    "to": "/guides/ruby/containerize/"
+  },
+  {
+    "from": "/language/ruby/",
+    "to": "/guides/ruby/"
+  },
+  {
+    "from": "/guides/language/ruby/",
+    "to": "/guides/ruby/"
+  },
+  {
+    "from": "/guides/language/",
+    "to": "/guides/"
+  },
+  {
+    "from": "/language/",
+    "to": "/guides/"
+  },
+  {
+    "from": "/learning-paths/",
+    "to": "/guides/"
+  },
+  {
+    "from": "/compose/compose-file/11-extension/",
+    "to": "/reference/compose-file/extension/"
+  },
+  {
+    "from": "/compose/compose-file/14-include/",
+    "to": "/reference/compose-file/include/"
+  },
+  {
+    "from": "/compose/compose-file/06-networks/",
+    "to": "/reference/compose-file/networks/"
+  },
+  {
+    "from": "/compose/compose-file/09-secrets/",
+    "to": "/reference/compose-file/secrets/"
+  },
+  {
+    "from": "/compose/compose-file/15-profiles/",
+    "to": "/reference/compose-file/profiles/"
+  },
+  {
+    "from": "/compose/compose-file/develop/",
+    "to": "/reference/compose-file/develop/"
+  },
+  {
+    "from": "/compose/compose-file/10-fragments/",
+    "to": "/reference/compose-file/fragments/"
+  },
+  {
+    "from": "/compose/compose-file/04-version-and-name/",
+    "to": "/reference/compose-file/version-and-name/"
+  },
+  {
+    "from": "/compose/compose-file/deploy/",
+    "to": "/reference/compose-file/deploy/"
+  },
+  {
+    "from": "/compose/compose-file/08-configs/",
+    "to": "/reference/compose-file/configs/"
+  },
+  {
+    "from": "/compose/compose-file/12-interpolation/",
+    "to": "/reference/compose-file/interpolation/"
+  },
+  {
+    "from": "/compose/compose-file/build/",
+    "to": "/reference/compose-file/build/"
+  },
+  {
+    "from": "/compose/compose-file/13-merge/",
+    "to": "/reference/compose-file/merge/"
+  },
+  {
+    "from": "/compose/compose-file/05-services/",
+    "to": "/reference/compose-file/services/"
+  },
+  {
+    "from": "/compose/compose-file/compose-versioning/",
+    "to": "/reference/compose-file/legacy-versions/"
+  },
+  {
+    "from": "/compose/compose-file/compose-file-v3/",
+    "to": "/reference/compose-file/legacy-versions/"
+  },
+  {
+    "from": "/compose/compose-file/compose-file-v2/",
+    "to": "/reference/compose-file/legacy-versions/"
+  },
+  {
+    "from": "/compose/compose-file/legacy-versions/",
+    "to": "/reference/compose-file/legacy-versions/"
+  },
+  {
+    "from": "/compose/compose-file/07-volumes/",
+    "to": "/reference/compose-file/volumes/"
+  },
+  {
+    "from": "/compose/yaml/",
+    "to": "/reference/compose-file/"
+  },
+  {
+    "from": "/compose/compose-file/compose-file-v1/",
+    "to": "/reference/compose-file/"
+  },
+  {
+    "from": "/compose/compose-file/",
+    "to": "/reference/compose-file/"
+  },
+  {
+    "from": "/compose/reference/overview/",
+    "to": "/reference/compose-file/"
+  },
+  {
+    "from": "/engine/reference/glossary/",
+    "to": "/reference/glossary/"
+  },
+  {
+    "from": "/glossary/",
+    "to": "/reference/glossary/"
+  },
+  {
+    "from": "/reference/api/hub/dvp/",
+    "to": "/reference/api/dvp/latest/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/Extension/",
+    "to": "/reference/api/extensions-sdk/Extension/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/Extension/",
+    "to": "/reference/api/extensions-sdk/Extension/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/ExecOptions/",
+    "to": "/reference/api/extensions-sdk/ExecOptions/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/ExecOptions/",
+    "to": "/reference/api/extensions-sdk/ExecOptions/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/Toast/",
+    "to": "/reference/api/extensions-sdk/Toast/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/Toast/",
+    "to": "/reference/api/extensions-sdk/Toast/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/NavigationIntents/",
+    "to": "/reference/api/extensions-sdk/NavigationIntents/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/NavigationIntents/",
+    "to": "/reference/api/extensions-sdk/NavigationIntents/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/HttpService/",
+    "to": "/reference/api/extensions-sdk/HttpService/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/HttpService/",
+    "to": "/reference/api/extensions-sdk/HttpService/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/RawExecResult/",
+    "to": "/reference/api/extensions-sdk/RawExecResult/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/RawExecResult/",
+    "to": "/reference/api/extensions-sdk/RawExecResult/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/ExecResultV0/",
+    "to": "/reference/api/extensions-sdk/ExecResultV0/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/ExecResultV0/",
+    "to": "/reference/api/extensions-sdk/ExecResultV0/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/OpenDialogResult/",
+    "to": "/reference/api/extensions-sdk/OpenDialogResult/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/OpenDialogResult/",
+    "to": "/reference/api/extensions-sdk/OpenDialogResult/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/RequestConfig/",
+    "to": "/reference/api/extensions-sdk/RequestConfig/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/RequestConfig/",
+    "to": "/reference/api/extensions-sdk/RequestConfig/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/ServiceError/",
+    "to": "/reference/api/extensions-sdk/ServiceError/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/ServiceError/",
+    "to": "/reference/api/extensions-sdk/ServiceError/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/DockerDesktopClient/",
+    "to": "/reference/api/extensions-sdk/DockerDesktopClient/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/DockerDesktopClient/",
+    "to": "/reference/api/extensions-sdk/DockerDesktopClient/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/DockerCommand/",
+    "to": "/reference/api/extensions-sdk/DockerCommand/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/DockerCommand/",
+    "to": "/reference/api/extensions-sdk/DockerCommand/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/ExecResult/",
+    "to": "/reference/api/extensions-sdk/ExecResult/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/ExecResult/",
+    "to": "/reference/api/extensions-sdk/ExecResult/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/Dialog/",
+    "to": "/reference/api/extensions-sdk/Dialog/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/Dialog/",
+    "to": "/reference/api/extensions-sdk/Dialog/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/ExecProcess/",
+    "to": "/reference/api/extensions-sdk/ExecProcess/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/ExecProcess/",
+    "to": "/reference/api/extensions-sdk/ExecProcess/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/BackendV0/",
+    "to": "/reference/api/extensions-sdk/BackendV0/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/BackendV0/",
+    "to": "/reference/api/extensions-sdk/BackendV0/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/ExtensionHost/",
+    "to": "/reference/api/extensions-sdk/ExtensionHost/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/ExtensionHost/",
+    "to": "/reference/api/extensions-sdk/ExtensionHost/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/ExtensionCli/",
+    "to": "/reference/api/extensions-sdk/ExtensionCli/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/ExtensionCli/",
+    "to": "/reference/api/extensions-sdk/ExtensionCli/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/RequestConfigV0/",
+    "to": "/reference/api/extensions-sdk/RequestConfigV0/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/RequestConfigV0/",
+    "to": "/reference/api/extensions-sdk/RequestConfigV0/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/Docker/",
+    "to": "/reference/api/extensions-sdk/Docker/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/Docker/",
+    "to": "/reference/api/extensions-sdk/Docker/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/SpawnOptions/",
+    "to": "/reference/api/extensions-sdk/SpawnOptions/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/SpawnOptions/",
+    "to": "/reference/api/extensions-sdk/SpawnOptions/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/Exec/",
+    "to": "/reference/api/extensions-sdk/Exec/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/Exec/",
+    "to": "/reference/api/extensions-sdk/Exec/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/DesktopUI/",
+    "to": "/reference/api/extensions-sdk/DesktopUI/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/DesktopUI/",
+    "to": "/reference/api/extensions-sdk/DesktopUI/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/Host/",
+    "to": "/reference/api/extensions-sdk/Host/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/Host/",
+    "to": "/reference/api/extensions-sdk/Host/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/README/",
+    "to": "/reference/api/extensions-sdk/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/README/",
+    "to": "/reference/api/extensions-sdk/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/ExtensionVM/",
+    "to": "/reference/api/extensions-sdk/ExtensionVM/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/ExtensionVM/",
+    "to": "/reference/api/extensions-sdk/ExtensionVM/"
+  },
+  {
+    "from": "/desktop/extensions-sdk/dev/api/reference/interfaces/ExecStreamOptions/",
+    "to": "/reference/api/extensions-sdk/ExecStreamOptions/"
+  },
+  {
+    "from": "/extensions/extensions-sdk/dev/api/reference/interfaces/ExecStreamOptions/",
+    "to": "/reference/api/extensions-sdk/ExecStreamOptions/"
+  },
+  {
+    "from": "/engine/api/latest/",
+    "to": "/reference/api/engine/version/v1.54/"
+  },
+  {
+    "from": "/reference/api/engine/latest/",
+    "to": "/reference/api/engine/version/v1.54/"
+  },
+  {
+    "from": "/engine/api/v1.44/",
+    "to": "/reference/api/engine/version/v1.44/"
+  },
+  {
+    "from": "/engine/api/v1.50/",
+    "to": "/reference/api/engine/version/v1.50/"
+  },
+  {
+    "from": "/engine/api/v1.40/",
+    "to": "/reference/api/engine/version/v1.40/"
+  },
+  {
+    "from": "/engine/api/v1.51/",
+    "to": "/reference/api/engine/version/v1.51/"
+  },
+  {
+    "from": "/engine/api/v1.41/",
+    "to": "/reference/api/engine/version/v1.41/"
+  },
+  {
+    "from": "/engine/api/v1.45/",
+    "to": "/reference/api/engine/version/v1.45/"
+  },
+  {
+    "from": "/engine/api/v1.48/",
+    "to": "/reference/api/engine/version/v1.48/"
+  },
+  {
+    "from": "/engine/api/v1.49/",
+    "to": "/reference/api/engine/version/v1.49/"
+  },
+  {
+    "from": "/engine/api/v1.42/",
+    "to": "/reference/api/engine/version/v1.42/"
+  },
+  {
+    "from": "/engine/api/v1.46/",
+    "to": "/reference/api/engine/version/v1.46/"
+  },
+  {
+    "from": "/engine/api/v1.47/",
+    "to": "/reference/api/engine/version/v1.47/"
+  },
+  {
+    "from": "/engine/api/v1.43/",
+    "to": "/reference/api/engine/version/v1.43/"
+  },
+  {
+    "from": "/engine/api/getting-started/",
+    "to": "/reference/api/engine/sdk/examples/"
+  },
+  {
+    "from": "/engine/api/client-libraries/",
+    "to": "/reference/api/engine/sdk/examples/"
+  },
+  {
+    "from": "/engine/reference/api/remote_api_client_libraries/",
+    "to": "/reference/api/engine/sdk/examples/"
+  },
+  {
+    "from": "/reference/api/remote_api_client_libraries/",
+    "to": "/reference/api/engine/sdk/examples/"
+  },
+  {
+    "from": "/develop/sdk/examples/",
+    "to": "/reference/api/engine/sdk/examples/"
+  },
+  {
+    "from": "/engine/api/sdk/examples/",
+    "to": "/reference/api/engine/sdk/examples/"
+  },
+  {
+    "from": "/develop/sdk/",
+    "to": "/reference/api/engine/sdk/"
+  },
+  {
+    "from": "/engine/api/sdks/",
+    "to": "/reference/api/engine/sdk/"
+  },
+  {
+    "from": "/engine/api/sdk/",
+    "to": "/reference/api/engine/sdk/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.0/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.1/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.2/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.3/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.4/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.5/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.6/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.7/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.8/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.9/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.10/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.11/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.12/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.13/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.14/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.15/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.16/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/docker_remote_api_v1.17/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/engine/reference/api/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/engine/reference/api/docker_remote_api/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/engine/api/",
+    "to": "/reference/api/engine/"
+  },
+  {
+    "from": "/reference/api/hub/latest-changelog/",
+    "to": "/reference/api/hub/changelog/"
+  },
+  {
+    "from": "/docker-hub/api/deprecated/",
+    "to": "/reference/api/hub/deprecated/"
+  },
+  {
+    "from": "/install/",
+    "to": "/get-started/get-docker/"
+  },
+  {
+    "from": "/install/overview/",
+    "to": "/get-started/get-docker/"
+  },
+  {
+    "from": "/installation/",
+    "to": "/get-started/get-docker/"
+  },
+  {
+    "from": "/get-docker/",
+    "to": "/get-started/get-docker/"
+  },
+  {
+    "from": "/desktop/install/",
+    "to": "/get-started/get-docker/"
+  },
+  {
+    "from": "/desktop/setup/install/",
+    "to": "/get-started/get-docker/"
+  },
+  {
+    "from": "/introduction/understanding-docker/",
+    "to": "/get-started/docker-overview/"
+  },
+  {
+    "from": "/engine/userguide/basics/",
+    "to": "/get-started/docker-overview/"
+  },
+  {
+    "from": "/engine/introduction/understanding-docker/",
+    "to": "/get-started/docker-overview/"
+  },
+  {
+    "from": "/engine/understanding-docker/",
+    "to": "/get-started/docker-overview/"
+  },
+  {
+    "from": "/engine/docker-overview/",
+    "to": "/get-started/docker-overview/"
+  },
+  {
+    "from": "/get-started/overview/",
+    "to": "/get-started/docker-overview/"
+  },
+  {
+    "from": "/guides/docker-overview/",
+    "to": "/get-started/docker-overview/"
+  },
+  {
+    "from": "/get-started/05_persisting_data/",
+    "to": "/get-started/workshop/05_persisting_data/"
+  },
+  {
+    "from": "/guides/workshop/05_persisting_data/",
+    "to": "/get-started/workshop/05_persisting_data/"
+  },
+  {
+    "from": "/get-started/part3/",
+    "to": "/get-started/workshop/04_sharing_app/"
+  },
+  {
+    "from": "/get-started/04_sharing_app/",
+    "to": "/get-started/workshop/04_sharing_app/"
+  },
+  {
+    "from": "/guides/workshop/04_sharing_app/",
+    "to": "/get-started/workshop/04_sharing_app/"
+  },
+  {
+    "from": "/get-started/part2/",
+    "to": "/get-started/workshop/02_our_app/"
+  },
+  {
+    "from": "/get-started/02_our_app/",
+    "to": "/get-started/workshop/02_our_app/"
+  },
+  {
+    "from": "/guides/workshop/02_our_app/",
+    "to": "/get-started/workshop/02_our_app/"
+  },
+  {
+    "from": "/guides/walkthroughs/containerize-your-app/",
+    "to": "/get-started/workshop/02_our_app/"
+  },
+  {
+    "from": "/get-started/09_image_best/",
+    "to": "/get-started/workshop/09_image_best/"
+  },
+  {
+    "from": "/guides/workshop/09_image_best/",
+    "to": "/get-started/workshop/09_image_best/"
+  },
+  {
+    "from": "/guides/walkthroughs/access-local-folder/",
+    "to": "/get-started/workshop/06_bind_mounts/"
+  },
+  {
+    "from": "/get-started/06_bind_mounts/",
+    "to": "/get-started/workshop/06_bind_mounts/"
+  },
+  {
+    "from": "/guides/workshop/06_bind_mounts/",
+    "to": "/get-started/workshop/06_bind_mounts/"
+  },
+  {
+    "from": "/get-started/08_using_compose/",
+    "to": "/get-started/workshop/08_using_compose/"
+  },
+  {
+    "from": "/guides/workshop/08_using_compose/",
+    "to": "/get-started/workshop/08_using_compose/"
+  },
+  {
+    "from": "/get-started/07_multi_container/",
+    "to": "/get-started/workshop/07_multi_container/"
+  },
+  {
+    "from": "/guides/workshop/07_multi_container/",
+    "to": "/get-started/workshop/07_multi_container/"
+  },
+  {
+    "from": "/get-started/03_updating_app/",
+    "to": "/get-started/workshop/03_updating_app/"
+  },
+  {
+    "from": "/guides/workshop/03_updating_app/",
+    "to": "/get-started/workshop/03_updating_app/"
+  },
+  {
+    "from": "/get-started/11_what_next/",
+    "to": "/get-started/workshop/10_what_next/"
+  },
+  {
+    "from": "/guides/workshop/10_what_next/",
+    "to": "/get-started/workshop/10_what_next/"
+  },
+  {
+    "from": "/guides/get-started/",
+    "to": "/get-started/workshop/"
+  },
+  {
+    "from": "/get-started/hands-on-overview/",
+    "to": "/get-started/workshop/"
+  },
+  {
+    "from": "/guides/workshop/",
+    "to": "/get-started/workshop/"
+  },
+  {
+    "from": "/guides/getting-started/develop-with-containers/",
+    "to": "/get-started/introduction/develop-with-containers/"
+  },
+  {
+    "from": "/guides/getting-started/build-and-push-first-image/",
+    "to": "/get-started/introduction/build-and-push-first-image/"
+  },
+  {
+    "from": "/guides/getting-started/whats-next/",
+    "to": "/get-started/introduction/whats-next/"
+  },
+  {
+    "from": "/getting-started/get-docker-desktop/",
+    "to": "/get-started/introduction/get-docker-desktop/"
+  },
+  {
+    "from": "/guides/getting-started/",
+    "to": "/get-started/introduction/"
+  },
+  {
+    "from": "/guides/docker-concepts/the-basics/what-is-an-image/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-an-image/"
+  },
+  {
+    "from": "/get-started/run-docker-hub-images/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-an-image/"
+  },
+  {
+    "from": "/guides/walkthroughs/multi-container-apps/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-docker-compose/"
+  },
+  {
+    "from": "/guides/docker-concepts/the-basics/what-is-docker-compose/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-docker-compose/"
+  },
+  {
+    "from": "/guides/walkthroughs/run-hub-images/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-a-registry/"
+  },
+  {
+    "from": "/guides/walkthroughs/publish-your-image/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-a-registry/"
+  },
+  {
+    "from": "/guides/docker-concepts/the-basics/what-is-a-registry/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-a-registry/"
+  },
+  {
+    "from": "/guides/walkthroughs/what-is-a-container/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-a-container/"
+  },
+  {
+    "from": "/guides/walkthroughs/run-a-container/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-a-container/"
+  },
+  {
+    "from": "/guides/walkthroughs/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-a-container/"
+  },
+  {
+    "from": "/get-started/run-your-own-container/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-a-container/"
+  },
+  {
+    "from": "/get-started/what-is-a-container/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-a-container/"
+  },
+  {
+    "from": "/guides/docker-concepts/the-basics/what-is-a-container/",
+    "to": "/get-started/docker-concepts/the-basics/what-is-a-container/"
+  },
+  {
+    "from": "/guides/docker-concepts/building-images/using-the-build-cache/",
+    "to": "/get-started/docker-concepts/building-images/using-the-build-cache/"
+  },
+  {
+    "from": "/guides/docker-concepts/building-images/build-tag-and-publish-an-image/",
+    "to": "/get-started/docker-concepts/building-images/build-tag-and-publish-an-image/"
+  },
+  {
+    "from": "/guides/docker-concepts/building-images/multi-stage-builds/",
+    "to": "/get-started/docker-concepts/building-images/multi-stage-builds/"
+  },
+  {
+    "from": "/guides/docker-concepts/building-images/writing-a-dockerfile/",
+    "to": "/get-started/docker-concepts/building-images/writing-a-dockerfile/"
+  },
+  {
+    "from": "/guides/docker-concepts/building-images/understanding-image-layers/",
+    "to": "/get-started/docker-concepts/building-images/understanding-image-layers/"
+  },
+  {
+    "from": "/guides/docker-concepts/running-containers/overriding-container-defaults/",
+    "to": "/get-started/docker-concepts/running-containers/overriding-container-defaults/"
+  },
+  {
+    "from": "/guides/docker-concepts/running-containers/multi-container-applications/",
+    "to": "/get-started/docker-concepts/running-containers/multi-container-applications/"
+  },
+  {
+    "from": "/guides/docker-concepts/running-containers/publishing-ports/",
+    "to": "/get-started/docker-concepts/running-containers/publishing-ports/"
+  },
+  {
+    "from": "/guides/walkthroughs/persist-data/",
+    "to": "/get-started/docker-concepts/running-containers/persisting-container-data/"
+  },
+  {
+    "from": "/guides/docker-concepts/running-containers/persisting-container-data/",
+    "to": "/get-started/docker-concepts/running-containers/persisting-container-data/"
+  },
+  {
+    "from": "/guides/docker-concepts/running-containers/sharing-local-files/",
+    "to": "/get-started/docker-concepts/running-containers/sharing-local-files/"
+  },
+  {
+    "from": "/engine/get-started/",
+    "to": "/get-started/"
+  },
+  {
+    "from": "/engine/tutorials/usingdocker/",
+    "to": "/get-started/"
+  },
+  {
+    "from": "/guides/getting-started/get-docker-desktop/",
+    "to": "/get-started/"
+  },
+  {
+    "from": "/search/",
+    "to": "/"
+  }
+]
