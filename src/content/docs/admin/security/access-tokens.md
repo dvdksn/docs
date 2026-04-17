@@ -30,7 +30,7 @@ Use PATs for these common scenarios:
 
 > [!NOTE]
 >
-> For organization-wide automation, consider [organization access tokens](/manuals/enterprise/security/access-tokens/) which aren't tied to individual user accounts.
+> For organization-wide automation, consider [organization access tokens](/admin/enterprise/security/access-tokens/) which aren't tied to individual user accounts.
 
 ## Create a personal access token
 
@@ -99,5 +99,5 @@ Best practices for fair use include:
 
 - Reuse tokens across similar use cases instead of creating many single-purpose tokens
 - Delete unused tokens regularly
-- Use [organization access tokens](/manuals/enterprise/security/access-tokens/) for organization-wide automation
+- Use [organization access tokens](/admin/enterprise/security/access-tokens/) for organization-wide automation
 - Monitor token usage to identify optimization opportunities

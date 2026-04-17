@@ -1,0 +1,429 @@
+---
+/**
+ * Guides directory — editorial table of contents.
+ *
+ * Replaces the centered hero + pill filters + featured-card grid.
+ * Now: typography-led header, sticky category nav rail on the right,
+ * each category as a section with guides as a tight hairline list.
+ * Reads like the front matter of a well-organized manual.
+ */
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { getCollection } from 'astro:content';
+
+/* ── Category derivation ─────────────────────────────── */
+
+const LANGUAGES = new Set([
+  'angular', 'bun', 'cpp', 'deno', 'dotnet', 'golang', 'java', 'laravel',
+  'nextjs', 'nodejs', 'php', 'python', 'r', 'reactjs', 'ros2', 'ruby',
+  'rust', 'vuejs',
+]);
+
+const AI_GUIDES = new Set([
+  'agentic-ai', 'claude-code-model-runner', 'jupyter', 'language-translation',
+  'named-entity-recognition', 'opencode-model-runner', 'sentiment-analysis',
+  'tensorflowjs', 'text-classification', 'text-summarization',
+]);
+
+const INFRA = new Set([
+  'kube-deploy', 'localstack', 'opentelemetry', 'orchestration',
+  'swarm-deploy', 'traefik', 'zscaler', 'go-prometheus-monitoring',
+]);
+
+const DB = new Set(['databases', 'kafka', 'pgadmin', 'postgresql', 'pre-seeding']);
+
+const CICD = new Set(['azure-pipelines', 'gha', 'github-sonarqube-sandbox']);
+
+const DOCKER_TOOLS = new Set([
+  'bake', 'compose-bake', 'container-supported-development', 'dex',
+  'docker-build-cloud', 'docker-compose', 'docker-scout', 'frameworks',
+  'wiremock',
+]);
+
+const ADMIN = new Set(['admin-set-up', 'admin-user-management']);
+
+function getCategory(name: string): string {
+  if (LANGUAGES.has(name)) return 'Languages & frameworks';
+  if (name.startsWith('testcontainers')) return 'Testing';
+  if (AI_GUIDES.has(name) || name.startsWith('genai-') || name.startsWith('rag-')) return 'AI & ML';
+  if (name.startsWith('dhi-')) return 'Security & hardening';
+  if (name.startsWith('lab-')) return 'Hands-on labs';
+  if (INFRA.has(name)) return 'Infrastructure';
+  if (DB.has(name)) return 'Databases';
+  if (CICD.has(name)) return 'CI/CD';
+  if (DOCKER_TOOLS.has(name)) return 'Docker tools';
+  if (ADMIN.has(name)) return 'Admin';
+  return 'Other';
+}
+
+const CATEGORY_META: Record<string, { lede: string }> = {
+  'Languages & frameworks': { lede: 'Containerize apps in your language of choice.' },
+  'AI & ML':                { lede: 'Build AI-powered applications with Docker.' },
+  'Testing':                { lede: 'Integration testing with Testcontainers.' },
+  'Security & hardening':   { lede: 'Harden images and remediate vulnerabilities.' },
+  'Docker tools':           { lede: 'Get more out of Compose, Build Cloud, and Scout.' },
+  'CI/CD':                  { lede: 'Automate builds with GitHub Actions and friends.' },
+  'Databases':              { lede: 'Run and manage databases in containers.' },
+  'Infrastructure':         { lede: 'Kubernetes, Swarm, monitoring, and networking.' },
+  'Admin':                  { lede: 'Set up and manage Docker organizations.' },
+  'Hands-on labs':          { lede: 'Interactive, step-by-step exercises.' },
+  'Other':                  { lede: 'Everything else worth reading.' },
+};
+
+const CATEGORY_ORDER = Object.keys(CATEGORY_META);
+
+/* ── Query guides ────────────────────────────────────── */
+
+const allDocs = await getCollection('docs');
+
+type Guide = {
+  title: string;
+  description: string;
+  href: string;
+  name: string;
+  category: string;
+};
+
+const guides: Guide[] = allDocs
+  .filter((entry) => {
+    if (!entry.id.startsWith('guides/')) return false;
+    if (entry.id === 'guides/index.md' || entry.id === 'guides/index.mdx') return false;
+    const rest = entry.id.slice('guides/'.length);
+    const parts = rest.split('/');
+    return parts.length === 1 || (parts.length === 2 && /^index\./.test(parts[1]!));
+  })
+  .map((entry) => {
+    const name = entry.id
+      .slice('guides/'.length)
+      .replace(/\/index\.(md|mdx)$/, '')
+      .replace(/\.(md|mdx)$/, '');
+    const slug = entry.id.replace(/\.(md|mdx)$/, '').replace(/\/index$/, '');
+    return {
+      title: (entry.data as { title?: string }).title || name,
+      description: (entry.data as { description?: string }).description || '',
+      href: `/${slug}/`,
+      name,
+      category: getCategory(name),
+    };
+  })
+  .sort((a, b) => a.title.localeCompare(b.title));
+
+const byCategory = new Map<string, Guide[]>();
+for (const g of guides) {
+  if (!byCategory.has(g.category)) byCategory.set(g.category, []);
+  byCategory.get(g.category)!.push(g);
+}
+
+const categories = CATEGORY_ORDER
+  .filter((cat) => byCategory.has(cat))
+  .map((cat, i) => ({
+    name: cat,
+    id: cat.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+    lede: CATEGORY_META[cat]?.lede ?? '',
+    guides: byCategory.get(cat)!,
+    num: String(i + 1).padStart(2, '0'),
+  }));
+
+const totalGuides = guides.length;
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'Docker guides',
+    description:
+      'Step-by-step tutorials — containerization, AI, testing, CI/CD, security, and more.',
+    template: 'splash',
+    pagefind: false,
+  }}
+>
+  <div class="guides not-content">
+
+    <!-- ── Hero ───────────────────────────────────────── -->
+    <header class="hero">
+      <p class="d-micro hero-meta">
+        <span>Docker Documentation</span>
+        <span aria-hidden="true">·</span>
+        <span>Guides</span>
+        <span aria-hidden="true">·</span>
+        <span>{totalGuides} entries</span>
+      </p>
+      <h1 class="hero-title">Guides.</h1>
+      <p class="hero-lede">
+        Step-by-step tutorials, organized by what you're trying to do.
+      </p>
+    </header>
+
+    <!-- ── Two-column: directory rail + sections ──────── -->
+    <div class="layout">
+
+      <!-- Sticky category rail -->
+      <nav class="rail" aria-label="Guide categories">
+        <p class="d-micro rail-head">Jump to</p>
+        <ol class="rail-list">
+          {categories.map((cat) => (
+            <li>
+              <a href={`#${cat.id}`}>
+                <span class="rail-num">{cat.num}</span>
+                <span class="rail-name">{cat.name}</span>
+                <span class="rail-count">{cat.guides.length}</span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      <!-- Category sections -->
+      <div class="sections">
+        {categories.map((cat) => (
+          <section class="cat" id={cat.id}>
+            <header class="cat-head">
+              <span class="d-micro cat-num">{cat.num}</span>
+              <div>
+                <h2 class="cat-title">{cat.name}</h2>
+                <p class="cat-lede">{cat.lede}</p>
+              </div>
+            </header>
+            <ul class="cat-list">
+              {cat.guides.map((guide) => (
+                <li>
+                  <a href={guide.href}>
+                    <span class="g-title">{guide.title}</span>
+                    {guide.description && (
+                      <span class="g-desc">{guide.description}</span>
+                    )}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</StarlightPage>
+
+<style>
+  .guides {
+    --col: 72rem;
+  }
+
+  /* ── Hero ───────────────────────────────────────────── */
+  .hero {
+    max-width: var(--col);
+    margin: 0 auto;
+    padding: 7.5rem 1.5rem 5rem;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    margin: 0 0 2rem;
+    color: var(--d-text-faint);
+    flex-wrap: wrap;
+  }
+
+  .hero-title {
+    font-family: var(--sl-font);
+    font-variation-settings: "wght" 760, "opsz" 144, "wdth" 100;
+    font-weight: normal;
+    font-size: clamp(2.4rem, 5.5vw, 4.25rem);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--d-text-strong);
+    margin: 0;
+  }
+
+  .hero-lede {
+    margin: 2rem 0 0;
+    max-width: 38rem;
+    color: var(--d-text-muted);
+    font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+    line-height: 1.6;
+    font-variation-settings: "wght" 380, "opsz" 18, "wdth" 100;
+  }
+
+  /* ── Layout: rail + sections ────────────────────────── */
+  .layout {
+    max-width: var(--col);
+    margin: 0 auto;
+    padding: 2rem 1.5rem 7rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 60rem) {
+    .layout {
+      grid-template-columns: 16rem 1fr;
+      gap: 5rem;
+    }
+  }
+
+  /* ── Sticky rail ────────────────────────────────────── */
+  .rail {
+    position: relative;
+  }
+
+  @media (min-width: 60rem) {
+    .rail {
+      position: sticky;
+      top: 5rem;
+      align-self: start;
+      max-height: calc(100vh - 6rem);
+      overflow-y: auto;
+    }
+  }
+
+  .rail-head {
+    margin: 0 0 1rem;
+    color: var(--d-text-faint);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--d-border);
+  }
+
+  .rail-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rail-list a {
+    display: grid;
+    grid-template-columns: 2rem 1fr auto;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding: 0.7rem 0;
+    text-decoration: none;
+    color: var(--d-text);
+    transition: color 0.15s;
+    font-size: 0.9rem;
+  }
+
+  .rail-list a:hover .rail-name,
+  .rail-list a:focus-visible .rail-name {
+    color: var(--d-accent);
+  }
+
+  .rail-num {
+    font-family: var(--sl-font-mono);
+    font-size: 0.7rem;
+    color: var(--d-text-faint);
+    letter-spacing: var(--d-track-mono);
+  }
+
+  .rail-name {
+    font-variation-settings: "wght" 460, "opsz" 14, "wdth" 100;
+    color: var(--d-text-strong);
+    transition: color 0.15s;
+  }
+
+  .rail-count {
+    font-family: var(--sl-font-mono);
+    font-size: 0.7rem;
+    color: var(--d-text-faint);
+  }
+
+  /* ── Sections ───────────────────────────────────────── */
+  .sections {
+    display: flex;
+    flex-direction: column;
+    gap: 5.5rem;
+  }
+
+  .cat {
+    scroll-margin-top: calc(var(--sl-nav-height, 3.75rem) + 1rem);
+  }
+
+  .cat-head {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.25rem;
+    align-items: baseline;
+    border-top: 1px solid var(--d-border);
+    padding-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .cat-num {
+    color: var(--d-text-faint);
+    padding-top: 0.4rem;
+  }
+
+  .cat-title {
+    font-family: var(--sl-font);
+    font-variation-settings: "wght" 620, "opsz" 32, "wdth" 100;
+    font-weight: normal;
+    font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+    letter-spacing: -0.02em;
+    color: var(--d-text-strong);
+    margin: 0;
+  }
+
+  .cat-lede {
+    margin: 0.4rem 0 0;
+    color: var(--d-text-muted);
+    font-size: 0.95rem;
+  }
+
+  /* ── Guide list ─────────────────────────────────────── */
+  .cat-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--d-border);
+  }
+
+  .cat-list li {
+    border-bottom: 1px solid var(--d-border);
+  }
+
+  .cat-list a {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    padding: 1.4rem 0;
+    text-decoration: none;
+    color: var(--d-text);
+    transition: color 0.15s, padding-left 0.15s;
+  }
+
+  @media (min-width: 36rem) {
+    .cat-list a {
+      grid-template-columns: minmax(15rem, 22rem) 1fr;
+      gap: 1.5rem;
+      align-items: baseline;
+    }
+  }
+
+  .cat-list a:hover,
+  .cat-list a:focus-visible {
+    padding-left: 0.5rem;
+  }
+
+  .g-title {
+    font-variation-settings: "wght" 480, "opsz" 16, "wdth" 100;
+    color: var(--d-text-strong);
+    font-size: 1rem;
+    transition: color 0.15s;
+    line-height: 1.35;
+  }
+
+  .cat-list a:hover .g-title,
+  .cat-list a:focus-visible .g-title {
+    color: var(--d-accent);
+  }
+
+  .g-desc {
+    font-size: 0.85rem;
+    color: var(--d-text-muted);
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+

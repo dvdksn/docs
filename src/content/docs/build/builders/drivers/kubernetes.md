@@ -140,7 +140,7 @@ $ docker buildx create \
 ## Multi-platform builds
 
 The Kubernetes driver has support for creating
-[multi-platform images](/manuals/build/building/multi-platform/),
+[multi-platform images](/build/building/multi-platform/),
 either using QEMU or by leveraging the native architecture of nodes.
 
 ### QEMU

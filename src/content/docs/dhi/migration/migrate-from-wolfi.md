@@ -12,8 +12,8 @@ Alpine-like and DHI provides an Alpine-based hardened image.
 
 Like other hardened images, DHI provides comprehensive
 [attestations](/dhi/core-concepts/attestations/) including SBOMs and provenance,
-allowing you to [verify](/manuals/dhi/how-to/verify/) image signatures and
-[scan](/manuals/dhi/how-to/scan/) for vulnerabilities to ensure the security
+allowing you to [verify](/dhi/how-to/verify/) image signatures and
+[scan](/dhi/how-to/scan/) for vulnerabilities to ensure the security
 and integrity of your images.
 
 ## Migration steps
@@ -59,7 +59,7 @@ around image versioning. Ensure that you specify the appropriate version tag for
 > and therefore result in a larger image with a broader attack surface.
 
 To ensure that your final image is as minimal as possible, you should use a
-[multi-stage build](/manuals/build/building/multi-stage/). All stages in your
+[multi-stage build](/build/building/multi-stage/). All stages in your
 Dockerfile should use a hardened image. While intermediary stages will typically
 use images tagged as `dev` or `sdk`, your final runtime stage should use a runtime image.
 
@@ -84,7 +84,7 @@ ENTRYPOINT ["/app/myapp"]
 ```
 
 After updating your Dockerfile, build and test your application. If you encounter
-issues, see the [Troubleshoot](/manuals/dhi/troubleshoot/) guide for common
+issues, see the [Troubleshoot](/dhi/troubleshoot/) guide for common
 problems and solutions.
 
 ## Language-specific examples

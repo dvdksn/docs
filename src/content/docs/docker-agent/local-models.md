@@ -29,11 +29,11 @@ You need Docker Model Runner installed and running:
 
 - Docker Desktop (macOS/Windows) - Enable Docker Model Runner in
   **Settings > AI > Enable Docker Model Runner**. See [Get started with
-  DMR](/manuals/ai/model-runner/get-started/#enable-docker-model-runner) for
+  DMR](/ai-overview/model-runner/get-started/#enable-docker-model-runner) for
   detailed instructions.
 - Docker Engine (Linux) - Install with `sudo apt-get install
 docker-model-plugin` or `sudo dnf install docker-model-plugin`. See [Get
-  started with DMR](/manuals/ai/model-runner/get-started/#docker-engine).
+  started with DMR](/ai-overview/model-runner/get-started/#docker-engine).
 
 Verify Docker Model Runner is available:
 

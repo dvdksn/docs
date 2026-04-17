@@ -57,8 +57,8 @@ To inspect an image, select the image row. Inspecting an image displays detailed
 - Vulnerabilities found
 - Packages inside the image
 
-[Docker Scout](/manuals/scout/) powers this vulnerability information.
-For more information about this view, see [Image details view](/manuals/scout/explore/image-details-view/)
+[Docker Scout](/scout/) powers this vulnerability information.
+For more information about this view, see [Image details view](/scout/explore/image-details-view/)
 
 ## Pull the latest image from Docker Hub
 
@@ -99,7 +99,7 @@ When signed in, it shows you a list of images in Docker Hub organizations and re
 Select an organization from the drop-down to view a list of repositories for that organization.
 
 If you have enabled [Docker Scout](../../scout/) on the repositories,
-image analysis results (and [health scores](/manuals/scout/policy/scores/) if
+image analysis results (and [health scores](/scout/policy/scores/) if
 your Docker organization is eligible) appear next to the image tags.
 
 Hovering over an image tag reveals two options:
@@ -109,4 +109,4 @@ Hovering over an image tag reveals two options:
 
 ## Additional resources
 
-- [What is an image?](/get-started/docker-concepts/the-basics/what-is-an-image/)
+- [What is an image?](/get-started/overview/)

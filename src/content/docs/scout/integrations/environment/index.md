@@ -41,8 +41,8 @@ Docker Scout supports the following runtime integrations:
 >
 > Only organization owners can create new environments and set up integrations.
 > Additionally, Docker Scout only assigns an image to an environment if the
-> image [has been analyzed](/manuals/scout/explore/analysis/), either manually or
-> through a [registry integration](/manuals/scout/integrations/#container-registries).
+> image [has been analyzed](/scout/explore/analysis/), either manually or
+> through a [registry integration](/scout/integrations/#container-registries).
 
 ## List environments
 

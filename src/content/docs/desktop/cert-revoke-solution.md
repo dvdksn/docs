@@ -36,7 +36,7 @@ If possible, update directly through the app. If not, and you’re still seeing 
     
 2. Make sure the malware pop-up is permanently closed. 
 
-3. [Download and install version 4.37.2](/manuals/desktop/release-notes/#4372).
+3. [Download and install version 4.37.2](/desktop/release-notes/#4372).
 
 4. Launch Docker Desktop. A privileged pop-up message displays after 5 to 10 seconds.
 
@@ -65,7 +65,7 @@ If you can’t upgrade to the latest version and you’re seeing the malware pop
 
 2. Make sure the malware pop-up is permanently closed.
 
-3. [Download and install the patched installer](/manuals/desktop/release-notes/) that matches your current base version. For example if you have version 4.36.0, install 4.36.1.
+3. [Download and install the patched installer](/desktop/release-notes/) that matches your current base version. For example if you have version 4.36.0, install 4.36.1.
 
 4. Launch Docker Desktop. A privileged pop-up message displays after 5 to 10 seconds.
 

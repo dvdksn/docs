@@ -4,7 +4,7 @@ description: Deploying Notary
 keywords: trust, security, notary, deployment
 ---
 
-The easiest way to deploy Notary Server is by using Docker Compose. To follow the procedure on this page, you must have already [installed Docker Compose](/manuals/compose/install/).
+The easiest way to deploy Notary Server is by using Docker Compose. To follow the procedure on this page, you must have already [installed Docker Compose](/compose/install/).
 
 1. Clone the Notary repository.
    

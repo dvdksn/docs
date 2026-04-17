@@ -52,7 +52,7 @@ This command will tell you the same thing.
 The SBOM can be generated during the build process and "attached" to the image. This is called an SBOM attestation.
 To generate an SBOM attestation for the `hello` image, first let's change the Dockerfile:
 
-```Dockerfile
+```dockerfile
 ARG BUILDKIT_SBOM_SCAN_STAGE=true
 
 FROM ubuntu:latest AS build

@@ -156,4 +156,4 @@ These attestations can then be verified downstream using tools
 like Cosign or Docker Scout.
 
 To learn how to attach custom attestations during the build process, see [Build
-attestations](/manuals/build/metadata/attestations/).
+attestations](/build/metadata/attestations/).

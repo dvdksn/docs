@@ -29,7 +29,7 @@ $ git clone https://github.com/dockersamples/docker-deno.git && cd docker-deno
 
 Use Compose Watch to automatically update your running Compose services as you
 edit and save your code. For more details about Compose Watch, see [Use Compose
-Watch](/manuals/compose/how-tos/file-watch/).
+Watch](/compose/how-tos/file-watch/).
 
 Open your `compose.yml` file in an IDE or text editor and then add the Compose Watch instructions. The following example shows how to add Compose Watch to your `compose.yml` file.
 
@@ -66,8 +66,8 @@ In this section, you also learned how to use Compose Watch to automatically rebu
 
 Related information:
  - [Compose file reference](/reference/compose-file/)
- - [Compose file watch](/manuals/compose/how-tos/file-watch/)
- - [Multi-stage builds](/manuals/build/building/multi-stage/)
+ - [Compose file watch](/compose/how-tos/file-watch/)
+ - [Multi-stage builds](/build/building/multi-stage/)
 
 ## Next steps
 

@@ -33,6 +33,6 @@ In production, the configuration is optimized for performance, security, and eff
 
 It’s recommended to use `alpine`-based images in production for smaller image sizes, enhancing deployment speed and security.
 
-Additionally, consider using [Docker Scout](/manuals/scout/) to detect and analyze vulnerabilities, especially in production environments.
+Additionally, consider using [Docker Scout](/scout/) to detect and analyze vulnerabilities, especially in production environments.
 
 For additional information about using Docker Compose in production, see [this guide](/compose/how-tos/production/).

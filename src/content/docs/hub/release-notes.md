@@ -58,7 +58,7 @@ known issues for each Docker Hub release.
 
 ### New
 
-- Organizations can assign the [editor role](/manuals/enterprise/security/roles-and-permissions/) to members to grant additional permissions without full administrative access.
+- Organizations can assign the [editor role](/admin/enterprise/security/roles-and-permissions/) to members to grant additional permissions without full administrative access.
 
 ## 2023-05-09
 
@@ -89,7 +89,7 @@ known issues for each Docker Hub release.
 
 ### Bug fixes and enhancements
 
-- In Docker Hub, you can now download a [registry.json](/manuals/enterprise/security/enforce-sign-in/) file or copy the commands to create a registry.json file to enforce sign-in for your organization.
+- In Docker Hub, you can now download a [registry.json](/admin/enterprise/security/enforce-sign-in/) file or copy the commands to create a registry.json file to enforce sign-in for your organization.
 
 ## 2022-09-19
 
@@ -119,7 +119,7 @@ known issues for each Docker Hub release.
 
 ### New
 
-- [Registry Access Management](/manuals/enterprise/security/hardened-desktop/registry-access-management/) is now available for all Docker Business subscriptions. When enabled, your users can access specific registries in Docker Hub.
+- [Registry Access Management](/admin/enterprise/security/hardened-desktop/registry-access-management/) is now available for all Docker Business subscriptions. When enabled, your users can access specific registries in Docker Hub.
 
 ## 2022-05-03
 
@@ -208,7 +208,7 @@ Docker introduces Hub Vulnerability Scanning which enables you to automatically 
 
 * Docker has announced a new, per-seat pricing model to accelerate developer workflows for cloud-native development. The previous private repository/concurrent autobuild-based plans have been replaced with new **Pro** and **Team** plans that include unlimited private repositories. For more information, see [Docker subscription](../subscription/).
 
-* Docker has enabled download rate limits for downloads and pull requests on Docker Hub. This caps the number of objects that users can download within a specified timeframe. For more information, see [Usage and limits](/manuals/docker-hub/usage/).
+* Docker has enabled download rate limits for downloads and pull requests on Docker Hub. This caps the number of objects that users can download within a specified timeframe. For more information, see [Usage and limits](/hub/usage/).
 
 ## 2019-11-04
 

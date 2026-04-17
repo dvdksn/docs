@@ -38,7 +38,7 @@ To change your billing cycle:
 1. On the plans and usage page, select **Switch to annual billing**.
 1. Verify your billing information.
 1. Select **Continue to payment**.
-1. Verify payment information and select **Upgrade subscription**. If you choose to pay using a US bank account, you must verify the account. For more information, see [Verify a bank account](/manuals/billing/payment-method/#verify-a-bank-account).
+1. Verify payment information and select **Upgrade subscription**. If you choose to pay using a US bank account, you must verify the account. For more information, see [Verify a bank account](/admin/billing/payment-method/#verify-a-bank-account).
 
 The billing plans and usage page will now reflect your new annual plan details.
 
@@ -57,4 +57,4 @@ organization's Docker subscription:
 1. On the plans and usage page, select **Switch to annual billing**.
 1. Verify your billing information.
 1. Select **Continue to payment**.
-1. Verify payment information and select **Upgrade subscription**. If you choose to pay using a US bank account, you must verify the account. For more information, see [Verify a bank account](/manuals/billing/payment-method/#verify-a-bank-account).
+1. Verify payment information and select **Upgrade subscription**. If you choose to pay using a US bank account, you must verify the account. For more information, see [Verify a bank account](/admin/billing/payment-method/#verify-a-bank-account).

@@ -25,7 +25,7 @@ Activity logs are available for Docker Team or Docker Business plans, with data 
 - Team collaboration review: Logs show which team members pushed updates to a critical repository, ensuring accountability during a development sprint.
 - Billing adjustments: Track who added or removed subscription seats to maintain budgetary control and compliance.
 
-For more information, see [Activity logs](/manuals/admin/organization/activity-logs/).
+For more information, see [Activity logs](/admin/organization/activity-logs/).
 
 ## Insights
 
@@ -43,13 +43,13 @@ Insights provide data-driven views of Docker usage to improve team productivity 
 - Build efficiency: Track average build times and success rates to pinpoint bottlenecks in development processes.
 - Container utilization: Analyze container activity across departments to ensure proper resource distribution and cost efficiency.
 
-For more information, see [Insights](/manuals/admin/organization/insights/).
+For more information, see [Insights](/admin/organization/insights/).
 
 ## Next steps
 
 Now that you've mastered user and access management in Docker, you can:
 
-- Review your [activity logs](/manuals/admin/organization/activity-logs/) regularly to maintain security awareness
-- Check your [Insights dashboard](/manuals/admin/organization/insights/) to identify opportunities for optimization
-- Explore [advanced security features](/manuals/enterprise/security/) to further enhance your Docker environment
+- Review your [activity logs](/admin/organization/activity-logs/) regularly to maintain security awareness
+- Check your [Insights dashboard](/admin/organization/insights/) to identify opportunities for optimization
+- Explore [advanced security features](/admin/enterprise/security/) to further enhance your Docker environment
 - Share best practices with your team to ensure consistent adoption of security policies

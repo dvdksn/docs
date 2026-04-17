@@ -10,7 +10,7 @@ sidebar:
 
 ## Prerequisites
 
-- You have installed the latest version of [Docker Desktop](/get-started/get-docker/).
+- You have installed the latest version of [Docker Desktop](/get-started/install/).
 - You have a [git client](https://git-scm.com/downloads). The examples in this section use a command-line based git client, but you can use any client.
 
 ## Overview
@@ -269,7 +269,7 @@ View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux
 
 ## View local images
 
-To see a list of images you have on your local machine, you have two options. One is to use the Docker CLI and the other is to use [Docker Desktop](/manuals/desktop/use-desktop/images/). As you are working in the terminal already, take a look at listing images using the CLI.
+To see a list of images you have on your local machine, you have two options. One is to use the Docker CLI and the other is to use [Docker Desktop](/desktop/use-desktop/images/). As you are working in the terminal already, take a look at listing images using the CLI.
 
 To list images, run the `docker images` command.
 

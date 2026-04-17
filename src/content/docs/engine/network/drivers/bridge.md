@@ -94,8 +94,8 @@ network.**
     compose file can define the shared variables.
 
   - You can use swarm services instead of standalone containers, and take
-    advantage of shared [secrets](/manuals/engine/swarm/secrets/) and
-    [configs](/manuals/engine/swarm/configs/).
+    advantage of shared [secrets](/engine/swarm/secrets/) and
+    [configs](/engine/swarm/configs/).
 
 Containers connected to the same user-defined bridge network effectively expose all ports
 to each other. For a port to be accessible to containers or non-Docker hosts on

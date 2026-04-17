@@ -28,7 +28,7 @@ Typically, Compose v1 projects include a top-level `version` element in the `com
 Compose v2, announced in 2020, is written in Go and is invoked with `docker compose`.
 Unlike v1, Compose v2 ignores the `version` top-level element in the `compose.yaml` file and relies entirely on the Compose Specification to interpret the file.
 
-Compose v5, released in 2025, is functionally identical to Compose v2. Its primary distinction is the introduction of an official [Go SDK](/manuals/compose/compose-sdk/). This SDK provides a comprehensive API that lets you integrate Compose functionality directly into your applications, allowing you to load, validate, and manage multi-container environments without relying on the Compose CLI. To avoid confusion with the legacy Compose file formats labeled “v2” and “v3,” the versioning was advanced directly to v5.
+Compose v5, released in 2025, is functionally identical to Compose v2. Its primary distinction is the introduction of an official [Go SDK](/compose/compose-sdk/). This SDK provides a comprehensive API that lets you integrate Compose functionality directly into your applications, allowing you to load, validate, and manage multi-container environments without relying on the Compose CLI. To avoid confusion with the legacy Compose file formats labeled “v2” and “v3,” the versioning was advanced directly to v5.
 
 ### Compose file format versioning
 
@@ -46,7 +46,7 @@ Compose file format 2.x and 3.x are very similar to each other, but the latter i
 
 To address confusion around Compose CLI versioning, Compose file format versioning, and feature parity depending on whether Swarm mode was in use, file format 2.x and 3.x were merged into the [Compose Specification](/reference/compose-file/). 
 
-Compose v2 and v5 uses the Compose Specification for project definition. Unlike the prior file formats, the Compose Specification is rolling and makes the `version` top-level element optional. Compose v2 and v5 also makes use of optional specifications - [Deploy](/reference/compose-file/deploy/), [Develop](/reference/compose-file/develop/), and [Build](/reference/compose-file/build/).
+Compose v2 and v5 uses the Compose Specification for project definition. Unlike the prior file formats, the Compose Specification is rolling and makes the `version` top-level element optional. Compose v2 and v5 also makes use of optional specifications - [Deploy](/reference/compose-file/deploy/), [Develop](/compose/how-tos/develop/), and [Build](/reference/compose-file/build/).
 
 To make migration easier, Compose v2 and v5 has backwards compatibility for certain elements that have been deprecated or changed between Compose file format 2.x/3.x and the Compose Specification.
 

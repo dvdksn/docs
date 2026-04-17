@@ -21,7 +21,7 @@ To upgrade your subscription:
 1. Select **Billing**.
 1. Optional. If you're upgrading from a free Personal subscription to a Team subscription and want to keep your username, [convert your user account into an organization](../admin/organization/convert-account/).
 1. Select **Upgrade**.
-1. Follow the on-screen instructions to complete your upgrade. If you choose to pay using a US bank account, you must verify the account. For more information, see [Verify a bank account](/manuals/billing/payment-method/#verify-a-bank-account).
+1. Follow the on-screen instructions to complete your upgrade. If you choose to pay using a US bank account, you must verify the account. For more information, see [Verify a bank account](/admin/billing/payment-method/#verify-a-bank-account).
 
 ## Downgrade your subscription
 

@@ -49,7 +49,7 @@ that, you must authenticate with your Docker credentials (username and access
 token) as part of the GitHub Actions workflow.
 
 For instructions on how to create a Docker access token, see
-[Create and manage access tokens](/manuals/security/access-tokens/).
+[Create and manage access tokens](/admin/security/access-tokens/).
 
 Once you have your Docker credentials ready, add the credentials to your GitHub
 repository so you can use them in GitHub Actions:
@@ -154,7 +154,7 @@ In this configuration:
   builds and tests images for pull requests but only pushes images for commits
   to the main branch.
 - `tags` and `annotations` use the outputs from the metadata action to apply
-  consistent tags and [annotations](/manuals/build/metadata/annotations/) to
+  consistent tags and [annotations](/build/metadata/annotations/) to
   the image automatically.
 
 ## Attestations
@@ -193,7 +193,7 @@ Here's the updated snippet:
 ```
 
 For more details about attestations, refer to
-[the documentation](/manuals/build/metadata/attestations/).
+[the documentation](/build/metadata/attestations/).
 
 ## Conclusion
 
@@ -244,10 +244,10 @@ jobs:
 This workflow implements best practices for building and pushing Docker images
 using GitHub Actions. This configuration can be used as-is or extended with
 additional features based on your project's needs, such as
-[multi-platform](/manuals/build/building/multi-platform/).
+[multi-platform](/build/building/multi-platform/).
 
 ### Further reading
 
-- Learn more about advanced configurations and examples in the [Docker Build GitHub Actions](/manuals/build/ci/github-actions/) section.
-- For more complex build setups, you may want to consider [Bake](/manuals/build/bake/). (See also the [Mastering Buildx Bake guide](/guides/bake/index/).)
+- Learn more about advanced configurations and examples in the [Docker Build GitHub Actions](/build/ci/github-actions/) section.
+- For more complex build setups, you may want to consider [Bake](/build/bake/). (See also the [Mastering Buildx Bake guide](/guides/bake/index/).)
 - Learn about Docker's managed build service, designed for faster, multi-platform builds, see [Docker Build Cloud](/guides/docker-build-cloud/).

@@ -69,7 +69,7 @@ Logs will be available at the end of a job:
 ## BuildKit Daemon configuration
 
 You can provide a [BuildKit configuration](../../buildkit/toml-configuration/)
-to your builder if you're using the [`docker-container` driver](/manuals/build/builders/drivers/docker-container/)
+to your builder if you're using the [`docker-container` driver](/build/builders/drivers/docker-container/)
 (default) with the `config` or `buildkitd-config-inline` inputs:
 
 ### Registry mirror
@@ -149,7 +149,7 @@ fields:
 | `buildkitd-flags` | String | [Flags for buildkitd](/reference/cli/docker/buildx/create/#buildkitd-flags) daemon                                                                                                                                                                    |
 | `platforms`       | String | Fixed [platforms](/reference/cli/docker/buildx/create/#platform) for the node. If not empty, values take priority over the detected ones.                                                                                                             |
 
-Here is an example using remote nodes with the [`remote` driver](/manuals/build/builders/drivers/remote/)
+Here is an example using remote nodes with the [`remote` driver](/build/builders/drivers/remote/)
 and [TLS authentication](#tls-authentication):
 
 ```yaml
@@ -191,7 +191,7 @@ using SSH or TLS.
 
 ### SSH authentication
 
-To be able to connect to an SSH endpoint using the [`docker-container` driver](/manuals/build/builders/drivers/docker-container/),
+To be able to connect to an SSH endpoint using the [`docker-container` driver](/build/builders/drivers/docker-container/),
 you have to set up the SSH private key and configuration on the GitHub Runner:
 
 ```yaml
@@ -219,7 +219,7 @@ jobs:
 
 ### TLS authentication
 
-You can also [set up a remote BuildKit instance](/manuals/build/builders/drivers/remote/#example-remote-buildkit-in-docker-container)
+You can also [set up a remote BuildKit instance](/build/builders/drivers/remote/#example-remote-buildkit-in-docker-container)
 using the remote driver. To ease the integration in your workflow, you can use
 an environment variables that sets up authentication using the BuildKit client
 certificates for the `tcp://`:
@@ -292,7 +292,7 @@ some packages may be particularly resource-intensive to build and require more
 compute. Or they require a builder equipped with a particular capability or
 hardware.
 
-For more information about remote builder, see [`remote` driver](/manuals/build/builders/drivers/remote/)
+For more information about remote builder, see [`remote` driver](/build/builders/drivers/remote/)
 and the [append builder nodes example](#append-additional-nodes-to-the-builder).
 
 ```yaml

@@ -10,7 +10,7 @@ sidebar:
 
 ## Prerequisites
 
-- You have installed the latest version of [Docker Desktop](/get-started/get-docker/).
+- You have installed the latest version of [Docker Desktop](/get-started/install/).
   Docker adds new features regularly and some parts of this guide may
   work only with the latest version of Docker Desktop.
 

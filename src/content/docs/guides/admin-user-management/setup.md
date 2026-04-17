@@ -12,7 +12,7 @@ With the right configurations, you can ensure your developers have easy access t
 
 Before setting up roles and permissions, it's important to have a clear understanding of who in your organization requires Docker access. Focus on gathering a comprehensive view of active users, their roles within projects, and how they interact with Docker resources. This process can be supported by tools like device management software or manual assessments. Encourage all users to update their Docker accounts to use organizational email addresses, ensuring seamless integration with your subscription.
 
-For steps on how you can do this, see [step 1 of onboarding your organization](/manuals/admin/organization/onboard/).
+For steps on how you can do this, see [step 1 of onboarding your organization](/admin/organization/onboard/).
 
 ## Assign roles strategically
 
@@ -24,7 +24,7 @@ Docker's predefined roles offer flexibility for various organizational needs. As
 - Editor: Partial administrative access to the organization. Editors can create, edit, and delete repositories. They can also edit an existing team's access permissions.
 - Owner: Full organization administrative access. Owners can manage organization repositories, teams, members, settings, and billing.
 
-For more information, see [Roles and permissions](/manuals/enterprise/security/roles-and-permissions/).
+For more information, see [Roles and permissions](/admin/enterprise/security/roles-and-permissions/).
 
 ### Enhance with teams
 
@@ -34,7 +34,7 @@ Teams in Docker provide a structured way to manage member access and they provid
 - Assign permissions at the team level rather than individually. For instance, a development team might have "Read & Write" access to certain repositories, while a QA team has "Read-only" access.
 - As teams grow or responsibilities shift, you can easily update permissions or add new members, maintaining consistency without reconfiguring individual settings.
 
-For more information, see [Create and manage a team](/manuals/admin/organization/manage-a-team/).
+For more information, see [Create and manage a team](/admin/organization/manage-a-team/).
 
 ### Example scenarios
 

@@ -88,7 +88,7 @@ application using Docker.
 
 Related information:
 
-- [Docker Compose overview](/manuals/compose/)
+- [Docker Compose overview](/compose/)
 
 ## Next steps
 

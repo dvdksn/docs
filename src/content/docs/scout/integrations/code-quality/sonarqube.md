@@ -8,7 +8,7 @@ sidebar:
 
 The SonarQube integration enables Docker Scout to surface SonarQube quality
 gate checks through Policy Evaluation, under a new [SonarQube Quality Gates
-Policy](/manuals/scout/policy/#sonarqube-quality-gates-policy).
+Policy](/scout/policy/#sonarqube-quality-gates-policy).
 
 ## How it works
 
@@ -36,7 +36,7 @@ Both self-managed SonarQube instances and SonarCloud are supported.
 To integrate Docker Scout with SonarQube, ensure that:
 
 - Your image repository is [integrated with Docker Scout](../#container-registries).
-- Your images are built with [provenance attestations](/manuals/build/metadata/attestations/slsa-provenance/),
+- Your images are built with [provenance attestations](/build/metadata/attestations/slsa-provenance/),
   or the `org.opencontainers.image.revision` annotation,
   containing information about the Git repository.
 

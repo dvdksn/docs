@@ -1,0 +1,107 @@
+---
+/**
+ * PageSidebar override — right rail.
+ *
+ * Renders the default TOC AND the Gordon chat as siblings in the right
+ * rail. CSS toggles which is visible based on `[data-chat-open]` on the
+ * root element. No more slide-out panel overlaying the content — when
+ * Gordon opens, it replaces the TOC in-place.
+ *
+ * Splash pages (no TOC) render nothing here. The Header override also
+ * hides the Gordon trigger on those pages since there's no rail to
+ * surface the chat in.
+ */
+import MobileTableOfContents from 'virtual:starlight/components/MobileTableOfContents';
+import TableOfContents from 'virtual:starlight/components/TableOfContents';
+import GordonChat from '@components/GordonChat.astro';
+---
+
+{
+  Astro.locals.starlightRoute.toc && (
+    <>
+      <div class="lg:sl-hidden">
+        <MobileTableOfContents />
+      </div>
+      <div class="right-sidebar-panel sl-hidden lg:sl-block">
+        <div class="sl-container">
+          <TableOfContents />
+        </div>
+      </div>
+      <div class="gordon-rail sl-hidden lg:sl-block">
+        <GordonChat />
+      </div>
+    </>
+  )
+}
+
+<style>
+  /*
+   * Chat takes the available vertical space. It needs an explicit width
+   * because the parent `.right-sidebar` is `position: fixed; width: 100%`
+   * (= 100vw). Default Starlight constrains the TOC via an inner
+   * `.sl-container` width; we constrain the chat directly here.
+   *
+   * The width matches the right-sidebar-container's calc when expanded
+   * by +8rem, so the chat aligns with the visible rail.
+   */
+  .gordon-rail {
+    display: none;
+    height: calc(100vh - var(--sl-nav-height));
+  }
+
+  @media (min-width: 72rem) {
+    .gordon-rail {
+      /*
+       * Starlight's right-sidebar-container uses `100%` (width of the
+       * flex parent, which is `.main-frame` with padding-inline-start
+       * equal to the left-sidebar width). We're computing from 100vw,
+       * so subtract `--sl-content-inline-start` to match.
+       */
+      width: calc(
+        var(--sl-sidebar-width) +
+        (100vw - var(--sl-content-inline-start, 0rem) - var(--sl-content-width) - var(--sl-sidebar-width)) / 2 +
+        8rem
+      );
+    }
+  }
+
+  /* Toggle TOC ↔ chat on [data-chat-open] */
+  :global([data-chat-open]) .right-sidebar-panel {
+    display: none;
+  }
+  :global([data-chat-open]) .gordon-rail {
+    display: block;
+  }
+</style>
+
+<!--
+  Widen the right rail when chat is open; steal the same amount from the
+  main-pane so the two columns still sum to 100% of the flex parent.
+  Starlight's width calcs live in TwoColumnContent.astro (scoped in
+  `@layer starlight.core`); these overrides sit outside any layer so they
+  win on cascade precedence.
+-->
+<style is:global>
+  @media (min-width: 72rem) {
+    .right-sidebar-container,
+    .main-pane {
+      transition: width 0.2s ease;
+    }
+
+    :root[data-chat-open] .right-sidebar-container {
+      width: calc(
+        var(--sl-sidebar-width) +
+        (100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2 +
+        8rem
+      );
+    }
+
+    :root[data-chat-open][data-has-sidebar][data-has-toc] .main-pane {
+      width: calc(
+        var(--sl-content-width) +
+        (100% - var(--sl-content-width) - var(--sl-sidebar-width)) / 2 -
+        8rem
+      );
+    }
+  }
+</style>

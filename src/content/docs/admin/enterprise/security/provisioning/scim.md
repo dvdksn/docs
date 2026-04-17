@@ -55,7 +55,7 @@ SCIM automates:
 >
 > To remove those users, delete them manually from your Docker organization.
 > For more information, see
-> [Manage organization members](/manuals/admin/organization/members/).
+> [Manage organization members](/admin/organization/members/).
 
 ## Supported attributes
 
@@ -570,7 +570,7 @@ If a user fails to reappear after removal:
 4. Check provisioning logs in your identity provider for errors.
 
 For more troubleshooting guidance, see
-[Troubleshoot provisioning](/manuals/enterprise/troubleshoot/troubleshoot-provisioning/).
+[Troubleshoot provisioning](/admin/enterprise/troubleshoot/troubleshoot-provisioning/).
 
 ## Disable SCIM
 
@@ -588,5 +588,5 @@ To disable SCIM:
 
 ## Next steps
 
-- Set up [Group mapping](/manuals/enterprise/security/provisioning/group-mapping/).
-- [Troubleshoot provisioning](/manuals/enterprise/troubleshoot/troubleshoot-provisioning/).
+- Set up [Group mapping](/admin/enterprise/security/provisioning/group-mapping/).
+- [Troubleshoot provisioning](/admin/enterprise/troubleshoot/troubleshoot-provisioning/).

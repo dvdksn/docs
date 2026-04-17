@@ -132,7 +132,7 @@ node-1
 
 The labels you set for nodes using `docker node update` apply only to the node
 entity within the swarm. Do not confuse them with the Docker daemon labels for
-[dockerd](/manuals/engine/manage-resources/labels/).
+[dockerd](/engine/manage-resources/labels/).
 
 Therefore, node labels can be used to limit critical tasks to nodes that meet
 certain requirements. For example, schedule only on machines where special

@@ -73,4 +73,4 @@ Examples of resources that BuildKit can request from Buildx include:
 - SSH sockets
 - Registry authentication tokens
 
-For more information about BuildKit, see [BuildKit](/manuals/build/buildkit/).
+For more information about BuildKit, see [BuildKit](/build/buildkit/).

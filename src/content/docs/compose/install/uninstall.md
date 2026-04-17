@@ -13,7 +13,7 @@ How you uninstall Docker Compose depends on how it was installed. This guide cov
 
 ## Uninstalling Docker Compose with Docker Desktop
 
-If you want to uninstall Docker Compose and you have installed Docker Desktop, see [Uninstall Docker Desktop](/manuals/desktop/uninstall/).
+If you want to uninstall Docker Compose and you have installed Docker Desktop, see [Uninstall Docker Desktop](/desktop/uninstall/).
 
 > [!WARNING]
 >

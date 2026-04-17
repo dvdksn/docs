@@ -1,0 +1,1322 @@
+---
+/**
+ * GordonChat — Q&A chat mounted in the right-side slide-out panel.
+ *
+ * Conversation state is persisted via sessionStorage so conversations
+ * survive navigation between pages.
+ *
+ * Aesthetic: docs-native Q&A, not a chat app.
+ *   - No bubbles. User turn = italic display-weight line. Assistant
+ *     turn = reading prose using the site's typography.
+ *   - No mascot. No blue header bar. Hairlines, OKLCH tokens.
+ *   - Suggestions are plain-text hairline chips.
+ */
+---
+
+<div
+  id="gordon-chat"
+  class="gordon-chat"
+  aria-label="Gordon AI Chat"
+>
+  <header class="g-topbar">
+    <span class="g-brand">
+      <span class="g-mark g-mark--sm" aria-hidden="true"></span>
+      <span>Gordon</span>
+    </span>
+    <div class="g-topbar-actions">
+      <button
+        type="button"
+        id="gordon-new-chat-btn"
+        class="g-iconbtn"
+        title="Clear conversation"
+        aria-label="Clear conversation"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+          <path d="M3 3v5h5"/>
+        </svg>
+      </button>
+      <button
+        type="button"
+        id="gordon-close-btn"
+        class="g-iconbtn"
+        title="Close"
+        aria-label="Close"
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="g-messages" id="gordon-messages">
+    <div class="g-welcome" id="gordon-welcome">
+      <div class="g-welcome-mark" aria-hidden="true">
+        <span class="g-mark g-mark--lg"></span>
+      </div>
+      <h2 class="g-welcome-title">Ask Gordon.</h2>
+      <p class="g-welcome-lede">
+        Docker's AI assistant, grounded in the documentation.
+        Ten questions per thread &mdash; make them count.
+      </p>
+      <p class="d-micro g-try-label">Try asking</p>
+      <div class="g-suggestions" id="gordon-suggestions">
+        <button type="button" class="g-suggestion" data-query="Help me get started with Docker. What should I do first?">
+          Getting started with Docker
+        </button>
+        <button type="button" class="g-suggestion" data-query="How do Docker Hardened Images work?">
+          How Hardened Images work
+        </button>
+        <button type="button" class="g-suggestion" data-query="What is the difference between docker run and docker exec?">
+          docker run vs docker exec
+        </button>
+        <button type="button" class="g-suggestion" data-query="How do I isolate an AI agent inside a sandbox?">
+          Isolate an AI agent in a sandbox
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <form class="g-input-area" id="gordon-input-form" autocomplete="off">
+    <textarea
+      id="gordon-input"
+      placeholder="Ask about any Docker product…"
+      rows="2"
+      aria-label="Ask Gordon"
+    ></textarea>
+    <div class="g-input-foot">
+      <span class="g-input-hint" aria-hidden="true">
+        <kbd>⇧</kbd><kbd>↵</kbd><span>for a new line</span>
+      </span>
+      <button type="submit" class="g-send" id="gordon-send-btn" aria-label="Send" disabled>
+        <span>Ask</span>
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </form>
+
+  <p class="g-disclaimer">
+    <span>Answers generated from the documentation.</span>
+    <a href="https://github.com/docker/docs/issues/23966" target="_blank" rel="noopener noreferrer">Share feedback</a>
+  </p>
+</div>
+
+<script>
+  import { marked } from 'marked';
+  import hljs from 'highlight.js/lib/core';
+  import bash from 'highlight.js/lib/languages/bash';
+  import javascript from 'highlight.js/lib/languages/javascript';
+  import typescript from 'highlight.js/lib/languages/typescript';
+  import json from 'highlight.js/lib/languages/json';
+  import yaml from 'highlight.js/lib/languages/yaml';
+  import xml from 'highlight.js/lib/languages/xml';
+  import css from 'highlight.js/lib/languages/css';
+  import python from 'highlight.js/lib/languages/python';
+  import go from 'highlight.js/lib/languages/go';
+  import dockerfile from 'highlight.js/lib/languages/dockerfile';
+  import plaintext from 'highlight.js/lib/languages/plaintext';
+
+  hljs.registerLanguage('bash', bash);
+  hljs.registerLanguage('sh', bash);
+  hljs.registerLanguage('shell', bash);
+  hljs.registerLanguage('javascript', javascript);
+  hljs.registerLanguage('js', javascript);
+  hljs.registerLanguage('typescript', typescript);
+  hljs.registerLanguage('ts', typescript);
+  hljs.registerLanguage('json', json);
+  hljs.registerLanguage('yaml', yaml);
+  hljs.registerLanguage('yml', yaml);
+  hljs.registerLanguage('xml', xml);
+  hljs.registerLanguage('html', xml);
+  hljs.registerLanguage('css', css);
+  hljs.registerLanguage('python', python);
+  hljs.registerLanguage('py', python);
+  hljs.registerLanguage('go', go);
+  hljs.registerLanguage('golang', go);
+  hljs.registerLanguage('dockerfile', dockerfile);
+  hljs.registerLanguage('docker', dockerfile);
+  hljs.registerLanguage('plaintext', plaintext);
+  hljs.registerLanguage('text', plaintext);
+
+  const MAX_TURNS = 10;
+  const BASE_URL =
+    import.meta.env.PUBLIC_GORDON_BASE_URL ||
+    'https://ai-backend-service-stage.docker.com';
+
+  interface ChatMessage {
+    role: 'user' | 'assistant';
+    content: string;
+    isStreaming?: boolean;
+    qaId?: string;
+    feedback?: 'positive' | 'negative' | null;
+  }
+
+  // ── DOM ──
+  const rootEl = document.getElementById('gordon-chat');
+  if (rootEl) {
+    const messagesEl = document.getElementById('gordon-messages')!;
+    const welcomeEl = document.getElementById('gordon-welcome')!;
+    const inputForm = document.getElementById(
+      'gordon-input-form',
+    ) as HTMLFormElement;
+    const inputEl = document.getElementById(
+      'gordon-input',
+    ) as HTMLTextAreaElement;
+    const sendBtn = document.getElementById(
+      'gordon-send-btn',
+    ) as HTMLButtonElement;
+    const suggestionsEl = document.getElementById('gordon-suggestions')!;
+    const closeBtn = document.getElementById('gordon-close-btn')!;
+    const newChatBtn = document.getElementById('gordon-new-chat-btn')!;
+
+    // ── State ──
+    let messages: ChatMessage[] = [];
+    let threadId: string | null = null;
+    let isLoading = false;
+
+    function loadState() {
+      try {
+        const m = sessionStorage.getItem('gordon-messages');
+        if (m) {
+          messages = JSON.parse(m).filter(
+            (msg: ChatMessage) => !msg.isStreaming,
+          );
+        }
+        threadId = sessionStorage.getItem('gordon-threadId');
+      } catch {}
+    }
+
+    function saveState() {
+      try {
+        sessionStorage.setItem('gordon-messages', JSON.stringify(messages));
+        if (threadId) sessionStorage.setItem('gordon-threadId', threadId);
+        else sessionStorage.removeItem('gordon-threadId');
+      } catch {}
+    }
+
+    function getSessionId(): string {
+      let id = sessionStorage.getItem('gordon-session-id');
+      if (!id) {
+        id = `docs-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+        sessionStorage.setItem('gordon-session-id', id);
+      }
+      return id;
+    }
+
+    // ── Markdown ──
+    marked.use({
+      breaks: true,
+      gfm: true,
+      renderer: {
+        code({ text, lang }: { text: string; lang?: string }) {
+          const language = lang && hljs.getLanguage(lang) ? lang : null;
+          const body = language
+            ? hljs.highlight(text, { language }).value
+            : escapeHtml(text);
+          const label = (language || 'text').toUpperCase();
+          return `<pre class="g-pre" data-lang="${label}"><code class="hljs">${body}</code></pre>`;
+        },
+      },
+    });
+
+    function escapeHtml(s: string): string {
+      return s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
+    // ── Panel toggle ──
+    function closePanel() {
+      document.documentElement.removeAttribute('data-chat-open');
+    }
+    function togglePanel() {
+      if (document.documentElement.hasAttribute('data-chat-open')) {
+        closePanel();
+      } else {
+        document.documentElement.setAttribute('data-chat-open', '');
+        setTimeout(() => inputEl.focus(), 260);
+      }
+    }
+
+    window.addEventListener('toggle-ask-ai', togglePanel);
+    // Opens the panel AND seeds it with a query (from home hero input, etc.).
+    window.addEventListener('ask-ai', ((e: CustomEvent<{ query?: string }>) => {
+      const q = (e.detail?.query || '').trim();
+      if (!document.documentElement.hasAttribute('data-chat-open')) {
+        document.documentElement.setAttribute('data-chat-open', '');
+      }
+      if (q) {
+        // Wait for the panel's opening animation so the focus+scroll settle,
+        // then send. Mirrors the 260ms delay used by togglePanel.
+        setTimeout(() => { if (!isLoading) sendMessage(q); }, 260);
+      } else {
+        setTimeout(() => inputEl.focus(), 260);
+      }
+    }) as EventListener);
+    closeBtn.addEventListener('click', closePanel);
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.key === 'Escape' &&
+        document.documentElement.hasAttribute('data-chat-open')
+      ) {
+        closePanel();
+      }
+    });
+
+    // ── New chat ──
+    newChatBtn.addEventListener('click', () => {
+      if (messages.length === 0) return;
+      if (!confirm('Clear this conversation?')) return;
+      messages = [];
+      threadId = null;
+      saveState();
+      renderMessages();
+    });
+
+    // ── Render ──
+    function renderMessages() {
+      messagesEl
+        .querySelectorAll('.g-turn, .g-warn')
+        .forEach((el) => el.remove());
+
+      if (messages.length === 0) {
+        welcomeEl.style.display = '';
+        return;
+      }
+      welcomeEl.style.display = 'none';
+
+      for (let i = 0; i < messages.length; i++) {
+        appendTurn(messages[i], i);
+      }
+
+      const userTurns = messages.filter((m) => m.role === 'user').length;
+      const remaining = MAX_TURNS - userTurns;
+
+      if (userTurns >= MAX_TURNS) {
+        const warn = document.createElement('div');
+        warn.className = 'g-warn g-warn--limit';
+        warn.innerHTML = `
+          <p>You've reached the ${MAX_TURNS}-question limit for this thread. Start a new one for the next question.</p>
+          <button type="button" class="g-action" id="g-new-thread">Start a new thread</button>
+        `;
+        messagesEl.appendChild(warn);
+        warn.querySelector('#g-new-thread')?.addEventListener('click', () => {
+          messages = [];
+          threadId = null;
+          saveState();
+          renderMessages();
+        });
+        inputEl.disabled = true;
+      } else if (remaining <= 3) {
+        const warn = document.createElement('div');
+        warn.className = 'g-warn g-warn--countdown';
+        warn.textContent = `${remaining} question${remaining === 1 ? '' : 's'} left in this thread.`;
+        messagesEl.appendChild(warn);
+        inputEl.disabled = false;
+      } else {
+        inputEl.disabled = false;
+      }
+
+      scrollToBottom();
+    }
+
+    function appendTurn(msg: ChatMessage, index: number) {
+      const turn = document.createElement('div');
+      turn.className = `g-turn g-turn--${msg.role}`;
+
+      if (msg.role === 'user') {
+        const body = document.createElement('p');
+        body.className = 'g-user-body';
+        body.textContent = msg.content;
+        turn.appendChild(body);
+      } else {
+        const label = document.createElement('p');
+        label.className = 'd-micro g-turn-label';
+        label.innerHTML = `
+          <span class="g-mark g-mark--xs" aria-hidden="true"></span>
+          <span>Gordon</span>
+        `;
+        turn.appendChild(label);
+
+        const body = document.createElement('div');
+        body.className = 'g-assistant-body';
+        if (msg.isStreaming && !msg.content) {
+          body.innerHTML = '<div class="g-dots"><span></span><span></span><span></span></div>';
+        } else {
+          body.innerHTML = marked.parse(msg.content) as string;
+        }
+        turn.appendChild(body);
+
+        if (!msg.isStreaming && msg.content) {
+          const actions = document.createElement('div');
+          actions.className = 'g-actions';
+          const svgUp = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>`;
+          const svgDown = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M17 14V2"/><path d="M9 18.12 10 14H4.17a2 2 0 0 1-1.92-2.56l2.33-8A2 2 0 0 1 6.5 2H20a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2.76a2 2 0 0 0-1.79 1.11L12 22a3.13 3.13 0 0 1-3-3.88Z"/></svg>`;
+          const svgCopy = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`;
+          actions.innerHTML = `
+            <span class="g-actions-label">Was this helpful?</span>
+            <button type="button" class="g-action g-action--icon g-action--up ${msg.feedback === 'positive' ? 'is-active' : ''}" aria-label="Mark helpful" title="Helpful">${svgUp}</button>
+            <button type="button" class="g-action g-action--icon g-action--down ${msg.feedback === 'negative' ? 'is-active' : ''}" aria-label="Mark not helpful" title="Not quite">${svgDown}</button>
+            <button type="button" class="g-action g-action--copy" aria-label="Copy answer">${svgCopy}<span>Copy</span></button>
+          `;
+          turn.appendChild(actions);
+
+          const upBtn = actions.querySelector<HTMLButtonElement>('.g-action--up')!;
+          const downBtn = actions.querySelector<HTMLButtonElement>('.g-action--down')!;
+          const copyBtn = actions.querySelector<HTMLButtonElement>('.g-action--copy')!;
+          const copyLabel = copyBtn.querySelector('span')!;
+
+          upBtn.addEventListener('click', () =>
+            submitFeedback(index, 'positive', upBtn, downBtn),
+          );
+          downBtn.addEventListener('click', () =>
+            submitFeedback(index, 'negative', upBtn, downBtn),
+          );
+          copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(msg.content).then(() => {
+              copyLabel.textContent = 'Copied';
+              setTimeout(() => (copyLabel.textContent = 'Copy'), 2000);
+            });
+          });
+        }
+      }
+
+      messagesEl.appendChild(turn);
+    }
+
+    function scrollToBottom() {
+      messagesEl.scrollTo({
+        top: messagesEl.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
+
+    // ── Suggestions ──
+    suggestionsEl.addEventListener('click', (e) => {
+      const btn = (e.target as HTMLElement).closest(
+        '.g-suggestion',
+      ) as HTMLElement | null;
+      if (btn) sendMessage(btn.getAttribute('data-query') || '');
+    });
+
+    // ── Input autosize + submit ──
+    function autosize() {
+      inputEl.style.height = 'auto';
+      inputEl.style.height = Math.min(160, inputEl.scrollHeight) + 'px';
+    }
+
+    inputEl.addEventListener('input', () => {
+      autosize();
+      sendBtn.disabled = !inputEl.value.trim();
+    });
+
+    inputEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        const text = inputEl.value.trim();
+        if (text && !isLoading) sendMessage(text);
+      }
+    });
+
+    inputForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const text = inputEl.value.trim();
+      if (text && !isLoading) sendMessage(text);
+    });
+
+    // ── Send ──
+    async function sendMessage(content: string) {
+      const userTurns = messages.filter((m) => m.role === 'user').length;
+      if (userTurns >= MAX_TURNS || isLoading) return;
+
+      messages.push({ role: 'user', content });
+      saveState();
+
+      inputEl.value = '';
+      inputEl.style.height = 'auto';
+      sendBtn.disabled = true;
+
+      const respIdx = messages.length;
+      messages.push({
+        role: 'assistant',
+        content: '',
+        isStreaming: true,
+        qaId: undefined,
+        feedback: null,
+      });
+
+      renderMessages();
+      isLoading = true;
+      inputEl.disabled = true;
+      sendBtn.classList.add('is-loading');
+
+      const apiMessages = messages.slice(0, respIdx).map((m, i) => {
+        const base: any = { role: m.role, content: m.content };
+        if (i === respIdx - 1) {
+          base.copilot_references = [
+            {
+              data: {
+                origin: 'docs-website',
+                email: 'docs@docker.com',
+                uuid: getSessionId(),
+                action: 'AskGordon',
+                page_url: window.location.href,
+                page_title: document.title,
+              },
+            },
+          ];
+        }
+        return base;
+      });
+
+      try {
+        const body: any = { messages: apiMessages };
+        if (threadId) body.thread_uuid = threadId;
+
+        const resp = await fetch(`${BASE_URL}/public/ask`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body),
+        });
+
+        if (!resp.ok) {
+          if (resp.status === 429) throw new Error('RATE_LIMIT_EXCEEDED');
+          throw new Error(`HTTP ${resp.status}`);
+        }
+
+        const reader = resp.body!.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+        const isNewConversation = !threadId;
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+
+          for (const line of lines) {
+            if (!line.startsWith('data: ')) continue;
+            const data = line.slice(6).trim();
+            if (data === '[DONE]') continue;
+            try {
+              const parsed = JSON.parse(data);
+              if (parsed.thread_id) {
+                if (isNewConversation) threadId = parsed.thread_id;
+                continue;
+              }
+              if (parsed.question_answer_id) {
+                messages[respIdx].qaId = parsed.question_answer_id;
+                continue;
+              }
+              if (parsed.choices?.[0]?.delta?.content) {
+                messages[respIdx].content +=
+                  parsed.choices[0].delta.content;
+                const turns = messagesEl.querySelectorAll(
+                  '.g-turn--assistant',
+                );
+                const lastTurn = turns[turns.length - 1];
+                if (lastTurn) {
+                  const body = lastTurn.querySelector('.g-assistant-body');
+                  if (body) {
+                    const dots = body.querySelector('.g-dots');
+                    if (dots) dots.remove();
+                    body.innerHTML = marked.parse(
+                      messages[respIdx].content,
+                    ) as string;
+                  }
+                }
+                const near =
+                  messagesEl.scrollHeight -
+                    messagesEl.scrollTop -
+                    messagesEl.clientHeight <
+                  120;
+                if (near) messagesEl.scrollTop = messagesEl.scrollHeight;
+              }
+            } catch {}
+          }
+        }
+      } catch (err: any) {
+        if (err?.message === 'RATE_LIMIT_EXCEEDED') {
+          messages.splice(respIdx, 1);
+          const warn = document.createElement('div');
+          warn.className = 'g-warn g-warn--limit';
+          warn.textContent = 'Rate limit reached. Please try again in a moment.';
+          messagesEl.appendChild(warn);
+        } else {
+          messages[respIdx].content =
+            messages[respIdx].content ||
+            'Failed to get a response. Please try again.';
+        }
+      }
+
+      if (messages[respIdx]) messages[respIdx].isStreaming = false;
+      isLoading = false;
+      inputEl.disabled = false;
+      sendBtn.classList.remove('is-loading');
+      sendBtn.disabled = !inputEl.value.trim();
+      saveState();
+      renderMessages();
+    }
+
+    // ── Feedback ──
+    async function submitFeedback(
+      idx: number,
+      type: 'positive' | 'negative',
+      upEl: HTMLElement,
+      downEl: HTMLElement,
+    ) {
+      const msg = messages[idx];
+      if (!msg?.qaId || msg.feedback === type) return;
+      msg.feedback = type;
+      saveState();
+
+      upEl.classList.toggle('is-active', type === 'positive');
+      downEl.classList.toggle('is-active', type === 'negative');
+
+      try {
+        await fetch(`${BASE_URL}/feedback`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: msg.qaId, feedback: type }),
+        });
+      } catch {}
+    }
+
+    // ── Init ──
+    loadState();
+    renderMessages();
+    autosize();
+  }
+</script>
+
+<style is:global>
+  /* All selectors are `.g-*` prefixed — safe to hoist global
+     because chat messages are rendered via innerHTML at runtime
+     and Astro's scoped styles only match template markup. */
+  /* ══════════════════════════════════════════════════════════
+   *  Chat layout — sits inside the slide-out panel,
+   *  fills its height, scrolls messages internally.
+   * ══════════════════════════════════════════════════════════ */
+  .gordon-chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background: var(--d-surface);
+    font-family: var(--sl-font);
+    color: var(--d-text);
+  }
+
+  .g-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1.25rem 0.85rem 1.5rem;
+    border-bottom: 1px solid var(--d-border);
+    flex-shrink: 0;
+  }
+
+  .g-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--sl-font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: var(--d-track-mono);
+    color: var(--d-text-strong);
+  }
+  .g-brand .g-mark {
+    color: var(--d-accent);
+  }
+
+  /* Shared Gordon mask-image icon. `currentColor` tints it. */
+  .g-mark {
+    display: inline-block;
+    background: currentColor;
+    -webkit-mask: url(/icons/gordon.svg) no-repeat center / contain;
+    mask: url(/icons/gordon.svg) no-repeat center / contain;
+  }
+  .g-mark--xs { width: 0.85rem; height: 0.85rem; }
+  .g-mark--sm { width: 1.1rem; height: 1.1rem; }
+  .g-mark--lg { width: 1.5rem; height: 1.5rem; }
+
+  .g-topbar-actions { display: inline-flex; gap: 0.25rem; }
+
+  .g-iconbtn {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.85rem;
+    height: 1.85rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--d-text-muted);
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: var(--d-radius-sm);
+    transition: color 0.15s, background 0.15s;
+  }
+  .g-iconbtn:hover,
+  .g-iconbtn:focus-visible {
+    color: var(--d-accent);
+    background: var(--d-surface-sunk);
+  }
+
+  /* ══════════════════════════════════════════════════════════
+   *  Messages container
+   * ══════════════════════════════════════════════════════════ */
+  .g-messages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 1.5rem 1.5rem 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--d-border-strong) transparent;
+  }
+
+  /* ══════════════════════════════════════════════════════════
+   *  Welcome / empty state
+   * ══════════════════════════════════════════════════════════ */
+  .g-welcome {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+
+  .g-welcome-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--d-border);
+    border-radius: var(--d-radius-md);
+    color: var(--d-accent);
+    background: var(--d-surface-sunk);
+  }
+
+  .g-welcome-title {
+    margin: 0 0 0.6rem;
+    color: var(--d-text-strong);
+    font-family: var(--sl-font);
+    font-size: 1.65rem;
+    font-weight: normal;
+    font-variation-settings: "wght" 640, "opsz" 32, "wdth" 100;
+    letter-spacing: -0.022em;
+    line-height: 1.15;
+  }
+
+  .g-welcome-lede {
+    margin: 0;
+    max-width: 32rem;
+    color: var(--d-text-muted);
+    font-size: 0.975rem;
+    line-height: 1.6;
+  }
+
+  .g-try-label {
+    margin: 1.75rem 0 0.85rem;
+    color: var(--d-text-faint);
+  }
+
+  /* Suggestions — a stack of hairline rows, not pills. Mirrors the
+     docs-native list rhythm used on the homepage. */
+  .g-suggestions {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--d-border);
+  }
+
+  .g-suggestion {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0.25rem;
+    border: 0;
+    border-bottom: 1px solid var(--d-border);
+    background: transparent;
+    color: var(--d-text);
+    font-family: var(--sl-font);
+    font-size: 0.92rem;
+    line-height: 1.35;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.15s, padding-inline-start 0.15s;
+  }
+
+  .g-suggestion::after {
+    content: "→";
+    color: var(--d-text-faint);
+    font-family: var(--sl-font-mono);
+    font-size: 0.85rem;
+    transition: color 0.15s, transform 0.15s;
+  }
+
+  .g-suggestion:hover,
+  .g-suggestion:focus-visible {
+    color: var(--d-accent);
+    outline: none;
+    padding-inline-start: 0.5rem;
+  }
+
+  .g-suggestion:hover::after,
+  .g-suggestion:focus-visible::after {
+    color: var(--d-accent);
+    transform: translateX(3px);
+  }
+
+  /* ══════════════════════════════════════════════════════════
+   *  Turns — Q&A reading style, no boxes, no bubbles
+   *  Hairline separates *pairs* (new user question), NOT within
+   *  a single Q/A pair. Keeps the question visually attached to
+   *  its answer.
+   * ══════════════════════════════════════════════════════════ */
+  .g-turn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  /* Space between user → assistant (within a pair): tight, no rule */
+  .g-turn--user + .g-turn--assistant {
+    margin-top: 1rem;
+  }
+
+  /* Space between assistant → user (new pair): generous, hairline */
+  .g-turn--assistant + .g-turn--user {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--d-border);
+  }
+
+  .g-turn-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
+    color: var(--d-accent);
+  }
+  .g-turn-label span { color: var(--d-text-faint); }
+
+  /* User turn — the italic slant IS the signal. No bubble,
+     no side bar, no avatar. Just a human voice on the page. */
+  .g-user-body {
+    margin: 0;
+    color: var(--d-text-strong);
+    font-size: 1.15rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    font-variation-settings: "wght" 500, "opsz" 20, "wdth" 100, "slnt" -6;
+    letter-spacing: -0.01em;
+  }
+
+  /* Assistant turn — reading body */
+  .g-assistant-body {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--d-text);
+    font-variation-settings: "wght" 400, "opsz" 16, "wdth" 100;
+  }
+
+  .g-assistant-body p { margin: 0.7em 0; }
+  .g-assistant-body > :first-child { margin-top: 0; }
+  .g-assistant-body > :last-child  { margin-bottom: 0; }
+
+  /* Heading ladder — distinct tiers instead of one mashed size */
+  .g-assistant-body h1,
+  .g-assistant-body h2,
+  .g-assistant-body h3,
+  .g-assistant-body h4 {
+    margin: 1.4em 0 0.5em;
+    font-weight: normal;
+    color: var(--d-text-strong);
+    letter-spacing: -0.015em;
+    line-height: 1.25;
+  }
+  .g-assistant-body h1 {
+    font-size: 1.35rem;
+    font-variation-settings: "wght" 620, "opsz" 32, "wdth" 100;
+  }
+  .g-assistant-body h2 {
+    font-size: 1.15rem;
+    font-variation-settings: "wght" 600, "opsz" 24, "wdth" 100;
+  }
+  .g-assistant-body h3 {
+    font-size: 1.02rem;
+    font-variation-settings: "wght" 580, "opsz" 20, "wdth" 100;
+  }
+  .g-assistant-body h4 {
+    font-size: 0.95rem;
+    font-variation-settings: "wght" 560, "opsz" 18, "wdth" 100;
+    color: var(--d-text-muted);
+    text-transform: uppercase;
+    letter-spacing: var(--d-track-mono);
+    font-family: var(--sl-font-mono);
+  }
+
+  .g-assistant-body ul,
+  .g-assistant-body ol {
+    margin: 0.7em 0;
+    padding-left: 1.35em;
+  }
+  .g-assistant-body li { margin: 0.25em 0; }
+  .g-assistant-body li::marker { color: var(--d-text-faint); }
+  .g-assistant-body li > p { margin: 0.2em 0; }
+
+  .g-assistant-body strong {
+    font-weight: normal;
+    font-variation-settings: var(--d-vf-emphasis);
+    color: var(--d-text-strong);
+  }
+  .g-assistant-body em {
+    font-variation-settings: "wght" 400, "opsz" 16, "wdth" 100, "slnt" -8;
+    font-style: normal;
+  }
+
+  .g-assistant-body a {
+    color: var(--d-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: color-mix(in oklch, currentColor 35%, transparent);
+    word-break: break-word;
+  }
+  .g-assistant-body a:hover {
+    text-decoration-color: currentColor;
+  }
+
+  /* Blockquote — hairline rule, muted voice */
+  .g-assistant-body blockquote {
+    margin: 0.9em 0;
+    padding: 0.25em 0 0.25em 1em;
+    border-left: 1px solid var(--d-border-strong);
+    color: var(--d-text-muted);
+  }
+  .g-assistant-body blockquote p { margin: 0.35em 0; }
+
+  /* Inline code — subtle, not boxy-chrome */
+  .g-assistant-body code {
+    font-family: var(--sl-font-mono);
+    font-size: 0.86em;
+    padding: 0.08em 0.36em;
+    border-radius: var(--d-radius-sm);
+    background: color-mix(in oklch, var(--d-surface-sunk) 70%, var(--d-border));
+    color: var(--d-text-strong);
+  }
+
+  /* Fenced block — hairline frame, language badge */
+  .g-assistant-body pre {
+    position: relative;
+    margin: 1em 0;
+    border: 1px solid var(--d-border);
+    border-radius: var(--d-radius-md);
+    overflow: hidden;
+    background: var(--d-surface-sunk);
+  }
+  .g-assistant-body pre[data-lang]::before {
+    content: attr(data-lang);
+    position: absolute;
+    top: 0.55rem;
+    right: 0.7rem;
+    font-family: var(--sl-font-mono);
+    font-size: 0.62rem;
+    letter-spacing: var(--d-track-mono);
+    color: var(--d-text-faint);
+    pointer-events: none;
+  }
+  .g-assistant-body pre code {
+    display: block;
+    overflow-x: auto;
+    padding: 0.9rem 1rem;
+    padding-top: 1.25rem;        /* clear the language badge */
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--d-text);
+    font-family: var(--sl-font-mono);
+    font-size: 0.82rem;
+    line-height: 1.6;
+    tab-size: 2;
+  }
+
+  /* ── highlight.js tokens — hand-tuned for the dark theme ── */
+  .g-assistant-body .hljs-comment,
+  .g-assistant-body .hljs-quote {
+    color: var(--d-text-faint);
+    font-variation-settings: "wght" 400, "opsz" 14, "wdth" 100, "slnt" -8;
+    font-style: normal;
+  }
+  .g-assistant-body .hljs-keyword,
+  .g-assistant-body .hljs-selector-tag,
+  .g-assistant-body .hljs-meta,
+  .g-assistant-body .hljs-meta-keyword,
+  .g-assistant-body .hljs-literal {
+    color: oklch(0.78 0.13 310);        /* soft violet */
+  }
+  .g-assistant-body .hljs-string,
+  .g-assistant-body .hljs-regexp,
+  .g-assistant-body .hljs-attr,
+  .g-assistant-body .hljs-addition {
+    color: oklch(0.82 0.14 150);        /* mellow green */
+  }
+  .g-assistant-body .hljs-number,
+  .g-assistant-body .hljs-symbol,
+  .g-assistant-body .hljs-bullet {
+    color: oklch(0.82 0.13 60);         /* warm peach */
+  }
+  .g-assistant-body .hljs-title,
+  .g-assistant-body .hljs-section,
+  .g-assistant-body .hljs-name,
+  .g-assistant-body .hljs-selector-id,
+  .g-assistant-body .hljs-selector-class,
+  .g-assistant-body .hljs-title.class_,
+  .g-assistant-body .hljs-title.function_ {
+    color: oklch(0.82 0.13 235);        /* soft blue, near accent */
+  }
+  .g-assistant-body .hljs-type,
+  .g-assistant-body .hljs-class,
+  .g-assistant-body .hljs-built_in,
+  .g-assistant-body .hljs-builtin-name {
+    color: oklch(0.88 0.07 235);        /* paler blue/white */
+  }
+  .g-assistant-body .hljs-variable,
+  .g-assistant-body .hljs-template-variable,
+  .g-assistant-body .hljs-params,
+  .g-assistant-body .hljs-attribute {
+    color: var(--d-text);
+  }
+  .g-assistant-body .hljs-tag {
+    color: var(--d-text-muted);
+  }
+  .g-assistant-body .hljs-deletion {
+    color: oklch(0.7 0.13 25);
+  }
+  .g-assistant-body .hljs-emphasis {
+    font-variation-settings: "wght" 400, "opsz" 14, "wdth" 100, "slnt" -8;
+  }
+  .g-assistant-body .hljs-strong {
+    font-variation-settings: var(--d-vf-emphasis);
+  }
+
+  .g-assistant-body table {
+    width: 100%;
+    margin: 0.9em 0;
+    border-collapse: collapse;
+    font-size: 0.92em;
+  }
+  .g-assistant-body th,
+  .g-assistant-body td {
+    padding: 0.45em 0.7em;
+    text-align: left;
+    border-bottom: 1px solid var(--d-border);
+  }
+  .g-assistant-body th {
+    font-family: var(--sl-font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: var(--d-track-mono);
+    color: var(--d-text-muted);
+  }
+
+  .g-assistant-body hr {
+    margin: 1.5em 0;
+    border: 0;
+    border-top: 1px solid var(--d-border);
+  }
+
+  /* Loading dots */
+  .g-assistant-body .g-dots {
+    display: inline-flex;
+    gap: 0.3rem;
+    padding: 0.3rem 0;
+  }
+  .g-assistant-body .g-dots span {
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: var(--d-text-faint);
+    animation: gDot 1.4s infinite ease-in-out both;
+  }
+  .g-assistant-body .g-dots span:nth-child(1) { animation-delay: 0ms; }
+  .g-assistant-body .g-dots span:nth-child(2) { animation-delay: 150ms; }
+  .g-assistant-body .g-dots span:nth-child(3) { animation-delay: 300ms; }
+  @keyframes gDot {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.3; }
+    40%           { transform: scale(1);   opacity: 1; }
+  }
+
+  /* ══════════════════════════════════════════════════════════
+   *  Feedback actions — quiet row under the answer.
+   *  Hairline above, mono eyebrow label, icon-only thumbs,
+   *  copy pushed right as icon+text.
+   * ══════════════════════════════════════════════════════════ */
+  .g-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    margin-top: 1.5rem;
+    padding-top: 0.85rem;
+    border-top: 1px dashed var(--d-border);
+  }
+
+  .g-actions-label {
+    margin-right: 0.5rem;
+    font-family: var(--sl-font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: var(--d-track-mono);
+    color: var(--d-text-faint);
+  }
+
+  .g-action {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--d-text-faint);
+    cursor: pointer;
+    font-family: var(--sl-font);
+    font-size: 0.78rem;
+    line-height: 1;
+    box-shadow: none;
+    border-radius: var(--d-radius-sm);
+    transition: color 0.15s, background 0.15s;
+  }
+
+  .g-action svg {
+    flex-shrink: 0;
+    display: block;
+  }
+
+  /* Icon-only thumbs — square tap target with subtle bg on hover */
+  .g-action--icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  .g-action--icon:hover,
+  .g-action--icon:focus-visible {
+    color: var(--d-text-strong);
+    background: var(--d-surface-sunk);
+    outline: none;
+  }
+
+  /* Copy — icon + text, pushed right */
+  .g-action--copy {
+    margin-left: auto;
+    padding: 0.35rem 0.5rem;
+    font-family: var(--sl-font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: var(--d-track-mono);
+  }
+  .g-action--copy:hover,
+  .g-action--copy:focus-visible {
+    color: var(--d-text-strong);
+    background: var(--d-surface-sunk);
+    outline: none;
+  }
+
+  .g-action.is-active {
+    color: var(--d-accent);
+    background: color-mix(in oklch, var(--d-accent) 10%, transparent);
+  }
+  .g-action.is-active:hover,
+  .g-action.is-active:focus-visible {
+    color: var(--d-accent);
+    background: color-mix(in oklch, var(--d-accent) 15%, transparent);
+  }
+  .g-action.is-active svg path {
+    fill: currentColor;
+    fill-opacity: 0.22;
+  }
+
+  /* Warnings */
+  .g-warn {
+    margin-top: 1.5rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--d-border);
+    border-radius: var(--d-radius-md);
+    color: var(--d-text-muted);
+    font-size: 0.9rem;
+  }
+  .g-warn p { margin: 0 0 0.5rem; }
+  .g-warn--limit {
+    border-color: color-mix(in oklch, var(--d-accent) 35%, var(--d-border));
+  }
+
+  /* ══════════════════════════════════════════════════════════
+   *  Input area — column layout so the textarea gets full width
+   *  and multi-line input is the native state, not a special case.
+   *  Keyboard hint on the left, Ask button on the right.
+   * ══════════════════════════════════════════════════════════ */
+  .g-input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    padding: 0.85rem 1rem 0.75rem;
+    border-top: 1px solid var(--d-border);
+    background: var(--d-surface);
+    transition: background 0.15s;
+  }
+
+  .g-input-area:focus-within {
+    background: var(--d-surface-sunk);
+  }
+
+  .g-input-area textarea {
+    width: 100%;
+    min-width: 0;
+    min-height: 2.75rem;         /* two lines so wrapping placeholder never cramps */
+    max-height: 10rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--d-text-strong);
+    font-family: inherit;
+    font-size: 0.975rem;
+    line-height: 1.5;
+    resize: none;
+    outline: none;
+    font-variation-settings: "wght" 400, "opsz" 16, "wdth" 100;
+  }
+
+  .g-input-area textarea::placeholder {
+    color: var(--d-text-faint);
+  }
+
+  /* Footer row — hint left, button right. */
+  .g-input-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    min-height: 1.75rem;
+  }
+
+  /* Keyboard hint — only reveals on focus so the empty state stays quiet. */
+  .g-input-hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--sl-font-mono);
+    font-size: 0.7rem;
+    color: var(--d-text-faint);
+    opacity: 0;
+    transform: translateY(2px);
+    transition: opacity 0.15s, transform 0.15s;
+    pointer-events: none;
+  }
+
+  .g-input-area:focus-within .g-input-hint {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .g-input-hint kbd {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.1rem;
+    height: 1.1rem;
+    padding: 0 0.25rem;
+    border: 1px solid var(--d-border);
+    border-radius: 3px;
+    background: var(--d-surface);
+    color: var(--d-text-muted);
+    font-family: var(--sl-font-mono);
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+  .g-input-hint span { padding-inline-start: 0.15rem; }
+
+  .g-send {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 0.9rem;
+    border: 0;
+    background: transparent;
+    color: var(--d-text-muted);
+    font-family: var(--sl-font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: var(--d-track-mono);
+    border-radius: var(--d-radius-sm);
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+  }
+  .g-send:hover:not(:disabled),
+  .g-send:focus-visible:not(:disabled) {
+    color: var(--d-accent);
+    background: var(--d-surface-sunk);
+  }
+  .g-send:disabled {
+    color: var(--d-text-faint);
+    cursor: not-allowed;
+  }
+  .g-send.is-loading { color: var(--d-accent); }
+  .g-send.is-loading::before {
+    content: "";
+    width: 0.65rem;
+    height: 0.65rem;
+    border: 1.5px solid currentColor;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    margin-right: 0.25rem;
+    animation: gSpin 0.75s linear infinite;
+  }
+  @keyframes gSpin { to { transform: rotate(360deg); } }
+
+  /* ══════════════════════════════════════════════════════════
+   *  Disclaimer
+   * ══════════════════════════════════════════════════════════ */
+  .g-disclaimer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0.65rem 1.25rem;
+    border-top: 1px solid var(--d-border);
+    background: var(--d-surface-sunk);
+    font-size: 0.78rem;
+    color: var(--d-text-faint);
+    flex-shrink: 0;
+  }
+
+  .g-disclaimer a {
+    color: var(--d-text-muted);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+    text-decoration-color: color-mix(in oklch, currentColor 35%, transparent);
+    transition: color 0.15s, text-decoration-color 0.15s;
+  }
+  .g-disclaimer a:hover {
+    color: var(--d-accent);
+    text-decoration-color: currentColor;
+  }
+</style>

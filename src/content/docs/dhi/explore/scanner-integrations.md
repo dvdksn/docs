@@ -25,7 +25,7 @@ Hardened Images to deliver more accurate vulnerability assessments:
 - [Wiz](https://www.wiz.io/): Automatically applies VEX statements with
   zero configuration.
 
-For step-by-step instructions, see [Scan Docker Hardened Images](/manuals/dhi/how-to/scan/).
+For step-by-step instructions, see [Scan Docker Hardened Images](/dhi/how-to/scan/).
 
 ## Choosing a scanner for Docker Hardened Images
 
@@ -38,7 +38,7 @@ the minimum requirements for VEX defined by CISA (Cybersecurity and
 Infrastructure Security Agency), the U.S. government agency responsible for
 cybersecurity guidance. These attestations document which vulnerabilities don't
 apply to the image and why, helping you focus on real risks. To understand what
-VEX is and how it works, see the [VEX core concept](/manuals/dhi/core-concepts/vex/).
+VEX is and how it works, see the [VEX core concept](/dhi/core-concepts/vex/).
 
 Because OpenVEX is an open standard with government backing, it has strong
 industry momentum and any tool can implement it without vendor-specific
@@ -167,6 +167,6 @@ exceptions. This requires:
 
 ## What's next
 
-Learn how to [scan Docker Hardened Images](/manuals/dhi/how-to/scan/) with
+Learn how to [scan Docker Hardened Images](/dhi/how-to/scan/) with
 VEX-compliant scanners.
 

@@ -61,7 +61,7 @@ docker buildx build --provenance=false .
 ```
 
 You can also disable default provenance attestations by setting the
-[`BUILDX_NO_DEFAULT_ATTESTATIONS`](/manuals/build/building/variables/#buildx_no_default_attestations)
+[`BUILDX_NO_DEFAULT_ATTESTATIONS`](/build/building/variables/#buildx_no_default_attestations)
 environment variable. See [Provenance attestation](./slsa-provenance/) for
 more details about provenance modes and options.
 
@@ -185,7 +185,7 @@ The following example shows the structure of an attestation manifest:
 ### Attestations as OCI artifacts
 
 You can configure the format of the attestation manifest using the
-[`oci-artifact` option](/manuals/build/exporters/image-registry/#synopsis)
+[`oci-artifact` option](/build/exporters/image-registry/#synopsis)
 for the `image` and `registry` exporters. If set to `true`, the structure of
 the attestation manifest changes as follows:
 

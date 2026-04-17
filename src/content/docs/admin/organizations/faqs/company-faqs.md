@@ -34,7 +34,7 @@ When you first create a company, your account is both a company owner and an
 organization owner. In that case, your account will occupy a seat as long as
 you remain an organization owner.
 
-To avoid occupying a seat, [assign another user as the organization owner](/manuals/admin/organization/members/#update-a-member-role) and remove yourself from the organization.
+To avoid occupying a seat, [assign another user as the organization owner](/admin/organization/members/#update-a-member-role) and remove yourself from the organization.
 You'll retain full administrative access as a company owner without using a
 subscription seat.
 
@@ -43,4 +43,4 @@ subscription seat.
 Company owners can navigate to the **Organizations** page to view all their
 nested organizations in a single location. They can also view or edit organization members and change single sign-on (SSO) and System for Cross-domain Identity Management (SCIM) settings. Changes to company settings impact all users in each organization under the company.
 
-For more information, see [Roles and permissions](/manuals/enterprise/security/roles-and-permissions/).
+For more information, see [Roles and permissions](/admin/enterprise/security/roles-and-permissions/).

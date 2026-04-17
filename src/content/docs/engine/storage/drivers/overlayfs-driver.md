@@ -11,13 +11,13 @@ storage driver as `overlay2`.
 
 > [!NOTE]
 > Docker Engine 29.0 and later uses the
-> [containerd image store](/manuals/engine/storage/containerd/) by default.
+> [containerd image store](/engine/storage/containerd/) by default.
 > The `overlay2` driver is a legacy storage driver that is superseded by the
 > `overlayfs` containerd snapshotter. For more information, see
-> [Select a storage driver](/manuals/engine/storage/drivers/select-storage-driver/).
+> [Select a storage driver](/engine/storage/drivers/select-storage-driver/).
 
 > [!NOTE]
-> For `fuse-overlayfs` driver, check [Rootless mode documentation](/manuals/engine/security/rootless/).
+> For `fuse-overlayfs` driver, check [Rootless mode documentation](/engine/security/rootless/).
 
 ## Prerequisites
 

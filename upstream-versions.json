@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Pinned versions for upstream content vendored into the Astro docs site. Used by scripts/sync-upstream.sh. Replaces go.mod version pins from the Hugo build.",
+  "repos": {
+    "moby/moby": {
+      "ref": "v28.4.0",
+      "sparse": ["api/docs"],
+      "mounts": [
+        {
+          "source": "api/docs/CHANGELOG.md",
+          "target": "src/content/docs/reference/api/engine/version-history.md"
+        },
+        {
+          "source": "api/docs/swagger",
+          "target": "src/content/docs/reference/api/engine/version",
+          "include": "*.yaml"
+        }
+      ]
+    },
+    "moby/buildkit": {
+      "ref": "v0.29.0",
+      "sparse": ["frontend/dockerfile/docs", "docs"],
+      "mounts": [
+        {
+          "source": "frontend/dockerfile/docs/reference.md",
+          "target": "src/content/docs/reference/dockerfile.md"
+        },
+        {
+          "source": "frontend/dockerfile/docs/rules",
+          "target": "src/content/docs/reference/build-checks",
+          "include": "*.md"
+        },
+        {
+          "source": "docs/buildkitd.toml.md",
+          "target": "src/content/docs/build/buildkit/toml-configuration.md"
+        },
+        {
+          "source": "docs/attestations/slsa-definitions.md",
+          "target": "src/content/docs/build/metadata/attestations/slsa-definitions.md"
+        },
+        {
+          "source": "docs/attestations/attestation-storage.md",
+          "target": "src/content/docs/build/metadata/attestations/attestation-storage.md"
+        }
+      ]
+    },
+    "docker/buildx": {
+      "ref": "v0.33.0",
+      "sparse": ["docs"],
+      "mounts": [
+        {
+          "source": "docs/bake-reference.md",
+          "target": "src/content/docs/build/bake/reference.md"
+        },
+        {
+          "source": "docs/bake-stdlib.md",
+          "target": "src/content/docs/build/bake/stdlib.md"
+        }
+      ]
+    },
+    "docker/cli": {
+      "ref": "v29.4.0",
+      "sparse": ["docs"],
+      "mounts": [
+        {
+          "source": "docs/extend",
+          "target": "src/content/docs/engine/extend",
+          "include": "*.md",
+          "exclude": ["EBS_volume.md", "plugins_metrics.md", "plugins_services.md"]
+        },
+        {
+          "source": "docs/deprecated.md",
+          "target": "src/content/docs/engine/deprecated.md"
+        },
+        {
+          "source": "docs/reference/run.md",
+          "target": "src/content/docs/engine/containers/run.md"
+        },
+        {
+          "source": "docs/reference/dockerd.md",
+          "target": "src/content/docs/reference/cli/dockerd.md"
+        }
+      ]
+    },
+    "docker/compose": {
+      "ref": "v2.36.1",
+      "sparse": ["docs/reference"],
+      "mounts": [
+        {
+          "source": "docs/reference",
+          "target": "src/data/cli/compose",
+          "include": "*.yaml"
+        }
+      ]
+    },
+    "docker/model-runner": {
+      "ref": "v1.1.28",
+      "sparse": ["cmd/cli/docs/reference"],
+      "mounts": [
+        {
+          "source": "cmd/cli/docs/reference",
+          "target": "src/data/cli/model",
+          "include": "*.yaml"
+        }
+      ]
+    }
+  }
+}

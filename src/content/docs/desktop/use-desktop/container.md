@@ -101,5 +101,5 @@ can also:
 
 ## Additional resources
 
-- [What is a container](/get-started/docker-concepts/the-basics/what-is-a-container/)
-- [Run multi-container applications](/get-started/docker-concepts/running-containers/multi-container-applications/)
+- [What is a container](/get-started/overview/)
+- [Run multi-container applications](/get-started/build-your-first-app/)

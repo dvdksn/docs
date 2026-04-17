@@ -41,7 +41,7 @@ deployed on the host, through the [Extensions SDK](https://www.npmjs.com/package
 > your own extension and use any other frontend framework, like Vue, Angular, Svelte, etc. or event stay with
 > vanilla Javascript.
 
-Learn more about [building a frontend](/manuals/extensions/extensions-sdk/build/frontend-extension-tutorial/) for your extension.
+Learn more about [building a frontend](/extensions/extensions-sdk/build/frontend-extension-tutorial/) for your extension.
 
 ## The backend
 
@@ -84,7 +84,7 @@ running Docker Desktop in constrained environments where they can't open ports o
 
 Finally, the backend can be built with any technology, as long as it can run in a container and listen on a socket.
 
-Learn more about [adding a backend](/manuals/extensions/extensions-sdk/build/backend-extension-tutorial/) to your extension.
+Learn more about [adding a backend](/extensions/extensions-sdk/build/backend-extension-tutorial/) to your extension.
 
 ## Executables
 

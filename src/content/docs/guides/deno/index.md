@@ -23,7 +23,7 @@ The Deno getting started guide teaches you how to create a containerized Deno ap
 ## Prerequisites
 
 - Basic understanding of JavaScript is assumed.
-- You must have familiarity with Docker concepts like containers, images, and Dockerfiles. If you are new to Docker, you can start with the [Docker basics](/get-started/docker-concepts/the-basics/what-is-a-container/) guide.
+- You must have familiarity with Docker concepts like containers, images, and Dockerfiles. If you are new to Docker, you can start with the [Docker basics](/get-started/overview/) guide.
 
 After completing the Deno getting started modules, you should be able to containerize your own Deno application based on the examples and instructions provided in this guide.
 

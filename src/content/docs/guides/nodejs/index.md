@@ -40,7 +40,7 @@ Before you begin, make sure you're familiar with the following:
 
 - Basic understanding of [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [TypeScript](https://www.typescriptlang.org/).
 - Basic knowledge of [Node.js](https://nodejs.org/en), [npm](https://docs.npmjs.com/about-npm), and [React](https://react.dev/) for modern web development.
-- Understanding of Docker concepts such as images, containers, and Dockerfiles. If you're new to Docker, start with the [Docker basics](/get-started/docker-concepts/the-basics/what-is-a-container/) guide.
+- Understanding of Docker concepts such as images, containers, and Dockerfiles. If you're new to Docker, start with the [Docker basics](/get-started/overview/) guide.
 - Familiarity with [Express.js](https://expressjs.com/) for backend API development.
 
 Once you've completed the Node.js getting started modules, you’ll be ready to containerize your own Node.js application using the examples and instructions provided in this guide.

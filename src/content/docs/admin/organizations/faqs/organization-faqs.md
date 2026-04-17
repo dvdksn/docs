@@ -24,12 +24,12 @@ assign them to a team during the invite process.
 ### Can I force my organization's members to authenticate before using Docker Desktop and are there any benefits?
 
 Yes. You can
-[enforce sign-in](/manuals/enterprise/security/enforce-sign-in/).
+[enforce sign-in](/admin/enterprise/security/enforce-sign-in/).
 
 Some benefits of enforcing sign-in are:
 
 - Ensures users receive the benefits of your subscription.
-- Ensures security features like [Image Access Management](/manuals/enterprise/security/hardened-desktop/image-access-management/) and [Registry Access Management](/manuals/enterprise/security/hardened-desktop/registry-access-management/) are applied.
+- Ensures security features like [Image Access Management](/admin/enterprise/security/hardened-desktop/image-access-management/) and [Registry Access Management](/admin/enterprise/security/hardened-desktop/registry-access-management/) are applied.
 - Ensures you gain insights into users' activity.
 
 ### Can I convert my personal Docker ID to an organization account?
@@ -46,7 +46,7 @@ For prerequisites and instructions, see
 Yes. A user invited to an organization will take up one of the provisioned
 seats, even if that user hasn’t accepted their invitation yet.
 
-To manage invites, see [Manage organization members](/manuals/admin/organization/members/).
+To manage invites, see [Manage organization members](/admin/organization/members/).
 
 ### Do organization owners take a seat?
 

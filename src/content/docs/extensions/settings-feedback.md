@@ -20,12 +20,12 @@ Docker Extensions is switched on by default. To change your settings:
 
 > [!NOTE]
 >
-> If you are an [organization owner](/manuals/admin/organization/manage-a-team/#organization-owner), you can turn off extensions for your users. Open the `settings-store.json` file, and set `"extensionsEnabled"` to `false`.
+> If you are an [organization owner](/admin/organization/manage-a-team/#organization-owner), you can turn off extensions for your users. Open the `settings-store.json` file, and set `"extensionsEnabled"` to `false`.
 > The `settings-store.json` file is located at:
 >   - `~/Library/Group Containers/group.com.docker/settings-store.json` on Mac
 >   - `C:\Users\[USERNAME]\AppData\Roaming\Docker\settings-store.json` on Windows
 >
-> This can also be done with [Hardened Docker Desktop](/manuals/enterprise/security/hardened-desktop/)
+> This can also be done with [Hardened Docker Desktop](/admin/enterprise/security/hardened-desktop/)
 
 ### Turn on or turn off extensions not available in the Marketplace
 

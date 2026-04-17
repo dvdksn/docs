@@ -14,17 +14,17 @@ It provides a centralized interface to manage your [containers](container/), [im
 
 In addition, the Docker Desktop Dashboard lets you:
 
-- Use [Gordon](/manuals/ai/gordon/), a personal AI assistant embedded in Docker Desktop and the Docker CLI. It's designed to streamline your workflow and help you make the most of the Docker ecosystem.
+- Use [Gordon](/ai-overview/gordon/), a personal AI assistant embedded in Docker Desktop and the Docker CLI. It's designed to streamline your workflow and help you make the most of the Docker ecosystem.
 - Navigate to the **Settings** menu to configure your Docker Desktop settings. Select the **Settings** icon in the Dashboard header.
 - Access the **Troubleshoot** menu to debug and perform restart operations. Select the **Troubleshoot** icon in the Dashboard header.
 - Be notified of new releases, installation progress updates, and more in the **Notifications center**. Select the bell icon in the bottom-right corner of the Docker Desktop Dashboard to access the notification center.
 - Access the **Learning center** from the Dashboard header. It helps you get started with quick in-app walkthroughs and provides other resources for learning about Docker. 
 
-  For a more detailed guide about getting started, see [Get started](/get-started/introduction/).
-- Access [Docker Hub](/manuals/docker-hub/) to search, browse, pull, run, or view details
+  For a more detailed guide about getting started, see [Get started](/get-started/).
+- Access [Docker Hub](/hub/) to search, browse, pull, run, or view details
   of images.
 - Get to the [Docker Scout](../../scout/) dashboard.
-- Navigate to [Docker Extensions](/manuals/extensions/).
+- Navigate to [Docker Extensions](/extensions/).
 
 > [!TIP]
 >

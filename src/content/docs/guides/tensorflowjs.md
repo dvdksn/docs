@@ -22,7 +22,7 @@ perform face detection. In this guide, you'll explore how to:
 ## Prerequisites
 
 - You have installed the latest version of
-  [Docker Desktop](/get-started/get-docker/).
+  [Docker Desktop](/get-started/install/).
 - You have a [Git client](https://git-scm.com/downloads). The examples in this
   guide use a command-line based Git client, but you can use any client.
 
@@ -450,7 +450,7 @@ Docker Compose is a tool for defining and running multi-container Docker
 applications. With Compose, you use a YAML file to configure your application's
 services, networks, and volumes. In this case, the application isn't a
 multi-container application, but Docker Compose has other useful features for
-development, like [Compose Watch](/manuals/compose/how-tos/file-watch/).
+development, like [Compose Watch](/compose/how-tos/file-watch/).
 
 The sample application doesn't have a Compose file yet. To create a Compose
 file, in the `TensorJS-Face-Detection` directory, create a text file named

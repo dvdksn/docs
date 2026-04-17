@@ -62,7 +62,7 @@ efficient approach to vulnerability management.
 > [!TIP]
 >
 > To understand which scanners support VEX and why it matters for your security
-> workflow, see [Scanner integrations](/manuals/dhi/explore/scanner-integrations/).
+> workflow, see [Scanner integrations](/dhi/explore/scanner-integrations/).
 
 ## Use VEX to suppress non-applicable CVEs
 
@@ -70,4 +70,4 @@ Docker Hardened Images include VEX attestations that can be consumed by
 vulnerability scanners to suppress non-applicable CVEs. For detailed
 instructions on scanning with VEX support across different tools including
 Docker Scout, Trivy, and Grype, see [Scan Docker Hardened
-Images](/manuals/dhi/how-to/scan/).
+Images](/dhi/how-to/scan/).

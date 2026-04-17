@@ -38,7 +38,7 @@ The Docker Engine provides the following storage backends on Linux:
 | :-------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `containerd` (snapshotters) | The default for Docker Engine 29.0 and later. Uses containerd snapshotters for image storage. Supports multi-platform images and attestations. See [containerd image store](../containerd/) for details.                                                 |
 | `overlay2`                  | Classic storage driver. Most widely compatible across all currently supported Linux distributions, and requires no extra configuration.                                                                                                                    |
-| `fuse-overlayfs`            | Preferred only for running Rootless Docker on hosts that don't support rootless `overlay2`. Not needed since Linux kernel 5.11, as `overlay2` works in rootless mode. See [rootless mode documentation](/manuals/engine/security/rootless/) for details. |
+| `fuse-overlayfs`            | Preferred only for running Rootless Docker on hosts that don't support rootless `overlay2`. Not needed since Linux kernel 5.11, as `overlay2` works in rootless mode. See [rootless mode documentation](/engine/security/rootless/) for details. |
 | `btrfs` and `zfs`           | Allow for advanced options, such as creating snapshots, but require more maintenance and setup. Each relies on the backing filesystem being configured correctly.                                                                                          |
 | `vfs`                       | Intended for testing purposes, and for situations where no copy-on-write filesystem can be used. Performance is poor, and not generally recommended for production use.                                                                                    |
 
@@ -66,11 +66,11 @@ the final decision.
 > [!NOTE]
 > Modifying the storage driver by editing the daemon configuration file isn't
 > supported on Docker Desktop. Docker Desktop uses the
-> [containerd image store](/manuals/desktop/features/containerd/) by default
+> [containerd image store](/desktop/features/containerd/) by default
 > (version 4.34 and later for clean installs). The following table is also not
 > applicable for the Docker Engine in rootless mode. For the drivers available
 > in rootless mode, see the
-> [Rootless mode documentation](/manuals/engine/security/rootless/).
+> [Rootless mode documentation](/engine/security/rootless/).
 
 This section applies to classic storage drivers only. If you're using the
 containerd image store (the default for Docker Engine 29.0+), see the

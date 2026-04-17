@@ -16,7 +16,7 @@ Settings Management lets you configure and enforce Docker Desktop settings acros
 
 Before you begin, make sure you have:
 
-- [Enforce sign-in](/manuals/enterprise/security/enforce-sign-in/) for
+- [Enforce sign-in](/admin/enterprise/security/enforce-sign-in/) for
   your organization
 - A Docker Business subscription
 
@@ -29,8 +29,8 @@ Users must be signed in and part of a Docker Business organization. If either co
 You can create the `admin-settings.json` file in two ways:
 
 - Use the `--admin-settings` installer flag to auto-generate the file:
-  - [Mac](/manuals/desktop/setup/install/mac-install/#install-from-the-command-line) installation guide
-  - [Windows](/manuals/desktop/setup/install/windows-install/#install-from-the-command-line) installation guide
+  - [Mac](/desktop/setup/install/mac-install/#install-from-the-command-line) installation guide
+  - [Windows](/desktop/setup/install/windows-install/#install-from-the-command-line) installation guide
 - Create it manually (UTF-8 without BOM) and place it in the following locations:
   - Mac: `/Library/Application\ Support/com.docker.docker/admin-settings.json`
   - Windows: `C:\ProgramData\DockerDesktop\admin-settings.json`
@@ -348,7 +348,7 @@ The following tables describe all available settings in the `admin-settings.json
 
 | Parameter    | OS  | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Version |
 | :----------- | --- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `kubernetes` |     | If `enabled` is set to true, a Kubernetes single-node cluster is started when Docker Desktop starts. If `showSystemContainers` is set to true, Kubernetes containers are displayed in the Docker Desktop Dashboard and when you run `docker ps`. The [imagesRepository](/manuals/desktop/use-desktop/kubernetes/#configuring-a-custom-image-registry-for-kubernetes-control-plane-images) setting lets you specify which repository Docker Desktop pulls control-plane Kubernetes images from. |         |
+| `kubernetes` |     | If `enabled` is set to true, a Kubernetes single-node cluster is started when Docker Desktop starts. If `showSystemContainers` is set to true, Kubernetes containers are displayed in the Docker Desktop Dashboard and when you run `docker ps`. The [imagesRepository](/desktop/use-desktop/kubernetes/#configuring-a-custom-image-registry-for-kubernetes-control-plane-images) setting lets you specify which repository Docker Desktop pulls control-plane Kubernetes images from. |         |
 
 > [!NOTE]
 >
@@ -367,13 +367,13 @@ The following tables describe all available settings in the `admin-settings.json
 | `dnsInhibition`         | Windows and Mac only        | Controls DNS record filtering returned to containers. Options: `auto` (recommended), `ipv4`, `ipv6`, `none`                                                                                                                 | |
 | `portBindingBehavior`   | Linux-based containers only | Defines port binding restrictions and default behavior, allowing admins to control how a user exposes ports from their containers. Options: `default-port-binding`, `default-local-port-binding`, `local-only-port-binding` | Docker Desktop version 4.52 and later. |
 
-For more information, see [Networking](/manuals/desktop/features/networking/#networking-mode-and-dns-behaviour-for-mac-and-windows).
+For more information, see [Networking](/desktop/features/networking/#networking-mode-and-dns-behaviour-for-mac-and-windows).
 
 ### AI settings
 
 | Parameter                   | OS           | Description                                                                                                                                                                                                                        | Version |
 | :-------------------------- | ------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| `enableInference`           |              | Setting `enableInference` to `true` enables [Docker Model Runner](/manuals/ai/model-runner/).                                                                                                                             |         |
+| `enableInference`           |              | Setting `enableInference` to `true` enables [Docker Model Runner](/ai-overview/model-runner/).                                                                                                                             |         |
 | `enableInferenceTCP`        |              | Enable host-side TCP support. This setting requires the Docker Model Runner setting to be enabled first.                                                                                                                           |         |
 | `enableInferenceTCPPort`    |              | Specifies the exposed TCP port. This setting requires the Docker Model Runner and Enable host-side TCP support settings to be enabled first.                                                                                       |         |
 | `enableInferenceCORS`       |              | Specifies the allowed CORS origins. Empty string to deny all,`*` to accept all, or a list of comma-separated values. This setting requires the Docker Model Runner and Enable host-side TCP support settings to be enabled first.  |         |
@@ -388,8 +388,8 @@ For more information, see [Networking](/manuals/desktop/features/networking/#net
 | Parameter                   | OS  | Description                                                                                                                                                                                                                                               | Version                                 |
 | :-------------------------- | --- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
 | `allowBetaFeatures`         |     | If `value` is set to `true`, beta features are enabled.                                                                                                                                                                                                   |                                         |
-| `enableDockerAI`            |     | If `allowBetaFeatures` is true, setting `enableDockerAI` to `true` enables [Gordon](/manuals/ai/gordon/) by default. You can independently control this setting from the `allowBetaFeatures` setting.                                            |                                         |
-| `enableDockerMCPToolkit`    |     | If `allowBetaFeatures` is true, setting `enableDockerMCPToolkit` to `true` enables the [MCP Toolkit feature](/manuals/ai/mcp-catalog-and-toolkit/toolkit/) by default. You can independently control this setting from the `allowBetaFeatures` setting. |                                         |
+| `enableDockerAI`            |     | If `allowBetaFeatures` is true, setting `enableDockerAI` to `true` enables [Gordon](/ai-overview/gordon/) by default. You can independently control this setting from the `allowBetaFeatures` setting.                                            |                                         |
+| `enableDockerMCPToolkit`    |     | If `allowBetaFeatures` is true, setting `enableDockerMCPToolkit` to `true` enables the [MCP Toolkit feature](/ai-overview/mcp-catalog-and-toolkit/toolkit/) by default. You can independently control this setting from the `allowBetaFeatures` setting. |                                         |
 | `allowExperimentalFeatures` |     | If `value` is set to `true`, experimental features are enabled.                                                                                                                                                                                           |  |
 
 ### Enhanced Container Isolation

@@ -13,7 +13,7 @@ Docker environment.
 >
 > Docker would like to thank [Pradumna Saraf](https://twitter.com/pradumna_saraf) for his contribution to this guide.
 
-Unlike the [OpenCode sandbox guide](../manuals/ai/sandboxes/agents/opencode/),
+Unlike the [OpenCode sandbox guide](../ai-overview/sandboxes/agents/opencode/),
 this guide focuses on using OpenCode as a local coding tool backed by Docker
 Model Runner rather than running OpenCode in a containerized sandbox.
 
@@ -28,8 +28,8 @@ In this guide, you'll learn how to:
 
 Before you start, make sure you have:
 
-- [Docker Desktop](../get-started/get-docker/) or Docker Engine installed
-- [Docker Model Runner enabled](../manuals/ai/model-runner/get-started/#enable-docker-model-runner)
+- [Docker Desktop](../get-started/install/) or Docker Engine installed
+- [Docker Model Runner enabled](../ai-overview/model-runner/get-started/#enable-docker-model-runner)
 - [OpenCode installed](https://opencode.ai/docs)
 
 If you use Docker Desktop, turn on TCP access in **Settings** > **AI**, or run:
@@ -178,6 +178,6 @@ If the model is missing, pull it first and confirm the model name in
 
 ## Learn more
 
-- [Docker Model Runner overview](../manuals/ai/model-runner/)
-- [Docker Model Runner API reference](../manuals/ai/model-runner/api-reference/)
-- [IDE and tool integrations](../manuals/ai/model-runner/ide-integrations/)
+- [Docker Model Runner overview](../ai-overview/model-runner/)
+- [Docker Model Runner API reference](../ai-overview/model-runner/api-reference/)
+- [IDE and tool integrations](../ai-overview/model-runner/ide-integrations/)

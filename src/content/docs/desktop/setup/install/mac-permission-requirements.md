@@ -40,7 +40,7 @@ The Docker binaries are installed by default in `/Applications/Docker.app/Conten
 
 You can choose whether to install symlinks either in `/usr/local/bin` or `$HOME/.docker/bin` during installation of Docker Desktop.
 
-If `/usr/local/bin` is chosen, and this location is not writable by unprivileged users, Docker Desktop requires authorization to confirm this choice before the symlinks to Docker binaries are created in `/usr/local/bin`. If `$HOME/.docker/bin` is chosen, authorization is not required, but then you must [manually add `$HOME/.docker/bin`](/manuals/desktop/settings-and-maintenance/settings/#advanced) to your PATH.
+If `/usr/local/bin` is chosen, and this location is not writable by unprivileged users, Docker Desktop requires authorization to confirm this choice before the symlinks to Docker binaries are created in `/usr/local/bin`. If `$HOME/.docker/bin` is chosen, authorization is not required, but then you must [manually add `$HOME/.docker/bin`](/desktop/settings-and-maintenance/settings/#advanced) to your PATH.
 
 You are also given the option to enable the installation of the `/var/run/docker.sock` symlink. Creating this symlink ensures various Docker clients relying on the default Docker socket path work without additional changes.
 
@@ -56,7 +56,7 @@ It is your responsibility to ensure that localhost is resolved to `127.0.0.1` an
 
 ## Installing from the command line
 
-Privileged configurations are applied during the installation with the `--user` flag on the [install command](/manuals/desktop/setup/install/mac-install/#install-from-the-command-line). In this case, you are not prompted to grant root privileges on the first run of Docker Desktop. Specifically, the `--user` flag:
+Privileged configurations are applied during the installation with the `--user` flag on the [install command](/desktop/setup/install/mac-install/#install-from-the-command-line). In this case, you are not prompted to grant root privileges on the first run of Docker Desktop. Specifically, the `--user` flag:
 - Uninstalls the previous `com.docker.vmnetd` if present
 - Sets up symlinks
 - Ensures that `localhost` is resolved to `127.0.0.1`
@@ -100,7 +100,7 @@ retain their original permissions.
 ## Enhanced Container Isolation
 
 In addition, Docker Desktop supports [Enhanced Container Isolation
-mode](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/) (ECI),
+mode](/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/) (ECI),
 available to Business customers only, which further secures containers without
 impacting developer workflows.
 

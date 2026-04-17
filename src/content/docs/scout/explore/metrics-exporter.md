@@ -23,7 +23,7 @@ The metrics endpoint exposes the following metrics:
 
 > **Streams**
 >
-> In Docker Scout, the streams concept is a superset of [environments](/manuals/scout/integrations/environment/).
+> In Docker Scout, the streams concept is a superset of [environments](/scout/integrations/environment/).
 > Streams include all runtime environments that you've defined,
 > as well as the special `latest-indexed` stream.
 > The `latest-indexed` stream contains the most recently pushed (and analyzed) tag for each repository.
@@ -38,7 +38,7 @@ To export metrics from your organization, first make sure your organization is e
 Then, create a Personal Access Token (PAT) - a secret token that allows the exporter to authenticate with the Docker Scout API.
 
 The PAT does not require any specific permissions, but it must be created by a user who is an owner of the Docker organization.
-To create a PAT, follow the steps in [Create an access token](/manuals/security/access-tokens/).
+To create a PAT, follow the steps in [Create an access token](/admin/security/access-tokens/).
 
 Once you have created the PAT, store it in a secure location.
 You will need to provide this token to the exporter when scraping metrics.
@@ -106,7 +106,7 @@ alongside Grafana with a pre-configured dashboard to visualize the vulnerability
    $ cd scout-metrics-exporter/prometheus
    ```
 
-2. [Create a Docker access token](/manuals/security/access-tokens/)
+2. [Create a Docker access token](/admin/security/access-tokens/)
    and store it in a plain text file at `/prometheus/prometheus/token` under the template directory.
 
    ```plaintext {title=token}
@@ -239,7 +239,7 @@ and a Datadog site.
    $ cd scout-metrics-exporter/datadog
    ```
 
-2. [Create a Docker access token](/manuals/security/access-tokens/)
+2. [Create a Docker access token](/admin/security/access-tokens/)
    and store it in a plain text file at `/datadog/token` under the template directory.
 
    ```plaintext {title=token}
@@ -345,7 +345,7 @@ To change the scrape interval:
 ## Revoke an access token
 
 If you suspect that your PAT has been compromised or is no longer needed, you can revoke it at any time.
-To revoke a PAT, follow the steps in the [Create and manage access tokens](/manuals/security/access-tokens/).
+To revoke a PAT, follow the steps in the [Create and manage access tokens](/admin/security/access-tokens/).
 
 Revoking a PAT immediately invalidates the token, and prevents Prometheus from scraping metrics using that token.
 You will need to create a new PAT and update the Prometheus configuration to use the new token.

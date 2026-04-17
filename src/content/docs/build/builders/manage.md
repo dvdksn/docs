@@ -121,5 +121,5 @@ It only removes your connection to the builder.
 ## Manage builders with Docker Desktop
 
 If you have turned on the
-[Docker Desktop Builds view](/manuals/desktop/use-desktop/builds/),
-you can inspect builders in [Docker Desktop settings](/manuals/desktop/settings-and-maintenance/settings/#builders). 
+[Docker Desktop Builds view](/desktop/use-desktop/builds/),
+you can inspect builders in [Docker Desktop settings](/desktop/settings-and-maintenance/settings/#builders). 

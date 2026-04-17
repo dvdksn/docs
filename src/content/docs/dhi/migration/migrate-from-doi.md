@@ -78,7 +78,7 @@ distribution base is specified in the tag (for example, `-alpine3.22` or
 > and therefore result in a larger image with a broader attack surface.
 
 To ensure that your final image is as minimal as possible, you should use a
-[multi-stage build](/manuals/build/building/multi-stage/). All stages in your
+[multi-stage build](/build/building/multi-stage/). All stages in your
 Dockerfile should use a hardened image. While intermediary stages will typically
 use images tagged as `dev` or `sdk`, your final runtime stage should use a runtime image.
 
@@ -103,7 +103,7 @@ ENTRYPOINT ["/app/myapp"]
 ```
 
 After updating your Dockerfile, build and test your application. If you encounter
-issues, see the [Troubleshoot](/manuals/dhi/troubleshoot/) guide for common
+issues, see the [Troubleshoot](/dhi/troubleshoot/) guide for common
 problems and solutions.
 
 ## Language-specific examples

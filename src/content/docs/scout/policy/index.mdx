@@ -24,7 +24,7 @@ with established best practices.
 ## How Policy Evaluation works
 
 When you activate Docker Scout for a repository, images that you push are
-[automatically analyzed](/manuals/scout/explore/analysis/). The analysis gives you insights
+[automatically analyzed](/scout/explore/analysis/). The analysis gives you insights
 about the composition of your images, including what packages they contain and
 what vulnerabilities they're exposed to. Policy Evaluation builds on top of the
 image analysis feature, interpreting the analysis results against the rules
@@ -73,7 +73,7 @@ is enabled, except for the following policies, which are optional and must be
 configured:
 
 - The **SonarQube Quality Gates** policy, which requires
-  [integration with SonarQube](/manuals/scout/integrations/code-quality/sonarqube/)
+  [integration with SonarQube](/scout/integrations/code-quality/sonarqube/)
   before use.
 - The **Valid Docker Hardened Image (DHI) or DHI base image** policy, which can
   be configured if you want to enforce the use of Docker Hardened Images.
@@ -183,8 +183,8 @@ For more information on policy configuration, see [Configure policies](./configu
 ### Supply Chain Attestations
 
 The **Supply Chain Attestations** policy type checks whether your images have
-[SBOM](/manuals/build/metadata/attestations/sbom/) and
-[provenance](/manuals/build/metadata/attestations/slsa-provenance/) attestations.
+[SBOM](/build/metadata/attestations/sbom/) and
+[provenance](/build/metadata/attestations/slsa-provenance/) attestations.
 
 Images are considered non-compliant if they lack either an SBOM attestation or
 a provenance attestation with *max mode* provenance. To ensure compliance,
@@ -195,10 +195,10 @@ $ docker buildx build --provenance=true --sbom=true -t <IMAGE> --push .
 ```
 
 For more information about building with attestations, see
-[Attestations](/manuals/build/metadata/attestations/).
+[Attestations](/build/metadata/attestations/).
 
 If you're using GitHub Actions to build and push your images,
-learn how you can [configure the action](/manuals/build/ci/github-actions/attestations/)
+learn how you can [configure the action](/build/ci/github-actions/attestations/)
 to apply SBOM and provenance attestations.
 
 ### Default Non-Root User
@@ -221,14 +221,14 @@ images where `root` is set on purpose.
 
 The following Dockerfile runs as `root` by default despite not being explicitly set:
 
-```Dockerfile
+```dockerfile
 FROM alpine
 RUN echo "Hi"
 ```
 
 Whereas in the following case, the `root` user is explicitly set:
 
-```Dockerfile
+```dockerfile
 FROM alpine
 USER root
 RUN echo "Hi"
@@ -348,7 +348,7 @@ SonarQube evaluates your source code against the quality gates you've defined
 in SonarQube. Docker Scout surfaces the SonarQube assessment as a Docker Scout
 policy.
 
-Docker Scout uses [provenance](/manuals/build/metadata/attestations/slsa-provenance/)
+Docker Scout uses [provenance](/build/metadata/attestations/slsa-provenance/)
 attestations or the `org.opencontainers.image.revision` OCI annotation to link
 SonarQube analysis results with container images. In addition to enabling the
 SonarQube integration, you must also make sure that your images have either the
@@ -400,6 +400,6 @@ This "no data" state occurs when:
   of date
 
 To make sure that Docker Scout always knows about your base image, you can
-attach [provenance attestations](/manuals/build/metadata/attestations/slsa-provenance/)
+attach [provenance attestations](/build/metadata/attestations/slsa-provenance/)
 at build-time. Docker Scout uses provenance attestations to find out the base
 image version.

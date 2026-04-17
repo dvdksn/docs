@@ -97,7 +97,7 @@ Once mirrored, the repository is a standard Docker Hub repository in your
 organization's namespace. It behaves exactly like any other Hub repository,
 which means you can manage access and permissions, configure webhooks, and use
 other standard Hub features. See [Docker Hub
-repositories](/manuals/docker-hub/repos/) for details.
+repositories](/hub/repos/) for details.
 
 Additionally, mirrored DHI repositories let you customize images and charts. To
 learn more, see [Customize a Docker Hardened Image or chart](./customize/).
@@ -328,7 +328,7 @@ reads a YAML configuration file and can filter tags.
 The following example uses a `regsync.yaml` file that syncs Node 24 and Python
 3.12 Debian 13 variants, excluding Alpine and Debian 12.
 
-```yaml{title="regsync.yaml"}
+```yaml
 version: 1
 # Optional: inline creds if not relying on prior CLI logins
 # creds:

@@ -41,18 +41,18 @@ Close any applications that might call Docker in the background:
 
 ### Step three: Reinstall Docker Desktop
 
-Follow the instructions in the [macOS installation guide](/manuals/desktop/setup/install/mac-install/) to reinstall Docker Desktop.
+Follow the instructions in the [macOS installation guide](/desktop/setup/install/mac-install/) to reinstall Docker Desktop.
 
 ### If the dialog persists
 
 If you continue to see the "damaged" dialog after following the recovery steps:
 
-1. Gather diagnostics using the terminal. Follow the instructions in [Diagnose from the terminal](/manuals/desktop/troubleshoot-and-support/troubleshoot/#diagnose-from-the-terminal).
+1. Gather diagnostics using the terminal. Follow the instructions in [Diagnose from the terminal](/desktop/troubleshoot-and-support/troubleshoot/#diagnose-from-the-terminal).
 
    - Note down the your diagnostics ID displayed in the terminal after running diagnostics.
 
 2. Get help:
-   - If you have a paid Docker subscription, [contact support](/manuals/support/) and include your diagnostics ID
+   - If you have a paid Docker subscription, [contact support](/admin/support/) and include your diagnostics ID
    - For community users, [open an issue on GitHub](https://github.com/docker/desktop-feedback) and include your diagnostics ID
 
 ## Prevention
@@ -66,7 +66,7 @@ To avoid this issue in the future:
 
 ## Related information
 
-- [Install Docker Desktop on Mac](/manuals/desktop/setup/install/mac-install/)
-- [PKG installer documentation](/manuals/enterprise/enterprise-deployment/pkg-install-and-configure/)
-- [Troubleshoot Docker Desktop](/manuals/desktop/troubleshoot-and-support/troubleshoot/)
-- [Known issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/)
+- [Install Docker Desktop on Mac](/desktop/setup/install/mac-install/)
+- [PKG installer documentation](/admin/enterprise/enterprise-deployment/pkg-install-and-configure/)
+- [Troubleshoot Docker Desktop](/desktop/troubleshoot-and-support/troubleshoot/)
+- [Known issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/)

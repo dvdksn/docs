@@ -26,7 +26,7 @@ Docker uses tokens to manage user sessions with different expiration periods:
 - Docker Desktop: Signs you out after 90 days, or 30 days of inactivity
 - Docker Hub and Docker Home: Sign you out after 24 hours
 
-Docker also supports your IdP's default session timeout through SAML attributes. For more information, see [SSO attributes](/manuals/enterprise/security/provisioning/#sso-attributes).
+Docker also supports your IdP's default session timeout through SAML attributes. For more information, see [SSO attributes](/admin/enterprise/security/provisioning/#sso-attributes).
 
 ## How does Docker distinguish between employee users and contractor users?
 
@@ -52,11 +52,11 @@ Docker Desktop uses the host operating system's secure key management to store a
 
 If SCIM isn't turned on, you must manually remove users from the organization. SCIM can automate user removal, but only for users added after SCIM is turned on. Users added before SCIM was turned on must be removed manually.
 
-For more information, see [Manage organization members](/manuals/admin/organization/members/).
+For more information, see [Manage organization members](/admin/organization/members/).
 
 ## What metadata does Scout collect from container images?
 
-For information about metadata stored by Docker Scout, see [Data handling](/manuals/scout/deep-dive/data-handling/).
+For information about metadata stored by Docker Scout, see [Data handling](/scout/deep-dive/data-handling/).
 
 ## How are Marketplace extensions vetted for security?
 
@@ -64,4 +64,4 @@ Security vetting for extensions isn't implemented. Extensions aren't covered as 
 
 ## Can I prevent users from pushing images to Docker Hub private repositories?
 
-No direct setting exists to disable private repositories. However, [Registry Access Management](/manuals/enterprise/security/hardened-desktop/registry-access-management/) lets administrators control which registries developers can access through Docker Desktop via the Admin Console.
+No direct setting exists to disable private repositories. However, [Registry Access Management](/admin/enterprise/security/hardened-desktop/registry-access-management/) lets administrators control which registries developers can access through Docker Desktop via the Admin Console.

@@ -8,11 +8,11 @@ sidebar:
 ## Send finalized settings files to the MDM team
 
 After reaching an agreement with the relevant teams about your baseline and
-security configurations as outlined in the previous section, configure Settings Management using either the [Docker Admin Console](/manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console/) or an
-[`admin-settings.json` file](/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file/).
+security configurations as outlined in the previous section, configure Settings Management using either the [Docker Admin Console](/admin/enterprise/security/hardened-desktop/settings-management/configure-admin-console/) or an
+[`admin-settings.json` file](/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/).
 
 Once the file is ready, collaborate with your MDM team to deploy your chosen
-settings, along with your chosen method for [enforcing sign-in](/manuals/enterprise/security/enforce-sign-in/).
+settings, along with your chosen method for [enforcing sign-in](/admin/enterprise/security/enforce-sign-in/).
 
 > [!IMPORTANT]
 >
@@ -21,8 +21,8 @@ settings, along with your chosen method for [enforcing sign-in](/manuals/enterpr
 ## Manage your organizations
 
 If you have more than one organization, consider either [consolidating them
-into one organization](/manuals/admin/organization/orgs/) or creating a
-[Docker company](/manuals/admin/company/) to manage multiple
+into one organization](/admin/organization/orgs/) or creating a
+[Docker company](/admin/company/) to manage multiple
 organizations.
 
 ## Begin setup
@@ -32,14 +32,14 @@ organizations.
 Single sign-on (SSO) lets developers authenticate using their identity
 providers (IdPs) to access Docker. SSO is available for a whole company and all associated organizations, or an individual organization that has a Docker
 Business subscription. For more information, see the
-[documentation](/manuals/enterprise/security/single-sign-on/).
+[documentation](/admin/enterprise/security/single-sign-on/).
 
-You can also enable [SCIM](/manuals/enterprise/security/provisioning/scim/)
+You can also enable [SCIM](/admin/enterprise/security/provisioning/scim/)
 for further automation of provisioning and deprovisioning of users.
 
 ### Set up Docker product entitlements included in the subscription
 
-[Docker Build Cloud](/manuals/build-cloud/) significantly reduces
+[Docker Build Cloud](/build-cloud/) significantly reduces
 build times, both locally and in CI, by providing a dedicated remote builder
 and shared cache. Powered by the cloud, developer time and local resources are
 freed up so your team can focus on more important things, like innovation.
@@ -50,13 +50,13 @@ your software supply chain security. By analyzing your images, Docker Scout
 compiles an inventory of components, also known as a Software Bill of Materials
 (SBOM). The SBOM is matched against a continuously updated vulnerability
 database to pinpoint security weaknesses. To get started, see
-[Quickstart](/manuals/scout/quickstart/).
+[Quickstart](/scout/quickstart/).
 
 [Testcontainers Cloud](https://testcontainers.com/cloud/docs/) allows
 developers to run containers in the cloud, removing the need to run heavy
 containers on your local machine.
 
-[Docker Hardened Images](/manuals/dhi/) are minimal, secure, and production-ready container base and application images maintained by Docker.
+[Docker Hardened Images](/dhi/) are minimal, secure, and production-ready container base and application images maintained by Docker.
 Designed to reduce vulnerabilities and simplify compliance, DHIs integrate
 easily into your existing Docker-based workflows with little to no retooling
 required.

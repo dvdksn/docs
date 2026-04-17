@@ -118,7 +118,7 @@ You need [super admin permissions](https://help.okta.com/en-us/content/topics/se
     - For **Name ID format**, choose `EmailAddress`
     - For **Application username**, choose `Email`
     - For **Update application username on**, choose `Create and update`
-    - Optional. Add [SAML attributes](/manuals/enterprise/security/provisioning/#sso-attributes), if required by your org. 
+    - Optional. Add [SAML attributes](/admin/enterprise/security/provisioning/#sso-attributes), if required by your org. 
 1. For **Feedback**, choose **This is an internal app that we have created** checkbox before finishing. 
 
 Keep your Okta window open for the next step. 
@@ -134,7 +134,7 @@ To enable SSO with Microsoft Entra, you need [Cloud Application Administrator](h
 1. Select **Edit** on the **Basic SAML configuration** section. From **Basic SAML configuration**, choose **Edit** and paste the values you copied from creating an SSO connection in Docker:
     - For the **Identifier** value, paste the Docker Entity ID.
     - For the **Reply URL** value, paste Docker ACS URL. 
-1. Optional. Add [SAML attributes](/manuals/enterprise/security/provisioning/#sso-attributes), if required by your org. 
+1. Optional. Add [SAML attributes](/admin/enterprise/security/provisioning/#sso-attributes), if required by your org. 
 1. From the **SAML Signing Certificate** section, download your **Certificate (Base64)**.
 
 </TabItem>
@@ -250,7 +250,7 @@ Docker Hub. If you want to use 2FA, you must enable 2FA through your IdP.
 
 ## Next steps
 
-- [Provision users](/manuals/enterprise/security/provisioning/).
+- [Provision users](/admin/enterprise/security/provisioning/).
 - [Enforce sign-in](../enforce-sign-in/).
-- [Create personal access tokens](/manuals/enterprise/security/access-tokens/).
-- [Troubleshoot SSO](/manuals/enterprise/troubleshoot/troubleshoot-sso/) issues.
+- [Create personal access tokens](/admin/enterprise/security/access-tokens/).
+- [Troubleshoot SSO](/admin/enterprise/troubleshoot/troubleshoot-sso/) issues.

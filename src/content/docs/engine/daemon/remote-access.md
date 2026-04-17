@@ -20,7 +20,7 @@ as the Unix socket.
 >
 > Remote access without TLS is **not recommended**, and will require explicit opt-in in a future release.
 > For more information on how to use TLS certificates to secure this connection, see
-> [Protect the Docker daemon socket](/manuals/engine/security/protect-access/).
+> [Protect the Docker daemon socket](/engine/security/protect-access/).
 
 ## Enable remote access
 

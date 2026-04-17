@@ -24,8 +24,8 @@ In this guide, you'll learn how to:
 
 Before you start, make sure you have:
 
-- [Docker Desktop](../get-started/get-docker/) or Docker Engine installed
-- [Docker Model Runner enabled](../manuals/ai/model-runner/get-started/#enable-docker-model-runner)
+- [Docker Desktop](../get-started/install/) or Docker Engine installed
+- [Docker Model Runner enabled](../ai-overview/model-runner/get-started/#enable-docker-model-runner)
 - [Claude Code installed](https://code.claude.com/docs/en/quickstart)
 
 If you use Docker Desktop, turn on TCP access in **Settings** > **AI**, or run:
@@ -119,7 +119,7 @@ $ curl http://localhost:12434/v1/messages \
 ```
 
 For more details about the request format, see the
-[Anthropic-compatible API reference](../manuals/ai/model-runner/api-reference/#anthropic-compatible-api).
+[Anthropic-compatible API reference](../ai-overview/model-runner/api-reference/#anthropic-compatible-api).
 
 ## Step 6: Inspect Claude Code requests
 
@@ -149,6 +149,6 @@ $ ANTHROPIC_BASE_URL=http://localhost:12434 claude --model gpt-oss:32k
 
 ## Learn more
 
-- [Docker Model Runner overview](../manuals/ai/model-runner/)
-- [Docker Model Runner API reference](../manuals/ai/model-runner/api-reference/)
-- [IDE and tool integrations](../manuals/ai/model-runner/ide-integrations/)
+- [Docker Model Runner overview](../ai-overview/model-runner/)
+- [Docker Model Runner API reference](../ai-overview/model-runner/api-reference/)
+- [IDE and tool integrations](../ai-overview/model-runner/ide-integrations/)

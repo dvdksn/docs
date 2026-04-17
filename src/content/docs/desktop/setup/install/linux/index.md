@@ -36,7 +36,7 @@ Docker Desktop for Linux provides a user-friendly graphical interface that simpl
 Docker Desktop for Linux and Docker Engine can be installed side-by-side on the
 same machine. Docker Desktop for Linux stores containers and images in an isolated
 storage location within a VM and offers
-controls to restrict [its resources](/manuals/desktop/settings-and-maintenance/settings/#resources). Using a dedicated storage
+controls to restrict [its resources](/desktop/settings-and-maintenance/settings/#resources). Using a dedicated storage
 location for Docker Desktop prevents it from interfering with a Docker Engine
 installation on the same machine.
 
@@ -68,7 +68,7 @@ $ sudo systemctl disable docker docker.socket containerd
 
 The Docker CLI can be used to interact with multiple Docker Engines. For example,
 you can use the same Docker CLI to control a local Docker Engine and to control
-a remote Docker Engine instance running in the cloud. [Docker Contexts](/manuals/engine/manage-resources/contexts/)
+a remote Docker Engine instance running in the cloud. [Docker Contexts](/engine/manage-resources/contexts/)
 allow you to switch between Docker Engines instances.
 
 When installing Docker Desktop, a dedicated "desktop-linux" context is created to
@@ -106,7 +106,7 @@ desktop-linux
 Current context is now "desktop-linux"
 ```
 
-Refer to the [Docker Context documentation](/manuals/engine/manage-resources/contexts/) for more details.
+Refer to the [Docker Context documentation](/engine/manage-resources/contexts/) for more details.
 
 </details>
 
@@ -137,10 +137,10 @@ To install Docker Desktop successfully, your Linux host must meet the following 
 - GNOME, KDE, or MATE desktop environments are supported but others may work.
   - For many Linux distributions, the GNOME environment does not support tray icons. To add support for tray icons, you need to install a GNOME extension. For example, [AppIndicator](https://extensions.gnome.org/extension/615/appindicator-support/).
 - At least 4 GB of RAM.
-- Enable configuring ID mapping in user namespaces, see [File sharing](/manuals/desktop/troubleshoot-and-support/faqs/linuxfaqs/#how-do-i-enable-file-sharing). Note that for Docker Desktop version 4.35 and later, this is not required anymore.
-- Recommended: [Initialize `pass`](/manuals/desktop/setup/sign-in/#credentials-management-for-linux-users) for credentials management.
+- Enable configuring ID mapping in user namespaces, see [File sharing](/desktop/troubleshoot-and-support/faqs/linuxfaqs/#how-do-i-enable-file-sharing). Note that for Docker Desktop version 4.35 and later, this is not required anymore.
+- Recommended: [Initialize `pass`](/desktop/setup/sign-in/#credentials-management-for-linux-users) for credentials management.
 
-Docker Desktop for Linux runs a Virtual Machine (VM). For more information on why, see [Why Docker Desktop for Linux runs a VM](/manuals/desktop/troubleshoot-and-support/faqs/linuxfaqs/#why-does-docker-desktop-for-linux-run-a-vm).
+Docker Desktop for Linux runs a Virtual Machine (VM). For more information on why, see [Why Docker Desktop for Linux runs a VM](/desktop/troubleshoot-and-support/faqs/linuxfaqs/#why-does-docker-desktop-for-linux-run-a-vm).
 
 > [!NOTE]
 >
@@ -198,7 +198,7 @@ Sign out and sign back in so that your group membership is re-evaluated.
 
 ## Using Docker SDKs with Docker Desktop
 
-Docker Desktop for Linux uses a per-user socket instead of the system-wide `/var/run/docker.sock`. Docker SDKs and tools that connect directly to the Docker daemon need the `DOCKER_HOST` environment variable set to connect to Docker Desktop. For configuration details, see [How do I use Docker SDKs with Docker Desktop for Linux?](/manuals/desktop/troubleshoot-and-support/faqs/linuxfaqs/#how-do-i-use-docker-sdks-with-docker-desktop-for-linux).
+Docker Desktop for Linux uses a per-user socket instead of the system-wide `/var/run/docker.sock`. Docker SDKs and tools that connect directly to the Docker daemon need the `DOCKER_HOST` environment variable set to connect to Docker Desktop. For configuration details, see [How do I use Docker SDKs with Docker Desktop for Linux?](/desktop/troubleshoot-and-support/faqs/linuxfaqs/#how-do-i-use-docker-sdks-with-docker-desktop-for-linux).
 
 ## Where to go next
 

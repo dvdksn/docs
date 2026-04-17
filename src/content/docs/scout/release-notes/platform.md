@@ -41,11 +41,11 @@ customize policies either by editing the default policy from a **policy type**
 which acts as a template. The default policies in Docker Scout are also
 implemented based on these types.
 
-For more information, refer to [policy types](/manuals/scout/policy/#policy-types).
+For more information, refer to [policy types](/scout/policy/#policy-types).
 
 ### 2024-09-09
 
-This release changes how [health scores](/manuals/scout/policy/scores/) are
+This release changes how [health scores](/scout/policy/scores/) are
 calculated in Docker Scout. The health score calculation now considers optional
 and custom policies that you have configured for your organization.
 
@@ -59,7 +59,7 @@ calculation will be based on the out-of-the-box policies.
 ### 2024-08-13
 
 This release changes the out-of-the-box policies to align with the policy
-configurations used to evaluate Docker Scout [health scores](/manuals/scout/policy/scores/).
+configurations used to evaluate Docker Scout [health scores](/scout/policy/scores/).
 
 The default out-of-the-box policies are now:
 
@@ -93,13 +93,13 @@ exceptions affecting images in your organization. You can also go to the image
 view in the Docker Scout Dashboard to see all exceptions that apply to a given
 image.
 
-For more information, see [Manage vulnerability exceptions](/manuals/scout/explore/exceptions/).
+For more information, see [Manage vulnerability exceptions](/scout/explore/exceptions/).
 
 ### 2024-05-06
 
 New HTTP endpoint that lets you scrape data from Docker Scout with Prometheus,
 to create your own vulnerability and policy dashboards with Grafana.
-For more information, see [Docker Scout metrics exporter](/manuals/scout/explore/metrics-exporter/).
+For more information, see [Docker Scout metrics exporter](/scout/explore/metrics-exporter/).
 
 ## Q1 2024
 

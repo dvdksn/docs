@@ -59,7 +59,7 @@ Compose to deploy applications to remote Docker hosts and manage
 production-specific configurations.
 
 For details on using production-oriented features, see
-[Compose in production](/manuals/compose/how-tos/production/).
+[Compose in production](/compose/how-tos/production/).
 
 ## What's next?
 

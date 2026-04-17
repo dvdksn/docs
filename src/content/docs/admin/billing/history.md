@@ -50,7 +50,7 @@ For more information, see [Update billing information](details/).
 > [!NOTE]
 >
 > Pay by invoice is only available for subscribers on an annual billing cycle.
-> To change your billing cycle, see [Change your billing cycle](/manuals/billing/cycle/).
+> To change your billing cycle, see [Change your billing cycle](/admin/billing/cycle/).
 
 If you've selected pay by invoice for your subscription, you'll receive email
 reminders to pay your invoice at 10 days before the due date, on the due date,
@@ -68,7 +68,7 @@ When your payment has processed, the invoice's **Status** column will update to
 **Paid** and you will receive a confirmation email.
 
 If you choose to pay using a US bank account, you must verify the account. For
-more information, see [Verify a bank account](/manuals/billing/payment-method/#verify-a-bank-account).
+more information, see [Verify a bank account](/admin/billing/payment-method/#verify-a-bank-account).
 
 ### View renewal date
 

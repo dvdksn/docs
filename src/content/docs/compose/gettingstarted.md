@@ -15,7 +15,7 @@ Using the Flask framework, the application features a hit counter in Redis, prov
 
 Make sure you have:
 
-- [Installed the latest version of Docker Compose](/manuals/compose/install/)
+- [Installed the latest version of Docker Compose](/compose/install/)
 - A basic understanding of Docker concepts and how Docker works
 
 ## Step 1: Set up the project
@@ -296,7 +296,7 @@ Without Compose Watch, every code change requires you to stop the stack, rebuild
    $ docker compose down
    ```
 
-   For more information on how Compose Watch works, see [Use Compose Watch](/manuals/compose/how-tos/file-watch/).
+   For more information on how Compose Watch works, see [Use Compose Watch](/compose/how-tos/file-watch/).
 
 ## Step 5: Persist data with named volumes
 
@@ -417,7 +417,7 @@ you want to reuse infrastructure definitions across projects.
    Compose merges both files at startup. The `web` service can still reference `redis`
    by name because all included services share the same default network.
 
-   This is a simplified example, but it demonstrates the basic principle of `include` and how it can make it easier to modularize complex applications into sub-Compose files. For more information on `include` and working with multiple Compose files, see [Working with multiple Compose files](/manuals/compose/how-tos/multiple-compose-files/).
+   This is a simplified example, but it demonstrates the basic principle of `include` and how it can make it easier to modularize complex applications into sub-Compose files. For more information on `include` and working with multiple Compose files, see [Working with multiple Compose files](/compose/how-tos/multiple-compose-files/).
 
 4. Stop the stack before moving on:
 

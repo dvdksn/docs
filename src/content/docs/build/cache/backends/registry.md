@@ -18,7 +18,7 @@ everything that the inline cache can do, and more:
 
 This cache storage backend is not supported with the default `docker` driver.
 To use this feature, create a new builder using a different driver. See
-[Build drivers](/manuals/build/builders/drivers/) for more information.
+[Build drivers](/build/builders/drivers/) for more information.
 
 ## Synopsis
 

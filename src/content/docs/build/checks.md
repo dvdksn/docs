@@ -286,4 +286,4 @@ experimental checks, the experimental checks will still run:
 For more information about using build checks, see:
 
 - [Build checks reference](/reference/build-checks/)
-- [Validating build configuration with GitHub Actions](/manuals/build/ci/github-actions/checks/)
+- [Validating build configuration with GitHub Actions](/build/ci/github-actions/checks/)

@@ -473,7 +473,7 @@ Press `ctrl+c` in the terminal to stop your application.
 
 Use Compose Watch to automatically update your running Compose services as you
 edit and save your code. For more details about Compose Watch, see [Use Compose
-Watch](/manuals/compose/how-tos/file-watch/).
+Watch](/compose/how-tos/file-watch/).
 
 Open your `compose.yaml` file in an IDE or text editor and then add the Compose
 Watch instructions. The following is the updated `compose.yaml` file.
@@ -563,8 +563,8 @@ database and persist data. You also learned how to use Compose Watch to automati
 Related information:
 
 - [Compose file reference](/reference/compose-file/)
-- [Compose file watch](/manuals/compose/how-tos/file-watch/)
-- [Multi-stage builds](/manuals/build/building/multi-stage/)
+- [Compose file watch](/compose/how-tos/file-watch/)
+- [Multi-stage builds](/build/building/multi-stage/)
 
 ## Next steps
 

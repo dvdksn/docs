@@ -15,7 +15,7 @@ SSO and SCIM setup.
 > [!IMPORTANT]
 >
 > Some users may need CLI based logins to Docker Hub, and for this they will
-> need a [personal access token (PAT)](/manuals/security/access-tokens/).
+> need a [personal access token (PAT)](/admin/security/access-tokens/).
 
 ## Test Registry Access Management and Image Access Management
 
@@ -24,7 +24,7 @@ SSO and SCIM setup.
 > Communicate with your users before proceeding, as this step will impact all
 > existing users signing into your Docker organization.
 
-If you plan to use [Registry Access Management (RAM)](/manuals/enterprise/security/hardened-desktop/registry-access-management/) and/or [Image Access Management (IAM)](/manuals/enterprise/security/hardened-desktop/image-access-management/):
+If you plan to use [Registry Access Management (RAM)](/admin/enterprise/security/hardened-desktop/registry-access-management/) and/or [Image Access Management (IAM)](/admin/enterprise/security/hardened-desktop/image-access-management/):
 
 1. Ensure your test developer signs in to Docker Desktop using their
    organization credentials
@@ -42,7 +42,7 @@ function as expected.
 
 ## Test Docker Build Cloud capabilities
 
-Have one of your Docker Desktop testers [connect to the cloud builder you created and use it to build](/manuals/build-cloud/usage/).
+Have one of your Docker Desktop testers [connect to the cloud builder you created and use it to build](/build-cloud/usage/).
 
 ## Test Testcontainers Cloud
 
@@ -57,5 +57,5 @@ been enabled.
 
 ## Verify access to Docker Hardened Images
 
-Have a test developer attempt to [pull a Docker Hardened Image](/manuals/dhi/get-started/) to confirm that
+Have a test developer attempt to [pull a Docker Hardened Image](/dhi/get-started/) to confirm that
 the team has proper access and can integrate these images into their workflows.

@@ -47,7 +47,7 @@ space is half of your subscription's total allocation.
 
 ### Get more build cache space
 
-To get more Build cache space, [upgrade your subscription](/manuals/subscription/scale/).
+To get more Build cache space, [upgrade your subscription](/admin/subscription/scale/).
 
 > [!TIP]
 >
@@ -66,7 +66,7 @@ To enable your cloud builders to access your private resources, enter the host n
 
 If your internal artifacts require authentication, make sure that you
 authenticate with the repository either before or during the build. For
-internal package repositories for npm or PyPI, use [build secrets](/manuals/build/building/secrets/)
+internal package repositories for npm or PyPI, use [build secrets](/build/building/secrets/)
 to authenticate during the build. For internal OCI registries, use `docker
 login` to authenticate before building.
 

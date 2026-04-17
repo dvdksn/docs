@@ -21,7 +21,7 @@ To add seats:
    organization.
 1. Select **Billing**.
    - If you choose to pay using a US bank account, you must verify the account.
-   - For more information, see [Verify a bank account](/manuals/billing/payment-method/#verify-a-bank-account).
+   - For more information, see [Verify a bank account](/admin/billing/payment-method/#verify-a-bank-account).
 1. Select **Add seats** and follow the on-screen instructions to complete
    adding seats.
    - You can't use pay by invoice for purchasing additional seats.

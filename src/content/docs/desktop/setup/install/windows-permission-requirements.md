@@ -65,7 +65,7 @@ into Docker containers still retain their original permissions.  Containers don'
 ## Enhanced Container Isolation
 
 In addition, Docker Desktop supports [Enhanced Container Isolation
-mode](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/) (ECI),
+mode](/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/) (ECI),
 available to Business customers only, which further secures containers without
 impacting developer workflows.
 

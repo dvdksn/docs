@@ -30,7 +30,7 @@ To edit this information:
 
 After configuring your organization information, you can:
 
-- [Configure single sign-on (SSO)](/manuals/enterprise/security/single-sign-on/connect/)
-- [Set up SCIM provisioning](/manuals/enterprise/security/provisioning/scim/)
-- [Manage domains](/manuals/enterprise/security/domain-management/)
-- [Create a company](/manuals/admin/company/new-company/)
+- [Configure single sign-on (SSO)](/admin/enterprise/security/single-sign-on/connect/)
+- [Set up SCIM provisioning](/admin/enterprise/security/provisioning/scim/)
+- [Manage domains](/admin/enterprise/security/domain-management/)
+- [Create a company](/admin/company/new-company/)

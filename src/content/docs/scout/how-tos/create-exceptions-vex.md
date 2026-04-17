@@ -7,14 +7,14 @@ keywords: Docker, vulnerability, exception, create, VEX
 Vulnerability Exploitability eXchange (VEX) is a standard format for
 documenting vulnerabilities in the context of a software package or product.
 Docker Scout supports VEX documents to create
-[exceptions](/manuals/scout/explore/exceptions/) for vulnerabilities in images.
+[exceptions](/scout/explore/exceptions/) for vulnerabilities in images.
 
 > [!NOTE]
 > You can also create exceptions using the Docker Scout Dashboard or Docker
 > Desktop. The GUI provides a user-friendly interface for creating exceptions,
 > and it's easy to manage exceptions for multiple images. It also lets you
 > create exceptions for multiple images, or your entire organization, all at
-> once. For more information, see [Create an exception using the GUI](/manuals/scout/how-tos/create-exceptions-gui/).
+> once. For more information, see [Create an exception using the GUI](/scout/how-tos/create-exceptions-gui/).
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ To create exceptions using OpenVEX documents, you need:
 
 - The latest version of Docker Desktop or the Docker Scout CLI plugin
 - The [`vexctl`](https://github.com/openvex/vexctl) command line tool.
-- The [containerd image store](/manuals/desktop/features/containerd/) must be enabled
+- The [containerd image store](/desktop/features/containerd/) must be enabled
 - Write permissions to the registry repository where the image is stored
 
 ## Introduction to VEX

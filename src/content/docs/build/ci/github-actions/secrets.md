@@ -15,7 +15,7 @@ Docker Build supports two forms of secrets:
 - [SSH mounts](#ssh-mounts) add SSH agent sockets or keys into the build container.
 
 This page shows how to use secrets with GitHub Actions.
-For an introduction to secrets in general, see [Build secrets](/manuals/build/building/secrets/).
+For an introduction to secrets in general, see [Build secrets](/build/building/secrets/).
 
 ## Secret mounts
 
@@ -63,7 +63,7 @@ jobs:
 > By default, they're available at `/run/secrets/<id>`.
 > You can also use the `env` option to load a secret into an environment variable,
 > or the `target` option to customize the mount path.
-> For details on secret mounts, see [Build secrets](/manuals/build/building/secrets/).
+> For details on secret mounts, see [Build secrets](/build/building/secrets/).
 
 ### Using secret files
 

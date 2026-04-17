@@ -37,7 +37,7 @@ files to be distributed to developer machines. Use MDM tools to deploy these con
 ## Identify Docker organizations
 
 Some companies may have more than one
-[Docker organization](/manuals/admin/organization/) created. These
+[Docker organization](/admin/organization/) created. These
 organizations may have been created for specific purposes, or may not be
 needed anymore.
 
@@ -49,7 +49,7 @@ If you suspect your company has multiple Docker organizations:
 
 ## Gather requirements
 
-[Settings Management](/manuals/enterprise/security/hardened-desktop/settings-management/) lets you preset numerous configuration parameters for Docker Desktop.
+[Settings Management](/admin/enterprise/security/hardened-desktop/settings-management/) lets you preset numerous configuration parameters for Docker Desktop.
 
 Work with the following stakeholders to establish your company's baseline
 configuration:
@@ -61,11 +61,11 @@ configuration:
 Review these areas together:
 
 - Security features and
-  [enforcing sign-in](/manuals/enterprise/security/enforce-sign-in/)
+  [enforcing sign-in](/admin/enterprise/security/enforce-sign-in/)
   for Docker Desktop users
 - Additional Docker products included in your subscriptions
 
-To view the parameters that can be preset, see [Configure Settings Management](/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file/#step-two-configure-the-settings-you-want-to-lock-in).
+To view the parameters that can be preset, see [Configure Settings Management](/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/#step-two-configure-the-settings-you-want-to-lock-in).
 
 ## Optional: Meet with the Docker Implementation team
 

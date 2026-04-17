@@ -22,7 +22,7 @@ Swarm mode to establish a connection between the hosts.
 
 This page describes overlay networks in general, and when used with standalone
 containers. For information about overlay for Swarm services, see
-[Manage Swarm service networks](/manuals/engine/swarm/networking/).
+[Manage Swarm service networks](/engine/swarm/networking/).
 
 ## Requirements
 

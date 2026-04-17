@@ -34,7 +34,7 @@ Hub can be mirrored.
 
 > [!NOTE]
 >
-> Mirrors of Docker Hub are still subject to Docker's [fair use policy](/manuals/docker-hub/usage/#fair-use).
+> Mirrors of Docker Hub are still subject to Docker's [fair use policy](/hub/usage/#fair-use).
 
 ### Solution
 

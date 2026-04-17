@@ -1,121 +1,609 @@
 /*
- * Docker docs theme — maps Docker design tokens to Starlight CSS variables.
- * Starlight documents its CSS custom properties at:
- * https://starlight.astro.build/reference/css-variables/
+ * ══════════════════════════════════════════════════════════
+ *  Docker Docs — Design System
+ * ══════════════════════════════════════════════════════════
+ *
+ *  Aesthetic: Infrastructure Modernism, refined.
+ *
+ *  Substance over decoration. Hairlines, not shadows.
+ *  Monochrome neutrals tinted toward Docker blue.
+ *  JetBrains Mono is a structural cue (UI chrome + code),
+ *  Inter carries content — matching docker.com. Docker blue
+ *  is rare and load-bearing — used only for active state,
+ *  focus, and the one true link color.
+ *
+ *  Dark mode is the primary surface; light mode is an
+ *  honored alternative.
+ *
+ * ══════════════════════════════════════════════════════════
  */
 
-/* ── Fonts ── */
+/* ── Typefaces ──────────────────────────────────────────── */
 
-@font-face {
-  font-family: "Roboto Flex";
-  font-style: normal;
-  font-weight: 100 1000;
-  font-display: swap;
-  src: url("/fonts/RobotoFlex-Variable.woff2") format("woff2");
-}
+/* Inter — body/display. Matches docker.com's type stack.
+   JetBrains Mono — UI chrome + code. Both loaded as variable
+   wght ranges so font-variation-settings still interpolates. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
-@font-face {
-  font-family: "Roboto Mono";
-  font-style: normal;
-  font-weight: 100 700;
-  font-display: swap;
-  src: url("/fonts/RobotoMono-Variable.woff2") format("woff2");
-}
-
-/* ── Docker color palette ── */
+/* ══════════════════════════════════════════════════════════
+ *  Brand palette (OKLCH)
+ *  Hue 258 = Docker blue. All neutrals are tinted toward it
+ *  (chroma 0.006–0.014) for subconscious brand cohesion.
+ * ══════════════════════════════════════════════════════════ */
 
 :root {
-  /* Primary */
-  --docker-blue-400: rgba(75, 131, 241, 1);
-  --docker-blue-500: rgba(37, 96, 255, 1);
-  --docker-blue-600: rgba(13, 77, 242, 1);
-  --docker-blue-700: rgba(0, 61, 181, 1);
+  /* Docker blue — chroma reduced at extremes */
+  --d-blue-50:  oklch(96.5% 0.020 258);
+  --d-blue-100: oklch(92.0% 0.045 258);
+  --d-blue-200: oklch(84.5% 0.085 258);
+  --d-blue-300: oklch(74.0% 0.135 258);
+  --d-blue-400: oklch(64.0% 0.180 258);
+  --d-blue-500: oklch(56.5% 0.215 258);   /* canonical Docker blue, ~#2560ff */
+  --d-blue-600: oklch(50.0% 0.225 258);
+  --d-blue-700: oklch(40.0% 0.190 258);
+  --d-blue-800: oklch(30.0% 0.140 258);
+  --d-blue-900: oklch(20.0% 0.090 258);
 
-  /* Grays */
-  --docker-gray-50: rgba(249, 250, 251, 1);
-  --docker-gray-100: rgba(231, 234, 239, 1);
-  --docker-gray-200: rgba(200, 207, 218, 1);
-  --docker-gray-300: rgba(169, 180, 198, 1);
-  --docker-gray-400: rgba(139, 153, 178, 1);
-  --docker-gray-500: rgba(108, 126, 157, 1);
-  --docker-gray-600: rgba(86, 101, 129, 1);
-  --docker-gray-700: rgba(67, 76, 95, 1);
-  --docker-gray-800: rgba(44, 51, 63, 1);
-  --docker-gray-900: rgba(30, 33, 41, 1);
-  --docker-gray-950: rgb(18, 21, 31);
+  /* Tinted neutrals — hue 258, chroma 0.006–0.014 */
+  --d-ink-50:   oklch(98.4% 0.004 258);
+  --d-ink-100:  oklch(96.2% 0.006 258);
+  --d-ink-200:  oklch(91.0% 0.008 258);
+  --d-ink-300:  oklch(82.0% 0.010 258);
+  --d-ink-400:  oklch(70.0% 0.012 258);
+  --d-ink-500:  oklch(56.0% 0.014 258);
+  --d-ink-600:  oklch(44.0% 0.014 258);
+  --d-ink-700:  oklch(33.0% 0.014 258);
+  --d-ink-800:  oklch(23.0% 0.014 258);
+  --d-ink-850:  oklch(18.0% 0.014 258);
+  --d-ink-900:  oklch(13.5% 0.014 258);
+  --d-ink-950:  oklch(9.5%  0.012 258);
 
-  /* Semantic */
-  --docker-green-600: rgba(56, 189, 125, 1);
-  --docker-red-600: rgba(244, 47, 57, 1);
-  --docker-orange-600: rgba(255, 107, 0, 1);
-  --docker-violet-500: rgba(125, 46, 255, 1);
+  /* Status — used sparingly */
+  --d-green:  oklch(65.0% 0.155 152);
+  --d-red:    oklch(62.0% 0.220 27);
+  --d-orange: oklch(70.0% 0.180 50);
+  --d-purple: oklch(60.0% 0.200 290);
 
-  /* Backgrounds */
-  --docker-bg-light: #f9f9fa;
-  --docker-bg-dark: #10151b;
+  /* Type scale — fluid for splash, fixed for content (set at content sites) */
+  --d-text-xs:   0.75rem;
+  --d-text-sm:   0.85rem;
+  --d-text-base: 0.95rem;
+  --d-text-md:   1.0625rem;
+  --d-text-lg:   1.25rem;
+  --d-text-xl:   1.5rem;
+  --d-text-2xl:  2rem;
+  --d-text-3xl:  2.75rem;
+
+  /* Spacing scale — 4pt base, semantic names */
+  --d-space-3xs: 0.125rem;  /*  2px */
+  --d-space-2xs: 0.25rem;   /*  4px */
+  --d-space-xs:  0.5rem;    /*  8px */
+  --d-space-sm:  0.75rem;   /* 12px */
+  --d-space-md:  1rem;      /* 16px */
+  --d-space-lg:  1.5rem;    /* 24px */
+  --d-space-xl:  2rem;      /* 32px */
+  --d-space-2xl: 3rem;      /* 48px */
+  --d-space-3xl: 4rem;      /* 64px */
+  --d-space-4xl: 6rem;      /* 96px */
+
+  /* Tracking */
+  --d-track-tight:  -0.025em;
+  --d-track-normal: 0;
+  --d-track-wide:   0.04em;
+  --d-track-wider:  0.08em;
+  --d-track-mono:   0.06em;  /* mono micro-labels */
+
+  /* Radii — restrained */
+  --d-radius-sm: 4px;
+  --d-radius-md: 6px;
+  --d-radius-lg: 10px;
+
+  /* Variable-font axes. Inter supports wght only; opsz/wdth are
+     silently ignored. Weights tuned for Inter's drawing — it runs
+     a touch heavier than Roboto Flex at the same numeric weight. */
+  --d-vf-display:  "wght" 800, "opsz" 144, "wdth" 100;
+  --d-vf-heading:  "wght" 620, "opsz" 32,  "wdth" 100;
+  --d-vf-body:     "wght" 400, "opsz" 14,  "wdth" 100;
+  --d-vf-emphasis: "wght" 560, "opsz" 14,  "wdth" 100;
+  --d-vf-micro:    "wght" 500, "opsz" 8,   "wdth" 95;
 }
 
-/* ── Starlight theme mapping — light mode ── */
+/* ══════════════════════════════════════════════════════════
+ *  Light mode
+ * ══════════════════════════════════════════════════════════ */
 
 :root {
-  --sl-font: "Roboto Flex", sans-serif;
-  --sl-font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
+  --sl-font: "Inter", Helvetica, Arial, sans-serif;
+  --sl-font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code",
+    "Source Code Pro", Menlo, Consolas, monospace;
 
-  --sl-color-accent-low: color-mix(in srgb, var(--docker-blue-500) 15%, white);
-  --sl-color-accent: var(--docker-blue-500);
-  --sl-color-accent-high: var(--docker-blue-700);
+  /* Inter has a large x-height — at 1.75 the text reads airy and
+     overwhelming. 1.6 restores rhythm without compressing descenders. */
+  --sl-line-height: 1.6;
+  --sl-line-height-headings: 1.2;
 
-  --sl-color-bg-nav: var(--docker-bg-light);
-  --sl-color-bg-sidebar: var(--docker-bg-light);
-  --sl-color-bg: white;
+  /* Body at 0.95rem — Inter renders optically larger than Roboto Flex
+     at the same size, so pull back slightly. */
+  --sl-text-body: 0.95rem;
 
-  --sl-color-white: var(--docker-gray-900);
-  --sl-color-gray-1: var(--docker-gray-800);
-  --sl-color-gray-2: var(--docker-gray-700);
-  --sl-color-gray-3: var(--docker-gray-500);
-  --sl-color-gray-4: var(--docker-gray-300);
-  --sl-color-gray-5: var(--docker-gray-100);
-  --sl-color-gray-6: var(--docker-gray-50);
-  --sl-color-black: white;
+  --sl-color-accent-low:  var(--d-blue-50);
+  --sl-color-accent:      var(--d-blue-500);
+  --sl-color-accent-high: var(--d-blue-700);
 
-  --sl-color-text: var(--docker-gray-800);
-  --sl-color-text-accent: var(--docker-blue-600);
+  --sl-color-bg:               #ffffff;
+  --sl-color-bg-nav:           #ffffff;
+  --sl-color-bg-sidebar:       var(--d-ink-50);
+  --sl-color-bg-inline-code:   var(--d-ink-100);
+
+  --sl-color-white:  var(--d-ink-900);
+  --sl-color-gray-1: var(--d-ink-800);
+  --sl-color-gray-2: var(--d-ink-700);
+  --sl-color-gray-3: var(--d-ink-500);
+  --sl-color-gray-4: var(--d-ink-400);
+  --sl-color-gray-5: var(--d-ink-200);
+  --sl-color-gray-6: var(--d-ink-100);
+  --sl-color-gray-7: var(--d-ink-50);
+  --sl-color-black:  #ffffff;
+
+  --sl-color-text:        var(--d-ink-800);
+  --sl-color-text-accent: var(--d-blue-700);
+
+  --sl-color-hairline:       var(--d-ink-100);
+  --sl-color-hairline-light: var(--d-ink-100);
+  --sl-color-hairline-shade: var(--d-ink-200);
+
+  --sl-shadow-sm: 0 1px 2px oklch(20% 0.014 258 / 0.05);
+  --sl-shadow-md: 0 2px 8px oklch(20% 0.014 258 / 0.07);
+  --sl-shadow-lg: 0 4px 24px oklch(20% 0.014 258 / 0.10);
+
+  /* Docker semantic — light */
+  --d-surface:           #ffffff;
+  --d-surface-sunk:      var(--d-ink-50);
+  --d-surface-raised:    #ffffff;
+  --d-text-strong:       var(--d-ink-900);
+  --d-text:              var(--d-ink-800);
+  --d-text-muted:        var(--d-ink-500);
+  --d-text-faint:        var(--d-ink-400);
+  --d-border:            var(--d-ink-200);
+  --d-border-strong:     var(--d-ink-300);
+  --d-accent:            var(--d-blue-600);
+  --d-accent-on:         #ffffff;
 }
 
-/* ── Starlight theme mapping — dark mode ── */
+/* ══════════════════════════════════════════════════════════
+ *  Dark mode (primary surface)
+ * ══════════════════════════════════════════════════════════ */
 
 :root[data-theme="dark"] {
-  --sl-color-accent-low: color-mix(
-    in srgb,
-    var(--docker-blue-400) 20%,
-    var(--docker-bg-dark)
-  );
-  --sl-color-accent: var(--docker-blue-400);
-  --sl-color-accent-high: color-mix(
-    in srgb,
-    var(--docker-blue-400) 80%,
-    white
-  );
+  --sl-color-accent-low:  oklch(56.5% 0.215 258 / 0.14);
+  --sl-color-accent:      var(--d-blue-400);
+  --sl-color-accent-high: var(--d-blue-200);
 
-  --sl-color-bg-nav: var(--docker-bg-dark);
-  --sl-color-bg-sidebar: var(--docker-bg-dark);
-  --sl-color-bg: var(--docker-bg-dark);
+  --sl-color-bg:             var(--d-ink-950);
+  --sl-color-bg-nav:         var(--d-ink-950);
+  --sl-color-bg-sidebar:     var(--d-ink-950);
+  --sl-color-bg-inline-code: oklch(23% 0.014 258 / 0.55);
 
-  --sl-color-white: rgba(231, 234, 239, 1);
-  --sl-color-gray-1: var(--docker-gray-200);
-  --sl-color-gray-2: var(--docker-gray-300);
-  --sl-color-gray-3: var(--docker-gray-400);
-  --sl-color-gray-4: var(--docker-gray-600);
-  --sl-color-gray-5: var(--docker-gray-800);
-  --sl-color-gray-6: var(--docker-gray-900);
-  --sl-color-black: var(--docker-bg-dark);
+  --sl-color-white:  oklch(96% 0.006 258);
+  --sl-color-gray-1: var(--d-ink-200);
+  --sl-color-gray-2: var(--d-ink-300);
+  --sl-color-gray-3: var(--d-ink-400);
+  --sl-color-gray-4: var(--d-ink-500);
+  --sl-color-gray-5: var(--d-ink-800);
+  --sl-color-gray-6: var(--d-ink-850);
+  --sl-color-gray-7: var(--d-ink-900);
+  --sl-color-black:  var(--d-ink-950);
 
-  --sl-color-text: var(--docker-gray-200);
-  --sl-color-text-accent: var(--docker-blue-400);
+  --sl-color-text:        var(--d-ink-200);
+  --sl-color-text-accent: var(--d-blue-300);
+
+  --sl-color-hairline:       var(--d-ink-800);
+  --sl-color-hairline-light: var(--d-ink-850);
+  --sl-color-hairline-shade: var(--d-ink-700);
+
+  --sl-shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.4);
+  --sl-shadow-md: 0 2px 8px oklch(0% 0 0 / 0.5);
+  --sl-shadow-lg: 0 8px 32px oklch(0% 0 0 / 0.55);
+
+  /* Docker semantic — dark (primary surface) */
+  --d-surface:           var(--d-ink-950);
+  --d-surface-sunk:      oklch(7% 0.012 258);
+  --d-surface-raised:    var(--d-ink-900);
+  --d-text-strong:       oklch(96% 0.006 258);
+  --d-text:              var(--d-ink-200);
+  --d-text-muted:        var(--d-ink-400);
+  --d-text-faint:        var(--d-ink-500);
+  --d-border:            var(--d-ink-800);
+  --d-border-strong:     var(--d-ink-700);
+  --d-accent:            var(--d-blue-300);
+  --d-accent-on:         var(--d-ink-950);
 }
 
-/* ── Base text size ── */
+/* ══════════════════════════════════════════════════════════
+ *  Base
+ * ══════════════════════════════════════════════════════════ */
 
 html {
-  font-size: 14px;
+  font-size: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-variation-settings: var(--d-vf-body);
+}
+
+:root {
+  --sl-sidebar-width: 17.5rem;
+  --sl-content-width: 48rem;
+}
+
+::selection {
+  background: color-mix(in oklch, var(--d-blue-500) 28%, transparent);
+  color: inherit;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sl-color-gray-4) transparent;
+}
+
+/* Focus ring — Docker blue, accessible, not a glow */
+:focus-visible {
+  outline: 2px solid var(--d-blue-400);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Typography — variable-font axes
+ * ══════════════════════════════════════════════════════════ */
+
+.sl-markdown-content :is(h1, h2, h3, h4, h5, h6):not(:where(.not-content *)) {
+  font-variation-settings: var(--d-vf-heading);
+  font-weight: normal;             /* weight is on the variation axis */
+  letter-spacing: var(--d-track-tight);
+  color: var(--sl-color-white);
+}
+
+.sl-markdown-content h1:not(:where(.not-content *)) {
+  letter-spacing: -0.032em;
+  font-variation-settings: "wght" 720, "opsz" 72, "wdth" 100;
+  line-height: 1.05;
+}
+
+.sl-markdown-content h2:not(:where(.not-content *)) {
+  letter-spacing: -0.022em;
+  font-variation-settings: "wght" 640, "opsz" 36, "wdth" 100;
+  line-height: 1.2;
+}
+
+.sl-markdown-content h3:not(:where(.not-content *)) {
+  letter-spacing: -0.015em;
+  font-variation-settings: "wght" 600, "opsz" 22, "wdth" 100;
+  line-height: 1.3;
+}
+
+.sl-markdown-content h4:not(:where(.not-content *)) {
+  letter-spacing: -0.008em;
+  font-variation-settings: "wght" 560, "opsz" 18, "wdth" 100;
+  line-height: 1.35;
+}
+
+.sl-markdown-content strong:not(:where(.not-content *)),
+.sl-markdown-content b:not(:where(.not-content *)) {
+  font-weight: normal;
+  font-variation-settings: var(--d-vf-emphasis);
+}
+
+/* Inline code — bordered chip, mono in proper proportion */
+.sl-markdown-content code:not(:where(.not-content *)) {
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: var(--d-radius-sm);
+  font-size: 0.86em;
+  padding: 0.08em 0.36em;
+  background: var(--sl-color-bg-inline-code);
+  color: var(--sl-color-white);
+}
+
+/* Body links — underline-from-baseline, animates in */
+.sl-markdown-content a:not(:where(.not-content *)) {
+  color: var(--sl-color-text-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in oklch, currentColor 35%, transparent);
+  transition: text-decoration-color 0.15s;
+}
+
+.sl-markdown-content a:not(:where(.not-content *)):hover {
+  text-decoration-color: currentColor;
+}
+
+/* Body paragraphs — comfortable measure */
+.sl-markdown-content p:not(:where(.not-content *)) {
+  max-width: 72ch;
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Tables — monospace headers
+ * ══════════════════════════════════════════════════════════ */
+
+.sl-markdown-content th:not(:where(.not-content *)) {
+  font-family: var(--sl-font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--d-track-mono);
+  color: var(--sl-color-gray-3);
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Sidebar
+ * ══════════════════════════════════════════════════════════ */
+
+/* Group labels — sans eyebrow. Same family as page links so the
+   sidebar reads as one voice; distinction comes from size, weight,
+   case, and color rather than swapping font families. */
+.sidebar-content details > summary .large {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sl-color-gray-3);
+}
+
+/* Active page — left-accent rule, no fill */
+.sidebar-content a[aria-current="page"],
+.sidebar-content a[aria-current="page"]:hover,
+.sidebar-content a[aria-current="page"]:focus {
+  color: var(--sl-color-text-accent);
+  background-color: transparent;
+  font-variation-settings: var(--d-vf-emphasis);
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Callouts / Asides
+ * ══════════════════════════════════════════════════════════ */
+
+.starlight-aside {
+  border-radius: var(--d-radius-md);
+  border-inline-start-width: 2px;
+}
+
+.starlight-aside__title {
+  font-family: var(--sl-font-mono);
+  font-size: 0.74rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--d-track-mono);
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Badges
+ * ══════════════════════════════════════════════════════════ */
+
+.sl-badge {
+  font-family: var(--sl-font-mono);
+  letter-spacing: var(--d-track-wide);
+  font-weight: 500;
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Code blocks
+ * ══════════════════════════════════════════════════════════ */
+
+.expressive-code {
+  margin: var(--d-space-lg) 0;
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Hero (splash pages)
+ * ══════════════════════════════════════════════════════════ */
+
+.hero h1 {
+  letter-spacing: var(--d-track-tight);
+  font-variation-settings: var(--d-vf-display);
+  font-weight: normal;
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Utility — micro label (mono uppercase tracked)
+ *  Use anywhere a section eyebrow / structural cue is needed.
+ * ══════════════════════════════════════════════════════════ */
+
+.d-micro {
+  font-family: var(--sl-font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--d-track-mono);
+  color: var(--d-text-muted);
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Content page — reading rhythm
+ *  Wider top space before sections, hairline rule above H2,
+ *  comfortable paragraph and list spacing.
+ * ══════════════════════════════════════════════════════════ */
+
+/* Unified vertical rhythm. Use margin-top only (owl pattern) so
+   adjacent siblings never accumulate opposing margins. One gap
+   between any two flow elements; section breaks override. */
+.sl-markdown-content > * + *:not(:where(.not-content *)) {
+  margin-top: 0.9em;
+}
+
+/* Section breaks — hairline rule above H2 acts as the anchor. */
+.sl-markdown-content > h2:not(:where(.not-content *)) {
+  padding-top: 1.4em;
+  margin-top: 2.25em;
+  border-top: 1px solid var(--sl-color-hairline);
+}
+
+.sl-markdown-content > h2:first-of-type:not(:where(.not-content *)) {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 1.25em;
+}
+
+.sl-markdown-content > h3:not(:where(.not-content *)) {
+  margin-top: 1.75em;
+}
+
+.sl-markdown-content > h4:not(:where(.not-content *)) {
+  margin-top: 1.4em;
+}
+
+/* Content immediately after a heading tightens — the heading
+   already carries visual weight, no need for another full gap. */
+.sl-markdown-content > :is(h1, h2, h3, h4) + *:not(:where(.not-content *)) {
+  margin-top: 0.55em;
+}
+
+.sl-markdown-content :is(ul, ol):not(:where(.not-content *)) {
+  padding-left: 1.3em;
+}
+
+.sl-markdown-content :is(ul, ol):not(:where(.not-content *)) li + li {
+  margin-top: 0.35em;
+}
+
+.sl-markdown-content :is(ul, ol):not(:where(.not-content *))
+  :is(ul, ol):not(:where(.not-content *)) {
+  margin-top: 0.35em;
+}
+
+/* Bullets — subtle, faint */
+.sl-markdown-content ul:not(:where(.not-content *)) {
+  list-style: none;
+}
+.sl-markdown-content ul:not(:where(.not-content *)) > li {
+  position: relative;
+  padding-left: 1.1em;
+}
+.sl-markdown-content ul:not(:where(.not-content *)) > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.4em;
+  height: 1px;
+  background: var(--d-border-strong);
+}
+
+/* Keep ol counters visible */
+.sl-markdown-content ol:not(:where(.not-content *)) > li {
+  padding-left: 0.3em;
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Right rail — "On this page"
+ *  Mono micro-label heading. Subtle links. Accent on active.
+ * ══════════════════════════════════════════════════════════ */
+
+.right-sidebar-panel {
+  padding: 1rem var(--sl-sidebar-pad-x);
+}
+
+.right-sidebar-panel h2 {
+  font-family: var(--sl-font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--d-track-mono);
+  color: var(--d-text-faint);
+  margin: 0 0 0.75rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+.right-sidebar-panel :where(a) {
+  display: block;
+  padding: 0.32rem 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--sl-color-gray-3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.right-sidebar-panel :where(a):hover,
+.right-sidebar-panel :where(a):focus-visible,
+.right-sidebar-panel :where(a)[aria-current="true"] {
+  color: var(--sl-color-text-accent);
+}
+
+.right-sidebar-panel :where(a)[aria-current="true"] {
+  font-variation-settings: var(--d-vf-emphasis);
+}
+
+/* Nested ToC items */
+.right-sidebar-panel ul ul {
+  padding-left: 0.75rem;
+  margin-top: 0.1rem;
+  border-left: 1px solid var(--sl-color-hairline);
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Left sidebar — refine hover, active, group labels
+ * ══════════════════════════════════════════════════════════ */
+
+.sidebar-content ul li a {
+  transition: color 0.15s;
+}
+
+.sidebar-content ul li a:hover {
+  color: var(--sl-color-text-accent);
+}
+
+/* Group label — already mono-ified elsewhere; tighten spacing */
+.sidebar-content details > summary {
+  padding-block: 0.35rem;
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Page title — tune the default PageTitle that is still used
+ *  on all non-suppressed pages
+ * ══════════════════════════════════════════════════════════ */
+
+h1#_top {
+  margin-top: 0.25rem;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.05rem, 4vw, 2.85rem);
+  font-variation-settings: "wght" 720, "opsz" 72, "wdth" 100;
+  font-weight: normal;
+  letter-spacing: -0.032em;
+  line-height: 1.06;
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Content action footer (edit link, last updated)
+ * ══════════════════════════════════════════════════════════ */
+
+.meta a,
+.meta p {
+  font-size: 0.82rem;
+  color: var(--d-text-muted);
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Prune empty Starlight layout wrappers.
+ *
+ *  Starlight always renders ContentPanel, Footer (.meta), and
+ *  Pagination wrappers even when their children resolve to
+ *  nothing (e.g. splash pages with no PageTitle, no prev/next,
+ *  no edit link). Those empty wrappers still paint their
+ *  padding/margin/border, leaving ghost blocks on the page.
+ *
+ *  `:not(:has(> *))` matches elements with no direct child
+ *  elements (whitespace-only doesn't count as a child element).
+ * ══════════════════════════════════════════════════════════ */
+
+.content-panel:not(:has(> .sl-container > *)) {
+  display: none;
+}
+
+.meta:not(:has(> *)) {
+  display: none;
 }

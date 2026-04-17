@@ -31,11 +31,11 @@ more efficient:
 - [Multi-threaded tools](#multi-threaded-tools)
 
 For more information on how to optimize your builds, see
-[Building best practices](/manuals/build/building/best-practices/).
+[Building best practices](/build/building/best-practices/).
 
 ### Dockerignore files
 
-Using a [`.dockerignore` file](/manuals/build/concepts/context/#dockerignore-files),
+Using a [`.dockerignore` file](/build/concepts/context/#dockerignore-files),
 you can be explicit about which local files you don’t want to include in the
 build context. Files caught by the glob patterns you specify in your
 ignore-file aren't transferred to the remote builder.

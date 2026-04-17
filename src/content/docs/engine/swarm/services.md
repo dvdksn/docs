@@ -555,7 +555,7 @@ $ docker service update --network-rm my-network my-web
 
 For more information on overlay networking and service discovery, refer to
 [Attach services to an overlay network](networking/) and
-[Docker swarm mode overlay network security model](/manuals/engine/network/drivers/overlay/).
+[Docker swarm mode overlay network security model](/engine/network/drivers/overlay/).
 
 ### Grant a service access to secrets
 
@@ -686,7 +686,7 @@ you may experience an Out Of Memory Exception (OOME) and a container, or the
 Docker daemon, might be killed by the kernel OOM killer. To prevent this from
 happening, ensure that your application runs on hosts with adequate memory and
 see
-[Understand the risks of running out of memory](/manuals/engine/containers/resource_constraints/#understand-the-risks-of-running-out-of-memory).
+[Understand the risks of running out of memory](/engine/containers/resource_constraints/#understand-the-risks-of-running-out-of-memory).
 
 Swarm services allow you to use resource constraints, placement preferences, and
 labels to ensure that your service is deployed to the appropriate swarm nodes.
@@ -949,7 +949,7 @@ $ docker service create \
 ```
 
 For more information on how to create data volumes and the use of volume
-drivers, see [Use volumes](/manuals/engine/storage/volumes/).
+drivers, see [Use volumes](/engine/storage/volumes/).
 
 
 #### Bind mounts

@@ -25,4 +25,4 @@ No specific firewall rules are required as long as `login.docker.com` is accessi
 
 ## Does Docker use my IdP's default session timeout?
 
-Yes, Docker supports your IdP's session timeout using a custom `dockerSessionMinutes` SAML attribute instead of the standard `SessionNotOnOrAfter` element. See [SSO attributes](/manuals/enterprise/security/provisioning/#sso-attributes) for more information.
+Yes, Docker supports your IdP's session timeout using a custom `dockerSessionMinutes` SAML attribute instead of the standard `SessionNotOnOrAfter` element. See [SSO attributes](/admin/enterprise/security/provisioning/#sso-attributes) for more information.

@@ -53,7 +53,7 @@ The database stores the Software Bill of Materials (SBOM) and other metadata abo
 When a security advisory has new information about a vulnerability,
 your SBOM is cross-referenced with the CVE information to detect how it affects you.
 
-For more details on how image analysis works, see the [image analysis page](/manuals/scout/explore/analysis/).
+For more details on how image analysis works, see the [image analysis page](/scout/explore/analysis/).
 
 ## Severity and scoring priority
 

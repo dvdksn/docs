@@ -9,7 +9,7 @@ sidebar:
 >
 > This guide uses the familiar Docker Compose workflow to orchestrate agentic AI
 > applications. For a smoother development experience, check out
-> [Docker Agent](../manuals/ai/docker-agent/), a purpose-built agent runtime that
+> [Docker Agent](../ai-overview/docker-agent/), a purpose-built agent runtime that
 > simplifies running and managing AI agents.
 
 ## Introduction
@@ -42,14 +42,14 @@ Compose.
 This guide walks you through the core components of agentic development and
 shows how Docker ties them all together with the following tools:
 
-- [Docker Model Runner](../manuals/ai/model-runner/) lets you run LLMs
+- [Docker Model Runner](../ai-overview/model-runner/) lets you run LLMs
   locally with simple command and OpenAI-compatible APIs.
 - [Docker MCP Catalog and
-  Toolkit](../manuals/ai/mcp-catalog-and-toolkit/) helps you discover
+  Toolkit](../ai-overview/mcp-catalog-and-toolkit/) helps you discover
   and securely run external tools, like APIs and databases, using the Model
   Context Protocol (MCP).
-- [Docker MCP Gateway](../manuals/ai/mcp-catalog-and-toolkit/mcp-gateway/) lets you orchestrate and manage MCP servers.
-- [Docker Compose](/manuals/ai/compose/models-and-compose/) is the tool that ties it all
+- [Docker MCP Gateway](../ai-overview/mcp-catalog-and-toolkit/mcp-gateway/) lets you orchestrate and manage MCP servers.
+- [Docker Compose](/ai-overview/compose/models-and-compose/) is the tool that ties it all
   together, letting you define and run multi-container applications with a
   single file.
 
@@ -61,8 +61,8 @@ all works together.
 
 To follow this guide, you need to:
 
-- [Install Docker Desktop 4.43 or later](../get-started/get-docker/)
-- [Enable Docker Model Runner](/manuals/ai/model-runner/#enable-dmr-in-docker-desktop)
+- [Install Docker Desktop 4.43 or later](../get-started/install/)
+- [Enable Docker Model Runner](/ai-overview/model-runner/#enable-dmr-in-docker-desktop)
 - At least the following hardware specifications:
   - VRAM: 3.5 GB
   - Storage: 2.31 GB
@@ -330,14 +330,14 @@ modular way.
 You also saw how Docker simplifies this process by providing a suite of tools
 that support agentic AI development:
 
-- [Docker Model Runner](../manuals/ai/model-runner/): Run and serve
+- [Docker Model Runner](../ai-overview/model-runner/): Run and serve
   open-source models locally via OpenAI-compatible APIs.
 - [Docker MCP Catalog and
-  Toolkit](../manuals/ai/mcp-catalog-and-toolkit/): Launch and manage
+  Toolkit](../ai-overview/mcp-catalog-and-toolkit/): Launch and manage
   tool integrations that follow the Model Context Protocol (MCP) standard.
-- [Docker MCP Gateway](../manuals/ai/mcp-catalog-and-toolkit/mcp-gateway/): Orchestrate and manage
+- [Docker MCP Gateway](../ai-overview/mcp-catalog-and-toolkit/mcp-gateway/): Orchestrate and manage
   MCP servers to connect agents to external tools and services.
-- [Docker Compose](/manuals/ai/compose/models-and-compose/): Define and run
+- [Docker Compose](/ai-overview/compose/models-and-compose/): Define and run
   multi-container agentic AI applications with a single file, using the same
   workflow.
 

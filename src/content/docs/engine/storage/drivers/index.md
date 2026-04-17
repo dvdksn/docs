@@ -69,8 +69,8 @@ Each layer is only a set of differences from the layer before it. Note that both
 _adding_, and _removing_ files will result in a new layer. In the example above,
 the `$HOME/.cache` directory is removed, but will still be available in the
 previous layer and add up to the image's total size. Refer to the
-[Best practices for writing Dockerfiles](/manuals/build/building/best-practices/)
-and [use multi-stage builds](/manuals/build/building/multi-stage/)
+[Best practices for writing Dockerfiles](/build/building/best-practices/)
+and [use multi-stage builds](/build/building/multi-stage/)
 sections to learn how to optimize your Dockerfiles for efficient images.
 
 The layers are stacked on top of each other. When you create a new container,
@@ -136,7 +136,7 @@ these containers would be SUM (`size` of containers) plus one image size
 This also doesn't count the following additional ways a container can take up
 disk space:
 
-- Disk space used for log files stored by the [logging-driver](/manuals/engine/logging/).
+- Disk space used for log files stored by the [logging-driver](/engine/logging/).
   This can be non-trivial if your container generates a large amount of logging
   data and log rotation isn't configured.
 - Volumes and bind mounts used by the container.
@@ -335,7 +335,7 @@ layers are the same.
    the ID of that image.
    
    BuildKit uses its own caching mechanism, and no longer requires intermediate
-   images for caching. Refer to [BuildKit](/manuals/build/buildkit/)
+   images for caching. Refer to [BuildKit](/build/buildkit/)
    to learn more about other enhancements made in BuildKit.
 
 9. Check out the layers for each image
@@ -377,7 +377,7 @@ layers are the same.
    > extract and format specific information from the output, without requiring
    > additional tools such as `awk` or `sed`. To learn more about formatting
    > the output of docker commands using the `--format` flag, refer to the
-   > [format command and log output section](/manuals/engine/cli/formatting/).
+   > [format command and log output section](/engine/cli/formatting/).
    > We also pretty-printed the JSON output using the [`jq` utility](https://stedolan.github.io/jq/)
    > for readability.
 

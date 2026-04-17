@@ -17,7 +17,7 @@ services.
 
 If a service is defined in both files, Compose merges the configurations using
 the rules described below and in the 
-[Compose Specification](/reference/compose-file/merge/).
+[Compose Specification](/compose/how-tos/multiple-compose-files/merge/).
 
 ## How to merge multiple Compose files
 
@@ -221,7 +221,7 @@ service, the local value replaces or extends the original value.
             - ./local:/baz
       ```
 
-For more merging rules, see [Merge and override](/reference/compose-file/merge/) in the Compose Specification. 
+For more merging rules, see [Merge and override](/compose/how-tos/multiple-compose-files/merge/) in the Compose Specification. 
 
 ### Additional information
 
@@ -362,4 +362,4 @@ With such a constraint, code organization in a monorepo can become hard as a nat
 
 ## Reference information
 
-- [Merge rules](/reference/compose-file/merge/)
+- [Merge rules](/compose/how-tos/multiple-compose-files/merge/)

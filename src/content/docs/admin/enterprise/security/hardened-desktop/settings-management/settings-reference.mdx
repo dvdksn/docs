@@ -8,11 +8,11 @@ sidebar:
 
 import { Badge } from "@astrojs/starlight/components";
 
-This reference documents Docker Desktop settings that administrators can configure using [Settings Management](/manuals/enterprise/security/hardened-desktop/settings-management/). Use this page to understand which settings are available, their accepted values, platform compatibility, and which configuration methods apply.
+This reference documents Docker Desktop settings that administrators can configure using [Settings Management](/admin/enterprise/security/hardened-desktop/settings-management/). Use this page to understand which settings are available, their accepted values, platform compatibility, and which configuration methods apply.
  
 > [!NOTE]
 >
-> This page only covers configurable settings for administrators who are deploying Docker Desktop to their organization. For the full list of Docker Desktop user-facing settings, see [Change settings](/manuals/desktop/settings-and-maintenance/settings/).
+> This page only covers configurable settings for administrators who are deploying Docker Desktop to their organization. For the full list of Docker Desktop user-facing settings, see [Change settings](/desktop/settings-and-maintenance/settings/).
 
 ## General
 
@@ -411,7 +411,7 @@ Configures an HTTP/HTTPS proxy for containers in air-gapped environments, provid
 }
 ```
 
-For more information, see [Air-gapped containers](/manuals/enterprise/security/hardened-desktop/air-gapped-containers/).
+For more information, see [Air-gapped containers](/admin/enterprise/security/hardened-desktop/air-gapped-containers/).
 
 ## LinuxVM
 
@@ -559,7 +559,7 @@ Controls whether users can access all Docker Desktop features that are in public
 
 ### Enable Docker MCP Toolkit (Beta)
 
-Enables [Docker MCP Toolkit](/manuals/ai/mcp-catalog-and-toolkit/) in Docker Desktop for AI model development workflows.
+Enables [Docker MCP Toolkit](/ai-overview/mcp-catalog-and-toolkit/) in Docker Desktop for AI model development workflows.
 
 | Property | Value |
 |---|---|
@@ -627,7 +627,7 @@ Sets the default IP protocol used when Docker creates new networks.
 | JSON key | `defaultNetworkingMode` |
 | Admin Console | **Default network IP mode** |
 
-For more information, see [Networking](/manuals/desktop/features/networking/#networking-mode-and-dns-behaviour-for-mac-and-windows).
+For more information, see [Networking](/desktop/features/networking/#networking-mode-and-dns-behaviour-for-mac-and-windows).
 
 ### Inhibit DNS resolution for IPv4/IPv6 
 
@@ -641,7 +641,7 @@ Filters unsupported DNS record types to improve reliability in environments wher
 | JSON key | `dnsInhibition` |
 | Admin Console | **DNS filtering behavior** |
 
-For more information, see [Networking](/manuals/desktop/features/networking/#networking-mode-and-dns-behaviour-for-mac-and-windows).
+For more information, see [Networking](/desktop/features/networking/#networking-mode-and-dns-behaviour-for-mac-and-windows).
 
 ### Port binding behavior
 

@@ -10,7 +10,7 @@ sidebar:
 
 ## Prerequisites
 
-- You have installed the latest version of [Docker Desktop](/get-started/get-docker/).
+- You have installed the latest version of [Docker Desktop](/get-started/install/).
 - You have a [Git client](https://git-scm.com/downloads). The examples in this section show the Git CLI, but you can use any client.
 
 ## Overview
@@ -27,7 +27,7 @@ Rails 7.1 and newer generates multistage Dockerfile out of the box. Following ar
 
 [Docker Hardened Images (DHIs)](https://docs.docker.com/dhi/) are minimal, secure, and production-ready container base and application images maintained by Docker. DHIs are recommended whenever it is possible for better security. They are designed to reduce vulnerabilities and simplify compliance, freely available to everyone with no subscription required, no usage restrictions, and no vendor lock-in.
 
-Multistage Dockerfiles help create smaller, more efficient images by separating build and runtime dependencies, ensuring only necessary components are included in the final image. Read more in the [Multi-stage builds guide](/get-started/docker-concepts/building-images/multi-stage-builds/).
+Multistage Dockerfiles help create smaller, more efficient images by separating build and runtime dependencies, ensuring only necessary components are included in the final image. Read more in the [Multi-stage builds guide](/get-started/build-your-first-app/).
 
 
 
@@ -377,7 +377,7 @@ application using Docker.
 
 Related information:
 
-- [Docker Compose overview](/manuals/compose/)
+- [Docker Compose overview](/compose/)
 
 ## Next steps
 

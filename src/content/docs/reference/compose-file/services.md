@@ -601,7 +601,7 @@ services:
           com.docker.network.bridge.host_binding_ipv4: "127.0.0.1"
 ```
 
-Consult the [network drivers documentation](/manuals/engine/network/) for more information.
+Consult the [network drivers documentation](/engine/network/) for more information.
 
 ### `entrypoint`
 
@@ -1349,7 +1349,7 @@ If either is omitted, Compose automatically generates the environment variable n
 - `service:{name}`: Gives the container access to the specified container by referring to its service name.
 - `container:{name}`: Gives the container access to the specified container by referring to its container ID.
 
-For more information container networks, see the [Docker Engine documentation](/manuals/engine/network/#container-networks).
+For more information container networks, see the [Docker Engine documentation](/engine/network/#container-networks).
 
 ```yml
     network_mode: "host"
@@ -1663,7 +1663,7 @@ in the form:
 
 > [!WARNING]
 >
-> If you do not specify a host IP (such as `127.0.0.1`), Docker binds to all interfaces (`0.0.0.0`), bypassing host firewall rules. This can expose the container directly to the internet if the host has a public IP address. For more information, see [Port publishing and mapping](/manuals/engine/network/port-publishing/).
+> If you do not specify a host IP (such as `127.0.0.1`), Docker binds to all interfaces (`0.0.0.0`), bypassing host firewall rules. This can expose the container directly to the internet if the host has a public IP address. For more information, see [Port publishing and mapping](/engine/network/port-publishing/).
 
 Ports can be either a single value or a range. `HOST` and `CONTAINER` must use equivalent ranges.
 
@@ -1754,7 +1754,7 @@ services:
           - FOO=BAR
 ```
 
-For more information, see [Use lifecycle hooks](/manuals/compose/how-tos/lifecycle/).
+For more information, see [Use lifecycle hooks](/compose/how-tos/lifecycle/).
 
 ### `pre_stop`
 
@@ -1817,7 +1817,7 @@ As Compose stops the application, the `awesomecloud` binary is used to manage th
 
 The mechanism used by Compose to delegate the service lifecycle to an external binary is described in the [Compose extensibility documentation](https://github.com/docker/compose/tree/main/docs/extension.md).
 
-For more information on using the `provider` attribute, see [Use provider services](/manuals/compose/how-tos/provider-services/).
+For more information on using the `provider` attribute, see [Use provider services](/compose/how-tos/provider-services/).
 
 #### `type`
 
@@ -1890,7 +1890,7 @@ web:
   runtime: runc
 ```
 
-The default is `runc`. To use a different runtime, see [Alternative runtimes](/manuals/engine/daemon/alternative-runtimes/).
+The default is `runc`. To use a different runtime, see [Alternative runtimes](/engine/daemon/alternative-runtimes/).
 
 ### `scale`
 
@@ -2209,7 +2209,7 @@ expressed in the short form.
 > [!TIP]
 >
 > Working with large repositories or monorepos, or with virtual file systems that are no longer scaling with your codebase?
-> Compose now takes advantage of [Synchronized file shares](/manuals/desktop/features/synchronized-file-sharing/) and automatically creates file shares for bind mounts.
+> Compose now takes advantage of [Synchronized file shares](/desktop/features/synchronized-file-sharing/) and automatically creates file shares for bind mounts.
 > Ensure you're signed in to Docker with a paid subscription and have enabled both **Access experimental features** and **Manage Synchronized file shares with Compose** in Docker Desktop's settings.
 
 ### `volumes_from`

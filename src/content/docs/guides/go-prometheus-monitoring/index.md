@@ -29,7 +29,7 @@ In this guide, you will be creating a Golang server with some endpoints to simul
 
 - A good understanding of Golang is assumed.
 - You must me familiar with Prometheus and creating dashboards in Grafana.
-- You must have familiarity with Docker concepts like containers, images, and Dockerfiles. If you are new to Docker, you can start with the [Docker basics](/get-started/docker-concepts/the-basics/what-is-a-container/) guide.
+- You must have familiarity with Docker concepts like containers, images, and Dockerfiles. If you are new to Docker, you can start with the [Docker basics](/get-started/overview/) guide.
 
 ## Next steps
 

@@ -27,9 +27,9 @@ then that CVE is excluded from analysis results.
 
 To create an exception for an image, you can:
 
-- Create an exception in the [GUI](/manuals/scout/how-tos/create-exceptions-gui/) of
+- Create an exception in the [GUI](/scout/how-tos/create-exceptions-gui/) of
   Docker Scout Dashboard or Docker Desktop.
-- Create a [VEX](/manuals/scout/how-tos/create-exceptions-vex/) document and attach
+- Create a [VEX](/scout/how-tos/create-exceptions-vex/) document and attach
   it to the image.
 
 The recommended way to create exceptions is to use Docker Scout Dashboard or
@@ -41,10 +41,10 @@ entire organization, all at once.
 
 To view exceptions for images, you need to have the appropriate permissions.
 
-- Exceptions created [using the GUI](/manuals/scout/how-tos/create-exceptions-gui/)
+- Exceptions created [using the GUI](/scout/how-tos/create-exceptions-gui/)
   are visible to members of your Docker organization. Unauthenticated users or
   users who aren't members of your organization cannot see these exceptions.
-- Exceptions created [using VEX documents](/manuals/scout/how-tos/create-exceptions-vex/)
+- Exceptions created [using VEX documents](/scout/how-tos/create-exceptions-vex/)
   are visible to anyone who can pull the image, since the VEX document is
   stored in the image manifest or on filesystem of the image.
 
@@ -56,7 +56,7 @@ for all images in your organization. From here, you can see more details about
 each exception, the CVEs being suppressed, the images that exceptions apply to,
 the type of exception and how it was created, and more.
 
-For exceptions created using the [GUI](/manuals/scout/how-tos/create-exceptions-gui/),
+For exceptions created using the [GUI](/scout/how-tos/create-exceptions-gui/),
 selecting the action menu lets you edit or remove the exception.
 
 To view all exceptions for a specific image tag:

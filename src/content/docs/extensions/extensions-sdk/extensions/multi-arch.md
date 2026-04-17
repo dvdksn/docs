@@ -56,7 +56,7 @@ Manifests:
 >
 > If you're having trouble pushing the image, make sure you're signed in to Docker Hub. Otherwise, run `docker login` to authenticate.
 
-For more information, see [Multi-platform images](/manuals/build/building/multi-platform/) page.
+For more information, see [Multi-platform images](/build/building/multi-platform/) page.
 
 ## Adding multi-arch binaries
 
@@ -68,7 +68,7 @@ The following example shows an extension that uses a binary as part of its opera
 
 In the `Dockerfile`, download the binary depending on the target architecture:
 
-```Dockerfile
+```dockerfile
 #syntax=docker/dockerfile:1.3-labs
 
 FROM alpine AS dl

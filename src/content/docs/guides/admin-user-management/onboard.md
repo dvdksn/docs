@@ -12,7 +12,7 @@ This page guides you through onboarding owners and members, and using tools like
 
 When you create a Docker organization, you automatically become its sole owner. While optional, adding additional owners can significantly ease the process of onboarding and managing your organization by distributing administrative responsibilities. It also ensures continuity and prevents blockers if the primary owner is unavailable.
 
-For detailed information on owners, see [Roles and permissions](/manuals/enterprise/security/roles-and-permissions/).
+For detailed information on owners, see [Roles and permissions](/admin/enterprise/security/roles-and-permissions/).
 
 ## Invite members and assign roles
 
@@ -26,7 +26,7 @@ Members are granted controlled access to resources and enjoy enhanced organizati
 - Access to enhanced features: Members benefit from organization-wide perks, such as increased pull limits and access to premium Docker features.
 - Security control: Apply and enforce security settings at an organizational level, reducing risks associated with unmanaged accounts.
 
-For detailed information, see [Manage organization members](/manuals/admin/organization/members/).
+For detailed information, see [Manage organization members](/admin/organization/members/).
 
 ## Future-proof user management
 
@@ -42,11 +42,11 @@ SSO:
 - Reduces password-related vulnerabilities.
 - Simplifies onboarding as it works seamlessly with SCIM and group mapping for automated provisioning.
 
-For more information, see the [SSO documentation](/manuals/enterprise/security/single-sign-on/).
+For more information, see the [SSO documentation](/admin/enterprise/security/single-sign-on/).
 
 ### Automate onboarding with SCIM and JIT provisioning
 
-Streamline user provisioning and role management with [SCIM](/manuals/enterprise/security/provisioning/scim/) and [Just-in-Time (JIT) provisioning](/manuals/enterprise/security/provisioning/just-in-time/).
+Streamline user provisioning and role management with [SCIM](/admin/enterprise/security/provisioning/scim/) and [Just-in-Time (JIT) provisioning](/admin/enterprise/security/provisioning/just-in-time/).
 
 With SCIM you can:
 
@@ -68,4 +68,4 @@ It also:
 - Ensures consistent access control policies.
 - Help you scale permissions as teams grow or change.
 
-For more information on how it works, see [Group mapping](/manuals/enterprise/security/provisioning/group-mapping/).
+For more information on how it works, see [Group mapping](/admin/enterprise/security/provisioning/group-mapping/).

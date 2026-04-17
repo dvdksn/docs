@@ -60,7 +60,7 @@ ADD hello /
 CMD ["/hello"]
 ```
 
-Assuming an executable binary named `hello` exists at the root of the [build context](/manuals/build/concepts/context/).
+Assuming an executable binary named `hello` exists at the root of the [build context](/build/concepts/context/).
 You can build this Docker image using the following `docker build` command:
 
 ```console
@@ -119,5 +119,5 @@ There are more example scripts for creating base images in
 For more information about building images and writing Dockerfiles, see:
 
 * [Dockerfile reference](/reference/dockerfile/)
-* [Dockerfile best practices](/manuals/build/building/best-practices/)
+* [Dockerfile best practices](/build/building/best-practices/)
 * [Docker Official Images](../../docker-hub/image-library/trusted-content/#docker-official-images)

@@ -9,8 +9,8 @@ sidebar:
 
 ## Prerequisites
 
-- You have installed the latest version of [Docker Desktop](/get-started/get-docker/).
-- You have completed the walkthroughs in the Docker Desktop [Learning Center](/manuals/desktop/use-desktop/) to learn about Docker concepts.
+- You have installed the latest version of [Docker Desktop](/get-started/install/).
+- You have completed the walkthroughs in the Docker Desktop [Learning Center](/desktop/use-desktop/) to learn about Docker concepts.
 - You have a [git client](https://git-scm.com/downloads). The examples in this section use a command-line based git client, but you can use any client.
 
 ## Overview
@@ -38,7 +38,7 @@ $ docker network create postgresnet
 ```
 
 Now you can run PostgreSQL in a container and attach to the volume and network that you created previously. Docker pulls the image from Hub and runs it for you locally.
-In the following command, option `--mount` is for starting the container with a volume. For more information, see [Docker volumes](/manuals/engine/storage/volumes/).
+In the following command, option `--mount` is for starting the container with a volume. For more information, see [Docker volumes](/engine/storage/volumes/).
 
 ```console
 $ docker run --rm -d --mount \
@@ -280,7 +280,7 @@ secrets:
     file: db/password.txt
 ```
 
-Note that the file doesn't specify a network for those 2 services. When you use Compose, it automatically creates a network and connects the services to it. For more information see [Networking in Compose](/manuals/compose/how-tos/networking/).
+Note that the file doesn't specify a network for those 2 services. When you use Compose, it automatically creates a network and connects the services to it. For more information see [Networking in Compose](/compose/how-tos/networking/).
 
 Before you run the application using Compose, notice that this Compose file specifies a `password.txt` file to hold the database's password. You must create this file as it's not included in the source repository.
 
@@ -318,8 +318,8 @@ In this section, you took a look at setting up your Compose file to run your Rus
 
 Related information:
 
-- [Docker volumes](/manuals/engine/storage/volumes/)
-- [Compose overview](/manuals/compose/)
+- [Docker volumes](/engine/storage/volumes/)
+- [Compose overview](/compose/)
 
 ## Next steps
 

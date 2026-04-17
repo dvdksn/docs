@@ -7,7 +7,7 @@ keywords: logging, driver, plugins, monitoring
 Docker logging plugins allow you to extend and customize Docker's logging
 capabilities beyond those of the [built-in logging drivers](configure/).
 A logging service provider can
-[implement their own plugins](/manuals/engine/extend/plugins_logging/) and make them
+[implement their own plugins](/engine/extend/plugins_logging/) and make them
 available on Docker Hub, or a private registry. This topic shows
 how a user of that logging service can configure Docker to use the plugin.
 

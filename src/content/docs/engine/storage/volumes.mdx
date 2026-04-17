@@ -39,7 +39,7 @@ if you need to access files or directories from both containers and the host.
 Volumes are often a better choice than writing data directly to a container,
 because a volume doesn't increase the size of the containers using it. Using a
 volume is also faster; writing into a container's writable layer requires a
-[storage driver](/manuals/engine/storage/drivers/) to manage the
+[storage driver](/engine/storage/drivers/) to manage the
 filesystem. The storage driver provides a union filesystem, using the Linux
 kernel. This extra abstraction reduces performance as compared to using
 volumes, which write directly to the host filesystem.

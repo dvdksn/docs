@@ -24,7 +24,7 @@ at any time. All charges are in United States dollars (USD). The following payme
 
 Certain payment methods require additional steps before selecting them as a payment method:
 
-- You must [verify a bank account](/manuals/billing/payment-method/#verify-a-bank-account) before choosing a bank account.
+- You must [verify a bank account](/admin/billing/payment-method/#verify-a-bank-account) before choosing a bank account.
 - You must have a Docker Business or Docker Team plan to [pay by invoice](/billing/payment-method/#enable-and-disable-pay-by-invoice).
 - You must be an existing Stripe Link customer, or fill out the card information form to use Link payments.
 

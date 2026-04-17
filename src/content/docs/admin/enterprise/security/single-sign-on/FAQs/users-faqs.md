@@ -29,13 +29,13 @@ Yes, you can convert existing users to SSO accounts. Ensure users have:
 - Personal access tokens created to replace passwords for CLI access
 - CI/CD pipelines updated to use PATs instead of passwords
 
-For detailed instructions, see [Configure single sign-on](/manuals/enterprise/security/single-sign-on/connect/).
+For detailed instructions, see [Configure single sign-on](/admin/enterprise/security/single-sign-on/connect/).
 
 ## Is Docker SSO fully synced with the IdP?
 
-Docker SSO provides Just-in-Time (JIT) provisioning by default. Users are provisioned when they authenticate with SSO. If users leave the organization, administrators must manually [remove the user](/manuals/admin/organization/members/#remove-a-member-or-invitee) from the organization.
+Docker SSO provides Just-in-Time (JIT) provisioning by default. Users are provisioned when they authenticate with SSO. If users leave the organization, administrators must manually [remove the user](/admin/organization/members/#remove-a-member-or-invitee) from the organization.
 
-[SCIM](/manuals/enterprise/security/provisioning/scim/) provides full synchronization with users and groups. When using SCIM, the recommended configuration is to turn off JIT so all auto-provisioning is handled by SCIM.
+[SCIM](/admin/enterprise/security/provisioning/scim/) provides full synchronization with users and groups. When using SCIM, the recommended configuration is to turn off JIT so all auto-provisioning is handled by SCIM.
 
 Additionally, you can use the [Docker Hub API](/reference/api/hub/latest/) to complete this process.
 
@@ -43,7 +43,7 @@ Additionally, you can use the [Docker Hub API](/reference/api/hub/latest/) to co
 
 When JIT is turned off (available with SCIM in the Admin Console), users must be organization members or have pending invitations to access Docker. Users who don't meet these criteria get an "Access denied" error and need administrator invitations.
 
-See [SSO authentication with JIT provisioning disabled](/manuals/enterprise/security/provisioning/just-in-time/#sso-authentication-with-jit-provisioning-disabled).
+See [SSO authentication with JIT provisioning disabled](/admin/enterprise/security/provisioning/just-in-time/#sso-authentication-with-jit-provisioning-disabled).
 
 ## Can someone join an organization without an invitation?
 

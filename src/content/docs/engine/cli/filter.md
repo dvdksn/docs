@@ -72,7 +72,7 @@ busybox      glibc     7338d0c72c65   2 hours ago   6.09MB
 
 ### Multiple negated filters
 
-Some commands support negated filters on [labels](/manuals/engine/manage-resources/labels/).
+Some commands support negated filters on [labels](/engine/manage-resources/labels/).
 Negated filters only consider results that don't match the specified patterns.
 The following command prunes all containers that aren't labeled `foo`.
 

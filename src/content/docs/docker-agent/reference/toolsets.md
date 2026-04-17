@@ -641,5 +641,5 @@ agent to transfer the entire conversation to a different agent.
 
 - Read the [Configuration file reference](./config/) for YAML file structure
 - Review the [CLI reference](./cli/) for running agents
-- Explore [MCP servers](/manuals/ai/mcp-catalog-and-toolkit/mcp-gateway/) for extended capabilities
+- Explore [MCP servers](/ai-overview/mcp-catalog-and-toolkit/mcp-gateway/) for extended capabilities
 - Browse [example configurations](https://github.com/docker/docker-agent/tree/main/examples)

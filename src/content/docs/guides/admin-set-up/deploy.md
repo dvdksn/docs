@@ -18,7 +18,7 @@ that matches your verified domain must sign in using your SSO connection. Make
 sure the Identity provider groups associated with your SSO connection cover all
 the developer groups that you want to have access to the Docker subscription.
 
-For instructions on how to enforce SSO, see [Enforce SSO](/manuals/enterprise/security/single-sign-on/connect/).
+For instructions on how to enforce SSO, see [Enforce SSO](/admin/enterprise/security/single-sign-on/connect/).
 
 ## Deploy configuration settings and enforce sign-in to users
 
@@ -31,6 +31,6 @@ for Docker.
 
 To continue optimizing your Docker environment:
 
-- Review your [organization's usage data](/manuals/admin/organization/insights/) to track adoption
-- Monitor [Docker Scout findings](/manuals/scout/explore/analysis/) for security insights
-- Explore [additional security features](/manuals/enterprise/security/) to enhance your configuration
+- Review your [organization's usage data](/admin/organization/insights/) to track adoption
+- Monitor [Docker Scout findings](/scout/explore/analysis/) for security insights
+- Explore [additional security features](/admin/enterprise/security/) to enhance your configuration

@@ -157,7 +157,7 @@ In this section, you learned how to connect services together using Docker Compo
 
 Related information:
 
- - [Docker Compose overview](/manuals/compose/)
+ - [Docker Compose overview](/compose/)
  - [Compose file reference](/reference/compose-file/)
 
 Next, you will learn how to develop the Golang application with Docker Compose and monitor it with Prometheus and Grafana.

@@ -10,7 +10,7 @@ sidebar:
 
 ## Prerequisites
 
-- You have installed the latest version of [Docker Desktop](/get-started/get-docker/).
+- You have installed the latest version of [Docker Desktop](/get-started/install/).
 - You have a [Git client](https://git-scm.com/downloads). The examples in this section use a command-line based Git client, but you can use any client.
 
 ## Overview
@@ -573,7 +573,7 @@ application using Docker.
 
 Related information:
 
-- [Docker Compose overview](/manuals/compose/)
+- [Docker Compose overview](/compose/)
 
 ## Next steps
 

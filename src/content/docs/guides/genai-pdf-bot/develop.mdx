@@ -40,7 +40,7 @@ To run the database service:
 
    The following is the updated `compose.yaml` file. All comments have been removed.
 
-   ```yaml{hl_lines=["7-23"]}
+   ```yaml
    services:
      server:
        build:
@@ -108,7 +108,7 @@ To run Ollama in a container and provide GPU access:
 
 1. Install the prerequisites.
    - For Docker Engine on Linux, install the [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-container-toolkit).
-   - For Docker Desktop on Windows 10/11, install the latest [NVIDIA driver](https://www.nvidia.com/Download/index.aspx) and make sure you are using the [WSL2 backend](/manuals/desktop/features/wsl/#turn-on-docker-desktop-wsl-2)
+   - For Docker Desktop on Windows 10/11, install the latest [NVIDIA driver](https://www.nvidia.com/Download/index.aspx) and make sure you are using the [WSL2 backend](/desktop/features/wsl/#turn-on-docker-desktop-wsl-2)
 2. Add the Ollama service and a volume in your `compose.yaml`. The following is
    the updated `compose.yaml`:
 
@@ -159,7 +159,7 @@ To run Ollama in a container and provide GPU access:
 
    > [!NOTE]
    >
-   > For more details about the Compose instructions, see [Turn on GPU access with Docker Compose](/manuals/compose/how-tos/gpu-support/).
+   > For more details about the Compose instructions, see [Turn on GPU access with Docker Compose](/compose/how-tos/gpu-support/).
 
 3. Add the ollama-pull service to your `compose.yaml` file. This service uses
    the `docker/genai:ollama-pull` image, based on the GenAI Stack's

@@ -11,7 +11,7 @@ import SummaryBar from "@components/SummaryBar.astro";
 
 <SummaryBar featureName="Compose OCI artifact" />
 
-Docker Compose supports working with [OCI artifacts](/manuals/docker-hub/repos/manage/hub-images/oci-artifacts/), allowing you to package and distribute your Compose applications through container registries. This means you can store your Compose files alongside your container images, making it easier to version, share, and deploy your multi-container applications.
+Docker Compose supports working with [OCI artifacts](/hub/repos/manage/hub-images/oci-artifacts/), allowing you to package and distribute your Compose applications through container registries. This means you can store your Compose files alongside your container images, making it easier to version, share, and deploy your multi-container applications.
 
 ## Publish your Compose application as an OCI artifact
 
@@ -111,7 +111,7 @@ When you run an application from an OCI artifact, Compose may display warning me
 
 - A list of the interpolation variables used along with their values
 - A list of all environment variables used by the application
-- If your OCI artifact application is using another remote resources, for example via [`include`](/reference/compose-file/include/).
+- If your OCI artifact application is using another remote resources, for example via [`include`](/compose/how-tos/multiple-compose-files/include/).
 
 ```text 
 $ REGISTRY=myregistry.com docker compose -f oci://docker.io/username/my-compose-app:latest up
@@ -148,7 +148,7 @@ $ docker compose publish -y username/my-compose-app:latest
 
 ## Next steps
 
-- [Familiarize yourself with Compose's trust model](/manuals/compose/trust-model/)
-- [Learn about OCI artifacts in Docker Hub](/manuals/docker-hub/repos/manage/hub-images/oci-artifacts/)
+- [Familiarize yourself with Compose's trust model](/compose/trust-model/)
+- [Learn about OCI artifacts in Docker Hub](/hub/repos/manage/hub-images/oci-artifacts/)
 - [Compose publish command](/reference/cli/docker/compose/publish/)
-- [Understand `include`](/reference/compose-file/include/)
+- [Understand `include`](/compose/how-tos/multiple-compose-files/include/)

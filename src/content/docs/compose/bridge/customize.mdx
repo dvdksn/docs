@@ -71,7 +71,7 @@ As part of the Go templating syntax, Compose Bridge offers a set of YAML helper 
 
 | Function    | Description                                                                                                 |
 | ----------- | ----------------------------------------------------------------------------------------------------------- |
-| `seconds`   | Converts a [duration](/reference/compose-file/extension/#specifying-durations) into an integer (seconds). |
+| `seconds`   | Converts a [duration](/compose/how-tos/extensions/#specifying-durations) into an integer (seconds). |
 | `uppercase` | Converts a string to uppercase.                                                                             |
 | `title`     | Capitalizes the first letter of each word.                                                                  |
 | `safe`      | Converts a string into a safe identifier (replaces non-lowercase characters with `-`).                      |
@@ -203,7 +203,7 @@ from `/in/compose.yaml` and produce platform manifests under `/out`. This simple
 contract makes it easy to bundle an alternate transformation using 
 [Kompose](https://kompose.io/):
 
-```Dockerfile
+```dockerfile
 FROM alpine
 
 # Get kompose from github release page

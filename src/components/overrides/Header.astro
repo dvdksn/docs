@@ -1,0 +1,227 @@
+---
+/**
+ * Custom Header override — extends Starlight's default Header with the
+ * Gordon AI trigger button (blue, with Gordon icon, shimmer effect).
+ */
+import config from 'virtual:starlight/user-config';
+
+import LanguageSelect from 'virtual:starlight/components/LanguageSelect';
+import Search from 'virtual:starlight/components/Search';
+import SiteTitle from 'virtual:starlight/components/SiteTitle';
+import SocialIcons from 'virtual:starlight/components/SocialIcons';
+import ThemeSelect from 'virtual:starlight/components/ThemeSelect';
+
+const shouldRenderSearch =
+  config.pagefind || config.components.Search !== '@astrojs/starlight/components/Search.astro';
+---
+
+<div class="header">
+  <div class="title-wrapper sl-flex">
+    <SiteTitle />
+    <nav class="primary-nav sl-hidden md:sl-flex" aria-label="Primary">
+      <a href="/#browse">Manuals</a>
+      <a href="/guides/">Guides</a>
+      <a href="/reference/">Reference</a>
+    </nav>
+  </div>
+  <div class="sl-flex print:hidden">
+    {shouldRenderSearch && <Search />}
+  </div>
+  <div class="sl-hidden md:sl-flex print:hidden right-group">
+    <div class="sl-flex social-icons">
+      <SocialIcons />
+    </div>
+    <button
+      class="gordon-trigger"
+      id="ask-ai-trigger"
+      aria-label="Ask Gordon, AI assistant"
+      title="Gordon, your AI assistant for Docker docs"
+    >
+      <span class="gordon-icon gordon-icon-default" aria-hidden="true"></span>
+      <span class="gordon-icon gordon-icon-happy" aria-hidden="true"></span>
+      <span class="gordon-trigger-label">Gordon</span>
+    </button>
+    <ThemeSelect />
+    <LanguageSelect />
+  </div>
+</div>
+
+<script>
+  document.getElementById('ask-ai-trigger')?.addEventListener('click', () => {
+    window.dispatchEvent(new CustomEvent('toggle-ask-ai'));
+  });
+</script>
+
+<style>
+  @layer starlight.core {
+    .header {
+      display: flex;
+      gap: var(--sl-nav-gap);
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    .title-wrapper {
+      overflow: clip;
+      padding: 0.25rem;
+      margin: -0.25rem;
+      min-width: 0;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    /* Primary nav — compact link group next to the wordmark */
+    .primary-nav {
+      gap: 1.25rem;
+      align-items: center;
+      padding-inline-start: 1rem;
+      border-inline-start: 1px solid var(--sl-color-gray-5);
+      align-self: stretch;
+    }
+    .primary-nav a {
+      font-size: 0.82rem;
+      font-variation-settings: "wght" 460, "opsz" 14, "wdth" 100;
+      color: var(--sl-color-gray-2);
+      text-decoration: none;
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.15s;
+    }
+    .primary-nav a:hover,
+    .primary-nav a:focus-visible {
+      color: var(--sl-color-text-accent);
+      outline: none;
+    }
+
+    /* Shrink the oversized SiteTitle logo — Starlight's default ties
+       logo height to the full nav height minus padding (~40px).
+       The Docker Docs wordmark only needs to read at ~22px to stay
+       balanced with the search field and Gordon trigger beside it. */
+    .title-wrapper :global(.site-title img) {
+      height: 1.375rem;  /* 22px — matches wordmark x-height rhythm */
+    }
+
+    .right-group,
+    .social-icons {
+      gap: 1rem;
+      align-items: center;
+    }
+    .social-icons::after {
+      content: '';
+      height: 2rem;
+      border-inline-end: 1px solid var(--sl-color-gray-5);
+    }
+
+    @media (min-width: 50rem) {
+      :global(:root[data-has-sidebar]) {
+        --__sidebar-pad: calc(2 * var(--sl-nav-pad-x));
+      }
+      :global(:root:not([data-has-toc])) {
+        --__toc-width: 0rem;
+      }
+      .header {
+        --__sidebar-width: max(0rem, var(--sl-content-inline-start, 0rem) - var(--sl-nav-pad-x));
+        --__main-column-fr: calc(
+          (
+              100% + var(--__sidebar-pad, 0rem) - var(--__toc-width, var(--sl-sidebar-width)) -
+                (2 * var(--__toc-width, var(--sl-nav-pad-x))) - var(--sl-content-inline-start, 0rem) -
+                var(--sl-content-width)
+            ) / 2
+        );
+        display: grid;
+        grid-template-columns:
+          minmax(
+            calc(var(--__sidebar-width) + max(0rem, var(--__main-column-fr) - var(--sl-nav-gap))),
+            auto
+          )
+          1fr
+          auto;
+        align-content: center;
+      }
+    }
+  }
+
+  /* ── Gordon trigger button — blue with icon ── */
+  .gordon-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--d-blue-700, #003db5);
+    border: 1px solid var(--d-blue-500, #2560ff);
+    border-radius: 6px;
+    color: white;
+    font-family: var(--sl-font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 0.4rem 0.65rem;
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.15s;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .gordon-trigger:hover {
+    background: var(--d-blue-500, #2560ff);
+  }
+
+  .gordon-trigger:focus-visible {
+    outline: 2px solid var(--d-blue-500, #2560ff);
+    outline-offset: 2px;
+    box-shadow: none;
+  }
+
+  /* Icon — CSS mask so the SVG tint follows parent color.
+     External <img> with fill=currentColor renders as black on
+     modern browsers; mask-image is the reliable way to theme it. */
+  .gordon-icon {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: currentColor;
+    -webkit-mask: url(/icons/gordon.svg) no-repeat center / contain;
+    mask: url(/icons/gordon.svg) no-repeat center / contain;
+  }
+  .gordon-icon-happy {
+    display: none;
+    -webkit-mask-image: url(/icons/gordon-happy.svg);
+    mask-image: url(/icons/gordon-happy.svg);
+  }
+  .gordon-trigger:hover .gordon-icon-default { display: none; }
+  .gordon-trigger:hover .gordon-icon-happy { display: inline-block; }
+
+  .gordon-trigger-label {
+    padding: 0 0.15rem;
+  }
+
+  @media (max-width: 64rem) {
+    .gordon-trigger-label { display: none; }
+  }
+
+  /* ── Shimmer effect ── */
+  .gordon-trigger::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      115deg,
+      transparent 40%,
+      rgba(255,255,255,0.25) 50%,
+      transparent 60%
+    );
+    transform: translateX(-100%);
+    animation: gordonShimmer 3s ease-in-out 1s 1;
+    pointer-events: none;
+  }
+
+  @keyframes gordonShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+</style>

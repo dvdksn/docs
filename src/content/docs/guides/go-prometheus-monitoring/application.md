@@ -166,7 +166,7 @@ func init() {
 
 In the `main` function, you have created a new instance of the `gin` framework and created three routes. You can see the health endpoint that is on path `/health` that will return a JSON with `{"message": "Up and running!"}` and the `/v1/users` endpoint that will return a JSON with `{"message": "Hello from /v1/users"}`. The third route is for the `/metrics` endpoint that will return the metrics in the Prometheus format. Then you have `RequestMetricsMiddleware` middleware, it will be called for every request made to the API. It will record the incoming requests metrics like status codes and paths. Finally, you are running the gin application on port 8000.
 
-```golang
+```go
 func main() {
 	router := gin.Default()
 
@@ -191,7 +191,7 @@ func main() {
 
 Now comes the middleware function `RequestMetricsMiddleware`. This function is called for every request made to the API. It increments the `HttpRequestTotal` counter (different counter for different paths and status codes) if the status code is less than or equal to 400. If the status code is greater than 400, it increments the `HttpRequestErrorTotal` counter (different counter for different paths and status codes). The `PrometheusHandler` function is the custom handler that will be called for the `/metrics` endpoint. It will return the metrics in the Prometheus format.
 
-```golang
+```go
 // Custom metrics handler with custom registry
 func PrometheusHandler() gin.HandlerFunc {
 	h := promhttp.HandlerFor(customRegistry, promhttp.HandlerOpts{})

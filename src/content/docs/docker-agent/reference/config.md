@@ -307,7 +307,7 @@ Remote server:
 ### Docker MCP Gateway
 
 Containerized tools from [Docker MCP
-Catalog](/manuals/ai/mcp-catalog-and-toolkit/mcp-gateway/):
+Catalog](/ai-overview/mcp-catalog-and-toolkit/mcp-gateway/):
 
 ```yaml
 - type: mcp

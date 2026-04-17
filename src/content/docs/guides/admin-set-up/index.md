@@ -40,16 +40,16 @@ policies.
 
 This guide covers the following Docker features:
 
-- [Organizations](/manuals/admin/organization/): The core structure
+- [Organizations](/admin/organization/): The core structure
   for managing your Docker environment, grouping users, teams, and image
   repositories. Your organization was created with your subscription and is
   managed by one or more owners. Users signed into the organization are
   assigned seats based on the purchased subscription.
-- [Enforce sign-in](/manuals/enterprise/security/enforce-sign-in/):
+- [Enforce sign-in](/admin/enterprise/security/enforce-sign-in/):
   By default, Docker Desktop doesn't require sign-in. You can configure
   settings to enforce this and ensure your developers sign in to your
   Docker organization.
-- [SSO](/manuals/enterprise/security/single-sign-on/): Without SSO,
+- [SSO](/admin/enterprise/security/single-sign-on/): Without SSO,
   user management in a Docker organization is manual. Setting
   up an SSO connection between your identity provider and Docker ensures
   compliance with your security policy and automates user provisioning. Adding

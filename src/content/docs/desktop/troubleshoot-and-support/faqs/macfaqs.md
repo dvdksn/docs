@@ -210,5 +210,5 @@ also in your keychain.
 
 To learn more about how to install a CA root certificate for the registry and
 how to set the client TLS certificate for verification, see
-[Verify repository client with certificates](/manuals/engine/security/certificates/)
+[Verify repository client with certificates](/engine/security/certificates/)
 in the Docker Engine topics.

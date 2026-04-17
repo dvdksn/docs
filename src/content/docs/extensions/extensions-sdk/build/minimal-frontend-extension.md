@@ -8,7 +8,7 @@ sidebar:
 
 To start creating your extension, you first need a directory with files which range from the extension’s source code to the required extension-specific files. This page provides information on how to set up a minimal frontend extension based on plain HTML.
 
-Before you start, make sure you have installed the latest version of [Docker Desktop](/manuals/desktop/release-notes/).
+Before you start, make sure you have installed the latest version of [Docker Desktop](/desktop/release-notes/).
 
 > Tip
 >
@@ -41,7 +41,7 @@ At a minimum, your Dockerfile needs:
 - The source code which in this case is an `index.html` that sits within the `ui` folder.
 - The `metadata.json` file.
 
-```Dockerfile
+```dockerfile
 # syntax=docker/dockerfile:1
 FROM scratch
 

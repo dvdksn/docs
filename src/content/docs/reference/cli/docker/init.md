@@ -48,7 +48,7 @@ After `docker init` has completed, you may need to modify the created files and 
   
   * [.dockerignore](/reference/dockerfile.md#dockerignore-file)
   * [Dockerfile](/reference/dockerfile.md)
-  * [compose.yaml](/manuals/compose/intro/compose-application-model.md)
+  * [compose.yaml](/compose/intro/compose-application-model.md)
 
 ## Options
 

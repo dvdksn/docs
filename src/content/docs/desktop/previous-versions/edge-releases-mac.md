@@ -7,7 +7,7 @@ keywords: Docker Desktop for Mac, edge, release notes
 This page contains information about Docker Desktop Edge releases. Edge releases give you early access to our newest features. Note that some of the features may be experimental, and some of them may not ever reach the Stable release.
 
 For Docker Desktop system requirements, see
-[What to know before you install](/manuals/desktop/setup/install/mac-install/#system-requirements).
+[What to know before you install](/desktop/setup/install/mac-install/#system-requirements).
 
 ## Docker Desktop Community 2.5.4
 2020-12-07
@@ -728,7 +728,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
   - Add an experimental SOCKS server to allow access to container networks, see [docker/for-mac#2670](https://github.com/docker/for-mac/issues/2670#issuecomment-372365274). Also see [docker/for-mac#2721](https://github.com/docker/for-mac/issues/2721)
 
 * Bug fixes and minor changes
-  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Preferences > Reset menu) before updating to the next major update. You can check documentation to [save images](/reference/cli/docker/image/save/#examples) and [back up volumes](/manuals/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes)
+  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Preferences > Reset menu) before updating to the next major update. You can check documentation to [save images](/reference/cli/docker/image/save/#examples) and [back up volumes](/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes)
   - Fix startup issue with AUFS [docker/for-mac#2804](https://github.com/docker/for-mac/issues/2804)
   - Fix status bug which could prevent the Kubernetes cluster from starting. Fixes [docker/for-mac#2990](https://github.com/docker/for-mac/issues/2990)
   - Fix bug which would cause virtual machine logs to be written to RAM rather than disk in some cases, and the virtual machine to hang. See [docker/for-mac#2984](https://github.com/docker/for-mac/issues/2984)
@@ -919,7 +919,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
   - [Docker 17.12.0-ce](https://github.com/docker/docker-ce/releases/tag/v17.12.0-ce)
 
 * New
-  - Experimental Kubernetes Support. You can now run a single-node Kubernetes cluster from the "Kubernetes" Pane in Docker For Mac Preferences and use kubectl commands as well as docker commands. See [the Kubernetes section](/manuals/desktop/use-desktop/kubernetes/)
+  - Experimental Kubernetes Support. You can now run a single-node Kubernetes cluster from the "Kubernetes" Pane in Docker For Mac Preferences and use kubectl commands as well as docker commands. See [the Kubernetes section](/desktop/use-desktop/kubernetes/)
   - DNS name `docker.for.mac.host.internal` should be used instead of `docker.for.mac.localhost` (still valid) for host resolution from containers, since since there is an RFC banning the use of subdomains of localhost (See https://tools.ietf.org/html/draft-west-let-localhost-be-localhost-06).
 
 * Bug fixes and minor changes
@@ -1567,9 +1567,9 @@ TCP connection is idle for more than five minutes (related to
 
 **New**
 
-- Dedicated preference pane for advanced configuration of the docker daemon (edit daemon.json). See [Daemon Advanced (JSON configuration file)](/manuals/desktop/settings-and-maintenance/settings/#docker-engine).
+- Dedicated preference pane for advanced configuration of the docker daemon (edit daemon.json). See [Daemon Advanced (JSON configuration file)](/desktop/settings-and-maintenance/settings/#docker-engine).
 
-- Docker Experimental mode can be toggled. See [Daemon Basic (experimental mode and registries)](/manuals/desktop/settings-and-maintenance/settings/#docker-engine).
+- Docker Experimental mode can be toggled. See [Daemon Basic (experimental mode and registries)](/desktop/settings-and-maintenance/settings/#docker-engine).
 
 **Upgrades**
 
@@ -1725,7 +1725,7 @@ issue is being investigated. The workaround is to restart Docker.app.
 traversals of large directories are currently slow. Additionally, containers
 that perform large numbers of directory operations, such as repeated scans of
 large directory trees, may suffer from poor performance. More information is
-available in [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in Troubleshooting.
+available in [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in Troubleshooting.
 
 * Under some unhandled error conditions, `inotify` event delivery can fail and become permanently disabled. The workaround is to restart `Docker.app`.
 
@@ -1755,7 +1755,7 @@ with `osxfs`. In particular, writes of small blocks and traversals of large
 directories are currently slow. Additionally, containers that perform large
 numbers of directory operations, such as repeated scans of large directory
 trees, may suffer from poor performance. More information is available in
-[Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in Troubleshooting.
+[Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in Troubleshooting.
 
 * Under some unhandled error conditions, `inotify` event delivery can fail and become permanently disabled. The workaround is to restart Docker.app.
 
@@ -1789,7 +1789,7 @@ trees, may suffer from poor performance. More information is available in
 * There are a number of issues with the performance of directories bind-mounted with `osxfs`. In particular, writes of small blocks and traversals of large
 directories are currently slow. Additionally, containers that perform large
 numbers of directory operations, such as repeated scans of large directory
-trees, may suffer from poor performance. For more information and workarounds, see the bullet on performance of bind-mounted directories in [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in Troubleshooting.
+trees, may suffer from poor performance. For more information and workarounds, see the bullet on performance of bind-mounted directories in [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in Troubleshooting.
 
 * Under some unhandled error conditions, `inotify` event delivery can fail and become permanently disabled. The workaround is to restart `Docker.app`.
 
@@ -1815,7 +1815,7 @@ trees, may suffer from poor performance. For more information and workarounds, s
 
 * Docker.app sometimes uses 200% CPU after macOS wakes up from sleep mode. The issue is being investigated. The workaround is to restart Docker.app
 
-* There are a number of issues with the performance of directories bind-mounted with `osxfs`. In particular, writes of small blocks and traversals of large directories are currently slow. Additionally, containers that perform large numbers of directory operations, such as repeated scans of large directory trees, may suffer from poor performance. For more information and workarounds, see the bullet on performance of bind-mounted directories in [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in Troubleshooting.
+* There are a number of issues with the performance of directories bind-mounted with `osxfs`. In particular, writes of small blocks and traversals of large directories are currently slow. Additionally, containers that perform large numbers of directory operations, such as repeated scans of large directory trees, may suffer from poor performance. For more information and workarounds, see the bullet on performance of bind-mounted directories in [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in Troubleshooting.
 
 * Under some unhandled error conditions, `inotify` event delivery can fail and become permanently disabled. The workaround is to restart Docker.app
 
@@ -1838,7 +1838,7 @@ trees, may suffer from poor performance. For more information and workarounds, s
 
 * Docker.app sometimes uses 200% CPU after macOS wakes up from sleep mode. The issue is being investigated. The workaround is to restart Docker.app
 
-* There are a number of issues with the performance of directories bind-mounted with `osxfs`. In particular, writes of small blocks and traversals of large directories are currently slow. Additionally, containers that perform large numbers of directory operations, such as repeated scans of large directory trees, may suffer from poor performance. More information is available in [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
+* There are a number of issues with the performance of directories bind-mounted with `osxfs`. In particular, writes of small blocks and traversals of large directories are currently slow. Additionally, containers that perform large numbers of directory operations, such as repeated scans of large directory trees, may suffer from poor performance. More information is available in [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
 
 * Under some unhandled error conditions, `inotify` event delivery can fail and become permanently disabled. The workaround is to restart Docker.app
 
@@ -1862,7 +1862,7 @@ events or unexpected unmounts.
 
 **New**
 
-* Docker for Mac is now available from 2 channels: **stable** and **beta**. New features and bug fixes will go out first in auto-updates to users in the beta channel. Updates to the stable channel are much less frequent and happen in sync with major and minor releases of the Docker Engine. Only features that are well-tested and ready for production are added to the stable channel releases. For downloads of both and more information, see the [installation guide](/manuals/desktop/setup/install/mac-install/).
+* Docker for Mac is now available from 2 channels: **stable** and **beta**. New features and bug fixes will go out first in auto-updates to users in the beta channel. Updates to the stable channel are much less frequent and happen in sync with major and minor releases of the Docker Engine. Only features that are well-tested and ready for production are added to the stable channel releases. For downloads of both and more information, see the [installation guide](/desktop/setup/install/mac-install/).
 
 **Upgrades**
 
@@ -1885,7 +1885,7 @@ events or unexpected unmounts.
 
 * Docker.app sometimes uses 200% CPU after macOS wakes up from sleep mode. The issue is being investigated. The workaround is to restart Docker.app
 
-* There are a number of issues with the performance of directories bind-mounted with `osxfs`.  In particular, writes of small blocks, and traversals of large directories are currently slow.  Additionally, containers that perform large numbers of directory operations, such as repeated scans of large directory trees, may suffer from poor performance. For more information and workarounds, see [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in [Logs and Troubleshooting](/manuals/desktop/troubleshoot-and-support/troubleshoot/).
+* There are a number of issues with the performance of directories bind-mounted with `osxfs`.  In particular, writes of small blocks, and traversals of large directories are currently slow.  Additionally, containers that perform large numbers of directory operations, such as repeated scans of large directory trees, may suffer from poor performance. For more information and workarounds, see [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/) in [Logs and Troubleshooting](/desktop/troubleshoot-and-support/troubleshoot/).
 
 * Under some unhandled error conditions, `inotify` event delivery can fail and become permanently disabled. The workaround is to restart Docker.app
 
@@ -1929,7 +1929,7 @@ events or unexpected unmounts.
 
 **Known issues**
 
-* See [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
+* See [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
 
 ### Beta 18.1 Release Notes (2016-07-07 1.12.0-rc3-beta18.1)
 
@@ -1957,7 +1957,7 @@ events or unexpected unmounts.
 
 **Known issues**
 
-* See [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
+* See [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
 
 ### Beta 18 Release Notes (2016-07-06 1.12.0-rc3-beta18)
 
@@ -1978,7 +1978,7 @@ events or unexpected unmounts.
 
 **Known issues**
 
-* See [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
+* See [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
 
 ### Beta 17 Release Notes (2016-06-29 1.12.0-rc2-beta17)
 
@@ -1997,7 +1997,7 @@ events or unexpected unmounts.
 
 **Known issues**
 
-* See [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
+* See [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
 
 ### Beta 16 Release Notes (2016-06-17 1.12.0-rc2-beta16)
 
@@ -2019,7 +2019,7 @@ events or unexpected unmounts.
 
 **Known issues**
 
-* See [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
+* See [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
 
 ### Beta 15 Release Notes (2016-06-10 1.11.2-beta15)
 
@@ -2043,7 +2043,7 @@ events or unexpected unmounts.
 
 **Known issues**
 
-* See [Known Issues](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
+* See [Known Issues](/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
 
 ### Beta 14 Release Notes (2016-06-02 1.11.1-beta14)
 

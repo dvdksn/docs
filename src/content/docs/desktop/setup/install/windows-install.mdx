@@ -23,7 +23,7 @@ This page provides download links, system requirements, and step-by-step install
 <LinkButton href="https://apps.microsoft.com/detail/xp8cbj40xlbwkx?hl=en-GB&gl=GB">Docker Desktop for Windows - x86_64 on the Microsoft Store</LinkButton>
 <LinkButton href="https://desktop.docker.com/win/main/arm64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=docs-driven-download-win-arm64">Docker Desktop for Windows - Arm (Early Access)</LinkButton>
 
-_For checksums, see [Release notes](/manuals/desktop/release-notes/)_
+_For checksums, see [Release notes](/desktop/release-notes/)_
 
 ## System requirements
 
@@ -47,9 +47,9 @@ _For checksums, see [Release notes](/manuals/desktop/release-notes/)_
   - 64-bit processor with [Second Level Address Translation (SLAT)](https://en.wikipedia.org/wiki/Second_Level_Address_Translation)
   - 8GB system RAM
   - Enable hardware virtualization in BIOS/UEFI. For more information, see
-    [Virtualization](/manuals/desktop/troubleshoot-and-support/troubleshoot/topics/#docker-desktop-fails-due-to-virtualization-not-working).
+    [Virtualization](/desktop/troubleshoot-and-support/troubleshoot/topics/#docker-desktop-fails-due-to-virtualization-not-working).
 
-For more information on setting up WSL 2 with Docker Desktop, see [WSL](/manuals/desktop/features/wsl/).
+For more information on setting up WSL 2 with Docker Desktop, see [WSL](/desktop/features/wsl/).
 
 > [!NOTE]
 >
@@ -73,7 +73,7 @@ For more information on setting up WSL 2 with Docker Desktop, see [WSL](/manuals
   - 8GB system RAM
   - Turn on BIOS/UEFI-level hardware virtualization support in the
     BIOS/UEFI settings. For more information, see
-    [Virtualization](/manuals/desktop/troubleshoot-and-support/troubleshoot/topics/#virtualization).
+    [Virtualization](/desktop/troubleshoot-and-support/troubleshoot/topics/#virtualization).
 
 > [!NOTE]
 >
@@ -97,7 +97,7 @@ For more information on setting up WSL 2 with Docker Desktop, see [WSL](/manuals
   - 64-bit processor with [Second Level Address Translation (SLAT)](https://en.wikipedia.org/wiki/Second_Level_Address_Translation)
   - 8GB system RAM
   - Enable hardware virtualization in BIOS/UEFI. For more information, see
-    [Virtualization](/manuals/desktop/troubleshoot-and-support/troubleshoot/topics/#virtualization).
+    [Virtualization](/desktop/troubleshoot-and-support/troubleshoot/topics/#virtualization).
 
 > [!IMPORTANT]
 >
@@ -112,13 +112,13 @@ accounts use the same VM to build and run containers. Note that it is not possib
 
 Running Docker Desktop inside a VMware ESXi or Azure VM is supported for Docker Business customers.
 It requires enabling nested virtualization on the hypervisor first.
-For more information, see [Running Docker Desktop in a VM or VDI environment](/manuals/desktop/setup/vm-vdi/).
+For more information, see [Running Docker Desktop in a VM or VDI environment](/desktop/setup/vm-vdi/).
 
 ## Install Docker Desktop on Windows
 
 ### Install interactively
 
-1. Download the installer using the download button at the top of the page, or from the [release notes](/manuals/desktop/release-notes/).
+1. Download the installer using the download button at the top of the page, or from the [release notes](/desktop/release-notes/).
 
 2. Double-click `Docker Desktop Installer.exe` to run the installer. By default, Docker Desktop is installed at `C:\Program Files\Docker\Docker`.
 
@@ -187,7 +187,7 @@ Docker Desktop does not start automatically after installation. To start Docker 
 
 > [!TIP]
 >
-> As an IT administrator, you can use endpoint management (MDM) software to identify the number of Docker Desktop instances and their versions within your environment. This can provide accurate license reporting, help ensure your machines use the latest version of Docker Desktop, and enable you to [enforce sign-in](/manuals/enterprise/security/enforce-sign-in/).
+> As an IT administrator, you can use endpoint management (MDM) software to identify the number of Docker Desktop instances and their versions within your environment. This can provide accurate license reporting, help ensure your machines use the latest version of Docker Desktop, and enable you to [enforce sign-in](/admin/enterprise/security/enforce-sign-in/).
 > - [Intune](https://learn.microsoft.com/en-us/mem/intune/apps/app-discovered-apps)
 > - [Jamf](https://docs.jamf.com/10.25.0/jamf-pro/administrator-guide/Application_Usage.html)
 > - [Kandji](https://support.kandji.io/support/solutions/articles/72000559793-view-a-device-application-list)
@@ -247,10 +247,10 @@ If Microsoft Store access is blocked due to security policies:
 #### Security and access control
 
 - `--allowed-org=<org name>`: Requires the user to sign in and be part of the specified Docker Hub organization when running the application
-- `--admin-settings`: Automatically creates an `admin-settings.json` file which is used by admins to control certain Docker Desktop settings on client machines within their organization. For more information, see [Settings Management](/manuals/enterprise/security/hardened-desktop/settings-management/).
+- `--admin-settings`: Automatically creates an `admin-settings.json` file which is used by admins to control certain Docker Desktop settings on client machines within their organization. For more information, see [Settings Management](/admin/enterprise/security/hardened-desktop/settings-management/).
   - It must be used together with the `--allowed-org=<org name>` flag. 
   - For example:`--allowed-org=<org name> --admin-settings="{'configurationFileVersion': 2, 'enhancedContainerIsolation': {'value': true, 'locked': false}}"`
-- `--no-windows-containers`: Disables the Windows containers integration. This can improve security. For more information, see [Windows containers](/manuals/desktop/setup/install/windows-permission-requirements/#windows-containers).
+- `--no-windows-containers`: Disables the Windows containers integration. This can improve security. For more information, see [Windows containers](/desktop/setup/install/windows-permission-requirements/#windows-containers).
 
 #### Proxy configuration
 
@@ -284,7 +284,7 @@ If Microsoft Store access is blocked due to security policies:
 
 Installing Docker Desktop requires administrator privileges. However, once installed, it can be used without administrative access. Some actions, though, still need elevated permissions. See [Understand permission requirements for Windows](./windows-permission-requirements/) for more detail.
 
-See the [FAQs](/manuals/desktop/troubleshoot-and-support/faqs/general/#how-do-i-run-docker-desktop-without-administrator-privileges) on how to install and run Docker Desktop without needing administrator privileges.
+See the [FAQs](/desktop/troubleshoot-and-support/faqs/general/#how-do-i-run-docker-desktop-without-administrator-privileges) on how to install and run Docker Desktop without needing administrator privileges.
 
 If you're an IT admin and your users do not have administrator rights and plan to perform operations that require elevated privileges, be sure to install Docker Desktop using the `--always-run-service` installer flag. This ensures those actions can still be executed without prompting for User Account Control (UAC) elevation. See [Installer Flags](#installer-flags) for more detail.
 
@@ -308,7 +308,7 @@ For more information on Windows containers, refer to the following documentation
   [forked here to use containers](https://github.com/friism/MusicStore), is a good example of a multi-container application.
 
 - To understand how to connect to Windows containers from the local host, see
-  [I want to connect to a container from Windows](/manuals/desktop/features/networking/#i-want-to-connect-to-a-container-from-the-host)
+  [I want to connect to a container from Windows](/desktop/features/networking/#i-want-to-connect-to-a-container-from-the-host)
 
 > [!NOTE]
 >
@@ -323,10 +323,10 @@ again when you switch back.
 ## Where to go next
 
 - Explore [Docker's subscriptions](https://www.docker.com/pricing?ref=Docs&refAction=DocsDesktopWindowsInstall) to see what Docker can offer you.
-- [Get started with Docker](/get-started/introduction/).
-- [Explore Docker Desktop](/manuals/desktop/use-desktop/) and all its features.
-- [Troubleshooting](/manuals/desktop/troubleshoot-and-support/troubleshoot/) describes common problems, workarounds, and
+- [Get started with Docker](/get-started/).
+- [Explore Docker Desktop](/desktop/use-desktop/) and all its features.
+- [Troubleshooting](/desktop/troubleshoot-and-support/troubleshoot/) describes common problems, workarounds, and
   how to get support.
-- [FAQs](/manuals/desktop/troubleshoot-and-support/faqs/general/) provide answers to frequently asked questions.
-- [Release notes](/manuals/desktop/release-notes/) lists component updates, new features, and improvements associated with Docker Desktop releases.
-- [Back up and restore data](/manuals/desktop/settings-and-maintenance/backup-and-restore/) provides instructions on backing up and restoring data related to Docker.
+- [FAQs](/desktop/troubleshoot-and-support/faqs/general/) provide answers to frequently asked questions.
+- [Release notes](/desktop/release-notes/) lists component updates, new features, and improvements associated with Docker Desktop releases.
+- [Back up and restore data](/desktop/settings-and-maintenance/backup-and-restore/) provides instructions on backing up and restoring data related to Docker.

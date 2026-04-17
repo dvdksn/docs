@@ -171,7 +171,7 @@ networks:
 
    Update the `.env` file with your preferred settings:
 
-   ```env
+   ```ini
    # Application Configuration
    NODE_ENV=development
    APP_PORT=3000
@@ -210,7 +210,7 @@ networks:
 
 ## Configure and run a development container
 
-You can use a bind mount to mount your source code into the container. The container can then see the changes you make to the code immediately, as soon as you save a file. This means that you can run processes, like nodemon, in the container that watch for filesystem changes and respond to them. To learn more about bind mounts, see [Storage overview](/manuals/engine/storage/).
+You can use a bind mount to mount your source code into the container. The container can then see the changes you make to the code immediately, as soon as you save a file. This means that you can run processes, like nodemon, in the container that watch for filesystem changes and respond to them. To learn more about bind mounts, see [Storage overview](/engine/storage/).
 
 In addition to adding a bind mount, you can configure your Dockerfile and `compose.yaml` file to install development dependencies and run development tools.
 
@@ -516,7 +516,7 @@ Related information:
 
 - [Volumes top-level element](/reference/compose-file/volumes/)
 - [Services top-level element](/reference/compose-file/services/)
-- [Multi-stage builds](/manuals/build/building/multi-stage/)
+- [Multi-stage builds](/build/building/multi-stage/)
 
 ## Next steps
 

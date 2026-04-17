@@ -8,7 +8,7 @@ import Include_swarm_compose_compat from "@includes/swarm-compose-compat.mdx";
 
 When running Docker Engine in swarm mode, you can use `docker stack deploy` to
 deploy a complete application stack to the swarm. The `deploy` command accepts
-a stack description in the form of a [Compose file](/reference/compose-file/legacy-versions/).
+a stack description in the form of a [Compose file](/compose/legacy-versions/).
 
 <Include_swarm_compose_compat />
 
@@ -28,7 +28,7 @@ To run through this tutorial, you need:
     > `docker stack` and `docker service` commands must be run from a manager
     > node.
 
-2.  A current version of [Docker Compose](/manuals/compose/install/).
+2.  A current version of [Docker Compose](/compose/install/).
 
 ## Set up a Docker registry
 
@@ -66,7 +66,7 @@ a throwaway registry, which you can discard afterward.
 ## Create the example application
 
 The app used in this guide is based on the hit counter app in the
-[Get started with Docker Compose](/manuals/compose/gettingstarted/) guide. It consists
+[Get started with Docker Compose](/compose/gettingstarted/) guide. It consists
 of a Python app which maintains a counter in a Redis instance and increments the
 counter whenever you visit it.
 

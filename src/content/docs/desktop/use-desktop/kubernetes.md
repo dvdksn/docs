@@ -51,7 +51,7 @@ Docker Desktop Kubernetes can be provisioned with either the `kubeadm` or `kind`
 provisioners.
 
 `kubeadm` is the older provisioner. It supports a single-node cluster, you can't select the kubernetes
-version, it's slower to provision than `kind`, and it's not supported by [Enhanced Container Isolation](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/index/) (ECI),
+version, it's slower to provision than `kind`, and it's not supported by [Enhanced Container Isolation](/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/index/) (ECI),
 meaning that if ECI is enabled the cluster works but it's not protected by ECI.
 
 `kind` is the newer provisioner. It supports multi-node clusters (for
@@ -154,7 +154,7 @@ factors, including the version of Kubernetes being used. The tags vary for each 
 
 To accommodate scenarios where access to Docker Hub is not allowed, admins can
 configure Docker Desktop to pull the above listed images from a different registry (e.g., a mirror)
-using the [KubernetesImagesRepository](/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file/#kubernetes) setting as follows.
+using the [KubernetesImagesRepository](/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/#kubernetes) setting as follows.
 
 An image name can be broken into `[registry[:port]/][namespace/]repository[:tag]` components.
 The `KubernetesImagesRepository` setting allows users to override the `[registry[:port]/][namespace]`
@@ -193,8 +193,8 @@ The recommended approach to set this up is the following:
 
 > [!NOTE]
 >
-> In Docker Desktop versions 4.43 or earlier, when using `KubernetesImagesRepository` and [Enhanced Container Isolation (ECI)](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/)
-> is enabled, add the following images to the [ECI Docker socket mount image list](/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file/#enhanced-container-isolation):
+> In Docker Desktop versions 4.43 or earlier, when using `KubernetesImagesRepository` and [Enhanced Container Isolation (ECI)](/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/)
+> is enabled, add the following images to the [ECI Docker socket mount image list](/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/#enhanced-container-isolation):
 >
 > `[imagesRepository]/desktop-cloud-provider-kind:`
 > `[imagesRepository]/desktop-containerd-registry-mirror:`

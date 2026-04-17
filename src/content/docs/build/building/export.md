@@ -25,7 +25,7 @@ your build.
 If you specify a filepath to the `docker build --output` flag, Docker exports
 the contents of the build container at the end of the build to the specified
 location on your host's filesystem. This uses the `local`
-[exporter](/manuals/build/exporters/local-tar/).
+[exporter](/build/exporters/local-tar/).
 
 The neat thing about this is that you can use Docker's powerful isolation and
 build features to create standalone binaries. This
@@ -44,7 +44,7 @@ World!", and exports the binary to the host filesystem.
 
 2. Create a Dockerfile with the following contents:
 
-   ```Dockerfile
+   ```dockerfile
    # syntax=docker/dockerfile:1
    FROM rust:alpine AS build
    WORKDIR /src
@@ -84,7 +84,7 @@ World!", and exports the binary to the host filesystem.
 ## Exporting multi-platform builds
 
 You use the `local` exporter to export binaries in combination with
-[multi-platform builds](/manuals/build/building/multi-platform/). This lets you
+[multi-platform builds](/build/building/multi-platform/). This lets you
 compile multiple binaries at once, that can be run on any machine of any
 architecture, provided that the target platform is supported by the compiler
 you use.
@@ -130,4 +130,4 @@ out/
 
 In addition to the `local` exporter, there are other exporters available. To
 learn more about the available exporters and how to use them, see the
-[exporters](/manuals/build/exporters/) documentation.
+[exporters](/build/exporters/) documentation.

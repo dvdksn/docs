@@ -82,7 +82,7 @@ To run Ollama in a container and provide GPU access:
 
 1. Install the prerequisites.
    - For Docker Engine on Linux, install the [NVIDIA Container Toolkilt](https://github.com/NVIDIA/nvidia-container-toolkit).
-   - For Docker Desktop on Windows 10/11, install the latest [NVIDIA driver](https://www.nvidia.com/Download/index.aspx) and make sure you are using the [WSL2 backend](/manuals/desktop/features/wsl/#turn-on-docker-desktop-wsl-2)
+   - For Docker Desktop on Windows 10/11, install the latest [NVIDIA driver](https://www.nvidia.com/Download/index.aspx) and make sure you are using the [WSL2 backend](/desktop/features/wsl/#turn-on-docker-desktop-wsl-2)
 2. The `docker-compose.yaml` file already contains the necessary instructions. In your own apps, you'll need to add the Ollama service in your `docker-compose.yaml`. The following is
    the updated `docker-compose.yaml`:
 
@@ -102,7 +102,7 @@ To run Ollama in a container and provide GPU access:
    ```
 
    > [!NOTE]
-   > For more details about the Compose instructions, see [Turn on GPU access with Docker Compose](/manuals/compose/how-tos/gpu-support/).
+   > For more details about the Compose instructions, see [Turn on GPU access with Docker Compose](/compose/how-tos/gpu-support/).
 
 3. Once the Ollama container is up and running it is possible to use the `download_model.sh` inside the `tools` folder with this command:
 

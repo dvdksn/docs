@@ -632,7 +632,7 @@ configuration file.
 
 2.  Create a new Docker config using the new `site.conf`, called `site-v2.conf`.
 
-    ```bah
+    ```bash
     $ docker config create site-v2.conf site.conf
     ```
 

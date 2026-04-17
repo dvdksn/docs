@@ -139,7 +139,7 @@ vulnerabilities](https://docs.docker.com/go/dhi-sla/).
 
 The following diagram shows the base image build flow:
 
-```goat
+```text
 .-------------------.      .-------------------.      .-------------------.      .-------------------.
 | Docker monitors   |----->| Trigger rebuild   |----->| AI guardrail      |----->| Human review      |
 | upstream sources  |      |                   |      | scans changes     |      |                   |
@@ -176,7 +176,7 @@ customized images and managing any CVEs introduced by your OCI artifacts.
 
 The following diagram shows the customized image build flow:
 
-```goat
+```text
 .-------------------.      .-------------------.      .-------------------.      .-------------------.
 | Docker monitors   |----->| Trigger rebuild   |----->| Fetch base        |----->| Apply             |
 | OCI artifacts     |      |                   |      | DHI image         |      | customizations    |

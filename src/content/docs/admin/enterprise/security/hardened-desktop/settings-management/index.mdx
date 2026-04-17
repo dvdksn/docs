@@ -25,10 +25,10 @@ Settings Management is designed for organizations that:
 
 Administrators can define settings using one of these methods:
 
-- [Admin Console](/manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console/): Create and assign settings policies through the
+- [Admin Console](/admin/enterprise/security/hardened-desktop/settings-management/configure-admin-console/): Create and assign settings policies through the
 Docker Admin Console. This provides a web-based interface for managing settings
 across your organization.
-- [`admin-settings.json` file](/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file/): Place a configuration file on the
+- [`admin-settings.json` file](/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/): Place a configuration file on the
 user's machine to enforce settings. This method works well for automated
 deployments and scripted installations.
 
@@ -46,7 +46,7 @@ Settings Management supports a wide range of Docker Desktop features, including:
 - Security policies
 - Cloud policies
 
-For a complete list of settings you can enforce, see the [Settings reference](/manuals/enterprise/security/hardened-desktop/settings-management/settings-reference/).
+For a complete list of settings you can enforce, see the [Settings reference](/admin/enterprise/security/hardened-desktop/settings-management/settings-reference/).
 
 ## Policy precedence
 
@@ -55,18 +55,18 @@ When multiple policies exist, Docker Desktop applies them in this order:
 1. User-specific policies: Highest priority
 1. Organization default policy: Applied when no user-specific policy exists
 1. Local `admin-settings.json` file: Lowest priority, overridden by Admin Console policies
-1. [Configuration profiles](/manuals/enterprise/security/enforce-sign-in/methods/#configuration-profiles-method-mac-only): Super-set of Docker Admin Console policies.
+1. [Configuration profiles](/admin/enterprise/security/enforce-sign-in/methods/#configuration-profiles-method-mac-only): Super-set of Docker Admin Console policies.
 
 ## Set up Settings Management
 
 You can create settings management policies at any time, but your organization needs to verify a domain before the policies take effect. 
 
-1. Check that you have [added and verified](/manuals/enterprise/security/domain-management/#add-and-verify-a-domain) your organization's domain.
-2. [Enforce sign-in](/manuals/enterprise/security/enforce-sign-in/) to
+1. Check that you have [added and verified](/admin/enterprise/security/domain-management/#add-and-verify-a-domain) your organization's domain.
+2. [Enforce sign-in](/admin/enterprise/security/enforce-sign-in/) to
 ensure all developers authenticate with your organization.
 3. Choose a configuration method:
-    - Use the `--admin-settings` installer flag on [macOS](/manuals/desktop/setup/install/mac-install/#install-from-the-command-line) or [Windows](/manuals/desktop/setup/install/windows-install/#install-from-the-command-line) to automatically create the `admin-settings.json`.
-    - Manually create and configure the [`admin-settings.json` file](/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file/).
+    - Use the `--admin-settings` installer flag on [macOS](/desktop/setup/install/mac-install/#install-from-the-command-line) or [Windows](/desktop/setup/install/windows-install/#install-from-the-command-line) to automatically create the `admin-settings.json`.
+    - Manually create and configure the [`admin-settings.json` file](/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/).
     - Create a settings policy in the [Docker Admin Console](configure-admin-console/).
 
 After configuration, developers receive the enforced settings when they:

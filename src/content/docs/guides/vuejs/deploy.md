@@ -11,7 +11,7 @@ sidebar:
 
 Before you begin, make sure you’ve completed the following:
 - Complete all the previous sections of this guide, starting with [Containerize Vue.js application](containerize/).
-- [Enable Kubernetes](/manuals/desktop/use-desktop/kubernetes/#enable-kubernetes) in Docker Desktop.
+- [Enable Kubernetes](/desktop/use-desktop/kubernetes/#enable-kubernetes) in Docker Desktop.
 
 > **New to Kubernetes?**  
 > Visit the [Kubernetes basics tutorial](https://kubernetes.io/docs/tutorials/kubernetes-basics/) to get familiar with how clusters, pods, deployments, and services work.

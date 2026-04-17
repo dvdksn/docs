@@ -318,7 +318,7 @@ Press `ctrl+c` in the terminal to stop your application.
 
 Use Compose Watch to automatically update your running Compose services as you
 edit and save your code. For more details about Compose Watch, see
-[Use Compose Watch](/manuals/compose/how-tos/file-watch/).
+[Use Compose Watch](/compose/how-tos/file-watch/).
 
 Open your `docker-compose.yaml` file in an IDE or text editor and then add the
 Compose Watch instructions. The following is the updated `docker-compose.yaml`
@@ -393,7 +393,7 @@ In this section, you took a look at running a database locally and persisting th
 Related information:
 
 - [Compose file reference](/reference/compose-file/)
-- [Compose Watch](/manuals/compose/how-tos/file-watch/)
+- [Compose Watch](/compose/how-tos/file-watch/)
 - [Dockerfile reference](/reference/dockerfile/)
 
 ## Next steps

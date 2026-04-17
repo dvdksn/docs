@@ -17,7 +17,7 @@ resulting output only contains the files that are needed to run the application.
 Using multiple stages can also let you build more efficiently by executing
 build steps in parallel.
 
-See [Multi-stage builds](/manuals/build/building/multi-stage/) for more
+See [Multi-stage builds](/build/building/multi-stage/) for more
 information.
 
 ### Create reusable stages
@@ -128,7 +128,7 @@ For example, to exclude all files with the `.md` extension:
 ```
 
 For information on creating one, see
-[Dockerignore file](/manuals/build/concepts/context/#dockerignore-files).
+[Dockerignore file](/build/concepts/context/#dockerignore-files).
 
 ## Create ephemeral containers
 
@@ -157,14 +157,14 @@ database, and an in-memory cache in a decoupled manner.
 
 Limiting each container to one process is a good rule of thumb, but it's not a
 hard and fast rule. For example, not only can containers be
-[spawned with an init process](/manuals/engine/containers/multi-service_container/),
+[spawned with an init process](/engine/containers/multi-service_container/),
 some programs might spawn additional processes of their own accord. For
 instance, [Celery](https://docs.celeryq.dev/) can spawn multiple worker
 processes, and [Apache](https://httpd.apache.org/) can create one process per
 request.
 
 Use your best judgment to keep containers as clean and modular as possible. If
-containers depend on each other, you can use [Docker container networks](/manuals/engine/network/)
+containers depend on each other, you can use [Docker container networks](/engine/network/)
 to ensure that these containers can communicate.
 
 ## Sort multi-line arguments
@@ -195,7 +195,7 @@ checks whether it can reuse the instruction from the build cache.
 Understanding how the build cache works, and how cache invalidation occurs,
 is critical for ensuring faster builds.
 For more information about the Docker build cache and how to optimize your builds,
-see [Docker build cache](/manuals/build/cache/).
+see [Docker build cache](/build/cache/).
 
 ## Pin base image versions
 
@@ -256,7 +256,7 @@ changes the version automatically, because you're in control and you have an
 audit trail of when and how the change occurred.
 
 For more information about automatically updating your base images with Docker
-Scout, see [Remediation](/manuals/scout/policy/remediation/).
+Scout, see [Remediation](/scout/policy/remediation/).
 
 ## Build and test your images in CI
 
@@ -323,10 +323,10 @@ LABEL vendor=ACME\ Incorporated \
       com.example.release-date="2015-02-12"
 ```
 
-See [Understanding object labels](/manuals/engine/manage-resources/labels/)
+See [Understanding object labels](/engine/manage-resources/labels/)
 for guidelines about acceptable label keys and values. For information about
 querying labels, refer to the items related to filtering in
-[Managing labels on objects](/manuals/engine/manage-resources/labels/#manage-labels-on-objects).
+[Managing labels on objects](/engine/manage-resources/labels/#manage-labels-on-objects).
 See also [LABEL](/reference/dockerfile/#label) in the Dockerfile reference.
 
 ### RUN
@@ -595,8 +595,8 @@ For more information about `ENV`, see [Dockerfile reference for the ENV instruct
 ### ADD or COPY
 
 `ADD` and `COPY` are functionally similar. `COPY` supports basic copying of
-files into the container, from the [build context](/manuals/build/concepts/context/)
-or from a stage in a [multi-stage build](/manuals/build/building/multi-stage/).
+files into the container, from the [build context](/build/concepts/context/)
+or from a stage in a [multi-stage build](/build/building/multi-stage/).
 `ADD` supports features for fetching files from remote HTTPS and Git URLs, and
 extracting tar files automatically when adding files from the build context.
 

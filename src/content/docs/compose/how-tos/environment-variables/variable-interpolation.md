@@ -52,7 +52,7 @@ For braced expressions, the following formats are supported:
   - `${VAR:+replacement}` -> `replacement` if `VAR` is set and non-empty, otherwise empty
   - `${VAR+replacement}` -> `replacement` if `VAR` is set, otherwise empty
 
-For more information, see [Interpolation](/reference/compose-file/interpolation/) in the Compose Specification. 
+For more information, see [Interpolation](/compose/how-tos/environment-variables/variable-interpolation/) in the Compose Specification. 
 
 ## Ways to set variables with interpolation
 

@@ -7,7 +7,7 @@ keywords: Docker Desktop for Windows, edge, release notes
 This page contains information about Docker Desktop Edge releases. Edge releases give you early access to our newest features. Note that some of the features may be experimental, and some of them may not ever reach the Stable release.
 
  For Docker Desktop system requirements, see
-[What to know before you install](/manuals/desktop/setup/install/windows-install/#system-requirements).
+[What to know before you install](/desktop/setup/install/windows-install/#system-requirements).
 
 ## Docker Desktop Community 2.5.4
 2020-12-07
@@ -475,7 +475,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
 ### Bug fixes and minor changes
 
 - Added a prerequisite check in the installer for the `LanmanServer` service. Fixes [docker/for-win#5150](https://github.com/docker/for-win/issues/5150).
-- DockerNAT has been removed from Docker Desktop as using an IP address to communicate from the host to a container is not a supported feature. To communicate from a container to the host, you must use the special DNS name `host.docker.internal`. We also recommend using ports to communicate from the host to a container. For more information, see [Networking](/manuals/desktop/features/networking/).
+- DockerNAT has been removed from Docker Desktop as using an IP address to communicate from the host to a container is not a supported feature. To communicate from a container to the host, you must use the special DNS name `host.docker.internal`. We also recommend using ports to communicate from the host to a container. For more information, see [Networking](/desktop/features/networking/).
 - Ceph support has been removed from Docker Desktop to save disk space.
 - Fixed an issue that caused the Windows log file archive to grow indefinitely. Fixes [docker/for-win#5113](https://github.com/docker/for-win/issues/5113).
 
@@ -511,7 +511,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
 
 ### Known issues
 
-- DockerNAT has been removed from Docker Desktop 2.2.0.0 as using an IP address to communicate from the host to a container is not a supported feature. To communicate from a container to the host, you must use the special DNS name `host.docker.internal`. We also recommend using ports to communicate from the host to a container. For more information, see [Networking](/manuals/desktop/features/networking/).
+- DockerNAT has been removed from Docker Desktop 2.2.0.0 as using an IP address to communicate from the host to a container is not a supported feature. To communicate from a container to the host, you must use the special DNS name `host.docker.internal`. We also recommend using ports to communicate from the host to a container. For more information, see [Networking](/desktop/features/networking/).
 
   However, if your current setup relies on IP addresses for communication, you can use a temporary workaround to reinstate DockerNAT. To do this, open
 `C:\Program Files\Docker\Docker\resources\MobyLinux.ps1` and add `$SwitchName = "DockerNAT"` between line 175 and 176. Note that the temporary workaround to reinstate DockerNAT may be removed from future releases.
@@ -619,7 +619,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
 
   To access the Dashboard UI, select the Docker menu from the system tray and then click **Dashboard**.
 
-- **WSL 2 backend:** The new Docker Desktop WSL 2 backend replaces the Docker Desktop WSL 2 Tech Preview. The WSL 2 backend architecture introduces support for Kubernetes, provides an updated Docker daemon, offers VPN-friendly networking, and additional features. For more information, see [Docker Desktop WSL 2 backend](/manuals/desktop/features/wsl/).
+- **WSL 2 backend:** The new Docker Desktop WSL 2 backend replaces the Docker Desktop WSL 2 Tech Preview. The WSL 2 backend architecture introduces support for Kubernetes, provides an updated Docker daemon, offers VPN-friendly networking, and additional features. For more information, see [Docker Desktop WSL 2 backend](/desktop/features/wsl/).
 
 - **New file sharing implementation:** Docker Desktop introduces a new file sharing implementation which uses gRPC, FUSE, and Hypervisor sockets instead of Samba, CIFS, and Hyper-V networking. The new implementation  offers improved I/O performance. Additionally, when using the new file system:
 
@@ -694,7 +694,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
 
 #### New
 
-- [Docker Desktop WSL 2 Tech Preview](/manuals/desktop/features/wsl/)
+- [Docker Desktop WSL 2 Tech Preview](/desktop/features/wsl/)
 
 #### Bug fixes and minor changes
 
@@ -949,7 +949,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
   - New Kubernetes menu item allowing to switch Kubernetes context & connect to clusters other than the local one.
 
 * Bug fixes and minor changes
-  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Settings > Reset menu) before updating to the next major update. You can check documentation to [save images](/reference/cli/docker/image/save/#examples) and [back up volumes](/manuals/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes)
+  - AUFS storage driver is deprecated in Docker Desktop and AUFS support will be removed in the next major release. You can continue with AUFS in Docker Desktop 18.06.x, but you will need to reset disk image (in Settings > Reset menu) before updating to the next major update. You can check documentation to [save images](/reference/cli/docker/image/save/#examples) and [back up volumes](/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes)
   - Fix startup issue with AUFS
   - Fix status bug which could prevent the kubernetes cluster from starting.
   - Fix bug which would cause VM logs to be written to RAM rather than disk in some cases, and the VM to hang.
@@ -1089,7 +1089,7 @@ This release contains a Kubernetes upgrade. Note that your local Kubernetes clus
   - [Docker 18.02.0-ce-rc1](https://github.com/docker/docker-ce/releases/tag/v18.02.0-ce-rc1)
 
 * New
-  - Experimental Kubernetes Support. You can now run a single-node Kubernetes cluster from the "Kubernetes" Pane in Docker for Windows settings and use kubectl commands as well as docker commands. See [the Kubernetes section](/manuals/desktop/use-desktop/kubernetes/).
+  - Experimental Kubernetes Support. You can now run a single-node Kubernetes cluster from the "Kubernetes" Pane in Docker for Windows settings and use kubectl commands as well as docker commands. See [the Kubernetes section](/desktop/use-desktop/kubernetes/).
   - LCOW containers can now be run next to Windows containers (on Windows RS3 build 16299 and later). Use `--platform=linux` in Windows container mode to run Linux Containers On Windows. Note that LCOW is still experimental, and requires daemon `experimental` option.
 
 * Bug fixes and minor changes
@@ -1727,7 +1727,7 @@ registry access (fixes [docker/for-win#569](https://github.com/docker/for-win/is
 **New**
 
 - Windows containers settings panel and options are working. In previous releases, settings were not implemented for
-[Windows containers mode](/manuals/desktop/troubleshoot-and-support/faqs/windowsfaqs/#how-do-i-switch-between-windows-and-linux-containers).
+[Windows containers mode](/desktop/troubleshoot-and-support/faqs/windowsfaqs/#how-do-i-switch-between-windows-and-linux-containers).
 - Windows containers: Restart from the settings panel works
 - Windows containers: Factory default
 - Windows containers: `Daemon.json` can be modified
@@ -1996,7 +1996,7 @@ work. Some insider builds may not work.
 **Known issues**
 
 * Only UTF-8 passwords are supported for host filesystem sharing
-* Docker automatically disables lingering net adapters. The only way to remove them is manually using `devmgmt.msc` as documented in [Troubleshooting](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
+* Docker automatically disables lingering net adapters. The only way to remove them is manually using `devmgmt.msc` as documented in [Troubleshooting](/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
 
 ### Beta 22 Release (2016-08-11 1.12.0-beta22)
 
@@ -2004,13 +2004,13 @@ Unreleased. See Beta 23 for changes.
 
 **Known issues**
 
-* Docker automatically disables lingering net adapters. The only way to remove them is manually using `devmgmt.msc` as documented in [Troubleshooting](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
+* Docker automatically disables lingering net adapters. The only way to remove them is manually using `devmgmt.msc` as documented in [Troubleshooting](/desktop/troubleshoot-and-support/troubleshoot/known-issues/).
 
 ### Beta 21 Release (2016-07-28 1.12.0-beta21)
 
 **New**
 
-* Docker for Windows is now available from two channels: **stable** and **beta**. New features and bug fixes go out first in auto-updates to users in the beta channel. Updates to the stable channel are much less frequent and happen in sync with major and minor releases of the Docker Engine. Only features that are well-tested and ready for production are added to the stable channel releases. For downloads of both and more information, see [Install Docker Desktop on Windows](/manuals/desktop/setup/install/windows-install/).
+* Docker for Windows is now available from two channels: **stable** and **beta**. New features and bug fixes go out first in auto-updates to users in the beta channel. Updates to the stable channel are much less frequent and happen in sync with major and minor releases of the Docker Engine. Only features that are well-tested and ready for production are added to the stable channel releases. For downloads of both and more information, see [Install Docker Desktop on Windows](/desktop/setup/install/windows-install/).
 
 * Removed the docker host name. Containers with exported ports are reachable via localhost.
 
@@ -2281,7 +2281,7 @@ This Beta release includes some significant changes:
 * The GUI now runs in non-elevated mode and connects to an elevated Windows service
 * Allocate virtual machine memory by 256 MB increments, instead of 1 GB
 * Show a meaningful error when the user has an empty password
-* Improved [Troubleshooting](/manuals/desktop/troubleshoot-and-support/troubleshoot/) page
+* Improved [Troubleshooting](/desktop/troubleshoot-and-support/troubleshoot/) page
 
 **Upgrades**
 
@@ -2305,7 +2305,7 @@ This Beta release includes some significant changes:
 
 **Known issues**
 
-* Due to limitation in the Windows NAT implementation, co-existence with other NAT prefixes needs to be carefully managed. See [Troubleshooting](/manuals/desktop/troubleshoot-and-support/troubleshoot/known-issues/) for more details.
+* Due to limitation in the Windows NAT implementation, co-existence with other NAT prefixes needs to be carefully managed. See [Troubleshooting](/desktop/troubleshoot-and-support/troubleshoot/known-issues/) for more details.
 
 * Logs for the windows service are not aggregated with logs from the GUI. This is expected to be fixed in future versions.
 
@@ -2333,7 +2333,7 @@ This Beta release includes some significant changes:
 
 **Known issues**
 
-*  Due to limitation in the Windows NAT implementation, co-existence with other NAT prefixes needs to be carefully managed. See [Troubleshooting](/manuals/desktop/troubleshoot-and-support/troubleshoot/) for more details.
+*  Due to limitation in the Windows NAT implementation, co-existence with other NAT prefixes needs to be carefully managed. See [Troubleshooting](/desktop/troubleshoot-and-support/troubleshoot/) for more details.
 
 
 ### Beta 9 Release (2016-04-26 1.11.0-beta9)

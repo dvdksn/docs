@@ -17,16 +17,16 @@ testing, and artifact generation.
 This guide assumes that you're familiar with:
 
 - Docker
-- [Buildx](/manuals/build/concepts/overview/#buildx)
-- [BuildKit](/manuals/build/concepts/overview/#buildkit)
-- [Multi-stage builds](/manuals/build/building/multi-stage/)
-- [Multi-platform builds](/manuals/build/building/multi-platform/)
+- [Buildx](/build/concepts/overview/#buildx)
+- [BuildKit](/build/concepts/overview/#buildkit)
+- [Multi-stage builds](/build/building/multi-stage/)
+- [Multi-platform builds](/build/building/multi-platform/)
 
 ## Prerequisites
 
 - You have a recent version of Docker installed on your machine.
 - You have Git installed for cloning repositories.
-- You're using the [containerd](/manuals/desktop/features/containerd/) image store.
+- You're using the [containerd](/desktop/features/containerd/) image store.
 
 ## Introduction
 
@@ -72,7 +72,7 @@ line. Here's a quick summary of the options for the `default` target:
 
 - `target`: The target build stage in the Dockerfile.
 - `tags`: Tags to assign to the image.
-- `attest`: [Attestations](/manuals/build/metadata/attestations/) to attach to the image.
+- `attest`: [Attestations](/build/metadata/attestations/) to attach to the image.
 
   > [!TIP]
   > The attestations provide metadata such as build provenance, which tracks
@@ -155,7 +155,7 @@ RUN --mount=target=. \
 ```
 
 > [!TIP]
-> The [`--mount=type=cache` directive](/manuals/build/cache/optimize/#use-cache-mounts)
+> The [`--mount=type=cache` directive](/build/cache/optimize/#use-cache-mounts)
 > caches Go modules between builds, improving build performance by avoiding the
 > need to re-download dependencies. This shared cache ensures that the same
 > dependency set is available across build, test, and other stages.
@@ -213,7 +213,7 @@ $ docker buildx bake validate
 
 Sometimes you need to build more than one version of a program. The following
 example uses Bake to build separate "release" and "debug" variants of the
-program, using [matrices](/manuals/build/bake/matrices/). Using matrices lets
+program, using [matrices](/build/bake/matrices/). Using matrices lets
 you run parallel builds with different configurations, saving time and ensuring
 consistency.
 
@@ -373,7 +373,7 @@ export it to `./build/local` on the local filesystem.
 In the `docker-bake.hcl` file, create a new `bin` target. In this stage, set
 the `output` attribute to a local filesystem path. Buildx automatically detects
 that the output looks like a filepath, and exports the results to the specified
-path using the [local exporter](/manuals/build/exporters/local-tar/).
+path using the [local exporter](/build/exporters/local-tar/).
 
 ```hcl
 target "bin" {
@@ -410,7 +410,7 @@ $ file ./build/bin/bakeme
 ```
 
 Next, let's add a target to build all of the platform variants of the program.
-To do this, you can [inherit](/manuals/build/bake/inheritance/) the `bin`
+To do this, you can [inherit](/build/bake/inheritance/) the `bin`
 target that you just created, and extend it by adding the desired platforms.
 
 ```hcl
@@ -503,7 +503,7 @@ deployment processes.
 
 For more information about how to use Bake, check out these resources:
 
-- [Bake documentation](/manuals/build/bake/)
-- [Matrix targets](/manuals/build/bake/matrices/)
-- [Bake file reference](/manuals/build/bake/reference/)
+- [Bake documentation](/build/bake/)
+- [Matrix targets](/build/bake/matrices/)
+- [Bake file reference](/build/bake/reference/)
 - [Bake GitHub Action](https://github.com/docker/bake-action)

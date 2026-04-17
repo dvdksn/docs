@@ -43,7 +43,7 @@ documentation](/offload/).
 >
 > Support for running Docker Desktop on a virtual desktop is available to Docker Business customers, on VMware ESXi or Azure VMs only.
 
-Docker support includes installing and running Docker Desktop within the VM, provided that nested virtualization is correctly enabled. The only hypervisors successfully tested are VMware ESXi and Azure, and there is no support for other VMs. For more information on Docker Desktop support, see [Get support](/manuals/support/).
+Docker support includes installing and running Docker Desktop within the VM, provided that nested virtualization is correctly enabled. The only hypervisors successfully tested are VMware ESXi and Azure, and there is no support for other VMs. For more information on Docker Desktop support, see [Get support](/admin/support/).
 
 For troubleshooting problems and intermittent failures that are outside of Docker's control, you should contact your hypervisor vendor. Each hypervisor vendor offers different levels of support. For example, Microsoft supports running nested Hyper-V both on-prem and on Azure, with some version constraints. This may not be the case for VMware ESXi.
 
@@ -92,4 +92,4 @@ For WSL 2-related issues, contact Nutanix support. For Docker Desktop-specific i
 
 ## Additional resources
 
-- [Docker Desktop on Microsoft Dev Box](/manuals/enterprise/enterprise-deployment/dev-box/)
+- [Docker Desktop on Microsoft Dev Box](/admin/enterprise/enterprise-deployment/dev-box/)

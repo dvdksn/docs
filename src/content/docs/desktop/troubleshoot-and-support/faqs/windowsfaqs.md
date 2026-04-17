@@ -42,7 +42,7 @@ Docker Desktop creates a certificate bundle of all user-trusted CAs based on
 the Windows certificate store, and appends it to Moby trusted certificates. Therefore, if an enterprise SSL certificate is trusted by the user on the host, it is trusted by Docker Desktop.
 
 To learn more about how to install a CA root certificate for the registry, see
-[Verify repository client with certificates](/manuals/engine/security/certificates/)
+[Verify repository client with certificates](/engine/security/certificates/)
 in the Docker Engine topics.
 
 ### How do I add client certificates?
@@ -59,12 +59,12 @@ You need to restart Docker Desktop after making any changes to the keychain
 or to the `~/.docker/certs.d` directory in order for the changes to take effect.
 
 The registry cannot be listed as an insecure registry (see
-[Docker Daemon](/manuals/desktop/settings-and-maintenance/settings/#docker-engine)). Docker Desktop ignores
+[Docker Daemon](/desktop/settings-and-maintenance/settings/#docker-engine)). Docker Desktop ignores
 certificates listed under insecure registries, and does not send client
 certificates. Commands like `docker run` that attempt to pull from the registry
 produce error messages on the command line, as well as on the registry.
 
 To learn more about how to set the client TLS certificate for verification, see
-[Verify repository client with certificates](/manuals/engine/security/certificates/)
+[Verify repository client with certificates](/engine/security/certificates/)
 in the Docker Engine topics.
 

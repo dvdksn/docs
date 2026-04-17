@@ -37,7 +37,7 @@ To specify the `mode` or `version` parameters using the shorthand option, use:
 `--provenance=mode=max,version=v1`.
 
 For an example on how to add provenance attestations with GitHub Actions, see
-[Add attestations with GitHub Actions](/manuals/build/ci/github-actions/attestations/).
+[Add attestations with GitHub Actions](/build/ci/github-actions/attestations/).
 
 ## Mode
 

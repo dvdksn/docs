@@ -1,0 +1,32 @@
+---
+/**
+ * PageTitle override.
+ *
+ * Starlight renders <h1 id="_top">{title}</h1> at the top of every page,
+ * including splash-template pages without a `hero:` frontmatter. A few
+ * routes render their own typographic hero and don't want a duplicate
+ * default title above it. List those routes here.
+ *
+ * Everything else falls through to the default behavior.
+ */
+// Mirrors `PAGE_TITLE_ID` from `@astrojs/starlight/constants`, which is
+// not an exported subpath of the package.
+const PAGE_TITLE_ID = '_top';
+
+const SUPPRESS = new Set(['/', '/guides/']);
+const suppressed = SUPPRESS.has(Astro.url.pathname);
+---
+
+{!suppressed && (
+  <h1 id={PAGE_TITLE_ID}>{Astro.locals.starlightRoute.entry.data.title}</h1>
+)}
+
+<style>
+  h1 {
+    margin-top: 1rem;
+    font-size: var(--sl-text-h1);
+    line-height: var(--sl-line-height-headings);
+    font-weight: 600;
+    color: var(--sl-color-white);
+  }
+</style>

@@ -40,12 +40,12 @@ The following table summarizes typical setups in more detail:
 
 ## How containers connect to the internet
 
-Each Linux container in Docker Desktop runs inside a small virtual network managed by Docker and every container is attached to a Docker-managed network and receives its own internal IP address. You can view and manage these networks with `docker network ls`, `docker network create`, and `docker network inspect`. They are managed by the [`daemon.json`](/manuals/engine/daemon/).
+Each Linux container in Docker Desktop runs inside a small virtual network managed by Docker and every container is attached to a Docker-managed network and receives its own internal IP address. You can view and manage these networks with `docker network ls`, `docker network create`, and `docker network inspect`. They are managed by the [`daemon.json`](/engine/daemon/).
 
 When a container initiates a network request, for example with `apt-get update` or `docker pull`:
 
 - The container’s `eth0` interface connects to a virtual bridge (`docker0`) inside the VM.
-- Outbound traffic from the container is sent through Network Address Translation (NAT) using a virtual adapter (typically with an internal IP such as `192.168.65.3`). You can view or change this with the [Docker Desktop settings](/manuals/desktop/settings-and-maintenance/settings/#network).
+- Outbound traffic from the container is sent through Network Address Translation (NAT) using a virtual adapter (typically with an internal IP such as `192.168.65.3`). You can view or change this with the [Docker Desktop settings](/desktop/settings-and-maintenance/settings/#network).
 - The traffic is transferred to the host system over a shared-memory channel rather than through a traditional virtual network interface. This approach ensures reliable communication and avoids conflicts with host-level network adapters or firewall configurations.
 - On the host, Docker Desktop’s backend process receives the traffic and creates standard TCP/IP connections using the same networking APIs as other applications.
 
@@ -62,13 +62,13 @@ For example, with `docker run -p 80:80 nginx`:
 - Inside the VM, the connection is routed to the container’s internal IP address and port, for example `172.17.0.2:80`.
 - The container responds through the same path, so you can access it from your host just like any other local service.
 
-By default, `docker run -p` listens on all network interfaces (`0.0.0.0`), but you can restrict it to a specific address, such as `127.0.0.1` (`localhost`) or a particular network adapter. This behavior can be modified to bind to `localhost` by default in [Docker Desktop's network settings](/manuals/desktop/settings-and-maintenance/settings/#network)
+By default, `docker run -p` listens on all network interfaces (`0.0.0.0`), but you can restrict it to a specific address, such as `127.0.0.1` (`localhost`) or a particular network adapter. This behavior can be modified to bind to `localhost` by default in [Docker Desktop's network settings](/desktop/settings-and-maintenance/settings/#network)
 
 Host firewalls can permit or deny inbound connections by filtering on `com.docker.backend`.
 
 ## Using Docker Desktop with a proxy
 
-Docker Desktop can use your system’s default proxy settings or custom settings that you configure with [Docker Desktop's proxy setting](/manuals/desktop/settings-and-maintenance/settings/#proxies). All proxy traffic passes through `com.docker.backend.exe`.
+Docker Desktop can use your system’s default proxy settings or custom settings that you configure with [Docker Desktop's proxy setting](/desktop/settings-and-maintenance/settings/#proxies). All proxy traffic passes through `com.docker.backend.exe`.
 
 When a proxy is enabled:
 

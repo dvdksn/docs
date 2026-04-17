@@ -11,7 +11,7 @@ sidebar:
 ## Prerequisites
 
 * You have installed the latest version of [Docker
-  Desktop](/get-started/get-docker/).
+  Desktop](/get-started/install/).
 * You have a [git client](https://git-scm.com/downloads). The examples in this
   section use a command-line based git client, but you can use any client.
 
@@ -217,7 +217,7 @@ application using Docker.
 Related information:
  - [Dockerfile reference](/reference/dockerfile/)
  - [.dockerignore file reference](/reference/dockerfile/#dockerignore-file)
- - [Docker Compose overview](/manuals/compose/)
+ - [Docker Compose overview](/compose/)
  - [Docker Hardened Images](/dhi/)
 
 ## Next steps

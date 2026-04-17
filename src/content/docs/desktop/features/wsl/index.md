@@ -16,7 +16,7 @@ Because WSL 2 uses dynamic memory allocation, Docker Desktop requests only the C
 Before you turn on the Docker Desktop WSL 2 feature, ensure you have:
 
 - At a minimum WSL version 2.1.5, but ideally the latest version of WSL to [avoid Docker Desktop not working as expected](best-practices/).
-- Met the Docker Desktop for Windows' [system requirements](/manuals/desktop/setup/install/windows-install/#system-requirements).
+- Met the Docker Desktop for Windows' [system requirements](/desktop/setup/install/windows-install/#system-requirements).
 - Installed the WSL 2 feature on Windows. For detailed instructions, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
 > [!TIP]
@@ -44,7 +44,7 @@ that was installed directly inside a WSL Linux distribution. Running both can ca
 >
 > By default, Docker Desktop stores the data for the WSL 2 engine at `C:\Users\[USERNAME]\AppData\Local\Docker\wsl`.
 > If you want to change the location, go to `Settings -> Resources -> Advanced` page from the Docker Dashboard.
-> Read more about this and other Windows settings at [Changing settings](/manuals/desktop/settings-and-maintenance/settings/)
+> Read more about this and other Windows settings at [Changing settings](/desktop/settings-and-maintenance/settings/)
 
 ## Enable Docker in a WSL 2 distribution
 
@@ -91,11 +91,11 @@ WSL is designed to aid interoperability between Windows and Linux environments. 
 For environments that require stricter isolation:
 
 - Run Docker Desktop in Hyper-V mode instead of WSL 2 to avoid the shared-kernel model entirely.
-- Enable [Enhanced Container Isolation](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/) to add an additional layer of protection around container workloads regardless of backend.
+- Enable [Enhanced Container Isolation](/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/) to add an additional layer of protection around container workloads regardless of backend.
 
 ## Additional resources
 
 - [Explore best practices](best-practices/)
 - [Understand how to develop with Docker and WSL 2](use-wsl/)
-- [Learn about GPU support with WSL 2](/manuals/desktop/features/gpu/)
+- [Learn about GPU support with WSL 2](/desktop/features/gpu/)
 - [Custom kernels on WSL](custom-kernels/)

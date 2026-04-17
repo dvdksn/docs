@@ -6,7 +6,7 @@ keywords: kubernetes, pods, deployments, kubernetes services
 
 ## Prerequisites
 
-- Download and install Docker Desktop as described in [Get Docker](/get-started/get-docker/).
+- Download and install Docker Desktop as described in [Get Docker](/get-started/install/).
 - Work through containerizing an application in [Part 2](02_our_app/).
 - Make sure that Kubernetes is turned on in Docker Desktop:
   If Kubernetes isn't running, follow the instructions in [Orchestration](orchestration/) to finish setting it up.

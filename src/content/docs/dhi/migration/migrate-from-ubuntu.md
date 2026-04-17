@@ -94,7 +94,7 @@ encounter missing packages, you can search for equivalent packages using the
 > and therefore result in a larger image with a broader attack surface.
 
 To ensure that your final image is as minimal as possible, you should use a
-[multi-stage build](/manuals/build/building/multi-stage/). All stages in your
+[multi-stage build](/build/building/multi-stage/). All stages in your
 Dockerfile should use a hardened image. While intermediary stages will typically
 use images tagged as `dev` or `sdk`, your final runtime stage should use a runtime image.
 

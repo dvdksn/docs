@@ -45,7 +45,7 @@ Dockerfile  hello.cpp
 
 Open the `Dockerfile` in an IDE or text editor. The `Dockerfile` contains the instructions for building the Docker image.
 
-```Dockerfile
+```dockerfile
 # Stage 1: Build stage
 FROM ubuntu:latest AS build
 

@@ -156,4 +156,4 @@ on disk but becomes hidden.
 
 To learn more about the containerd image store and its capabilities in Docker
 Desktop, see
-[containerd image store on Docker Desktop](/manuals/desktop/features/containerd/).
+[containerd image store on Docker Desktop](/desktop/features/containerd/).

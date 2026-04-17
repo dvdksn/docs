@@ -523,7 +523,7 @@ in the subdirectory `foo` under the root of the build context:
 If a line in `.dockerignore` file starts with `#` in column 1, then this line
 is considered as a comment and is ignored before interpreted by the CLI.
 
-```gitignore
+```text
 #/this/is/a/comment
 ```
 
@@ -733,7 +733,7 @@ reference can be a local image or an image in your registry.
 
 ### Named contexts with Bake
 
-[Bake](/manuals/build/bake/) is a tool built into `docker build` that
+[Bake](/build/bake/) is a tool built into `docker build` that
 lets you manage your build configuration with a configuration file. Bake fully
 supports named contexts.
 
@@ -803,4 +803,4 @@ $ docker buildx bake app
 For more information about working with named contexts, see:
 
 - [`--build-context` CLI reference](/reference/cli/docker/buildx/build/#build-context)
-- [Using Bake with additional contexts](/manuals/build/bake/contexts/)
+- [Using Bake with additional contexts](/build/bake/contexts/)

@@ -42,8 +42,8 @@ Use the repository allowlist when you need to:
 
 Before configuring Image Access Management, you must:
 
-- [Enforce sign-in](/manuals/enterprise/security/enforce-sign-in/). Image Access Management only takes effect when users are signed in to Docker Desktop with organization credentials.
-- Use [personal access tokens (PATs)](/manuals/security/access-tokens/) for authentication (Organization access tokens aren't supported)
+- [Enforce sign-in](/admin/enterprise/security/enforce-sign-in/). Image Access Management only takes effect when users are signed in to Docker Desktop with organization credentials.
+- Use [personal access tokens (PATs)](/admin/security/access-tokens/) for authentication (Organization access tokens aren't supported)
 - Have a Docker Business subscription
 
 ## Configure image access
@@ -107,7 +107,7 @@ Image access restrictions apply to all Docker Hub operations including pulls, bu
 
 ## Scope and bypass considerations
 
-- Image Access Management only controls access to Docker Hub images. Images from other registries aren't affected by these policies. Use [Registry Access Management](/manuals/enterprise/security/hardened-desktop/registry-access-management/) to control access to other registries.
+- Image Access Management only controls access to Docker Hub images. Images from other registries aren't affected by these policies. Use [Registry Access Management](/admin/enterprise/security/hardened-desktop/registry-access-management/) to control access to other registries.
 - Users can potentially bypass Image Access Management by signing out of Docker Desktop (unless sign-in is enforced), using images from other registries that aren't restricted, or using registry mirrors or proxies. Enforce sign-in and combine with Registry Access Management for comprehensive control.
 - Image restrictions apply to Dockerfile `FROM` instructions, Docker Compose services using restricted images will fail, multi-stage builds may be affected if intermediate images are restricted, and CI/CD pipelines using diverse image types may be impacted.
 

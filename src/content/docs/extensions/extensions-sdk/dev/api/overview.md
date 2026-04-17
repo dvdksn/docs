@@ -15,7 +15,7 @@ JavaScript API libraries, with Typescript support, are available in order to get
 - [@docker/extension-api-client](https://www.npmjs.com/package/@docker/extension-api-client) gives access to the extension API entrypoint `DockerDesktopClient`.
 - [@docker/extension-api-client-types](https://www.npmjs.com/package/@docker/extension-api-client-types) can be added as a dev dependency in order to get types auto-completion in your IDE.
 
-```Typescript
+```typescript
 import { createDockerDesktopClient } from '@docker/extension-api-client';
 
 export function App() {

@@ -13,7 +13,7 @@ Common questions about installing Docker Desktop using the MSI installer.
 
 ### What happens to user data if they have an older Docker Desktop installation (i.e. `.exe`)?
 
-Users must [uninstall](/manuals/desktop/uninstall/) older `.exe` installations before using the new MSI version. The `.exe` installer includes a `-keep-data` flag that removes Docker Desktop while preserving underlying resources such as the container VMs:
+Users must [uninstall](/desktop/uninstall/) older `.exe` installations before using the new MSI version. The `.exe` installer includes a `-keep-data` flag that removes Docker Desktop while preserving underlying resources such as the container VMs:
 
 ```powershell
 & 'C:\Program Files\Docker\Docker\Docker Desktop Installer.exe' uninstall -keep-data

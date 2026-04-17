@@ -41,7 +41,7 @@ people, or builds in a CI environment. When you've imported a build record, it
 gives you full access to the logs, traces, and other data for that build,
 directly in Docker Desktop. 
 
-The [build summary](/manuals/build/ci/github-actions/build-summary/)
+The [build summary](/build/ci/github-actions/build-summary/)
 for the `docker/build-push-action` and `docker/bake-action` GitHub Actions
 includes a link to download the build records, for inspecting CI jobs with
 Docker Desktop.
@@ -58,7 +58,7 @@ top-right of this tab lets you filter the information down to a specific
 platform:
 
 The **Source details** section shows information about the frontend
-[frontend](/manuals/build/buildkit/frontend/) and, if available,
+[frontend](/build/buildkit/frontend/) and, if available,
 the source code repository used for the build.
 
 ### Build timing
@@ -83,8 +83,8 @@ operations are defined as follows:
 | HTTP                 | Remote artifact downloads using `ADD`.                                                                                                                                          |
 | Git                  | Same as **HTTP** but for Git URLs.                                                                                                                                              |
 | Result exports       | Time spent exporting the build results.                                                                                                                                         |
-| SBOM                 | Time spent generating the [SBOM attestation](/manuals/build/metadata/attestations/sbom/).                                                                                                 |
-| Idle                 | Idle time for build workers, which can happen if you have configured a [max parallelism limit](/manuals/build/buildkit/configure/#max-parallelism).                              |
+| SBOM                 | Time spent generating the [SBOM attestation](/build/metadata/attestations/sbom/).                                                                                                 |
+| Idle                 | Idle time for build workers, which can happen if you have configured a [max parallelism limit](/build/buildkit/configure/#max-parallelism).                              |
 
 ### Build dependencies
 
@@ -113,7 +113,7 @@ including image manifest details, attestations, and build traces.
 Attestations are metadata records attached to a container image.
 The metadata describes something about the image,
 for example how it was built or what packages it contains.
-For more information about attestations, see [Build attestations](/manuals/build/metadata/attestations/).
+For more information about attestations, see [Build attestations](/build/metadata/attestations/).
 
 Build traces capture information about the build execution steps in Buildx and
 BuildKit. The traces are available in two formats: OTLP and Jaeger. You can
@@ -151,7 +151,7 @@ Now you can analyze the build trace using the Jaeger UI:
 ### Dockerfile source and errors
 
 When inspecting a successful completed build or an ongoing active build,
-the **Source** tab shows the [frontend](/manuals/build/buildkit/frontend/)
+the **Source** tab shows the [frontend](/build/buildkit/frontend/)
 used to create the build.
 
 If the build failed, an **Error** tab displays instead of the **Source** tab.
@@ -193,4 +193,4 @@ The **Builder** tab in **Settings** lets you:
 - Delete build history
 - Add or remove builders (or connect and disconnect, in the case of cloud builders)
 
-For more information about managing builders, see [Change settings](/manuals/desktop/settings-and-maintenance/settings/#builders)
+For more information about managing builders, see [Change settings](/desktop/settings-and-maintenance/settings/#builders)

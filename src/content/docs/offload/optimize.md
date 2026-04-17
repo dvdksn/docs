@@ -23,11 +23,11 @@ several ways to optimize your setup for Docker Offload:
 - [Fetch remote files during the build](#fetch-remote-files-in-build)
 - [Leverage multi-threaded tools](#multi-threaded-tools)
 
-For general Dockerfile tips, see [Building best practices](/manuals/build/building/best-practices/).
+For general Dockerfile tips, see [Building best practices](/build/building/best-practices/).
 
 ## dockerignore files
 
-A [`.dockerignore` file](/manuals/build/concepts/context/#dockerignore-files)
+A [`.dockerignore` file](/build/concepts/context/#dockerignore-files)
 lets you specify which local files should *not* be included in the build
 context. Files excluded by these patterns won’t be uploaded to Docker Offload
 during a build.

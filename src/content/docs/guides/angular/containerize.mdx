@@ -13,11 +13,11 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
 
 Before you begin, make sure the following tools are installed and available on your system:
 
-- You have installed the latest version of [Docker Desktop](/get-started/get-docker/).
+- You have installed the latest version of [Docker Desktop](/get-started/install/).
 - You have a [git client](https://git-scm.com/downloads). The examples in this section use a command-line based git client, but you can use any client.
 
 > **New to Docker?**  
-> Start with the [Docker basics](/get-started/docker-concepts/the-basics/what-is-a-container/) guide to get familiar with key concepts like images, containers, and Dockerfiles.
+> Start with the [Docker basics](/get-started/overview/) guide to get familiar with key concepts like images, containers, and Dockerfiles.
 
 ---
 
@@ -268,7 +268,7 @@ The `.dockerignore` file tells Docker which files and folders to exclude when bu
 
 Copy and replace the contents of your existing `.dockerignore` with the configuration below:
 
-```dockerignore
+```text
 # ================================
 # Node and build output
 # ================================
@@ -459,7 +459,7 @@ What this command does:
 
 #### Step 6:  View local images
 
-After building your Docker image, you can check which images are available on your local machine using either the Docker CLI or [Docker Desktop](/manuals/desktop/use-desktop/images/). Since you're already working in the terminal, let's use the Docker CLI.
+After building your Docker image, you can check which images are available on your local machine using either the Docker CLI or [Docker Desktop](/desktop/use-desktop/images/). Since you're already working in the terminal, let's use the Docker CLI.
 
 To list all locally available Docker images, run the following command:
 

@@ -15,7 +15,7 @@ open-source projects that have been deprecated, retired, or transitioned.
 >
 > This page does not cover deprecated and removed Docker Engine features.
 > For a detailed list of deprecated Docker Engine features, refer to the
-> [Docker Engine Deprecated Features documentation](/manuals/engine/deprecated/).
+> [Docker Engine Deprecated Features documentation](/engine/deprecated/).
 
 ## Products and features
 
@@ -27,8 +27,8 @@ to receive updates from their new maintainers.
 
 Docker Machine was a tool for provisioning and managing Docker hosts across
 various platforms, including virtual machines and cloud providers. It is no
-longer maintained, and users are encouraged to use [Docker Desktop](/manuals/desktop/)
-or [Docker Engine](/manuals/engine/) directly on supported platforms.
+longer maintained, and users are encouraged to use [Docker Desktop](/desktop/)
+or [Docker Engine](/engine/) directly on supported platforms.
 Machine's approach to creating and configuring hosts has been superseded by
 more modern workflows that integrate more closely with Docker Desktop.
 
@@ -37,7 +37,7 @@ more modern workflows that integrate more closely with Docker Desktop.
 Docker Toolbox was used on older systems where Docker Desktop could not run. It
 bundled Docker Machine, Docker Engine, and Docker Compose into a single
 installer. Toolbox is no longer maintained and is effectively replaced by
-[Docker Desktop](/manuals/desktop/) on current systems. References to
+[Docker Desktop](/desktop/) on current systems. References to
 Docker Toolbox occasionally appear in older documentation or community
 tutorials, but it is not recommended for new installations.
 
@@ -100,7 +100,7 @@ Enhanced Service Account add-ons provided tiered pull rate limits for automated
 workflows and service accounts accessing Docker Hub.
 
 Docker recommends transitioning to [Organization Access Tokens
-(OATs)](/manuals/enterprise/security/access-tokens/), which provide secure,
+(OATs)](/admin/enterprise/security/access-tokens/), which provide secure,
 programmatic access to Docker Hub with granular repository permissions, token
 expiration, and better security auditing. OATs are included with Docker Team
 and Business subscriptions and offer similar functionality without requiring
@@ -127,7 +127,7 @@ multi-container applications, has been superseded by Compose v2 (`docker
 compose`), which is written in Go and integrates with the Docker CLI. Compose
 v1 is no longer maintained, and users should migrate to Compose v2.
 
-[Compose v2 Documentation](/manuals/compose/)
+[Compose v2 Documentation](/compose/)
 
 ### InfraKit
 

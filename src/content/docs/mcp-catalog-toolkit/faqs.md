@@ -21,7 +21,7 @@ Currently, a majority of the servers in the catalog are built directly by Docker
 - Signed SBOMs: Software Bill of Materials with cryptographic signatures.
 
 > [!NOTE]
-> When using the images with [Docker MCP gateway](/manuals/ai/mcp-catalog-and-toolkit/mcp-gateway/),
+> When using the images with [Docker MCP gateway](/ai-overview/mcp-catalog-and-toolkit/mcp-gateway/),
 > you can verify attestations at runtime using the `docker mcp gateway run
 --verify-signatures` CLI command.
 
@@ -70,9 +70,9 @@ After the update completes, refresh the **Catalog** tab in Docker Desktop.
 
 ### What's the difference between profiles and the catalog?
 
-The [catalog](/manuals/ai/mcp-catalog-and-toolkit/catalog/) is the source of
+The [catalog](/ai-overview/mcp-catalog-and-toolkit/catalog/) is the source of
 available MCP servers - a library of tools you can choose from.
-[Profiles](/manuals/ai/mcp-catalog-and-toolkit/profiles/) are collections of
+[Profiles](/ai-overview/mcp-catalog-and-toolkit/profiles/) are collections of
 servers you've added to organize your work. Think of the catalog as a library,
 and profiles as your personal bookshelves containing the books you've selected
 for different purposes.
@@ -110,5 +110,5 @@ different settings for different projects or environments.
 
 ## Related pages
 
-- [Get started with MCP Toolkit](/manuals/ai/mcp-catalog-and-toolkit/get-started/)
-- [Open-source MCP Gateway](/manuals/ai/mcp-catalog-and-toolkit/mcp-gateway/)
+- [Get started with MCP Toolkit](/ai-overview/mcp-catalog-and-toolkit/get-started/)
+- [Open-source MCP Gateway](/ai-overview/mcp-catalog-and-toolkit/mcp-gateway/)

@@ -41,13 +41,13 @@ Some important considerations include:
 
 Before configuring air-gapped containers, you must have:
 
-- [Enforce sign-in](/manuals/enterprise/security/enforce-sign-in/) enabled to ensure users authenticate with your organization
+- [Enforce sign-in](/admin/enterprise/security/enforce-sign-in/) enabled to ensure users authenticate with your organization
 - A Docker Business subscription
-- Configured [Settings Management](/manuals/enterprise/security/hardened-desktop/settings-management/) with the `admin-settings.json` file to manage organization policies
+- Configured [Settings Management](/admin/enterprise/security/hardened-desktop/settings-management/) with the `admin-settings.json` file to manage organization policies
 
 ## Configure air-gapped containers
 
-Add the container proxy to your [`admin-settings.json` file](/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file/). For example:
+Add the container proxy to your [`admin-settings.json` file](/admin/enterprise/security/hardened-desktop/settings-management/configure-json-file/). For example:
 
 ```json
 {
@@ -227,5 +227,5 @@ $ docker run --rm alpine wget -O- https://docker.io
 
 ## Next steps
 
-- [Explore Enhanced Container Isolation](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/) to further restrict what containers can do at runtime
-- [Understand how Docker Desktop handles host and container networking](/manuals/desktop/features/networking/)
+- [Explore Enhanced Container Isolation](/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/) to further restrict what containers can do at runtime
+- [Understand how Docker Desktop handles host and container networking](/desktop/features/networking/)

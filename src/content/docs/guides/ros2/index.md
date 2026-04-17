@@ -31,7 +31,7 @@ In this guide, you'll learn how to:
 Before you begin, make sure you're familiar with the following:
 
 - [Docker Desktop](https://docs.docker.com/desktop/): You must have Docker Desktop installed and running.
-- [Docker concepts](/get-started/docker-concepts/the-basics/what-is-a-container/): You must understand core Docker concepts, such as images and containers.
+- [Docker concepts](/get-started/overview/): You must understand core Docker concepts, such as images and containers.
 - [ROS 2 concepts](https://www.ros.org): Basic understanding of concepts like nodes, packages, topics, and services.
 
 ## What's next?

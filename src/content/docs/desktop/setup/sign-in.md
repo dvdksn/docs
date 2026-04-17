@@ -9,7 +9,7 @@ sidebar:
 
 Docker recommends signing in with the **Sign in** option in the top-right corner of the Docker Dashboard. 
 
-In large enterprises where admin access is restricted, administrators can [enforce sign-in](/manuals/enterprise/security/enforce-sign-in/). 
+In large enterprises where admin access is restricted, administrators can [enforce sign-in](/admin/enterprise/security/enforce-sign-in/). 
 
 > [!TIP]
 >
@@ -19,9 +19,9 @@ In large enterprises where admin access is restricted, administrators can [enfor
 
 - Access your Docker Hub repositories directly from Docker Desktop.
 
-- Increase your pull rate limit compared to anonymous users. See [Usage and limits](/manuals/docker-hub/usage/).
+- Increase your pull rate limit compared to anonymous users. See [Usage and limits](/hub/usage/).
 
-- Enhance your organization’s security posture for containerized development with [Hardened Desktop](/manuals/enterprise/security/hardened-desktop/).
+- Enhance your organization’s security posture for containerized development with [Hardened Desktop](/admin/enterprise/security/hardened-desktop/).
 
 > [!NOTE]
 >
@@ -76,6 +76,6 @@ docker.io/molly/privateimage:latest
 
 ## What's next?
 
-- [Explore Docker Desktop](/manuals/desktop/use-desktop/) and its features. 
-- Change your [Docker Desktop settings](/manuals/desktop/settings-and-maintenance/settings/).
-- [Browse common FAQs](/manuals/desktop/troubleshoot-and-support/faqs/general/).
+- [Explore Docker Desktop](/desktop/use-desktop/) and its features. 
+- Change your [Docker Desktop settings](/desktop/settings-and-maintenance/settings/).
+- [Browse common FAQs](/desktop/troubleshoot-and-support/faqs/general/).

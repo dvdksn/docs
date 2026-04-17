@@ -1,0 +1,576 @@
+---
+/**
+ * Homepage — traditional docs landing.
+ *
+ * Structure:
+ *   1. Hero: welcome + orienting paragraph
+ *   2. Get-started callout: beginner invite to the guided tutorial
+ *   3. Main-links row: Manuals, Guides, Reference — the three top-level buckets
+ *   4. Browse every product — directory grid (Manuals lands here via #browse)
+ *
+ * Gordon lives in the header trigger + slide-out panel like every other page.
+ */
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'Docker Docs',
+    description:
+      'The official documentation for Docker — build, run, and ship containerized applications.',
+    template: 'splash',
+    pagefind: false,
+  }}
+>
+  <div class="home not-content">
+
+    <!-- ── Hero ───────────────────────────────────────── -->
+    <header class="hero">
+      <h1 class="hero-title">How can we help?</h1>
+      <p class="hero-lede">
+        The official documentation for every Docker product.
+        Ask a question below, or scroll to browse.
+      </p>
+
+      <form class="hero-ask" id="hero-ask-form" autocomplete="off">
+        <label class="hero-ask-label" for="hero-ask-input">
+          Ask Gordon, Docker's AI assistant
+        </label>
+        <div class="hero-ask-field">
+          <input
+            id="hero-ask-input"
+            type="text"
+            placeholder="How do I mount a volume in Compose?"
+            aria-label="Ask Gordon"
+            autocomplete="off"
+          />
+          <button type="submit" class="hero-ask-send" aria-label="Ask Gordon">
+            <span>Ask</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <ul class="hero-ask-examples" aria-label="Example questions">
+          <li><button type="button" data-query="How do I install Docker Desktop?">Install Docker Desktop</button></li>
+          <li><button type="button" data-query="How do I mount a volume in Docker Compose?">Mount a volume in Compose</button></li>
+          <li><button type="button" data-query="What is a multi-stage build?">Multi-stage builds</button></li>
+          <li><button type="button" data-query="How do I scan an image for vulnerabilities?">Scan an image for CVEs</button></li>
+        </ul>
+      </form>
+    </header>
+
+    <!-- ── Get started callout ─────────────────────────── -->
+    <section class="callout-wrap">
+      <a href="/get-started/" class="callout">
+        <div class="callout-body">
+          <p class="d-micro callout-eyebrow">New to Docker?</p>
+          <h2 class="callout-title">Start with a guided walkthrough.</h2>
+          <p class="callout-lede">
+            A linear tutorial through the basics &mdash;
+            images, containers, and Compose. About 20 minutes.
+          </p>
+        </div>
+        <span class="callout-cta" aria-hidden="true">
+          <span>Open the tutorial</span>
+          <span class="callout-arrow">→</span>
+        </span>
+      </a>
+    </section>
+
+    <!-- ── Main links ──────────────────────────────────── -->
+    <section class="nav-row-wrap">
+      <ul class="nav-row">
+        <li>
+          <a href="#browse">
+            <span class="nav-row-title">
+              Manuals<span class="nav-row-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="nav-row-blurb">Configure and operate every Docker product.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/guides/">
+            <span class="nav-row-title">
+              Guides<span class="nav-row-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="nav-row-blurb">Task-oriented how-tos, worked examples, and recipes.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/reference/">
+            <span class="nav-row-title">
+              Reference<span class="nav-row-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="nav-row-blurb">CLI, Compose, Engine API, and Dockerfile specs.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ── Browse every product ─────────────────────────── -->
+    <section class="band" id="browse">
+      <div class="band-head">
+        <h2 class="band-title">Every product</h2>
+      </div>
+
+      <div class="product-grid">
+        <article>
+          <h3 class="d-micro">Develop</h3>
+          <ul class="product-list">
+            <li><a href="/desktop/"><b>Docker Desktop</b><span>Container runtime, debugger, and dashboard for your workstation.</span></a></li>
+            <li><a href="/engine/"><b>Docker Engine</b><span>The container runtime.</span></a></li>
+            <li><a href="/build/"><b>Docker Build</b><span>Turn source into images.</span></a></li>
+            <li><a href="/compose/"><b>Docker Compose</b><span>Define and run multi-container apps.</span></a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 class="d-micro">Ship</h3>
+          <ul class="product-list">
+            <li><a href="/hub/"><b>Docker Hub</b><span>Registry for sharing and pulling images.</span></a></li>
+            <li><a href="/dhi/"><b>Docker Hardened Images</b><span>Distroless base images with curated, vetted packages.</span></a></li>
+            <li><a href="/scout/"><b>Docker Scout</b><span>Image analysis for vulnerabilities and policy.</span></a></li>
+            <li><a href="/build-cloud/"><b>Docker Build Cloud</b><span>Remote builders with shared cache and multi-arch support.</span></a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 class="d-micro">Run agents &amp; AI</h3>
+          <ul class="product-list">
+            <li><a href="/model-runner/"><b>Docker Model Runner</b><span>Run local LLMs through an OpenAI-compatible API.</span></a></li>
+            <li><a href="/sandboxes/"><b>Docker Sandboxes</b><span>Isolated environments for untrusted code and AI agents.</span></a></li>
+            <li><a href="/mcp-catalog-toolkit/"><b>MCP Catalog &amp; Toolkit</b><span>Discover and run MCP servers.</span></a></li>
+            <li><a href="/gordon/"><b>Gordon</b><span>Docker's AI assistant.</span></a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 class="d-micro">Operate</h3>
+          <ul class="product-list">
+            <li><a href="/admin/"><b>Admin &amp; billing</b><span>Manage organizations, users, and subscriptions.</span></a></li>
+            <li><a href="/admin/enterprise/security/hardened-desktop/"><b>Hardened Desktop</b><span>Admin-controlled Docker Desktop for managed organizations.</span></a></li>
+            <li><a href="/offload/"><b>Docker Offload</b><span>Run workloads on remote Docker environments.</span></a></li>
+            <li><a href="/extensions/"><b>Extensions</b><span>Third-party tools integrated into Docker Desktop.</span></a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+
+  </div>
+</StarlightPage>
+
+<style>
+  /* ── Page frame ─────────────────────────────────────── */
+  .home {
+    --col: 64rem;
+  }
+
+  /* ── Hero ───────────────────────────────────────────── */
+  .hero {
+    max-width: var(--col);
+    margin: 0 auto;
+    padding: 4.5rem 1.5rem 3rem;
+  }
+
+  .hero-title {
+    font-family: var(--sl-font);
+    font-variation-settings: "wght" 740, "opsz" 144, "wdth" 100;
+    font-weight: normal;
+    font-size: clamp(2.4rem, 5.5vw, 4.25rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    color: var(--d-text-strong);
+    margin: 0;
+  }
+
+  .hero-lede {
+    margin: 1.5rem 0 0;
+    max-width: 42rem;
+    color: var(--d-text-muted);
+    font-size: clamp(1.0625rem, 1.35vw, 1.2rem);
+    line-height: 1.55;
+    font-variation-settings: "wght" 380, "opsz" 18, "wdth" 100;
+  }
+
+  /* ── Hero ask (AI prompt input) ─────────────────────── */
+  .hero-ask {
+    margin-top: 2.25rem;
+    max-width: 42rem;
+  }
+
+  .hero-ask-label {
+    display: block;
+    font-family: var(--sl-font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: var(--d-track-mono);
+    color: var(--d-text-faint);
+    margin-bottom: 0.65rem;
+  }
+
+  .hero-ask-field {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    border: 1px solid var(--d-border);
+    border-radius: var(--d-radius-md);
+    background: var(--d-surface);
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .hero-ask-field:focus-within {
+    border-color: var(--d-accent);
+    background: var(--d-surface-sunk);
+  }
+
+  .hero-ask input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.95rem 1.1rem;
+    border: 0;
+    background: transparent;
+    color: var(--d-text-strong);
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.4;
+    outline: none;
+  }
+  .hero-ask input::placeholder {
+    color: var(--d-text-faint);
+  }
+
+  .hero-ask-send {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.35rem;
+    padding: 0 1rem;
+    border: 0;
+    border-radius: var(--d-radius-sm);
+    background: transparent;
+    color: var(--d-text-muted);
+    font-family: var(--sl-font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: var(--d-track-mono);
+    cursor: pointer;
+    transition: color 0.15s, background 0.15s;
+  }
+  .hero-ask-send:hover,
+  .hero-ask-send:focus-visible {
+    color: var(--d-accent);
+    background: color-mix(in oklch, var(--d-accent) 10%, transparent);
+    outline: none;
+  }
+
+  .hero-ask-examples {
+    list-style: none;
+    margin: 0.9rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .hero-ask-examples button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--d-border);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--d-text-muted);
+    font-family: inherit;
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .hero-ask-examples button:hover,
+  .hero-ask-examples button:focus-visible {
+    color: var(--d-text-strong);
+    border-color: var(--d-border-strong);
+    background: var(--d-surface);
+    outline: none;
+  }
+
+
+  /* ── Get-started callout ────────────────────────────── */
+  .callout-wrap {
+    max-width: var(--col);
+    margin: 3rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .callout {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 2.25rem;
+    border: 1px solid var(--d-border);
+    border-radius: var(--d-radius-md);
+    background: var(--d-surface);
+    color: var(--d-text);
+    text-decoration: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  @media (max-width: 48rem) {
+    .callout {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1.75rem 1.5rem;
+    }
+  }
+
+  .callout:hover {
+    background: var(--d-surface-sunk);
+  }
+
+  .callout:focus-visible {
+    border-color: var(--d-accent);
+    background: var(--d-surface-sunk);
+    outline: none;
+  }
+
+  .callout-eyebrow {
+    margin: 0 0 0.6rem;
+    color: var(--d-text-faint);
+  }
+
+  .callout-title {
+    font-family: var(--sl-font);
+    font-variation-settings: "wght" 580, "opsz" 26, "wdth" 100;
+    font-weight: normal;
+    font-size: clamp(1.25rem, 1.9vw, 1.55rem);
+    letter-spacing: -0.015em;
+    color: var(--d-text-strong);
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .callout-lede {
+    margin: 0.65rem 0 0;
+    max-width: 36rem;
+    color: var(--d-text-muted);
+    font-size: 0.975rem;
+    line-height: 1.55;
+  }
+
+  .callout-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid var(--d-border);
+    border-radius: var(--d-radius-sm);
+    background: var(--d-surface-sunk);
+    font-family: var(--sl-font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: var(--d-track-mono);
+    color: var(--d-text-strong);
+    white-space: nowrap;
+    transition: color 0.15s, background 0.15s, border-color 0.15s;
+  }
+
+  .callout:hover .callout-cta,
+  .callout:focus-visible .callout-cta {
+    color: var(--d-accent);
+  }
+
+  .callout-arrow {
+    transition: transform 0.15s;
+  }
+
+  .callout:hover .callout-arrow,
+  .callout:focus-visible .callout-arrow {
+    transform: translateX(3px);
+  }
+
+  /* ── Main-links row ─────────────────────────────────── */
+  .nav-row-wrap {
+    max-width: var(--col);
+    margin: 3.5rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .nav-row {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 56rem) {
+    .nav-row {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+  }
+
+  .nav-row a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: var(--d-text);
+  }
+
+  .nav-row-title {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.55rem;
+    font-family: var(--sl-font);
+    font-variation-settings: "wght" 580, "opsz" 32, "wdth" 100;
+    font-size: clamp(1.35rem, 2.2vw, 1.65rem);
+    letter-spacing: -0.02em;
+    color: var(--d-text-strong);
+    line-height: 1.15;
+    transition: color 0.15s;
+  }
+
+  .nav-row a:hover .nav-row-title,
+  .nav-row a:focus-visible .nav-row-title {
+    color: var(--d-accent);
+  }
+
+  .nav-row-blurb {
+    color: var(--d-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 28ch;
+  }
+
+  .nav-row-arrow {
+    font-family: var(--sl-font-mono);
+    font-size: 0.85em;
+    color: var(--d-text-faint);
+    transition: color 0.15s, transform 0.15s;
+    display: inline-block;
+  }
+
+  .nav-row a:hover .nav-row-arrow,
+  .nav-row a:focus-visible .nav-row-arrow {
+    color: var(--d-accent);
+    transform: translateX(4px);
+  }
+
+  /* ── Band (section) ─────────────────────────────────── */
+  .band {
+    max-width: var(--col);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .band + .band {
+    margin-top: 0;
+  }
+
+  .band-head {
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--d-border);
+    margin: 5rem 0 2.5rem;
+  }
+
+  .band-title {
+    font-family: var(--sl-font);
+    font-variation-settings: "wght" 560, "opsz" 32, "wdth" 100;
+    font-weight: normal;
+    font-size: clamp(1.4rem, 2.2vw, 1.7rem);
+    letter-spacing: -0.02em;
+    color: var(--d-text-strong);
+    margin: 0;
+  }
+
+  /* ── Product grid ───────────────────────────────────── */
+  .product-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem 2.5rem;
+  }
+
+  @media (min-width: 48rem) {
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 72rem) {
+    .product-grid { grid-template-columns: repeat(4, 1fr); }
+    .product-grid { gap: 3rem 2.5rem; }
+  }
+
+  .product-grid article > h3 {
+    margin: 0 0 1.5rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--d-border);
+    color: var(--d-text-faint);
+    font-weight: 500;
+  }
+
+  .product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .product-list a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-decoration: none;
+    color: var(--d-text);
+    transition: color 0.15s;
+  }
+
+  .product-list a b {
+    font-weight: normal;
+    font-variation-settings: "wght" 540, "opsz" 14, "wdth" 100;
+    color: var(--d-text-strong);
+    transition: color 0.15s;
+  }
+
+  .product-list a span:not(.d-micro) {
+    font-size: 0.85rem;
+    color: var(--d-text-muted);
+    line-height: 1.45;
+  }
+
+  .product-list a:hover b,
+  .product-list a:focus-visible b {
+    color: var(--d-accent);
+  }
+
+</style>
+
+<script>
+  const form = document.getElementById('hero-ask-form') as HTMLFormElement | null;
+  const input = document.getElementById('hero-ask-input') as HTMLInputElement | null;
+
+  function ask(query: string) {
+    const q = query.trim();
+    if (!q) {
+      window.dispatchEvent(new CustomEvent('toggle-ask-ai'));
+      return;
+    }
+    window.dispatchEvent(new CustomEvent('ask-ai', { detail: { query: q } }));
+    if (input) input.value = '';
+  }
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    ask(input?.value || '');
+  });
+
+  document.querySelectorAll<HTMLButtonElement>('.hero-ask-examples button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      ask(btn.getAttribute('data-query') || btn.textContent || '');
+    });
+  });
+</script>
+

@@ -61,7 +61,7 @@ the requested capabilities. The provider then populates Compose model with infor
 This information is passed to services that declare a dependency on the provider service, typically through environment
 variables. The naming convention for these variables is:
 
-```env
+```ini
 &lt;<PROVIDER_SERVICE_NAME>>_&lt;<VARIABLE_NAME>>
 ```
 
@@ -104,7 +104,7 @@ This information is then passed to dependent services as environment variables.
 
 > [!TIP]
 >
-> If you're working with AI models in Compose, use the [`models` top-level element](/manuals/ai/compose/models-and-compose/) instead.
+> If you're working with AI models in Compose, use the [`models` top-level element](/ai-overview/compose/models-and-compose/) instead.
 
 ## Benefits of using provider services
 
@@ -123,5 +123,5 @@ This guide explains the extension mechanism that allows you to add new provider 
 
 ## Reference
 
-- [Docker Model Runner documentation](/manuals/ai/model-runner/)
+- [Docker Model Runner documentation](/ai-overview/model-runner/)
 - [Compose Extensions documentation](https://github.com/docker/compose/blob/main/docs/extension.md)

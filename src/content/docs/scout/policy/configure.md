@@ -24,7 +24,7 @@ You can not change the name of the policy type, only its display names.
 
 The available configuration parameters for a policy depends on the
 policy type that you're editing. For more information, refer to
-[Policy types](/manuals/scout/policy/#policy-types).
+[Policy types](/scout/policy/#policy-types).
 
 To add a policy:
 

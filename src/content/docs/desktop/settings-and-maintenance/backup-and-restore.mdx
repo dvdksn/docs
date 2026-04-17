@@ -26,20 +26,20 @@ Use this procedure to back up and restore your images and container data. This i
    Also note that filesystem changes in a volume that are attached to the
    container are not included in the image, and must be backed up separately.
 
-   If you used a [named volume](/manuals/engine/storage/#more-details-about-mount-types) to store container data, such as databases, refer to the [back up, restore, or migrate data volumes](/manuals/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes) page in the storage section.
+   If you used a [named volume](/engine/storage/#more-details-about-mount-types) to store container data, such as databases, refer to the [back up, restore, or migrate data volumes](/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes) page in the storage section.
 
 2. Use [`docker push`](/reference/cli/docker/image/push/) to push any
-   images you have built locally and want to keep to the [Docker Hub registry](/manuals/docker-hub/).
+   images you have built locally and want to keep to the [Docker Hub registry](/hub/).
    
    > [!TIP]
    >
-   > [Set the repository visibility to private](/manuals/docker-hub/repos/) if your image includes sensitive content.
+   > [Set the repository visibility to private](/hub/repos/) if your image includes sensitive content.
 
    Alternatively, use [`docker image save -o images.tar image1 [image2 ...]`](/reference/cli/docker/image/save/)
    to save any images you want to keep to a local `.tar` file. 
 
 After backing up your data, you can uninstall the current version of Docker Desktop
-and [install a different version](/manuals/desktop/release-notes/) or reset Docker Desktop to factory defaults.
+and [install a different version](/desktop/release-notes/) or reset Docker Desktop to factory defaults.
 
 ### Restore your data
 
@@ -58,9 +58,9 @@ and [install a different version](/manuals/desktop/release-notes/) or reset Dock
       ```
 
 2. Re-create your containers if needed, using [`docker run`](/reference/cli/docker/container/run/),
-   or [Docker Compose](/manuals/compose/).
+   or [Docker Compose](/compose/).
 
-To restore volume data, refer to [backup, restore, or migrate data volumes](/manuals/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes). 
+To restore volume data, refer to [backup, restore, or migrate data volumes](/engine/storage/volumes/#back-up-restore-or-migrate-data-volumes). 
 
 ## If Docker Desktop fails to start 
 

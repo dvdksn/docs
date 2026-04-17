@@ -10,7 +10,7 @@
   "license": "Apache-2.0",
   "homepage": "https://docs.docker.com/",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --port 1313",
     "build": "astro build",
     "preview": "astro preview"
   },

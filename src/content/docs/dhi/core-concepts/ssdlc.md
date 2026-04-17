@@ -38,7 +38,7 @@ Docker provides tools and secure content that make SSDLC practices easier to
 adopt across the container lifecycle. With [Docker Hardened
 Images](../) (DHIs), [Docker
 Debug](/reference/cli/docker/debug/), and [Docker
-Scout](../../../manuals/scout/), teams can add security without losing
+Scout](../../../scout/), teams can add security without losing
 velocity.
 
 ### Plan and design

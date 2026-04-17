@@ -10,7 +10,7 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
 
 To start creating your extension, you first need a directory with files which range from the extension’s source code to the required extension-specific files. This page provides information on how to set up an extension with a more advanced frontend.
 
-Before you start, make sure you have installed the latest version of [Docker Desktop](/manuals/desktop/release-notes/).
+Before you start, make sure you have installed the latest version of [Docker Desktop](/desktop/release-notes/).
 
 ## Extension folder structure
 
@@ -63,7 +63,7 @@ extension:
 <Tabs syncKey="framework">
 <TabItem label="React">
 
-```Dockerfile
+```dockerfile
 # syntax=docker/dockerfile:1
 FROM --platform=$BUILDPLATFORM node:18.9-alpine3.15 AS client-builder
 WORKDIR /ui

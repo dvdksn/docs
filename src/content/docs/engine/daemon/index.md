@@ -12,7 +12,7 @@ This page shows you how to customize the Docker daemon, `dockerd`.
 > [!NOTE]
 >
 > This page is for users who've installed Docker Engine manually. If you're
-> using Docker Desktop, refer to the [settings page](/manuals/desktop/settings-and-maintenance/settings/#docker-engine).
+> using Docker Desktop, refer to the [settings page](/desktop/settings-and-maintenance/settings/#docker-engine).
 
 ## Configure the Docker daemon
 
@@ -82,12 +82,12 @@ By default the daemon stores data in:
 - `/var/lib/docker` on Linux
 - `C:\ProgramData\docker` on Windows
 
-When using the [containerd image store](/manuals/engine/storage/containerd/)
+When using the [containerd image store](/engine/storage/containerd/)
 (the default for Docker Engine 29.0 and later on fresh installations), image
 contents and container snapshots are stored in `/var/lib/containerd`. Other
 daemon data (volumes, configs) remains in `/var/lib/docker`.
 
-When using [classic storage drivers](/manuals/engine/storage/drivers/)
+When using [classic storage drivers](/engine/storage/drivers/)
 like `overlay2` (the default for upgraded installations), all data is stored in
 `/var/lib/docker`.
 
@@ -121,8 +121,8 @@ are difficult to troubleshoot.
 Many specific configuration options are discussed throughout the Docker
 documentation. Some places to go next include:
 
-- [Automatically start containers](/manuals/engine/containers/start-containers-automatically/)
-- [Limit a container's resources](/manuals/engine/containers/resource_constraints/)
-- [Configure storage drivers](/manuals/engine/storage/drivers/select-storage-driver/)
-- [Container security](/manuals/engine/security/)
+- [Automatically start containers](/engine/containers/start-containers-automatically/)
+- [Limit a container's resources](/engine/containers/resource_constraints/)
+- [Configure storage drivers](/engine/storage/drivers/select-storage-driver/)
+- [Container security](/engine/security/)
 - [Configure the Docker daemon to use a proxy](./proxy/)

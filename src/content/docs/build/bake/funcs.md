@@ -11,7 +11,7 @@ configuration in more complex ways than just concatenation or interpolation.
 
 ## Standard library
 
-Bake ships with built-in support for the [standard library functions](/manuals/build/bake/stdlib/).
+Bake ships with built-in support for the [standard library functions](/build/bake/stdlib/).
 
 The following example shows the `add` function:
 

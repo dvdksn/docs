@@ -1,0 +1,181 @@
+---
+/**
+ * PageFrame override.
+ *
+ * On content pages (with a TOC), the Gordon chat lives in the right rail
+ * via the PageSidebar override — it replaces the TOC when opened.
+ *
+ * On splash pages (no TOC, e.g. the homepage and guides index), there is
+ * no right rail. Fall back to a slide-out panel mounted here. Either way,
+ * exactly one GordonChat instance is rendered per page.
+ */
+import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
+import GordonChat from '@components/GordonChat.astro';
+
+const { hasSidebar } = Astro.locals.starlightRoute;
+const hasTOC = !!Astro.locals.starlightRoute.toc;
+---
+
+<div class="page sl-flex">
+  <header class="header"><slot name="header" /></header>
+  {
+    hasSidebar && (
+      <nav class="sidebar print:hidden" aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}>
+        <MobileMenuToggle />
+        <div id="starlight__sidebar" class="sidebar-pane">
+          <div class="sidebar-content sl-flex">
+            <slot name="sidebar" />
+          </div>
+        </div>
+      </nav>
+    )
+  }
+  <div class="main-frame"><slot /></div>
+  {!hasTOC && (
+    <>
+      <div class="gordon-backdrop print:hidden" id="gordon-backdrop"></div>
+      <aside class="gordon-pane print:hidden" id="gordon-pane" aria-label="Gordon AI Chat">
+        <GordonChat />
+      </aside>
+    </>
+  )}
+</div>
+
+<script>
+  // Slide-out panel only: close when clicking the backdrop.
+  document.getElementById('gordon-backdrop')?.addEventListener('click', () => {
+    document.documentElement.removeAttribute('data-chat-open');
+  });
+</script>
+
+<style>
+  @layer starlight.core {
+    .page {
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      z-index: var(--sl-z-index-navbar);
+      position: fixed;
+      inset-inline-start: 0;
+      inset-block-start: 0;
+      width: 100%;
+      height: var(--sl-nav-height);
+      border-bottom: 1px solid var(--sl-color-hairline-shade);
+      padding: var(--sl-nav-pad-y) var(--sl-nav-pad-x);
+      padding-inline-end: var(--sl-nav-pad-x);
+      background-color: var(--sl-color-bg-nav);
+    }
+
+    :global([data-has-sidebar]) .header {
+      padding-inline-end: calc(
+        var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size)
+      );
+    }
+
+    .sidebar-pane {
+      visibility: var(--sl-sidebar-visibility, hidden);
+      position: fixed;
+      z-index: var(--sl-z-index-menu);
+      inset-block: var(--sl-nav-height) 0;
+      inset-inline-start: 0;
+      width: 100%;
+      background-color: var(--sl-color-black);
+      overflow-y: auto;
+    }
+
+    :global([aria-expanded='true']) ~ .sidebar-pane {
+      --sl-sidebar-visibility: visible;
+    }
+
+    .sidebar-content {
+      height: 100%;
+      min-height: max-content;
+      padding: 1rem var(--sl-sidebar-pad-x) 0;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @media (min-width: 50rem) {
+      .sidebar-content::after {
+        content: '';
+        padding-bottom: 1px;
+      }
+    }
+
+    .main-frame {
+      padding-top: calc(var(--sl-nav-height) + var(--sl-mobile-toc-height));
+      padding-inline-start: var(--sl-content-inline-start, 0rem);
+    }
+
+    @media (min-width: 50rem) {
+      :global([data-has-sidebar]) .header {
+        padding-inline-end: var(--sl-nav-pad-x);
+      }
+      .sidebar-pane {
+        --sl-sidebar-visibility: visible;
+        width: var(--sl-sidebar-width);
+        background-color: var(--sl-color-bg-sidebar);
+        border-inline-end: 1px solid var(--sl-color-hairline-shade);
+      }
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════
+   *  Splash-page chat — behaves as an on-page right rail,
+   *  not a floating overlay. Matches the content-page rail's
+   *  width calc so the two modes feel the same.
+   * ══════════════════════════════════════════════════════════ */
+
+  /* Backdrop unused on splash — kept as hidden stub so the existing
+     click-to-close script can attach without null checks. */
+  .gordon-backdrop {
+    display: none;
+  }
+
+  .gordon-pane {
+    position: fixed;
+    z-index: 30;
+    inset-block: var(--sl-nav-height) 0;
+    inset-inline-end: 0;
+    width: 100%;
+    max-width: min(32rem, 100vw);
+    background-color: var(--d-surface);
+    border-inline-start: 1px solid var(--sl-color-hairline);
+    transform: translateX(100%);
+    transition: transform 0.22s ease-out;
+    overflow: hidden;
+  }
+
+  @media (min-width: 72rem) {
+    .gordon-pane {
+      max-width: calc(
+        var(--sl-sidebar-width) +
+        (100vw - var(--sl-content-inline-start, 0rem) - var(--sl-content-width) - var(--sl-sidebar-width)) / 2 +
+        8rem
+      );
+    }
+  }
+
+  :global([data-chat-open]) .gordon-pane {
+    transform: translateX(0);
+  }
+
+  /* Reflow main content to make room for the chat rail on splash
+     pages. Only applies when there's no TOC (hence no real rail to
+     steal from). */
+  .main-frame {
+    transition: padding-inline-end 0.22s ease;
+  }
+
+  @media (min-width: 72rem) {
+    :global(:root[data-chat-open]:not([data-has-toc])) .main-frame {
+      padding-inline-end: calc(
+        var(--sl-sidebar-width) +
+        (100vw - var(--sl-content-inline-start, 0rem) - var(--sl-content-width) - var(--sl-sidebar-width)) / 2 +
+        8rem
+      );
+    }
+  }
+</style>

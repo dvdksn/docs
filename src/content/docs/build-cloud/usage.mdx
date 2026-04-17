@@ -49,7 +49,7 @@ uses the `default` builder, unless you specify the `--builder` flag explicitly.
 If you use build scripts, such as `make`, that use the `docker build` command,
 we recommend updating your build commands to `docker buildx build`. Alternatively,
 you can set the [`BUILDX_BUILDER` environment
-variable](/manuals/build/building/variables/#buildx_builder) to specify which
+variable](/build/building/variables/#buildx_builder) to specify which
 builder `docker build` should use.
 
 ## Use with Docker Compose
@@ -69,7 +69,7 @@ $ docker compose build
 
 In addition to `docker buildx use`, you can also use the `docker compose build
 --builder` flag or the [`BUILDX_BUILDER` environment
-variable](/manuals/build/building/variables/#buildx_builder) to select the cloud builder.
+variable](/build/building/variables/#buildx_builder) to select the cloud builder.
 
 ## Loading build results
 
@@ -187,5 +187,5 @@ It only changes the builder that's automatically selected to run your builds.
 
 ## Registries on internal networks
 
-It is possible to use Docker Build Cloud with a [private registry](/manuals/build-cloud/builder-settings/#private-resource-access)
+It is possible to use Docker Build Cloud with a [private registry](/build-cloud/builder-settings/#private-resource-access)
 or registry mirror on an internal network.

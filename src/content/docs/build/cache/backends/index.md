@@ -16,8 +16,8 @@ environments usually have little-to-no persistence between runs, but it's still
 important to keep the runtime of image builds as low as possible.
 
 The default `docker` driver supports the `inline`, `local`, `registry`, and
-`gha` cache backends, but only if you have enabled the [containerd image store](/manuals/desktop/features/containerd/).
-Other cache backends require you to select a different [driver](/manuals/build/builders/drivers/).
+`gha` cache backends, but only if you have enabled the [containerd image store](/desktop/features/containerd/).
+Other cache backends require you to select a different [driver](/build/builders/drivers/).
 
 > [!WARNING]
 >

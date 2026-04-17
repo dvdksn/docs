@@ -10,7 +10,7 @@ sidebar:
 ## Prerequisites
 
 - Complete all the previous sections of this guide, starting with [Containerize a Bun application](containerize/).
-- [Turn on Kubernetes](/manuals//desktop/use-desktop/kubernetes/#enable-kubernetes) in Docker Desktop.
+- [Turn on Kubernetes](/desktop/use-desktop/kubernetes/#enable-kubernetes) in Docker Desktop.
 
 ## Overview
 
@@ -136,5 +136,5 @@ In this section, you learned how to use Docker Desktop to deploy your Bun applic
 
 Related information:
    - [Kubernetes documentation](https://kubernetes.io/docs/home/)
-   - [Deploy on Kubernetes with Docker Desktop](/manuals/desktop/use-desktop/kubernetes/)
-   - [Swarm mode overview](/manuals/engine/swarm/)
+   - [Deploy on Kubernetes with Docker Desktop](/desktop/use-desktop/kubernetes/)
+   - [Swarm mode overview](/engine/swarm/)

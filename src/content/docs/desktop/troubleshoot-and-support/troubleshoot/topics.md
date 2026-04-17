@@ -163,7 +163,7 @@ On macOS, users without administrator privileges cannot perform in-app upgrades 
 To upgrade Docker Desktop:
 
 - Ask an administrator to install the newer version over the existing one.
-- Use the []`--user` install flag](/manuals/desktop/setup/install/mac-install/#security-and-access) if appropriate for your setup.
+- Use the []`--user` install flag](/desktop/setup/install/mac-install/#security-and-access) if appropriate for your setup.
 
 ### Persistent notification telling me an application has changed my Desktop configurations
 
@@ -210,7 +210,7 @@ Check that:
 
 See also, [Hypervisor Framework
 Reference](https://developer.apple.com/library/mac/documentation/DriversKernelHardware/Reference/Hypervisor/)
-in the Apple documentation, and Docker Desktop [Mac system requirements](/manuals/desktop/setup/install/mac-install/#system-requirements).
+in the Apple documentation, and Docker Desktop [Mac system requirements](/desktop/setup/install/mac-install/#system-requirements).
 
 ## Topics for Windows
 
@@ -232,7 +232,7 @@ add Docker to the exclusions/exceptions in your antivirus software.
 
 #### Cause 
 
-When sharing files from Windows, Docker Desktop sets permissions on [shared volumes](/manuals/desktop/settings-and-maintenance/settings/#file-sharing)
+When sharing files from Windows, Docker Desktop sets permissions on [shared volumes](/desktop/settings-and-maintenance/settings/#file-sharing)
 to a default value of [0777](https://chmodcommand.com/chmod-0777/)
 (`read`, `write`, `execute` permissions for `user` and for `group`).
 
@@ -403,7 +403,7 @@ In the subsequent screen, verify that Hyper-V is enabled.
 
 ##### Virtualization must be turned on
 
-In addition to [Hyper-V](#hyper-v) or [WSL 2](/manuals/desktop/features/wsl/), virtualization must be turned on. Check the
+In addition to [Hyper-V](#hyper-v) or [WSL 2](/desktop/features/wsl/), virtualization must be turned on. Check the
 Performance tab on the Task Manager. Alternatively, you can type `systeminfo` into your terminal. If you see `Hyper-V Requirements: A hypervisor has been detected. Features required for Hyper-V will not be displayed`, then virtualization is enabled.
 
 ![Task Manager](/desktop/images/virtualization-enabled.png)
@@ -411,7 +411,7 @@ Performance tab on the Task Manager. Alternatively, you can type `systeminfo` in
 If you manually uninstall Hyper-V, WSL 2 or turn off virtualization,
 Docker Desktop cannot start. 
 
-To turn on nested virtualization, see [Run Docker Desktop for Windows in a VM or VDI environment](/manuals/desktop/setup/vm-vdi/#turn-on-nested-virtualization).
+To turn on nested virtualization, see [Run Docker Desktop for Windows in a VM or VDI environment](/desktop/setup/vm-vdi/#turn-on-nested-virtualization).
 
 ##### Hypervisor enabled at Windows startup
 
@@ -434,7 +434,7 @@ If you are using Hyper-V and you get the following error message when running Do
 The Virtual Machine Management Service failed to start the virtual machine 'DockerDesktopVM' because one of the Hyper-V components is not running
 ```
 
-Try [enabling nested virtualization](/manuals/desktop/setup/vm-vdi/#turn-on-nested-virtualization).
+Try [enabling nested virtualization](/desktop/setup/vm-vdi/#turn-on-nested-virtualization).
 
 ### Docker Desktop with Windows Containers fails with "The media is write protected""
 

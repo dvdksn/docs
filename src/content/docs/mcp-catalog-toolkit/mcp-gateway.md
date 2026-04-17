@@ -15,7 +15,7 @@ When using MCP servers without the MCP Gateway, you need to configure
 applications individually for each AI application. With the MCP Gateway, you
 configure applications to connect to the Gateway. The Gateway then handles
 server lifecycle, routing, and authentication across all servers in your
-[profiles](/manuals/ai/mcp-catalog-and-toolkit/profiles/).
+[profiles](/ai-overview/mcp-catalog-and-toolkit/profiles/).
 
 > [!NOTE]
 > If you use Docker Desktop with MCP Toolkit enabled, the Gateway runs

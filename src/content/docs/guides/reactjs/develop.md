@@ -97,7 +97,7 @@ services:
 - `watch` triggers file sync with Compose Watch.
 
 > [!NOTE]
-> For more details, see the official guide: [Use Compose Watch](/manuals/compose/how-tos/file-watch/).
+> For more details, see the official guide: [Use Compose Watch](/compose/how-tos/file-watch/).
 
 ### Step 3: Update vite.config.ts to ensure it works properly inside Docker
 
@@ -195,8 +195,8 @@ With this setup, you're now equipped to build, run, and iterate on your React.js
 
 Deepen your knowledge and improve your containerized development workflow with these guides:
 
-- [Using Compose Watch](/manuals/compose/how-tos/file-watch/) – Automatically sync source changes during development  
-- [Multi-stage builds](/manuals/build/building/multi-stage/) – Create efficient, production-ready Docker images  
+- [Using Compose Watch](/compose/how-tos/file-watch/) – Automatically sync source changes during development  
+- [Multi-stage builds](/build/building/multi-stage/) – Create efficient, production-ready Docker images  
 - [Dockerfile best practices](/build/building/best-practices/) – Write clean, secure, and optimized Dockerfiles.
 - [Compose file reference](/compose/compose-file/) – Learn the full syntax and options available for configuring services in `compose.yaml`.
 - [Docker volumes](/storage/volumes/) – Persist and manage data between container runs  

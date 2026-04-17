@@ -257,7 +257,7 @@ This builds the image with:
 >
 > Learn more: 
 > - [Docker task for Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/docker-v2?view=azure-pipelines&tabs=yaml)
-> - [Docker SBOM Attestations](/manuals/build/metadata/attestations/slsa-provenance/)
+> - [Docker SBOM Attestations](/build/metadata/attestations/slsa-provenance/)
 
 #### Step 4.4: Push the Docker image
 
@@ -303,5 +303,5 @@ With this Azure Pipelines CI setup, you get:
 
 - [Azure Pipelines Documentation](https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops): Comprehensive guide to configuring and managing CI/CD pipelines in Azure DevOps.
 - [Docker Task for Azure Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/build/docker): Detailed reference for using the Docker task in Azure Pipelines to build and push images.
-- [Docker Buildx Bake](/manuals/build/bake/): Explore Docker's advanced build tool for complex, multi-stage, and multi-platform build setups. See also the [Mastering Buildx Bake Guide](/guides/bake/index/) for practical examples and best practices.
+- [Docker Buildx Bake](/build/bake/): Explore Docker's advanced build tool for complex, multi-stage, and multi-platform build setups. See also the [Mastering Buildx Bake Guide](/guides/bake/index/) for practical examples and best practices.
 - [Docker Build Cloud](/guides/docker-build-cloud/): Learn about Docker's managed build service for faster, scalable, and multi-platform image builds in the cloud.

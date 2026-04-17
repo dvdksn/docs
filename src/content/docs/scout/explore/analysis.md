@@ -9,7 +9,7 @@ Docker Scout automatically analyzes new images that you push to that repository.
 
 Image analysis extracts the Software Bill of Material (SBOM)
 and other image metadata,and evaluates it against vulnerability data from
-[security advisories](/manuals/scout/deep-dive/advisory-db-sources/).
+[security advisories](/scout/deep-dive/advisory-db-sources/).
 
 If you run image analysis as a one-off task using the CLI or Docker Desktop,
 Docker Scout won't store any data about your image.
@@ -20,7 +20,7 @@ This dynamic evaluation means there's no need to re-analyze images when new CVE 
 
 Docker Scout image analysis is available by default for Docker Hub repositories.
 You can also integrate third-party registries and other services. To learn more,
-see [Integrating Docker Scout with other systems](/manuals/scout/integrations/).
+see [Integrating Docker Scout with other systems](/scout/integrations/).
 
 ## Activate Docker Scout on a repository
 
@@ -30,7 +30,7 @@ to learn how many Scout-enabled repositories come with each subscription tier.
 Before you can activate image analysis on a repository in a third-party registry,
 the registry must be integrated with Docker Scout for your Docker organization.
 Docker Hub is integrated by default. For more information, see
-See [Container registry integrations](/manuals/scout/integrations/#container-registries)
+See [Container registry integrations](/scout/integrations/#container-registries)
 
 > [!NOTE]
 >
@@ -67,13 +67,13 @@ analysis is activated.
    ```
 
    Building with the `--provenance=true` and `--sbom=true` flags attaches
-   [build attestations](/manuals/build/metadata/attestations/) to the image. Docker
+   [build attestations](/build/metadata/attestations/) to the image. Docker
    Scout uses attestations to provide more fine-grained analysis results.
 
    > [!NOTE]
    >
    > The default `docker` driver only supports build attestations if you use the
-   > [containerd image store](/manuals/desktop/features/containerd/).
+   > [containerd image store](/desktop/features/containerd/).
 
 3. Go to the [Images page](https://scout.docker.com/reports/images) in the Docker Scout Dashboard.
 
@@ -181,7 +181,7 @@ reference documentation:
 ## Vulnerability severity assessment
 
 Docker Scout assigns a severity rating to vulnerabilities based on
-vulnerability data from [advisory sources](/manuals/scout/deep-dive/advisory-db-sources/).
+vulnerability data from [advisory sources](/scout/deep-dive/advisory-db-sources/).
 Advisories are ranked and prioritized depending on the type of package that's
 affected by a vulnerability. For example, if a vulnerability affects an OS
 package, the severity level assigned by the distribution maintainer is
@@ -223,5 +223,5 @@ Image analysis on the Docker Scout platform, and analysis triggered by backgroun
 indexing in Docker Desktop, has an image file size limit of 10 GB (uncompressed).
 To analyze images larger than that:
 
-- Attach an [SBOM attestation](/manuals/build/metadata/attestations/sbom/) at build-time. When an image includes an SBOM attestation, Docker Scout uses it instead of generating one, so the 10 GB limit doesn’t apply.
+- Attach an [SBOM attestation](/build/metadata/attestations/sbom/) at build-time. When an image includes an SBOM attestation, Docker Scout uses it instead of generating one, so the 10 GB limit doesn’t apply.
 - Alternatively, you can use the [CLI](#cli) to analyze the image locally. The 10 GB limit doesn’t apply when using the CLI. If the image includes an SBOM attestation, the CLI uses it to complete the analysis faster.

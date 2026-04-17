@@ -11,38 +11,38 @@ sidebar:
 
 ## Docker Desktop 4.67.0 security update: CVE-2026-33990
 
-A vulnerability in Docker Desktop was fixed on March 30 in the [4.67.0](/manuals/desktop/release-notes/#4670) release:
+A vulnerability in Docker Desktop was fixed on March 30 in the [4.67.0](/desktop/release-notes/#4670) release:
 
 - Addressed [CVE-2026-33990](https://www.cve.org/cverecord?id=CVE-2026-33990), SSRF in Docker Model Runner OCI Registry Client
 
 
 ## Docker Desktop 4.62.0 security update: CVE-2026-28400
 
-A vulnerability in Docker Desktop was fixed on February 23 in the [4.62.0](/manuals/desktop/release-notes/#4620) release:
+A vulnerability in Docker Desktop was fixed on February 23 in the [4.62.0](/desktop/release-notes/#4620) release:
 
 - Addressed [CVE-2026-28400](https://www.cve.org/cverecord?id=CVE-2026-28400), runtime flag injection in Docker Model Runner.
 
 ## Docker Desktop 4.62.0 security update: CVE-2026-2664
 
-A vulnerability in Docker Desktop was fixed on February 23 in the [4.62.0](/manuals/desktop/release-notes/#4620) release:
+A vulnerability in Docker Desktop was fixed on February 23 in the [4.62.0](/desktop/release-notes/#4620) release:
 
 - Fixed [CVE-2026-2664](https://www.cve.org/cverecord?id=CVE-2026-2664), out of bounds read in gRPC-FUSE kernel module.
 
 ## Docker Desktop 4.54.0 security update: CVE-2025-13743
 
-A vulnerability in Docker Desktop was fixed on December 4 in the [4.54.0](/manuals/desktop/release-notes/#4540) release:
+A vulnerability in Docker Desktop was fixed on December 4 in the [4.54.0](/desktop/release-notes/#4540) release:
 
 - Fixed [CVE-2025-13743](https://www.cve.org/cverecord?id=CVE-2025-13743) where Docker Desktop diagnostics bundles were found to include expired Hub PATs in log output due to error object serialization.
 
 ## Docker Desktop 4.49.0 security update: CVE-2025-9164
 
-A vulnerability in Docker Desktop for Windows was fixed on October 23 in the [4.49.0](/manuals/desktop/release-notes/#4490) release:
+A vulnerability in Docker Desktop for Windows was fixed on October 23 in the [4.49.0](/desktop/release-notes/#4490) release:
 
 - Fixed [CVE-2025-9164](https://www.cve.org/cverecord?id=CVE-2025-9164) where the Docker Desktop for Windows installer was vulnerable to DLL hijacking due to insecure DLL search order. The installer searches for required DLLs in the user's Downloads folder before checking system directories, allowing local privilege escalation through malicious DLL placement.
 
 ## Docker Desktop 4.47.0 security update: CVE-2025-10657
 
-A vulnerability in Docker Desktop was fixed on September 25 in the [4.47.0](/manuals/desktop/release-notes/#4470) release:
+A vulnerability in Docker Desktop was fixed on September 25 in the [4.47.0](/desktop/release-notes/#4470) release:
 
 - Fixed [CVE-2025-10657](https://www.cve.org/CVERecord?id=CVE-2025-10657) where the Enhanced Container Isolation [Docker Socket command restrictions](../enterprise/security/hardened-desktop/enhanced-container-isolation/config/#command-restrictions) feature was not working properly in Docker Desktop 4.46.0 only (the configuration for it was being ignored).
 
@@ -50,7 +50,7 @@ A vulnerability in Docker Desktop was fixed on September 25 in the [4.47.0](/man
 
 _Last updated August 20, 2025_
 
-A vulnerability in Docker Desktop was fixed on August 20 in the [4.44.3](/manuals/desktop/release-notes/#4443) release:
+A vulnerability in Docker Desktop was fixed on August 20 in the [4.44.3](/desktop/release-notes/#4443) release:
 
 - Fixed [CVE-2025-9074](https://www.cve.org/CVERecord?id=CVE-2025-9074) where a malicious container running on Docker Desktop could access the Docker Engine and launch additional containers without requiring the Docker socket to be mounted. This could allow unauthorized access to user files on the host system. Enhanced Container Isolation (ECI) does not mitigate this vulnerability.
 
@@ -65,7 +65,7 @@ We are aware of [CVE-2025-23266](https://nvd.nist.gov/vuln/detail/CVE-2025-23266
 
 _Last updated July 03, 2025_
 
-A vulnerability in Docker Desktop was fixed on July 03 in the [4.43.0](/manuals/desktop/release-notes/#4430) release:
+A vulnerability in Docker Desktop was fixed on July 03 in the [4.43.0](/desktop/release-notes/#4430) release:
 
 - Fixed [CVE-2025-6587](https://www.cve.org/CVERecord?id=CVE-2025-6587) where sensitive system environment variables were included in Docker Desktop diagnostic logs, allowing for potential secret exposure.
 
@@ -73,32 +73,32 @@ A vulnerability in Docker Desktop was fixed on July 03 in the [4.43.0](/manuals/
 
 _Last updated May 15, 2025_
 
-Three vulnerabilities in Docker Desktop were fixed on April 28 in the [4.41.0](/manuals/desktop/release-notes/#4410) release.
+Three vulnerabilities in Docker Desktop were fixed on April 28 in the [4.41.0](/desktop/release-notes/#4410) release.
 
 - Fixed [CVE-2025-3224](https://www.cve.org/CVERecord?id=CVE-2025-3224) allowing an attacker with access to a user machine to perform an elevation of privilege when Docker Desktop updates.
 - Fixed [CVE-2025-4095](https://www.cve.org/CVERecord?id=CVE-2025-4095) where Registry Access Management (RAM) policies were not enforced when using a MacOS configuration profile, allowing users to pull images from unapproved registries.
 - Fixed [CVE-2025-3911](https://www.cve.org/CVERecord?id=CVE-2025-3911) allowing an attacker with read access to a user's machine to obtain sensitive information from Docker Desktop log files, including environment variables configured for running containers.
 
-We strongly encourage you to update to Docker Desktop [4.41.0](/manuals/desktop/release-notes/#4410).
+We strongly encourage you to update to Docker Desktop [4.41.0](/desktop/release-notes/#4410).
 
 ## Docker Desktop 4.34.2 Security Update: CVE-2024-8695 and CVE-2024-8696
 
 _Last updated September 13, 2024_
 
-Two remote code execution (RCE) vulnerabilities in Docker Desktop related to Docker Extensions were reported by [Cure53](https://cure53.de/) and were fixed on September 12 in the [4.34.2](/manuals/desktop/release-notes/#4342) release.
+Two remote code execution (RCE) vulnerabilities in Docker Desktop related to Docker Extensions were reported by [Cure53](https://cure53.de/) and were fixed on September 12 in the [4.34.2](/desktop/release-notes/#4342) release.
 
 - [CVE-2024-8695](https://www.cve.org/cverecord?id=CVE-2024-8695): A remote code execution (RCE) vulnerability via crafted extension description/changelog could be abused by a malicious extension in Docker Desktop before 4.34.2. [Critical]
 - [CVE-2024-8696](https://www.cve.org/cverecord?id=CVE-2024-8696): A remote code execution (RCE) vulnerability via crafted extension publisher-url/additional-urls could be abused by a malicious extension in Docker Desktop before 4.34.2. [High]
 
 No existing extensions exploiting the vulnerabilities were found in the Extensions Marketplace. The Docker Team will be closely monitoring and diligently reviewing any requests for publishing new extensions.
 
-We strongly encourage you to update to Docker Desktop [4.34.2](/manuals/desktop/release-notes/#4342). If you are unable to update promptly, you can [disable Docker Extensions](/manuals/extensions/settings-feedback/#turn-on-or-turn-off-extensions) as a workaround.
+We strongly encourage you to update to Docker Desktop [4.34.2](/desktop/release-notes/#4342). If you are unable to update promptly, you can [disable Docker Extensions](/extensions/settings-feedback/#turn-on-or-turn-off-extensions) as a workaround.
 
 ## Deprecation of password logins on CLI when SSO enforced
 
 _Last updated July, 2024_
 
-When [SSO enforcement](/manuals/enterprise/security/single-sign-on/connect/) was first introduced, Docker provided a grace period to continue to let passwords be used on the Docker CLI when authenticating to Docker Hub. This was allowed so organizations could more easily use SSO enforcement. It is recommended that administrators configuring SSO encourage users using the CLI [to switch over to Personal Access Tokens](/manuals/enterprise/security/single-sign-on/#prerequisites) in anticipation of this grace period ending.
+When [SSO enforcement](/admin/enterprise/security/single-sign-on/connect/) was first introduced, Docker provided a grace period to continue to let passwords be used on the Docker CLI when authenticating to Docker Hub. This was allowed so organizations could more easily use SSO enforcement. It is recommended that administrators configuring SSO encourage users using the CLI [to switch over to Personal Access Tokens](/admin/enterprise/security/single-sign-on/#prerequisites) in anticipation of this grace period ending.
 
 On September 16, 2024 the grace period will end and passwords will no longer be able to authenticate to Docker Hub via the Docker CLI when SSO is enforced. Affected users are required to switch over to using PATs to continue signing in.
 
@@ -138,16 +138,16 @@ If you are using affected versions of runc, BuildKit, Moby, or Docker Desktop, m
 | `runc`                 | >= [1.1.12](https://github.com/opencontainers/runc/releases/tag/v1.1.12)                 |
 | `BuildKit`             | >= [0.12.5](https://github.com/moby/buildkit/releases/tag/v0.12.5)                 |
 | `Moby (Docker Engine)` | >= [25.0.2](https://github.com/moby/moby/releases/tag/v25.0.2) and >= [24.0.9](https://github.com/moby/moby/releases/tag/v24.0.9)   |
-| `Docker Desktop`       | >= [4.27.1](/manuals/desktop/release-notes/#4271)                 |
+| `Docker Desktop`       | >= [4.27.1](/desktop/release-notes/#4271)                 |
 
 
 If you are unable to update to an unaffected version promptly, follow these best practices to mitigate risk:
 
 * Only use trusted Docker images (such as [Docker Official Images](../docker-hub/image-library/trusted-content/#docker-official-images)).
 * Don't build Docker images from untrusted sources or untrusted Dockerfiles.
-* If you are a Docker Business customer using Docker Desktop and unable to update to v4.27.1, make sure to enable [Hardened Docker Desktop](/manuals/enterprise/security/hardened-desktop/) features such as:
-  * [Enhanced Container Isolation](/manuals/enterprise/security/hardened-desktop/enhanced-container-isolation/), which mitigates the impact of CVE-2024-21626 in the case of running containers from malicious images.
-  * [Image Access Management](/manuals/enterprise/security/hardened-desktop/image-access-management/), and [Registry Access Management](/manuals/enterprise/security/hardened-desktop/registry-access-management/), which give organizations control over which images and repositories their users can access.
+* If you are a Docker Business customer using Docker Desktop and unable to update to v4.27.1, make sure to enable [Hardened Docker Desktop](/admin/enterprise/security/hardened-desktop/) features such as:
+  * [Enhanced Container Isolation](/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/), which mitigates the impact of CVE-2024-21626 in the case of running containers from malicious images.
+  * [Image Access Management](/admin/enterprise/security/hardened-desktop/image-access-management/), and [Registry Access Management](/admin/enterprise/security/hardened-desktop/registry-access-management/), which give organizations control over which images and repositories their users can access.
 * For CVE-2024-23650, CVE-2024-23651, CVE-2024-23652, and CVE-2024-23653, avoid using BuildKit frontend from an untrusted source. A frontend image is usually specified as the #syntax line on your Dockerfile, or with `--frontend` flag when using the `buildctl build` command.
 * To mitigate CVE-2024-24557, make sure to either use BuildKit or disable caching when building images. From the CLI this can be done via the `DOCKER_BUILDKIT=1` environment variable (default for Moby >= v23.0 if the buildx plugin is installed) or the `--no-cache flag`. If you are using the HTTP API directly or through a client, the same can be done by setting `nocache` to `true` or `version` to `2` for the [/build API endpoint](https://docs.docker.com/reference/api/engine/version/v1.44/#tag/Image/operation/ImageBuild).
 
@@ -195,7 +195,7 @@ _The issue has been fixed in Moby >= v25.0.2 and >= v24.0.9._
 
 Docker Desktop v4.27.0 and earlier are affected. Docker Desktop v4.27.1 was released on February 1 and includes runc, BuildKit, and dockerd binaries patches. In addition to updating to this new version, we encourage all Docker users to diligently use Docker images and Dockerfiles and ensure you only use trusted content in your builds.
 
-As always, you should check Docker Desktop system requirements for your operating system ([Windows](/manuals/desktop/setup/install/windows-install/#system-requirements), [Linux](/manuals/desktop/setup/install/linux/#general-system-requirements), [Mac](/manuals/desktop/setup/install/mac-install/#system-requirements)) before updating to ensure full compatibility.
+As always, you should check Docker Desktop system requirements for your operating system ([Windows](/desktop/setup/install/windows-install/#system-requirements), [Linux](/desktop/setup/install/linux/#general-system-requirements), [Mac](/desktop/setup/install/mac-install/#system-requirements)) before updating to ensure full compatibility.
 
 #### Docker Build Cloud
 

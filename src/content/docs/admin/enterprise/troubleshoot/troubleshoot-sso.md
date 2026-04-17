@@ -95,7 +95,7 @@ to re-enable it:
 **Manually invite users**
 
 When JIT is disabled, users are not automatically added to your organization when they authenticate through SSO.
-To manually invite users, see [Invite members](/manuals/admin/organization/members/#invite-members)
+To manually invite users, see [Invite members](/admin/organization/members/#invite-members)
 
 **Configure SCIM provisioning**
 
@@ -107,7 +107,7 @@ If you have SCIM enabled, troubleshoot your SCIM connection using the following 
 1. Navigate back to the **SSO and SCIM** page of the Admin Console and verify your SCIM configuration:
     - Ensure that the SCIM Base URL and API Token in your IdP match those provided in the Docker Admin Console.
     - Verify that SCIM is enabled in both Docker and your IdP.
-1. Ensure that the attributes being synced from your IdP match Docker's [supported attributes](/manuals/enterprise/security/provisioning/scim/#supported-attributes) for SCIM.
+1. Ensure that the attributes being synced from your IdP match Docker's [supported attributes](/admin/enterprise/security/provisioning/scim/#supported-attributes) for SCIM.
 1. Test user provisioning by trying to provision a test user through your IdP and verify if they appear in Docker.
 
 ## IdP-initiated sign in is not enabled for connection
@@ -150,11 +150,11 @@ This error occurs when the organization has no available seats for the user when
 
 **Add more seats to the organization**
 
-Purchase additional Docker Business subscription seats. For details, see [Manage subscription seats](/manuals/subscription/manage-seats/).
+Purchase additional Docker Business subscription seats. For details, see [Manage subscription seats](/admin/subscription/manage-seats/).
 
 **Remove users or pending invitations**
 
-Review your organization members and pending invitations. Remove inactive users or pending invitations to free up seats. For more details, see [Manage organization members](/manuals/admin/organization/members/).
+Review your organization members and pending invitations. Remove inactive users or pending invitations to free up seats. For more details, see [Manage organization members](/admin/organization/members/).
 
 ## Domain is not verified for SSO connection
 
@@ -179,7 +179,7 @@ Ensure that the IdP SSO connection is returning the correct UPN value in the ass
 
 **Add and verify all domains**
 
-Add and verify all domains and subdomains used as UPN by your IdP and associate them with your Docker SSO connection. For details, see [Configure single sign-on](/manuals/enterprise/security/single-sign-on/connect/).
+Add and verify all domains and subdomains used as UPN by your IdP and associate them with your Docker SSO connection. For details, see [Configure single sign-on](/admin/enterprise/security/single-sign-on/connect/).
 
 ## Unable to find session
 

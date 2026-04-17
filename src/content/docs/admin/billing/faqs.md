@@ -27,11 +27,11 @@ disabled.
 
 ### Can I manually retry a failed payment?
 
-No. Docker retries failed payments on a [retry schedule](/manuals/billing/faqs/#what-happens-if-my-subscription-payment-fails).
+No. Docker retries failed payments on a [retry schedule](/admin/billing/faqs/#what-happens-if-my-subscription-payment-fails).
 
 To ensure a retired payment is successful, verify your default payment is
 updated. If you need to update your default payment method, see
-[Manage payment method](/manuals/billing/payment-method/#manage-payment-method).
+[Manage payment method](/admin/billing/payment-method/#manage-payment-method).
 
 ### Does Docker collect sales tax and/or VAT?
 
@@ -60,4 +60,4 @@ purchasing upgrades or additional seats. You must use card payment or US bank
 accounts for these changes.
 
 For a list of supported payment methods, see
-[Add or update a payment method](/manuals/billing/payment-method/).
+[Add or update a payment method](/admin/billing/payment-method/).

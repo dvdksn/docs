@@ -51,6 +51,13 @@ Results: 1,088 pages migrated, 1,626 redirects collected, 216 URL changes.
 - docker-hub renamed to hub
 - All products at top level (no `manuals/` directory)
 - reference/samples removed
+- **Get started** consolidated from 3 overlapping tracks (docker-concepts,
+  introduction, workshop — ~25 pages) into a single linear journey (overview,
+  install, build-your-first-app, next-steps — 4 pages)
+- **Compose file reference** split: 9 explanatory files moved to `compose/`,
+  reference/compose-file/ now contains pure spec only (services, networks,
+  volumes, build, deploy, configs, secrets, version-and-name)
+- **Broken `/manuals/` links** fixed across 390 files (~1,100 occurrences)
 
 ### 5. CLI reference (complete)
 
@@ -64,47 +71,57 @@ Results: 1,088 pages migrated, 1,626 redirects collected, 216 URL changes.
 
 ## What's NOT done (priority order)
 
-### 1. Get a clean build (BLOCKING)
+### 1. ~~Get a clean build~~ (DONE)
 
-`npx astro build` fails on MDX runtime errors. Root causes:
+Build passes: 1,596 pages, zero errors.
 
-**MDX strictness** — Hugo markdown uses patterns MDX can't handle:
-- `{#id}` and `{key=value}` heading/block attributes → JS expressions in MDX
-- Bare `<` in prose (`<->`, `<=`) → parsed as JSX
-- `<details>/<summary>` inside lists → nesting violations
-- HTML comments in .mdx files → need `{/* */}` syntax
+Fix applied: escaped `{ip, ...}` in `reference/compose-file/merge.mdx`
+(MDX was parsing curly braces as JS expression).
 
-**Image paths** — Relative image references break after IA file moves.
-Partial fix in `scripts/fix-image-paths.mjs`.
+Remaining non-blocking warnings: unknown code languages in Expressive Code
+(`Dockerfile` needs lowercase, `goat`/`rego`/`env`/`dockerignore` not bundled).
 
-**Page-level params** — `{{% param "X" %}}` where X is page-specific
-(not in `src/data/versions.ts`). Manually fixed for engine install pages.
+### 2. ~~Vendored upstream content~~ (DONE)
 
-**~30 files converted back to .md** as workaround (losing component imports).
+Replaced Hugo module vendoring with:
+- `upstream-versions.json` — pinned versions for 6 upstream repos (replaces `go.mod`)
+- `scripts/sync-upstream.sh` — fetches from GitHub at pinned refs with sparse checkout
+- Content copied from `_vendor/` into Astro tree with front matter cleaned up
 
-**Recommended approach:** Consider converting ALL files to .md and using
-remark plugins for component injection instead of MDX imports. This avoids
-all MDX strictness issues at the cost of a different component integration
-pattern. Alternatively, systematically fix the remaining ~20 MDX errors.
+All 6 repos synced:
+- moby/moby: version-history.md
+- moby/buildkit: Dockerfile reference, 21 build-checks, toml config, 2 attestation docs
+- docker/buildx: bake reference + stdlib
+- docker/cli: engine extend (8 plugins), deprecated, run, dockerd
+- docker/compose: 48 CLI YAML data files → src/data/cli/compose/
+- docker/model-runner: 34 CLI YAML data files → src/data/cli/model/
 
-### 2. Vendored upstream content
+CLI page generator now produces 468 pages (was 396+41).
 
-Hugo modules (`hugo.yaml` lines 294-379) vendor content from 6 upstream repos.
-Need a replacement:
-- `scripts/sync-upstream.sh` to fetch/copy at pinned versions
-- `upstream-versions.json` replacing `go.mod` for version pins
-- Mount mapping in `hugo.yaml` → copy destinations in Astro tree
+### 3. ~~Special features~~ (mostly DONE)
 
-### 3. Special features
+Completed:
+- **Redirects endpoint** — `src/pages/redirects.json.ts` merges migration
+  redirects + vanity redirects into flat JSON for Lambda@Edge (2,335 redirects).
+- **Metadata JSON** — `src/pages/metadata.json.ts` outputs `{url, title,
+  description, keywords}` for each page (1,595 entries).
+- **llms.txt** — `src/pages/llms.txt.ts` generates plain-text page listing
+  grouped by section for LLM context.
+- **robots.txt** — `src/pages/robots.txt.ts` with prod/staging awareness.
+- **sitemap.xml** — `@astrojs/sitemap` integration (built into Starlight).
+- **Markdown export** — `src/integrations/markdown-output.ts` post-build
+  integration writes `.md` files to `dist/` for every page + CLI reference
+  (2,105 files). Powers "View Markdown" / "Open in Claude" via Lambda@Edge
+  content negotiation.
+- **Code block prompt stripping** — `src/plugins/ec-prompt-strip.ts`
+  Expressive Code plugin strips `$`/`>` prefixes from copy button clipboard
+  content for shell-like code blocks.
 
-- **Gordon AI chat** — `gordon.astro` (root) is a working Astro component.
-  Needs branding update + Starlight layout integration.
-- **Redirects endpoint** — `src/pages/redirects.json.ts` producing JSON
-  for Lambda@Edge. Data in `src/data/redirects-migration.json` + `data/redirects.yml`.
-- **Search** — Pagefind built into Starlight. Needs custom ranking weights.
-- **Markdown export** — "View Markdown" / "Open in Claude" feature.
-- **Output formats** — `metadata.json`, `llms.txt`, `robots.txt`, `sitemap.xml`.
-- **Code blocks** — Prompt stripping for `$`/`>` prefixes (Expressive Code plugin).
+- **Gordon AI chat** — integrated into Starlight layout via component
+  overrides. `src/components/AskAI.astro` (panel), Header override (trigger
+  button), PageFrame override (slide-out panel). Streaming SSE, session
+  persistence, markdown rendering with syntax highlighting, feedback.
+- **Search** — Pagefind built into Starlight, using defaults.
 
 ### 4. Build pipeline & CI
 
@@ -125,13 +142,25 @@ Need a replacement:
 | `src/data/versions.ts` | Site-wide version constants |
 | `src/data/summary.yaml` | Feature availability matrix |
 | `src/data/cli/` | Docker CLI YAML data |
+| `upstream-versions.json` | Pinned versions for 6 upstream repos |
+| `scripts/sync-upstream.sh` | Fetch/copy vendored content from upstream |
 | `scripts/migrate.mjs` | Main migration script (4-pass) |
 | `scripts/generate-cli-pages.mjs` | CLI reference page generator |
 | `scripts/fix-image-paths.mjs` | Relative → absolute image paths |
 | `scripts/fix-mdx-errors.mjs` | Iterative MDX error fixer |
 | `migration-map.json` | Old → new path mapping |
-| `src/data/redirects-migration.json` | Collected redirects |
-| `gordon.astro` | Gordon chat reference implementation |
+| `src/data/redirects-migration.json` | Collected redirects (migration) |
+| `src/data/redirects-vanity.json` | Vanity/manual redirects (from data/redirects.yml) |
+| `src/pages/redirects.json.ts` | Redirects endpoint for Lambda@Edge |
+| `src/pages/metadata.json.ts` | Page metadata endpoint for search |
+| `src/pages/llms.txt.ts` | LLM context page listing |
+| `src/pages/robots.txt.ts` | Robots.txt with prod/staging awareness |
+| `src/integrations/markdown-output.ts` | Post-build markdown file generation |
+| `src/plugins/ec-prompt-strip.ts` | Expressive Code prompt-stripping plugin |
+| `src/components/AskAI.astro` | Gordon AI chat panel component |
+| `src/components/overrides/Header.astro` | Starlight Header + Ask AI trigger |
+| `src/components/overrides/PageFrame.astro` | Starlight PageFrame + slide-out panel |
+| `gordon.astro` | Gordon chat reference implementation (original) |
 | `technical-audit.md` | Technical observations about the migration |
 | `information-architecture-proposal.md` | IA reorganization spec |
 
@@ -139,7 +168,8 @@ Need a replacement:
 
 ```sh
 npm install                          # Install deps (required first time)
-npx astro build                      # Build (currently fails on MDX errors)
+npx astro build                      # Build (1,596 pages, zero errors)
+./scripts/sync-upstream.sh           # Re-sync vendored content from upstream repos
 npx astro dev                        # Dev server on port 4321
 node scripts/migrate.mjs --write     # Re-run content migration from Hugo source
 node scripts/generate-cli-pages.mjs  # Re-generate CLI reference pages

@@ -408,4 +408,4 @@ $ docker model package --safetensors ./model/ --push myorg/mymodel-vllm
 
 - [Configuration options](configuration/) - Detailed parameter reference
 - [API reference](api-reference/) - API documentation
-- [GPU support](/manuals/desktop/features/gpu/) - GPU configuration for Docker Desktop
+- [GPU support](/desktop/features/gpu/) - GPU configuration for Docker Desktop

@@ -6,7 +6,7 @@ description: Learn how to build Docker Compose projects with Docker Buildx Bake
 This guide explores how you can use Bake to build images for Docker Compose
 projects with multiple services.
 
-[Docker Buildx Bake](/manuals/build/bake/) is a build orchestration
+[Docker Buildx Bake](/build/bake/) is a build orchestration
 tool that enables declarative configuration for your builds, much like Docker
 Compose does for defining runtime stacks. For projects where Docker Compose is
 used to spin up services for local development, Bake offers a way of seamlessly
@@ -17,8 +17,8 @@ extending the project with a production-ready build configuration.
 This guide assumes that you're familiar with
 
 - Docker Compose
-- [Multi-stage builds](/manuals/build/building/multi-stage/)
-- [Multi-platform builds](/manuals/build/building/multi-platform/)
+- [Multi-stage builds](/build/building/multi-stage/)
+- [Multi-platform builds](/build/building/multi-platform/)
 
 ## Orientation
 
@@ -317,13 +317,13 @@ are pushed to a registry, it's often a good idea to build for multiple
 platforms, arm64 and amd64 in particular.
 
 Attestations
-: [Attestations](/manuals/build/metadata/attestations/) are manifests
+: [Attestations](/build/metadata/attestations/) are manifests
 attached to the image that describe how the image was created and what
 components it contains. Attaching attestations to your images helps ensure that
 your images follow software supply chain best practices.
 
 Annotations
-: [Annotations](/manuals/build/metadata/annotations/) provide descriptive
+: [Annotations](/build/metadata/annotations/) provide descriptive
 metadata for images. Use annotations to record arbitrary information and attach
 it to your image, which helps consumers and tools understand the origin,
 contents, and how to use the image.
@@ -389,8 +389,8 @@ helps separate your development and build configuration in a reasonable way.
 
 For more information about how to use Bake, check out these resources:
 
-- [Bake documentation](/manuals/build/bake/)
-- [Building with Bake from a Compose file](/manuals/build/bake/compose-file/)
-- [Bake file reference](/manuals/build/bake/reference/)
+- [Bake documentation](/build/bake/)
+- [Building with Bake from a Compose file](/build/bake/compose-file/)
+- [Bake file reference](/build/bake/reference/)
 - [Mastering multi-platform builds, testing, and more with Docker Buildx Bake](/guides/bake/index/)
 - [Bake GitHub Action](https://github.com/docker/bake-action)
