@@ -130,7 +130,7 @@ Edit `/etc/docker/daemon.json` and add the following:
 ```
 
 See all storage options for each storage driver in the
-[daemon reference documentation](/reference/cli/dockerd/#daemon-storage-driver)
+[daemon reference documentation](/engine/cli/dockerd/#daemon-storage-driver)
 
 Save and close the file, and restart Docker.
 

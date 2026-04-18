@@ -204,7 +204,7 @@ function formatSbxOption(opt: SbxOption): string {
 }
 
 function sbxSlugFromName(name: string): string {
-  return "reference/cli/" + name.replace(/\s+/g, "-");
+  return "sandboxes/cli/" + name.replace(/\s+/g, "-");
 }
 
 function generateSbxCliMarkdown(doc: SbxCliDoc): string {

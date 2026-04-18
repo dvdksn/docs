@@ -27,7 +27,7 @@ use `docker pull`.
 
 If you are behind an HTTP proxy server, for example in corporate settings,
 before open a connect to registry, you may need to configure the Docker
-daemon's proxy settings, refer to the [dockerd command-line reference](/reference/cli/dockerd/#proxy-configuration)
+daemon's proxy settings, refer to the [dockerd command-line reference](/engine/cli/dockerd/#proxy-configuration)
 for details.
 
 ### Concurrent downloads
@@ -35,7 +35,7 @@ for details.
 By default the Docker daemon will pull three layers of an image at a time.
 If you are on a low bandwidth connection this may cause timeout issues and you may want to lower
 this via the `--max-concurrent-downloads` daemon option. See the
-[daemon documentation](/reference/cli/dockerd/) for more details.
+[daemon documentation](/engine/cli/dockerd/) for more details.
 
 ## Options
 
@@ -184,7 +184,7 @@ Registry credentials are managed by [docker login](/reference/cli/docker/login/)
 
 Docker uses the `https://` protocol to communicate with a registry, unless the
 registry is allowed to be accessed over an insecure connection. Refer to the
-[insecure registries](/reference/cli/dockerd/#insecure-registries) section for more information.
+[insecure registries](/engine/cli/dockerd/#insecure-registries) section for more information.
 
 
 ### Pull a repository with multiple images (-a, --all-tags) {#all-tags}

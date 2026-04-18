@@ -2,7 +2,7 @@
 title: How-tos
 description: Step-by-step guidance for working with Docker Hardened Images, from discovery to governance.
 sidebar:
-  order: 20
+  order: 4
 ---
 
 This section provides practical, task-based guidance for working with Docker

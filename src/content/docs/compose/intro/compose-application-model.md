@@ -8,27 +8,27 @@ sidebar:
 
 With Docker Compose you use a YAML configuration file, known as the [Compose file](#the-compose-file), to configure your application’s services, and then you create and start all the services from your configuration with the [Compose CLI](#cli). 
 
-The Compose file, or `compose.yaml` file, follows the rules provided by the [Compose Specification](/reference/compose-file/) in how to define multi-container applications. This is the Docker Compose implementation of the formal [Compose Specification](https://github.com/compose-spec/compose-spec). 
+The Compose file, or `compose.yaml` file, follows the rules provided by the [Compose Specification](/compose/compose-file/) in how to define multi-container applications. This is the Docker Compose implementation of the formal [Compose Specification](https://github.com/compose-spec/compose-spec). 
 
 <details>
 <summary>The Compose application model</summary>
 
 
-Computing components of an application are defined as [services](/reference/compose-file/services/). A service is an abstract concept implemented on platforms by running the same container image, and configuration, one or more times.
+Computing components of an application are defined as [services](/compose/compose-file/services/). A service is an abstract concept implemented on platforms by running the same container image, and configuration, one or more times.
 
-Services communicate with each other through [networks](/reference/compose-file/networks/). In the Compose Specification, a network is a platform capability abstraction to establish an IP route between containers within services connected together.
+Services communicate with each other through [networks](/compose/compose-file/networks/). In the Compose Specification, a network is a platform capability abstraction to establish an IP route between containers within services connected together.
 
-Services store and share persistent data into [volumes](/reference/compose-file/volumes/). The Specification describes such a persistent data as a high-level filesystem mount with global options.
+Services store and share persistent data into [volumes](/compose/compose-file/volumes/). The Specification describes such a persistent data as a high-level filesystem mount with global options.
 
-Some services require configuration data that is dependent on the runtime or platform. For this, the Specification defines a dedicated [configs](/reference/compose-file/configs/) concept. From inside the container, configs behave like volumes—they’re mounted as files. However, configs are defined differently at the platform level.
+Some services require configuration data that is dependent on the runtime or platform. For this, the Specification defines a dedicated [configs](/compose/compose-file/configs/) concept. From inside the container, configs behave like volumes—they’re mounted as files. However, configs are defined differently at the platform level.
 
-A [secret](/reference/compose-file/secrets/) is a specific flavor of configuration data for sensitive data that should not be exposed without security considerations. Secrets are made available to services as files mounted into their containers, but the platform-specific resources to provide sensitive data are specific enough to deserve a distinct concept and definition within the Compose Specification.
+A [secret](/compose/compose-file/secrets/) is a specific flavor of configuration data for sensitive data that should not be exposed without security considerations. Secrets are made available to services as files mounted into their containers, but the platform-specific resources to provide sensitive data are specific enough to deserve a distinct concept and definition within the Compose Specification.
 
 > [!NOTE]
 >
 > With volumes, configs and secrets you can have a simple declaration at the top-level and then add more platform-specific information at the service level.
 
-A project is an individual deployment of an application specification on a platform. A project's name, set with the top-level [`name`](/reference/compose-file/version-and-name/) attribute, is used to group
+A project is an individual deployment of an application specification on a platform. A project's name, set with the top-level [`name`](/compose/compose-file/version-and-name/) attribute, is used to group
 resources together and isolate them from other applications or other installation of the same Compose-specified application with distinct parameters. If you are creating resources on a platform, you must prefix resource names by project and
 set the label `com.docker.compose.project`.
 
@@ -166,4 +166,4 @@ example-backend-1   example/database     "docker-entrypoint.s…"   backend     
 
 - [Try the Quickstart guide](/compose/gettingstarted/)
 - [Explore some sample applications](https://github.com/docker/awesome-compose)
-- [Familiarize yourself with the Compose Specification](/reference/compose-file/)
+- [Familiarize yourself with the Compose Specification](/compose/compose-file/)

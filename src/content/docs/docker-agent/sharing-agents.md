@@ -9,7 +9,7 @@ keywords:
   - sharing
   - distribution
 sidebar:
-  order: 50
+  order: 6
 ---
 
 Push your agent to a registry and share it by name. Your teammates

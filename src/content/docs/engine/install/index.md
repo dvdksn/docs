@@ -4,7 +4,7 @@ description: Learn how to choose the best method for you to install Docker Engin
 keywords: install engine, docker engine install, install docker engine, docker engine installation, engine install, docker ce installation, docker ce install, engine installer, installing docker engine, docker server install, docker desktop vs docker engine
 sidebar:
   label: Install
-  order: 10
+  order: 1
 ---
 
 This section describes how to install Docker Engine on Linux, also known as

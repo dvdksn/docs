@@ -8,7 +8,7 @@ keywords:
   - agent design
   - optimization
 sidebar:
-  order: 40
+  order: 8
 ---
 
 Patterns you learn from building and running agents with Docker Agent. These aren't

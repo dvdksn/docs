@@ -1,7 +1,7 @@
 /**
  * Generates robots.txt at build time.
  *
- * In production: allow crawling, disallow /unassociated-machines/.
+ * In production: allow crawling, disallow /admin/organizations/unassociated-machines/.
  * In non-production: disallow everything to prevent indexing previews.
  */
 import type { APIRoute } from "astro";
@@ -14,7 +14,7 @@ export const GET: APIRoute = ({ site }) => {
 
   const body = isProd
     ? `User-agent: *
-Disallow: /unassociated-machines/
+Disallow: /admin/organizations/unassociated-machines/
 
 Sitemap: ${siteUrl}/sitemap-index.xml
 `

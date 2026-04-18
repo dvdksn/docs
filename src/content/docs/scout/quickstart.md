@@ -4,7 +4,7 @@ description: Learn how to get started with Docker Scout to analyze images and fi
 keywords: scout, supply chain, vulnerabilities, packages, cves, scan, analysis, analyze
 sidebar:
   label: Quickstart
-  order: 20
+  order: 1
 ---
 
 Docker Scout analyzes image contents and generates a detailed report of packages

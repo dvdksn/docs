@@ -3,7 +3,7 @@ title: Troubleshoot
 description: Resolve common issues when building, running, or debugging Docker Hardened Images, such as non-root behavior, missing shells, and port access.
 keywords: troubleshoot hardened image, docker debug container, non-root permission issue, missing shell error, no package manager, debug, hardened images, DHI, troubleshooting, ephemeral container, docker debug, non-root containers, hardened container image, debug secure container
 sidebar:
-  order: 40
+  order: 91
 ---
 
 This page covers debugging techniques and common issues you may encounter while

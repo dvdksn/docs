@@ -3,7 +3,7 @@ title: BuildKit
 description: Introduction and overview of BuildKit
 keywords: build, buildkit
 sidebar:
-  order: 100
+  order: 5
 ---
 
 [BuildKit](https://github.com/moby/buildkit) is the builder backend used by
@@ -63,7 +63,7 @@ it to LLB so BuildKit can execute it. Frontends can be distributed as images,
 and the user can target a specific version of a frontend that is guaranteed to
 work for the features used by their definition.
 
-For example, to build a [Dockerfile](/reference/dockerfile/) with
+For example, to build a [Dockerfile](/build/dockerfile/) with
 BuildKit, you would
 [use an external Dockerfile frontend](frontend/).
 

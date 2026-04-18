@@ -3,7 +3,7 @@ title: Docker accounts
 description: Learn how to create and manage your Docker account
 keywords: accounts, docker ID, account management, account settings, docker account, docker home
 sidebar:
-  order: 30
+  order: 1
 group: Platform
 ---
 

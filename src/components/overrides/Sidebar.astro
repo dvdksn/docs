@@ -1,60 +1,292 @@
 ---
 /**
- * Custom Sidebar override — scoped per-product sidebars.
+ * Custom Sidebar override.
  *
- * When viewing a page within a product section, shows only that section's
- * sidebar tree with a "back" link. At the root or landing pages, shows the
- * full sidebar with all sections collapsed.
+ * Two behaviors layered on top of Starlight's default sidebar:
  *
- * The matching heuristic walks the sidebar tree to find the deepest group
- * that (a) contains the current page and (b) has at least one direct link
- * entry. Category-only groups (whose children are all groups) are skipped
- * so we land on the actual product group.
+ * 1. Scoped per-product sidebars. When viewing a page within a product
+ *    section, shows only that section's tree. The matching heuristic walks
+ *    the sidebar tree to find the deepest group that (a) contains the
+ *    current page and (b) has at least one direct link entry. Category-only
+ *    groups (whose children are all groups) are skipped.
+ *
+ * 2. Tabbed view for the `docker` CLI reference. The docker CLI tree is
+ *    huge (~425 pages, 5+ levels deep). Rendering it as a single nested
+ *    sidebar buries frequent commands next to rare ones. Instead, we split
+ *    the subtree into category tabs (Root, Compose, Buildx, Scout, etc.)
+ *    and show only the active tab's subcommands. Active tab is derived
+ *    from the URL's first segment after /reference/cli/docker/.
  */
 import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
 import SidebarPersister from '@astrojs/starlight/components/SidebarPersister.astro';
 import SidebarSublist from '@astrojs/starlight/components/SidebarSublist.astro';
+import CliSublist from './CliSublist.astro';
 
 type SidebarLink = { type: 'link'; label: string; href: string; isCurrent: boolean; badge?: unknown; attrs: Record<string, unknown> };
 type SidebarGroup = { type: 'group'; label: string; entries: SidebarEntry[]; collapsed: boolean; badge?: unknown };
 type SidebarEntry = SidebarLink | SidebarGroup;
 
 const { sidebar } = Astro.locals.starlightRoute;
+const path = Astro.url.pathname;
 
-/** Check whether any descendant link in the tree is the current page. */
+/* ── Shared helpers ── */
+
 function hasCurrentEntry(entries: SidebarEntry[]): boolean {
   return entries.some((e) =>
     e.type === 'link' ? e.isCurrent : hasCurrentEntry(e.entries),
   );
 }
 
-/**
- * Find the deepest group containing the current page that directly holds
- * link entries (a product section, not a category wrapper).
- */
 function findCurrentProduct(entries: SidebarEntry[]): SidebarGroup | null {
   for (const entry of entries) {
     if (entry.type !== 'group' || !hasCurrentEntry(entry.entries)) continue;
-    // If this group has direct page links, it's a product section — stop here.
     if (entry.entries.some((e) => e.type === 'link')) return entry;
-    // Otherwise it's a category wrapper (only sub-groups) — look deeper.
     const deeper = findCurrentProduct(entry.entries);
     if (deeper) return deeper;
   }
   return null;
 }
 
-const currentProduct = findCurrentProduct(sidebar);
+function walkLinks(entries: SidebarEntry[], out: SidebarLink[] = []): SidebarLink[] {
+  for (const e of entries) {
+    if (e.type === 'link') out.push(e);
+    else walkLinks(e.entries, out);
+  }
+  return out;
+}
 
-// Derive the section index href from the URL's first segment.
-const segments = Astro.url.pathname.split('/').filter(Boolean);
-const sectionHref = segments.length > 0 ? `/${segments[0]}/` : '/';
+/* ── Docker CLI tabbed view ── */
 
-const displaySidebar = currentProduct ? currentProduct.entries : sidebar;
+const CLI_ROOT = '/reference/cli/docker/';
+const isCliPage = path.startsWith(CLI_ROOT) || path === CLI_ROOT.slice(0, -1);
+
+// Find the `docker` CLI group — the group that directly contains the
+// /reference/cli/docker/ index link among its entries.
+function findDockerGroup(entries: SidebarEntry[]): SidebarGroup | null {
+  for (const entry of entries) {
+    if (entry.type !== 'group') continue;
+    const hasDockerIndex = entry.entries.some(
+      (e) => e.type === 'link' && e.href === CLI_ROOT,
+    );
+    if (hasDockerIndex) return entry;
+    const deeper = findDockerGroup(entry.entries);
+    if (deeper) return deeper;
+  }
+  return null;
+}
+
+// Tab definitions. `slug` corresponds to the URL segment immediately after
+// /reference/cli/docker/. Order here is the order shown in the UI.
+const TABS = [
+  { slug: 'root',    label: 'Root' },
+  { slug: 'compose', label: 'Compose' },
+  { slug: 'buildx',  label: 'Buildx' },
+  { slug: 'scout',   label: 'Scout' },
+  { slug: 'desktop', label: 'Desktop' },
+  { slug: 'model',   label: 'Model' },
+  { slug: 'dhi',     label: 'DHI' },
+  { slug: 'mcp',     label: 'MCP' },
+  { slug: 'sandbox', label: 'Sandbox' },
+  { slug: 'offload', label: 'Offload' },
+];
+const NAMED_TABS = new Set(TABS.filter((t) => t.slug !== 'root').map((t) => t.slug));
+
+function tabFromHref(href: string): string {
+  const rest = href.startsWith(CLI_ROOT) ? href.slice(CLI_ROOT.length) : '';
+  const first = rest.split('/')[0];
+  return NAMED_TABS.has(first) ? first : 'root';
+}
+
+// Which tab an entry belongs to (based on its first leaf link's href).
+function entryTab(e: SidebarEntry): string {
+  if (e.type === 'link') return tabFromHref(e.href);
+  const first = walkLinks([e])[0];
+  return first ? tabFromHref(first.href) : 'root';
+}
+
+const activeTab = tabFromHref(path);
+const dockerGroup = isCliPage ? findDockerGroup(sidebar) : null;
+
+// Entries for the active tab. For `root`, include any direct child of the
+// Docker group that doesn't belong to a named tab (top-level commands plus
+// resource verb-groups like container, image, volume, network). For named
+// tabs, use that tab's subgroup.
+let cliEntries: SidebarEntry[] = [];
+if (dockerGroup) {
+  if (activeTab === 'root') {
+    cliEntries = dockerGroup.entries.filter((e) => entryTab(e) === 'root');
+  } else {
+    const tabSubtree = dockerGroup.entries.find(
+      (e) => e.type === 'group' && entryTab(e) === activeTab,
+    );
+    cliEntries =
+      tabSubtree && tabSubtree.type === 'group' ? tabSubtree.entries : [];
+  }
+}
+
+// Rewrite link labels to full command paths ("docker container run") and
+// drop the management-command self-link that duplicates its group label.
+// Starlight's autogenerate produces, for `container/index.md + container/run.md`,
+// a group labelled "container" containing a link also labelled "container"
+// plus a link "run" — the first link is just the group's own index. We detect
+// it as the link whose href is a strict prefix of its siblings' hrefs.
+function hrefToCommand(href: string): string {
+  const rest = href.startsWith(CLI_ROOT) ? href.slice(CLI_ROOT.length) : '';
+  const parts = rest.replace(/\/$/, '').split('/').filter(Boolean);
+  return ['docker', ...parts].join(' ');
+}
+
+// Walk a group to find its "own" href — the longest common path prefix of
+// all descendant leaves. For a `container/` group, all leaves sit under
+// /reference/cli/docker/container/, so the common prefix is that directory.
+function groupHref(group: SidebarGroup): string | null {
+  const leaves = walkLinks(group.entries);
+  if (leaves.length === 0) return null;
+  const parts = leaves.map((l) => l.href.split('/'));
+  let i = 0;
+  while (parts.every((p) => p[i] !== undefined && p[i] === parts[0][i])) i++;
+  const prefix = parts[0].slice(0, i).join('/') + '/';
+  return prefix.startsWith(CLI_ROOT) && prefix !== CLI_ROOT ? prefix : null;
+}
+
+function rewriteCli(entries: SidebarEntry[]): SidebarEntry[] {
+  // Within this level, find a link whose href is a proper prefix of another
+  // sibling link's href — that's the self-index to drop.
+  const linkHrefs = entries
+    .filter((e): e is SidebarLink => e.type === 'link')
+    .map((e) => e.href);
+  const selfIndex = linkHrefs.find((h) =>
+    linkHrefs.some((other) => other !== h && other.startsWith(h)),
+  );
+
+  return entries
+    .filter((e) => !(e.type === 'link' && e.href === selfIndex))
+    .map((e) => {
+      if (e.type === 'link') {
+        return { ...e, label: hrefToCommand(e.href) };
+      }
+      const gh = groupHref(e);
+      // Attach groupHref so CliSublist can render the group label as a link
+      // to the management command's index page.
+      return {
+        ...e,
+        label: gh ? hrefToCommand(gh) : e.label,
+        groupHref: gh,
+        entries: rewriteCli(e.entries),
+      };
+    });
+}
+
+cliEntries = rewriteCli(cliEntries);
+
+/* ── Non-CLI fallback (per-product scoping) ── */
+
+// Collapse the autogenerated "Reference" group to a single link. The CLI
+// branch above consumes the full tree directly; outside of that branch we
+// don't want ~425 CLI pages expanding into the main site nav. The Reference
+// group is identified by containing a link to /reference/ directly among
+// its entries (matches the autogenerate shape for src/content/docs/reference).
+function collapseReferenceGroup(entries: SidebarEntry[]): SidebarEntry[] {
+  return entries.map((e) => {
+    if (
+      e.type === 'group' &&
+      e.entries.some((c) => c.type === 'link' && c.href === '/reference/')
+    ) {
+      return {
+        type: 'link',
+        label: e.label,
+        href: '/reference/',
+        isCurrent: path === '/reference/',
+        attrs: {},
+      } satisfies SidebarLink;
+    }
+    return e;
+  });
+}
+
+// Reference portal scope: pages under /reference/ that aren't the docker
+// CLI get a small curated sidebar (portal + glossary), not the full main
+// nav. Keeps the landing feel consistent with the CLI's standalone sidebar.
+const isReferencePortalPage = path.startsWith('/reference/') && !isCliPage;
+
+// Curated portal for /reference/ and /reference/glossary/. Grouped by type
+// of reference (CLIs / file formats / APIs & SDKs) so each entry has a
+// natural home rather than being lumped under "Other references". The
+// product-specific refs live under their products (Dockerfile under
+// /build/, Compose file under /compose/, etc.) — surfacing them here keeps
+// the portal a credible "find-a-reference" landing without duplication.
+const REFERENCE_SECTIONS: {
+  label: string;
+  items: { label: string; href: string }[];
+}[] = [
+  {
+    label: 'Command-line',
+    items: [
+      { label: 'docker', href: '/reference/cli/docker/' },
+      { label: 'dockerd', href: '/engine/cli/dockerd/' },
+      { label: 'sbx', href: '/sandboxes/cli/sbx/' },
+    ],
+  },
+  {
+    label: 'File formats',
+    items: [
+      { label: 'Dockerfile', href: '/build/dockerfile/' },
+      { label: 'Compose file', href: '/compose/compose-file/' },
+    ],
+  },
+  {
+    label: 'APIs & SDKs',
+    items: [
+      { label: 'Engine API', href: '/engine/api/' },
+      { label: 'Engine SDK', href: '/engine/api/sdk/' },
+      { label: 'Hub API', href: '/hub/api/' },
+      { label: 'DVP API', href: '/hub/api/dvp/' },
+      { label: 'Extensions SDK', href: '/desktop/extensions/extensions-sdk/api/' },
+    ],
+  },
+];
+
+const referencePortalEntries: SidebarEntry[] = [
+  {
+    type: 'link',
+    label: 'Reference',
+    href: '/reference/',
+    isCurrent: path === '/reference/',
+    attrs: {},
+  },
+  ...REFERENCE_SECTIONS.map<SidebarEntry>((section) => ({
+    type: 'group',
+    label: section.label,
+    collapsed: false,
+    entries: section.items.map((item) => ({
+      type: 'link' as const,
+      label: item.label,
+      href: item.href,
+      isCurrent: path === item.href,
+      attrs: {},
+    })),
+  })),
+  {
+    type: 'link',
+    label: 'Glossary',
+    href: '/reference/glossary/',
+    isCurrent: path === '/reference/glossary/',
+    attrs: {},
+  },
+];
+
+const nonCliSidebar = !isCliPage ? collapseReferenceGroup(sidebar) : sidebar;
+const currentProduct =
+  !isCliPage && !isReferencePortalPage ? findCurrentProduct(nonCliSidebar) : null;
+const displaySidebar = isReferencePortalPage
+  ? referencePortalEntries
+  : currentProduct
+    ? currentProduct.entries
+    : nonCliSidebar;
 ---
 
-{currentProduct && (
-  <div class="sidebar-scope">
+{isCliPage && dockerGroup ? (
+  <div class="cli-sidebar">
     <a href="/" class="back-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
         fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
@@ -63,63 +295,57 @@ const displaySidebar = currentProduct ? currentProduct.entries : sidebar;
       </svg>
       Docker Docs
     </a>
+    <h2 class="cli-title"><a href="/reference/cli/docker/">docker CLI</a></h2>
+    <nav class="cli-tabs" aria-label="CLI category">
+      {TABS.map((tab) => (
+        <a
+          href={tab.slug === 'root' ? '/reference/cli/docker/' : `/reference/cli/docker/${tab.slug}/`}
+          class:list={['cli-tab', { 'is-active': activeTab === tab.slug }]}
+        >
+          {tab.label}
+        </a>
+      ))}
+    </nav>
+    <div class="cli-tree-wrap">
+      <CliSublist entries={cliEntries} currentPath={path} />
+    </div>
   </div>
-)}
+) : (
+  <>
+    {(currentProduct || isReferencePortalPage) && (
+      <div class="sidebar-scope">
+        <a href="/" class="back-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+          Docker Docs
+        </a>
+      </div>
+    )}
 
-<div class:list={['sidebar-tree', { 'is-scoped': !!currentProduct }]}>
-  <SidebarPersister>
-    <SidebarSublist sublist={displaySidebar} />
-  </SidebarPersister>
-</div>
+    <div
+      class:list={[
+        'sidebar-tree',
+        { 'is-scoped': !!currentProduct || isReferencePortalPage },
+      ]}
+    >
+      <SidebarPersister>
+        <SidebarSublist sublist={displaySidebar} />
+      </SidebarPersister>
+    </div>
+  </>
+)}
 
 <div class="md:sl-hidden">
   <MobileMenuFooter />
 </div>
 
-<style>
-  .sidebar-scope {
-    padding-bottom: 0.5rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-family: var(--sl-font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.02em;
-    color: var(--sl-color-gray-3);
-    text-decoration: none;
-    padding: 0.15rem 0;
-  }
-
-  .back-link:hover {
-    color: var(--sl-color-text-accent);
-  }
-
-  /* In a scoped sidebar (deep inside a product), Starlight's autogenerate
-     puts the product's index link at the top of the tree. Promote that first
-     top-level link to serve as the visible section title — it already carries
-     the right label and href, so no duplication, no filtering. */
-  .sidebar-tree.is-scoped :global(.sidebar-content > ul > li:first-child > a) {
-    font-size: var(--sl-text-lg);
-    font-weight: 650;
-    color: var(--sl-color-white);
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-    padding-block: 0.35rem 0.6rem;
-    margin-bottom: 0.35rem;
-    border-bottom: 1px solid var(--sl-color-hairline-light);
-  }
-
-  .sidebar-tree.is-scoped :global(.sidebar-content > ul > li:first-child > a:hover) {
-    color: var(--sl-color-text-accent);
-  }
-
-  @media (min-width: 50rem) {
-    .sidebar-tree.is-scoped :global(.sidebar-content > ul > li:first-child > a) {
-      font-size: var(--sl-text-base);
-    }
-  }
-</style>
+<!-- Styles for the custom sidebar live in src/styles/theme.css (global
+     rules under the "Left sidebar — custom overrides" heading). Astro's
+     scoped styles can't reliably reach into Starlight's own component
+     subtree (e.g. SidebarSublist) and specificity-wrapping with :where()
+     caused base styles like Starlight's `.sidebar-content ul li a` to win
+     over scoped tab styles. Global styles with explicit parent class
+     scoping is the cleanest fix. -->

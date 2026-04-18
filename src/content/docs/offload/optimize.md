@@ -4,7 +4,7 @@ description: Learn how to optimize your Docker Offload usage.
 keywords: cloud, optimize, performance, offload
 sidebar:
   label: Optimize usage
-  order: 40
+  order: 5
 ---
 
 Docker Offload builds and runs your containers remotely, not on the machine where you invoke the
@@ -66,7 +66,7 @@ from your client to Docker Offload.
 
 You can do this using:
 
-- The Dockerfile [`ADD` instruction](/reference/dockerfile/#add)
+- The Dockerfile [`ADD` instruction](/build/dockerfile/#add)
 - `RUN` commands like `wget`, `curl`, or `rsync`
 
 ### Multi-threaded tools

@@ -4,7 +4,7 @@ description: Learn about developer-level security features like 2FA and access t
 keywords: docker, docker hub, docker desktop, security, developer security, 2FA, access tokens
 sidebar:
   label: Security
-  order: 40
+  order: 5
 group: Platform
 ---
 

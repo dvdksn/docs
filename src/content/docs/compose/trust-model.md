@@ -3,7 +3,7 @@ title: Trust model for Compose files
 description: Learn how Docker Compose treats Compose files as trusted input and what this means when using files you did not author.
 keywords: compose, security, trust model, oci, remote, registry, include, extends, supply chain, trust, best practices
 sidebar:
-  order: 70
+  order: 9
 ---
 
 Docker Compose treats every Compose file as trusted input. When a Compose file
@@ -21,7 +21,7 @@ Evaluating trust means asking: do you know who authored this file, can you verif
 
 A Compose application can be assembled from multiple sources. The
 [`include`](/compose/how-tos/multiple-compose-files/include/) directive imports entire Compose
-files, while [`extends`](/reference/compose-file/services/#extends) inherits
+files, while [`extends`](/compose/compose-file/services/#extends) inherits
 configuration from a specific service in another file. Both support remote
 references and can be chained:
 
@@ -127,5 +127,5 @@ Treat any update to a pinned digest as a code change. Make sure you review the n
 - [OCI artifact applications](/compose/how-tos/oci-artifact/)
 - [Use Compose in production](/compose/how-tos/production/)
 - [`include` reference](/compose/how-tos/multiple-compose-files/include/)
-- [`extends` reference](/reference/compose-file/services/#extends)
+- [`extends` reference](/compose/compose-file/services/#extends)
 - [Manage secrets in Compose](/compose/how-tos/use-secrets/)

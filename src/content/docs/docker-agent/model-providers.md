@@ -10,7 +10,7 @@ keywords:
   - google
   - gemini
 sidebar:
-  order: 10
+  order: 2
 ---
 
 To run Docker Agent, you need a model provider. You can either use a cloud provider

@@ -75,7 +75,7 @@ object. Labels on Swarm nodes and services can be updated dynamically.
 
 ### Images
 
-Add labels to images using the [`LABEL` instruction](/reference/dockerfile/#label) in a Dockerfile:
+Add labels to images using the [`LABEL` instruction](/build/dockerfile/#label) in a Dockerfile:
 
 ```dockerfile
 LABEL com.example.version="1.0"
@@ -126,7 +126,7 @@ $ docker container ls --filter "label=com.example.env=prod"
 
 Add labels to the Docker daemon by passing `--label` flags when starting
 `dockerd`, or by setting `"labels"` in the
-[daemon configuration file](/reference/cli/dockerd/#daemon-configuration-file):
+[daemon configuration file](/engine/cli/dockerd/#daemon-configuration-file):
 
 ```json
 {

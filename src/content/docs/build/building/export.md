@@ -61,7 +61,7 @@ World!", and exports the binary to the host filesystem.
    ```
 
    > [!TIP]
-   > The `COPY <<EOT` syntax is a [here-document](/reference/dockerfile/#here-documents).
+   > The `COPY <<EOT` syntax is a [here-document](/build/dockerfile/#here-documents).
    > It lets you write multi-line strings in a Dockerfile. Here it's used to
    > create a simple Rust program inline in the Dockerfile.
 

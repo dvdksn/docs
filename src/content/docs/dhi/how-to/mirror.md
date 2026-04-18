@@ -176,9 +176,8 @@ ECR, Google Artifact Registry, GitHub Container Registry, or a private Harbor
 instance.
 
 You can use any standard workflow to mirror the image, such as the
-[Docker CLI](/reference/cli/docker/), [Docker Hub Registry
-API](/reference/api/registry/latest/), third-party registry tools, or CI/CD
-automation.
+[Docker CLI](/reference/cli/docker/), [Docker Hub API](/hub/api/latest/),
+third-party registry tools, or CI/CD automation.
 
 However, to preserve the full security context, including attestations, you must
 also mirror its associated OCI artifacts. DHI repositories store the image

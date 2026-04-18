@@ -4,6 +4,7 @@ description: Learn about the latest features of Docker Build Cloud
 keywords: docker build cloud, release notes, changelog, features, changes, delta, new, releases
 sidebar:
   label: Release notes
+  order: 99
 ---
 
 This page contains information about the new features, improvements, known

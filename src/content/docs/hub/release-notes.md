@@ -4,7 +4,7 @@ description: Learn about the new features, bug fixes, and breaking changes for D
 keywords: docker hub, whats new, release notes
 sidebar:
   label: Release notes
-  order: 999
+  order: 99
 ---
 
 Here you can learn about the latest changes, new features, bug fixes, and
@@ -156,7 +156,7 @@ The updated [Docker Subscription Service Agreement](https://www.docker.com/legal
 
 When managing the content of your repositories, you can now filter the results based on the currentness of the tags and more easily identify your untagged images.
 
-For Docker Hub API documentation, see [Docker Hub API Reference](/reference/api/hub/latest/#operation/GetNamespacesRepositoriesImages).
+For Docker Hub API documentation, see [Docker Hub API Reference](/hub/api/latest/#operation/GetNamespacesRepositoriesImages).
 
 ## 2021-04-13
 

@@ -23,7 +23,7 @@ Key features of Docker Hub:
 * Trusted content featuring high-quality, secure images
 
 In addition to the graphical interface, you can interact with Docker Hub using
-the [Docker Hub API](../../reference/api/hub/latest/) or experimental [Docker
+the [Docker Hub API](../../hub/api/latest/) or experimental [Docker
 Hub CLI tool](https://github.com/docker/hub-tool#readme).
 
 <!-- GRID:grid:3 -->

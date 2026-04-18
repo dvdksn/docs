@@ -37,7 +37,7 @@ Docker SSO provides Just-in-Time (JIT) provisioning by default. Users are provis
 
 [SCIM](/admin/enterprise/security/provisioning/scim/) provides full synchronization with users and groups. When using SCIM, the recommended configuration is to turn off JIT so all auto-provisioning is handled by SCIM.
 
-Additionally, you can use the [Docker Hub API](/reference/api/hub/latest/) to complete this process.
+Additionally, you can use the [Docker Hub API](/hub/api/latest/) to complete this process.
 
 ## How does turning off Just-in-Time provisioning affect user sign-in?
 

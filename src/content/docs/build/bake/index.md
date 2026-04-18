@@ -2,7 +2,7 @@
 title: Bake
 keywords: build, buildx, bake, buildkit, hcl, json, compose
 sidebar:
-  order: 50
+  order: 7
 ---
 
 

@@ -136,7 +136,7 @@ daemon. The following table shows which options have equivalent flags in the
 The Docker daemon supports a `--bridge` flag, which you can use to define
 your own `docker0` bridge. Use this option if you want to run multiple daemon
 instances on the same host. For details, see
-[Run multiple daemons](/reference/cli/dockerd/#run-multiple-daemons).
+[Run multiple daemons](/engine/cli/dockerd/#run-multiple-daemons).
 
 ### Default host binding address
 

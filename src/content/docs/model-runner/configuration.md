@@ -3,7 +3,7 @@ title: Configuration options
 description: Configure context size, runtime parameters, and model behavior in Docker Model Runner.
 keywords: Docker, ai, model runner, configuration, context size, context length, tokens, llama.cpp, parameters
 sidebar:
-  order: 35
+  order: 2
 ---
 
 Docker Model Runner provides several configuration options to tune model behavior,

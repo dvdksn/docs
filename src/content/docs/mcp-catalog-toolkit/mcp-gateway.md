@@ -4,7 +4,7 @@ description: Docker's MCP Gateway provides secure, centralized, and scalable orc
 keywords: MCP Gateway
 sidebar:
   label: Gateway
-  order: 40
+  order: 5
 ---
 
 The MCP Gateway is Docker's open source solution for orchestrating Model

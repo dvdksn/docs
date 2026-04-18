@@ -4,7 +4,7 @@ description: Find the Docker Desktop release notes for Mac, Linux, and Windows.
 keywords: Docker desktop, release notes, linux, mac, windows
 sidebar:
   label: Release notes
-  order: 220
+  order: 99
 ---
 
 import DesktopInstall from "@components/DesktopInstall.astro";
@@ -2390,7 +2390,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 - Organization admins can now [configure Docker socket mount permissions](/admin/enterprise/security/hardened-desktop/enhanced-container-isolation/config/) when ECI is enabled.
 - [Containerd Image Store](/desktop/features/containerd/) support is now generally available to all users.
 - Get a debug shell into any container or image with the new [`docker debug` command](/reference/cli/docker/debug/) (Beta).
-- Organization admins, with a Docker Business subscription, can now configure a custom list of extensions with [Private Extensions Marketplace](/extensions/private-marketplace/) enabled (Beta)
+- Organization admins, with a Docker Business subscription, can now configure a custom list of extensions with [Private Extensions Marketplace](/desktop/extensions/private-marketplace/) enabled (Beta)
 
 ### Upgrades
 
@@ -3162,7 +3162,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 
 - Docker Desktop now ships with Docker Scout. Pull and view analysis for images from Docker Hub and Artifactory repositories, get base image updates and recommended tags and digests, and filter your images on vulnerability information. To learn more, see [Docker Scout](../scout/).
 - `docker scan` has been replaced by `docker scout`. See [Docker Scout CLI](../scout/#docker-scout-cli), for more information.
-- You can now discover extensions that have been autonomously published in the Extensions Marketplace. For more information on self-published extensions, see [Marketplace Extensions](/extensions/marketplace/).
+- You can now discover extensions that have been autonomously published in the Extensions Marketplace. For more information on self-published extensions, see [Marketplace Extensions](/desktop/extensions/marketplace/).
 - **Container File Explorer** is available as an experimental feature. Debug the filesystem within your containers straight from the GUI.
 - You can now search for volumes in **Global Search**.
 
@@ -3867,7 +3867,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 ### New
 
 - Released [Docker Desktop for Linux](/desktop/setup/install/linux/).
-- Beta release of [Docker Extensions](/extensions/) and Extensions SDK.
+- Beta release of [Docker Extensions](/desktop/extensions/) and Extensions SDK.
 - Created a Docker Homepage where you can run popular images and discover how to use them.
 - [Compose V2 is now GA](https://www.docker.com/blog/announcing-compose-v2-general-availability/)
 
@@ -3888,7 +3888,7 @@ This can be resolved by adding the user to the **docker-users** group. Before st
 ### New
 
 - Released [Docker Desktop for Linux](/desktop/setup/install/linux/).
-- Beta release of [Docker Extensions](/extensions/) and Extensions SDK.
+- Beta release of [Docker Extensions](/desktop/extensions/) and Extensions SDK.
 - Created a Docker Homepage where you can run popular images and discover how to use them.
 - [Compose V2 is now GA](https://www.docker.com/blog/announcing-compose-v2-general-availability/)
 

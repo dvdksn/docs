@@ -1,0 +1,74 @@
+---
+/**
+ * Recursive renderer for the docker CLI sidebar subtree.
+ *
+ * Replaces Starlight's SidebarSublist (which wraps groups in <details>
+ * whose <summary> is a toggle, not a link). For the CLI reference we want
+ * the group label itself to be a link to the management command's index
+ * page (e.g. clicking "docker container" navigates to /container/).
+ *
+ * The tabbed view already scopes content per tab, so trees are shallow
+ * enough that we render everything expanded — no collapse affordance needed.
+ */
+type SidebarLink = {
+  type: 'link';
+  label: string;
+  href: string;
+  isCurrent: boolean;
+  badge?: unknown;
+  attrs: Record<string, unknown>;
+};
+type SidebarGroup = {
+  type: 'group';
+  label: string;
+  entries: SidebarEntry[];
+  collapsed: boolean;
+  badge?: unknown;
+  // Augmented by Sidebar.astro's rewriter so we know where to point the
+  // group heading link. Null for groups with no own index page.
+  groupHref?: string | null;
+};
+type SidebarEntry = SidebarLink | SidebarGroup;
+
+interface Props {
+  entries: SidebarEntry[];
+  currentPath: string;
+  depth?: number;
+}
+
+const { entries, currentPath, depth = 0 } = Astro.props;
+---
+
+<ul class:list={['cli-tree', `cli-tree-depth-${depth}`]}>
+  {entries.map((entry) =>
+    entry.type === 'link' ? (
+      <li class="cli-leaf">
+        <a
+          href={entry.href}
+          aria-current={currentPath === entry.href ? 'page' : undefined}
+        >
+          {entry.label}
+        </a>
+      </li>
+    ) : (
+      <li class="cli-group">
+        {entry.groupHref ? (
+          <a
+            class="cli-group-heading"
+            href={entry.groupHref}
+            aria-current={currentPath === entry.groupHref ? 'page' : undefined}
+          >
+            {entry.label}
+          </a>
+        ) : (
+          <span class="cli-group-heading">{entry.label}</span>
+        )}
+        <Astro.self
+          entries={entry.entries}
+          currentPath={currentPath}
+          depth={depth + 1}
+        />
+      </li>
+    ),
+  )}
+</ul>

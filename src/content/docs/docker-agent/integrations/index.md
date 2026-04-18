@@ -10,7 +10,7 @@ keywords:
   - editor
   - protocol
 sidebar:
-  order: 60
+  order: 7
 ---
 
 Agents created with Docker Agent can integrate with different environments depending on how you

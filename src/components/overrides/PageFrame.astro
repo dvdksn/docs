@@ -14,12 +14,21 @@ import GordonChat from '@components/GordonChat.astro';
 
 const { hasSidebar } = Astro.locals.starlightRoute;
 const hasTOC = !!Astro.locals.starlightRoute.toc;
+
+// Individual guide pages drop the left nav rail while keeping the rest
+// of the default layout (TOC rail, content column width). We keep
+// `hasSidebar` truthy in route data so Starlight's width math still
+// applies — we just skip rendering `<nav class="sidebar">` here.
+const path = Astro.url.pathname;
+const hideSidebar =
+  hasSidebar && path.startsWith('/guides/') && path !== '/guides/';
+const renderSidebar = hasSidebar && !hideSidebar;
 ---
 
 <div class="page sl-flex">
   <header class="header"><slot name="header" /></header>
   {
-    hasSidebar && (
+    renderSidebar && (
       <nav class="sidebar print:hidden" aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}>
         <MobileMenuToggle />
         <div id="starlight__sidebar" class="sidebar-pane">

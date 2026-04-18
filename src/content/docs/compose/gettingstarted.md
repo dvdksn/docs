@@ -4,7 +4,7 @@ description: Follow this hands-on tutorial to learn how to use Docker Compose fr
 keywords: docker compose example, docker compose tutorial, how to use docker compose, running docker compose, how to run docker compose, docker compose build image, docker compose command example, run docker compose file, how to create a docker compose file, run a docker compose file
 sidebar:
   label: Quickstart
-  order: 30
+  order: 3
 ---
 
 This tutorial aims to introduce fundamental concepts of Docker Compose by guiding you through the development of a basic Python web application. 
@@ -76,7 +76,7 @@ Make sure you have:
    > Make sure the file is named `Dockerfile` with no extension. Some editors add `.txt`
    > automatically, which causes the build to fail.
 
-   For more information on how to write Dockerfiles, see the [Dockerfile reference](/reference/dockerfile/).
+   For more information on how to write Dockerfiles, see the [Dockerfile reference](/build/dockerfile/).
 
 5. Create a `.env` file to hold configuration values:
 
@@ -515,7 +515,7 @@ $ docker compose exec redis redis-cli GET hits
 ## Where to go next
 
 - [Explore the full list of Compose commands](/reference/cli/docker/compose/)
-- [Explore the Compose file reference](/reference/compose-file/)
+- [Explore the Compose file reference](/compose/compose-file/)
 - [Check out the Learning Docker Compose video on LinkedIn Learning](https://www.linkedin.com/learning/learning-docker-compose/)
 - [Learn how to set environment variables in Compose](/compose/how-tos/environment-variables/set-environment-variables/)
 - [Learn how to package and distribute your Compose app](/compose/how-tos/oci-artifact/)

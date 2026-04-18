@@ -2,6 +2,8 @@
 title: Glossary
 description: Glossary of terms used around Docker
 keywords: glossary, docker, terms, definitions
+sidebar:
+  order: 90
 ---
 
 > [!TIP]

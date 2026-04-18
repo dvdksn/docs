@@ -75,7 +75,7 @@ Docker supports the following SCIM attributes:
 | `active`          | Indicates if a user is enabled or disabled, set to "false" to de-provision a user |
 
 For additional details about supported attributes and SCIM, see
-[Docker Hub API SCIM reference](/reference/api/hub/latest/#tag/scim).
+[Docker Hub API SCIM reference](/hub/api/latest/#tag/scim).
 
 > [!IMPORTANT]
 >

@@ -72,17 +72,17 @@ created. Not all `Dockerfile` instructions are supported; the list of instructio
 is limited to metadata (configuration) changes. The following `Dockerfile`
 instructions are supported:
 
-- [`CMD`](/reference/dockerfile/#cmd)
-- [`ENTRYPOINT`](/reference/dockerfile/#entrypoint)
-- [`ENV`](/reference/dockerfile/#env)
-- [`EXPOSE`](/reference/dockerfile/#expose)
-- [`HEALTHCHECK`](/reference/dockerfile/#healthcheck)
-- [`LABEL`](/reference/dockerfile/#label)
-- [`ONBUILD`](/reference/dockerfile/#onbuild)
-- [`STOPSIGNAL`](/reference/dockerfile/#stopsignal)
-- [`USER`](/reference/dockerfile/#user)
-- [`VOLUME`](/reference/dockerfile/#volume)
-- [`WORKDIR`](/reference/dockerfile/#workdir)
+- [`CMD`](/build/dockerfile/#cmd)
+- [`ENTRYPOINT`](/build/dockerfile/#entrypoint)
+- [`ENV`](/build/dockerfile/#env)
+- [`EXPOSE`](/build/dockerfile/#expose)
+- [`HEALTHCHECK`](/build/dockerfile/#healthcheck)
+- [`LABEL`](/build/dockerfile/#label)
+- [`ONBUILD`](/build/dockerfile/#onbuild)
+- [`STOPSIGNAL`](/build/dockerfile/#stopsignal)
+- [`USER`](/build/dockerfile/#user)
+- [`VOLUME`](/build/dockerfile/#volume)
+- [`WORKDIR`](/build/dockerfile/#workdir)
 
 The following example imports an image from a TAR-file containing a root-filesystem,
 and sets the `DEBUG` environment-variable in the resulting image:

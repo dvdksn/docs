@@ -220,7 +220,7 @@ FROM quay.io/jupyter/base-notebook
 RUN pip install --no-cache-dir matplotlib scikit-learn
 ```
 
-This Dockerfile uses the `quay.io/jupyter/base-notebook` image as the base, and then runs `pip` to install the dependencies. For more details about the instructions in the Dockerfile, see the [Dockerfile reference](/reference/dockerfile/).
+This Dockerfile uses the `quay.io/jupyter/base-notebook` image as the base, and then runs `pip` to install the dependencies. For more details about the instructions in the Dockerfile, see the [Dockerfile reference](/build/dockerfile/).
 
 Before you proceed, save your changes to the `Dockerfile`.
 
@@ -312,7 +312,7 @@ volumes:
 ```
 
 This Compose file specifies all the options you used in the `docker run` command. For more details about the Compose instructions, see the
-[Compose file reference](/reference/compose-file/).
+[Compose file reference](/compose/compose-file/).
 
 Before you proceed, save your changes to the `compose.yaml` file.
 
@@ -423,7 +423,7 @@ notebooks and environments with other data scientists.
 
 Related information:
 
-- [Dockerfile reference](/reference/dockerfile/)
-- [Compose file reference](/reference/compose-file/)
+- [Dockerfile reference](/build/dockerfile/)
+- [Compose file reference](/compose/compose-file/)
 - [Docker CLI reference](reference/cli/docker/)
 - [Jupyter Docker Stacks docs](https://jupyter-docker-stacks.readthedocs.io/en/latest/)

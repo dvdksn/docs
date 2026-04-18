@@ -15,17 +15,17 @@ It all starts with a Dockerfile.
 Docker builds images by reading the instructions from a Dockerfile. A
 Dockerfile is a text file containing instructions for building your source
 code. The Dockerfile instruction syntax is defined by the specification
-reference in the [Dockerfile reference](/reference/dockerfile/).
+reference in the [Dockerfile reference](/build/dockerfile/).
 
 Here are the most common types of instructions:
 
 | Instruction                                               | Description                                                                                                                                                                                              |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`FROM <image>`](/reference/dockerfile/#from)           | Defines a base for your image.                                                                                                                                                                           |
-| [`RUN <command>`](/reference/dockerfile/#run)           | Executes any commands in a new layer on top of the current image and commits the result. `RUN` also has a shell form for running commands.                                                               |
-| [`WORKDIR <directory>`](/reference/dockerfile/#workdir) | Sets the working directory for any `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions that follow it in the Dockerfile.                                                                          |
-| [`COPY <src> <dest>`](/reference/dockerfile/#copy)      | Copies new files or directories from `<src>` and adds them to the filesystem of the container at the path `<dest>`.                                                                                      |
-| [`CMD <command>`](/reference/dockerfile/#cmd)           | Lets you define the default program that is run once you start the container based on this image. Each Dockerfile only has one `CMD`, and only the last `CMD` instance is respected when multiple exist. |
+| [`FROM <image>`](/build/dockerfile/#from)           | Defines a base for your image.                                                                                                                                                                           |
+| [`RUN <command>`](/build/dockerfile/#run)           | Executes any commands in a new layer on top of the current image and commits the result. `RUN` also has a shell form for running commands.                                                               |
+| [`WORKDIR <directory>`](/build/dockerfile/#workdir) | Sets the working directory for any `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions that follow it in the Dockerfile.                                                                          |
+| [`COPY <src> <dest>`](/build/dockerfile/#copy)      | Copies new files or directories from `<src>` and adds them to the filesystem of the container at the path `<dest>`.                                                                                      |
+| [`CMD <command>`](/build/dockerfile/#cmd)           | Lets you define the default program that is run once you start the container based on this image. Each Dockerfile only has one `CMD`, and only the last `CMD` instance is respected when multiple exist. |
 
 Dockerfiles are crucial inputs for image builds and can facilitate automated,
 multi-layer image builds based on your unique configurations. Dockerfiles can
@@ -112,11 +112,11 @@ Here's a breakdown of what this Dockerfile does:
 
 ### Dockerfile syntax
 
-The first line to add to a Dockerfile is a [`# syntax` parser directive](/reference/dockerfile/#syntax).
+The first line to add to a Dockerfile is a [`# syntax` parser directive](/build/dockerfile/#syntax).
 While optional, this directive instructs the Docker builder what syntax to use
 when parsing the Dockerfile, and allows older Docker versions with [BuildKit enabled](../buildkit/#getting-started)
 to use a specific [Dockerfile frontend](../buildkit/frontend/) before
-starting the build. [Parser directives](/reference/dockerfile/#parser-directives)
+starting the build. [Parser directives](/build/dockerfile/#parser-directives)
 must appear before any other comment, whitespace, or Dockerfile instruction in
 your Dockerfile, and should be the first line in Dockerfiles.
 
@@ -138,7 +138,7 @@ The line following the syntax directive defines what base image to use:
 FROM ubuntu:22.04
 ```
 
-The [`FROM` instruction](/reference/dockerfile/#from) sets your base
+The [`FROM` instruction](/build/dockerfile/#from) sets your base
 image to the 22.04 release of Ubuntu. All instructions that follow are executed
 in this base image: an Ubuntu environment. The notation `ubuntu:22.04`, follows
 the `name:tag` standard for naming Docker images. When you build images, you
@@ -158,7 +158,7 @@ The following line executes a build command inside the base image.
 RUN apt-get update && apt-get install -y python3 python3-pip
 ```
 
-This [`RUN` instruction](/reference/dockerfile/#run) executes a
+This [`RUN` instruction](/build/dockerfile/#run) executes a
 shell in Ubuntu that updates the APT package index and installs Python tools in
 the container.
 
@@ -193,7 +193,7 @@ use the command to install the flask web framework.
 ### Copying files
 
 The next instruction uses the
-[`COPY` instruction](/reference/dockerfile/#copy) to copy the
+[`COPY` instruction](/build/dockerfile/#copy) to copy the
 `hello.py` file from the local build context into the root directory of our image.
 
 ```dockerfile
@@ -209,7 +209,7 @@ of the build container.
 ### Setting environment variables
 
 If your application uses environment variables, you can set environment variables
-in your Docker build using the [`ENV` instruction](/reference/dockerfile/#env).
+in your Docker build using the [`ENV` instruction](/build/dockerfile/#env).
 
 ```dockerfile
 ENV FLASK_APP=hello
@@ -221,7 +221,7 @@ flask wouldn't know where to find our application to be able to run it.
 
 ### Exposed ports
 
-The [`EXPOSE` instruction](/reference/dockerfile/#expose) marks that
+The [`EXPOSE` instruction](/build/dockerfile/#expose) marks that
 our final image has a service listening on port `8000`.
 
 ```dockerfile
@@ -233,7 +233,7 @@ team members understand what this application is doing.
 
 ### Starting the application
 
-Finally, [`CMD` instruction](/reference/dockerfile/#cmd) sets the
+Finally, [`CMD` instruction](/build/dockerfile/#cmd) sets the
 command that is run when the user starts a container based on this image.
 
 ```dockerfile
@@ -251,7 +251,7 @@ CMD flask run --host 0.0.0.0 --port 8000
 There are subtle differences between these two versions,
 for example in how they trap signals like `SIGTERM` and `SIGKILL`.
 For more information about these differences, see
-[Shell and exec form](/reference/dockerfile/#shell-and-exec-form)
+[Shell and exec form](/build/dockerfile/#shell-and-exec-form)
 
 ## Building
 

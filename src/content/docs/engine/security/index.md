@@ -4,7 +4,7 @@ description: Review of the Docker Daemon attack surface
 keywords: Docker, Docker documentation, security
 sidebar:
   label: Security
-  order: 80
+  order: 10
 ---
 
 There are four major areas to consider when reviewing Docker security:
@@ -255,7 +255,7 @@ to a non uid-0 user outside the container, which can help to mitigate the
 risks of container breakout. This facility is available but not enabled
 by default.
 
-Refer to the [daemon command](/reference/cli/dockerd/#daemon-user-namespace-options)
+Refer to the [daemon command](/engine/cli/dockerd/#daemon-user-namespace-options)
 in the command line reference for more information on this feature.
 Additional information on the implementation of User Namespaces in Docker
 can be found in

@@ -156,7 +156,7 @@ for creating a Docker container.
 
 The sample application already contains a `Dockerfile`. Open the `Dockerfile` in a code or text editor to explore its contents.
 
-The following steps explain each part of the `Dockerfile`. For more details, see the [Dockerfile reference](/reference/dockerfile/).
+The following steps explain each part of the `Dockerfile`. For more details, see the [Dockerfile reference](/build/dockerfile/).
 
 1. Specify the base image.
 
@@ -345,7 +345,7 @@ using Docker.
 Related information:
 
 - [Docker CLI reference](/reference/cli/docker/)
-- [Dockerfile reference](/reference/dockerfile/)
+- [Dockerfile reference](/build/dockerfile/)
 - [Bert Extractive Summarizer](https://github.com/dmmiller612/bert-extractive-summarizer)
 - [PyTorch](https://pytorch.org/)
 - [Python documentation](https://docs.python.org/3/)

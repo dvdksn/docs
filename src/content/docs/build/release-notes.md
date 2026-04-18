@@ -1,6 +1,6 @@
 ---
 title: Build release notes
 sidebar:
-  order: 120
+  order: 99
 ---
 

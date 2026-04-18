@@ -3,7 +3,7 @@ title: Builders
 description: Learn about builders and how to manage them
 keywords: build, buildx, builders, buildkit, drivers, backend
 sidebar:
-  order: 40
+  order: 6
 ---
 
 A builder is a BuildKit daemon that you can use to run your builds. BuildKit

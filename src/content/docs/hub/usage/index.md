@@ -4,7 +4,7 @@ description: Learn about usage and limits for Docker Hub.
 keywords: Docker Hub, limit, usage
 sidebar:
   label: Usage and limits
-  order: 30
+  order: 4
 ---
 
 The following table provides an overview of the included usage and limits for each

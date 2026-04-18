@@ -4,7 +4,7 @@ description: Learn how to quickly install and use the MCP Toolkit to set up serv
 keywords: Docker MCP Toolkit, MCP server, MCP client, AI agents
 sidebar:
   label: Get started
-  order: 5
+  order: 1
 ---
 
 

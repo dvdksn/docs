@@ -4,7 +4,7 @@ description: Learn about Docker Hub's library of images, extensions, and plugins
 keywords: Docker Hub, Hub, content library
 sidebar:
   label: Library
-  order: 20
+  order: 3
 ---
 
 Docker Hub's content library is the world's largest collection of

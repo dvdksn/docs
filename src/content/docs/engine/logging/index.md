@@ -4,7 +4,7 @@ description: Learn how to write to, view, and configure a container's logs
 keywords: docker, logging
 sidebar:
   label: Logs and metrics
-  order: 70
+  order: 8
 ---
 
 The `docker logs` command shows information logged by a running container. The
@@ -50,4 +50,4 @@ its errors to `/proc/self/fd/2` (which is `STDERR`). See the
 ## Next steps
 
 - Configure [logging drivers](configure/).
-- Write a [Dockerfile](/reference/dockerfile/).
+- Write a [Dockerfile](/build/dockerfile/).

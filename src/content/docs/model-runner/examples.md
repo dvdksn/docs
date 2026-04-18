@@ -3,7 +3,7 @@ title: DMR examples
 description: Example projects and CI/CD workflows for Docker Model Runner.
 keywords: Docker, ai, model runner, examples, github actions, genai, sample project
 sidebar:
-  order: 40
+  order: 6
 ---
 
 

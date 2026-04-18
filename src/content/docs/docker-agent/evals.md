@@ -7,7 +7,7 @@ keywords:
   - testing
   - evals
 sidebar:
-  order: 80
+  order: 5
 ---
 
 Evaluations (evals) help you track how your agent's behavior changes over time.

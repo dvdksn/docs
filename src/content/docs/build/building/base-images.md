@@ -118,6 +118,6 @@ There are more example scripts for creating base images in
 
 For more information about building images and writing Dockerfiles, see:
 
-* [Dockerfile reference](/reference/dockerfile/)
+* [Dockerfile reference](/build/dockerfile/)
 * [Dockerfile best practices](/build/building/best-practices/)
 * [Docker Official Images](../../docker-hub/image-library/trusted-content/#docker-official-images)

@@ -8,7 +8,7 @@ sidebar:
 
 
 The `docker build` and `docker buildx build` commands build Docker images from
-a [Dockerfile](/reference/dockerfile/) and a context.
+a [Dockerfile](/build/dockerfile/) and a context.
 
 ## What is a build context?
 
@@ -293,7 +293,7 @@ $ docker buildx build 'https://github.com/user/myrepo.git?tag=v0.1.0&commit=dead
 
 By default, BuildKit doesn't keep the `.git` directory when using Git contexts.
 You can configure BuildKit to keep the directory by setting the
-[`BUILDKIT_CONTEXT_KEEP_GIT_DIR` build argument](/reference/dockerfile/#buildkit-built-in-build-args).
+[`BUILDKIT_CONTEXT_KEEP_GIT_DIR` build argument](/build/dockerfile/#buildkit-built-in-build-args).
 This can be useful to if you want to retrieve Git information during your build:
 
 ```dockerfile

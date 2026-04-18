@@ -133,19 +133,19 @@ To customize a Docker Hardened Image using the web interface, follow these steps
 
 1. Select **Next: Configure** to configure the following image settings:
 
-   1. Specify the [environment variables](/reference/dockerfile/#env) and their
+   1. Specify the [environment variables](/build/dockerfile/#env) and their
       values that the image will contain.
-   1. Add [labels](/reference/dockerfile/#label) to the image.
+   1. Add [labels](/build/dockerfile/#label) to the image.
    1. Add [annotations](/build/metadata/annotations/) to the image.
    1. Specify the users to add to the image.
    1. Specify the user groups to add to the image.
-   1. Select which [user](/reference/dockerfile/#user) to run the images as.
-   1. Add [`ENTRYPOINT`](/reference/dockerfile/#entrypoint) arguments to the
+   1. Select which [user](/build/dockerfile/#user) to run the images as.
+   1. Add [`ENTRYPOINT`](/build/dockerfile/#entrypoint) arguments to the
       image. These arguments are appended to the base image's entrypoint.
-   1. Add [`CMD`](/reference/dockerfile/#cmd) arguments to the image. These
+   1. Add [`CMD`](/build/dockerfile/#cmd) arguments to the image. These
       arguments are appended to the base image's command.
    1. Override the default (`/`) [working
-      directory](/reference/dockerfile/#workdir) for the image.
+      directory](/build/dockerfile/#workdir) for the image.
    1. Specify a suffix for the customization name that is appended to the
       customized image's tag. For example, if you specify `custom` when
       customizing the `dhi-python:3.13` image, the customized image will be

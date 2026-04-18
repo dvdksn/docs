@@ -345,7 +345,7 @@ namespace contains extensions known in the marketplace, you will see an
 ## Exporting analytics data
 
 You can export the analytics data either from the web dashboard, or using the
-[DVP Data API](/reference/api/dvp/latest/). All members of an organization
+[DVP Data API](/hub/api/dvp/latest/). All members of an organization
 have access to the analytics data.
 
 The data is available as a downloadable CSV file, in a weekly (Monday through
@@ -373,7 +373,7 @@ following these steps:
 
 The HTTP API endpoints are available at:
 `https://hub.docker.com/api/publisher/analytics/v1`. Learn how to export data
-using the API in the [DVP Data API documentation](/reference/api/dvp/latest/).
+using the API in the [DVP Data API documentation](/hub/api/dvp/latest/).
 
 ## Data points
 

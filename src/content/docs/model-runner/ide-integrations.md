@@ -3,7 +3,7 @@ title: IDE and tool integrations
 description: Configure popular AI coding assistants and tools to use Docker Model Runner as their backend.
 keywords: Docker, ai, model runner, cline, continue, cursor, vscode, ide, integration, openai, ollama, claude, anthropic, claude-code
 sidebar:
-  order: 40
+  order: 4
 ---
 
 Docker Model Runner can serve as a local backend for popular AI coding assistants

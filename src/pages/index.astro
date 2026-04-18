@@ -5,8 +5,8 @@
  * Structure:
  *   1. Hero: welcome + orienting paragraph
  *   2. Get-started callout: beginner invite to the guided tutorial
- *   3. Main-links row: Manuals, Guides, Reference — the three top-level buckets
- *   4. Browse every product — directory grid (Manuals lands here via #browse)
+ *   3. Main-links row: Products, Guides, Reference, Admin &amp; billing — top-level buckets
+ *   4. Browse every product — directory grid (Products lands here via #browse)
  *
  * Gordon lives in the header trigger + slide-out panel like every other page.
  */
@@ -82,9 +82,9 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
         <li>
           <a href="#browse">
             <span class="nav-row-title">
-              Manuals<span class="nav-row-arrow" aria-hidden="true">→</span>
+              Products<span class="nav-row-arrow" aria-hidden="true">→</span>
             </span>
-            <span class="nav-row-blurb">Configure and operate every Docker product.</span>
+            <span class="nav-row-blurb">Every Docker product and how to use it.</span>
           </a>
         </li>
         <li>
@@ -103,6 +103,14 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
             <span class="nav-row-blurb">CLI, Compose, Engine API, and Dockerfile specs.</span>
           </a>
         </li>
+        <li>
+          <a href="/admin/">
+            <span class="nav-row-title">
+              Admin &amp; billing<span class="nav-row-arrow" aria-hidden="true">→</span>
+            </span>
+            <span class="nav-row-blurb">Organizations, subscriptions, security, and enterprise deployment.</span>
+          </a>
+        </li>
       </ul>
     </section>
 
@@ -114,7 +122,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
       <div class="product-grid">
         <article>
-          <h3 class="d-micro">Develop</h3>
+          <h3 class="d-micro">Development tools</h3>
           <ul class="product-list">
             <li><a href="/desktop/"><b>Docker Desktop</b><span>Container runtime, debugger, and dashboard for your workstation.</span></a></li>
             <li><a href="/engine/"><b>Docker Engine</b><span>The container runtime.</span></a></li>
@@ -124,32 +132,30 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
         </article>
 
         <article>
-          <h3 class="d-micro">Ship</h3>
-          <ul class="product-list">
-            <li><a href="/hub/"><b>Docker Hub</b><span>Registry for sharing and pulling images.</span></a></li>
-            <li><a href="/dhi/"><b>Docker Hardened Images</b><span>Distroless base images with curated, vetted packages.</span></a></li>
-            <li><a href="/scout/"><b>Docker Scout</b><span>Image analysis for vulnerabilities and policy.</span></a></li>
-            <li><a href="/build-cloud/"><b>Docker Build Cloud</b><span>Remote builders with shared cache and multi-arch support.</span></a></li>
-          </ul>
-        </article>
-
-        <article>
-          <h3 class="d-micro">Run agents &amp; AI</h3>
+          <h3 class="d-micro">Agents and AI</h3>
           <ul class="product-list">
             <li><a href="/model-runner/"><b>Docker Model Runner</b><span>Run local LLMs through an OpenAI-compatible API.</span></a></li>
-            <li><a href="/sandboxes/"><b>Docker Sandboxes</b><span>Isolated environments for untrusted code and AI agents.</span></a></li>
-            <li><a href="/mcp-catalog-toolkit/"><b>MCP Catalog &amp; Toolkit</b><span>Discover and run MCP servers.</span></a></li>
             <li><a href="/gordon/"><b>Gordon</b><span>Docker's AI assistant.</span></a></li>
+            <li><a href="/mcp-catalog-toolkit/"><b>MCP Catalog &amp; Toolkit</b><span>Discover and run MCP servers.</span></a></li>
+            <li><a href="/docker-agent/"><b>Docker Agent</b><span>Build and run AI agents on Docker.</span></a></li>
+            <li><a href="/sandboxes/"><b>Docker Sandboxes</b><span>Isolated environments for untrusted code and AI agents.</span></a></li>
           </ul>
         </article>
 
         <article>
-          <h3 class="d-micro">Operate</h3>
+          <h3 class="d-micro">Supply chain &amp; images</h3>
           <ul class="product-list">
-            <li><a href="/admin/"><b>Admin &amp; billing</b><span>Manage organizations, users, and subscriptions.</span></a></li>
-            <li><a href="/admin/enterprise/security/hardened-desktop/"><b>Hardened Desktop</b><span>Admin-controlled Docker Desktop for managed organizations.</span></a></li>
+            <li><a href="/hub/"><b>Docker Hub</b><span>Registry for sharing and pulling images.</span></a></li>
+            <li><a href="/scout/"><b>Docker Scout</b><span>Image analysis for vulnerabilities and policy.</span></a></li>
+            <li><a href="/dhi/"><b>Docker Hardened Images</b><span>Distroless base images with curated, vetted packages.</span></a></li>
+          </ul>
+        </article>
+
+        <article>
+          <h3 class="d-micro">Cloud services</h3>
+          <ul class="product-list">
+            <li><a href="/build-cloud/"><b>Docker Build Cloud</b><span>Remote builders with shared cache and multi-arch support.</span></a></li>
             <li><a href="/offload/"><b>Docker Offload</b><span>Run workloads on remote Docker environments.</span></a></li>
-            <li><a href="/extensions/"><b>Extensions</b><span>Third-party tools integrated into Docker Desktop.</span></a></li>
           </ul>
         </article>
       </div>
@@ -407,8 +413,15 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 
   @media (min-width: 56rem) {
     .nav-row {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem 2.5rem;
+    }
+  }
+
+  @media (min-width: 72rem) {
+    .nav-row {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
     }
   }
 
@@ -497,9 +510,8 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
     .product-grid { grid-template-columns: repeat(2, 1fr); }
   }
 
-  @media (min-width: 72rem) {
-    .product-grid { grid-template-columns: repeat(4, 1fr); }
-    .product-grid { gap: 3rem 2.5rem; }
+  @media (min-width: 88rem) {
+    .product-grid { grid-template-columns: repeat(4, 1fr); gap: 3rem 2.5rem; }
   }
 
   .product-grid article > h3 {

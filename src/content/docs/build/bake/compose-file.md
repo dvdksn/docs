@@ -4,7 +4,7 @@ description: Build your compose services with Bake
 keywords: build, buildx, bake, buildkit, compose, yaml
 ---
 
-Bake supports the [Compose file format](/reference/compose-file/)
+Bake supports the [Compose file format](/compose/compose-file/)
 to parse a Compose file and translate each service to a [target](reference/#target).
 
 ```yaml

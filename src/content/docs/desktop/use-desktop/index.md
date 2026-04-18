@@ -3,7 +3,7 @@ title: Explore Docker Desktop
 description: Learn how to use the Docker Desktop Dashboard within Docker Desktop, including Quick search, the Docker menu, and more
 keywords: Docker Desktop Dashboard, manage, containers, gui, dashboard, images, user manual, whale menu
 sidebar:
-  order: 30
+  order: 2
 ---
 
 When you open Docker Desktop, the Docker Desktop Dashboard displays.
@@ -24,7 +24,7 @@ In addition, the Docker Desktop Dashboard lets you:
 - Access [Docker Hub](/hub/) to search, browse, pull, run, or view details
   of images.
 - Get to the [Docker Scout](../../scout/) dashboard.
-- Navigate to [Docker Extensions](/extensions/).
+- Navigate to [Docker Extensions](/desktop/extensions/).
 
 > [!TIP]
 >

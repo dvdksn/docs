@@ -7,7 +7,7 @@ keywords:
   - coding agent
   - ai assistant
 sidebar:
-  order: 30
+  order: 1
 ---
 
 This tutorial teaches you how to build a coding agent that can help with

@@ -2,6 +2,8 @@
 title: Docker Desktop Enterprise
 description: Docker Desktop Enterprise
 keywords: Docker Desktop Enterprise
+sidebar:
+  order: 6
 ---
 
 Docker Desktop Enterprise (DDE) has been deprecated and is no longer in active development. Please use [Docker Desktop](../) Community instead.

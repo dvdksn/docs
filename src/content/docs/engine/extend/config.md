@@ -55,11 +55,11 @@ the registry.
 
 - `entrypoint` string array
 
-   Entrypoint of the plugin, see [`ENTRYPOINT`](https://docs.docker.com/reference/dockerfile/#entrypoint)
+   Entrypoint of the plugin, see [`ENTRYPOINT`](https://docs.docker.com/build/dockerfile/#entrypoint)
 
 - `workdir` string
 
-   Working directory of the plugin, see [`WORKDIR`](https://docs.docker.com/reference/dockerfile/#workdir)
+   Working directory of the plugin, see [`WORKDIR`](https://docs.docker.com/build/dockerfile/#workdir)
 
 - `network` PluginNetwork
 

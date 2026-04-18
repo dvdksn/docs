@@ -4,7 +4,7 @@ description: Learn how to install Docker Compose. Compose is available natively 
 keywords: install docker compose, docker compose plugin, install compose linux, install docker desktop, docker compose windows, standalone docker compose, docker compose not found
 sidebar:
   label: Install
-  order: 20
+  order: 2
 ---
 
 This page summarizes the different ways you can install Docker Compose, depending on your platform and needs.

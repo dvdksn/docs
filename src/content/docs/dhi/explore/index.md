@@ -3,7 +3,7 @@ title: Explore Docker Hardened Images
 description: Learn about Docker Hardened Images, their purpose, how they are built and tested, and the shared responsibility model for security.
 sidebar:
   label: Explore
-  order: 10
+  order: 5
 ---
 
 Docker Hardened Images (DHI) are minimal, secure, and production-ready container

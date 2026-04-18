@@ -3,7 +3,7 @@ title: Repositories
 description: Learn how to manage repositories on Docker Hub
 keywords: Docker Hub, Hub, repositories
 sidebar:
-  order: 20
+  order: 2
 ---
 
 A Docker Hub repository is a collection of container images, enabling you to

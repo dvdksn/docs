@@ -8,25 +8,139 @@
  * default title above it. List those routes here.
  *
  * Everything else falls through to the default behavior.
+ *
+ * Also renders a breadcrumb above the H1 on content pages. The trail is
+ * derived from the sidebar group ancestry of the current entry, so the
+ * labels match what the user sees in the left nav.
  */
 // Mirrors `PAGE_TITLE_ID` from `@astrojs/starlight/constants`, which is
 // not an exported subpath of the package.
 const PAGE_TITLE_ID = '_top';
 
+type SidebarEntry =
+  | { type: 'link'; label: string; href: string; isCurrent: boolean }
+  | { type: 'group'; label: string; entries: SidebarEntry[] };
+
+type Crumb = { label: string; href?: string };
+
 const SUPPRESS = new Set(['/', '/guides/']);
-const suppressed = SUPPRESS.has(Astro.url.pathname);
+const path = Astro.url.pathname;
+const suppressed = SUPPRESS.has(path);
+const title = Astro.locals.starlightRoute.entry.data.title;
+const sidebar = Astro.locals.starlightRoute.sidebar as SidebarEntry[];
+
+// Walk the sidebar to find the chain of group labels leading to the
+// current entry. Falls back to null if the page isn't in the sidebar
+// (e.g. vanity or splash routes), in which case breadcrumbs are hidden.
+// Pick the shallowest direct-child link whose href is a prefix of the
+// current URL — that's the group's implicit landing page (e.g. the group
+// "Docker Desktop" resolves to /desktop/ via its desktop/index page).
+function findGroupIndex(
+  group: Extract<SidebarEntry, { type: 'group' }>,
+): string | undefined {
+  let best: { href: string; depth: number } | undefined;
+  for (const child of group.entries) {
+    if (child.type !== 'link') continue;
+    if (!path.startsWith(child.href) || child.href === path) continue;
+    const depth = child.href.split('/').filter(Boolean).length;
+    if (!best || depth < best.depth) best = { href: child.href, depth };
+  }
+  return best?.href;
+}
+
+function findTrail(
+  entries: SidebarEntry[],
+  trail: Crumb[] = [],
+): Crumb[] | null {
+  for (const e of entries) {
+    if (e.type === 'link') {
+      if (e.isCurrent) return trail;
+    } else {
+      const href = findGroupIndex(e);
+      const result = findTrail(e.entries, [...trail, { label: e.label, href }]);
+      if (result) return result;
+    }
+  }
+  return null;
+}
+
+function buildCrumbs(): Crumb[] | null {
+  const trail = findTrail(sidebar);
+  if (!trail || trail.length === 0) return null;
+  // If the page title matches its parent group label (common for group
+  // "root" pages like /desktop/), skip the duplicate final crumb.
+  const last = trail[trail.length - 1];
+  if (last && last.label === title) return trail;
+  return [...trail, { label: title }];
+}
+
+const crumbs = suppressed ? null : buildCrumbs();
 ---
 
 {!suppressed && (
-  <h1 id={PAGE_TITLE_ID}>{Astro.locals.starlightRoute.entry.data.title}</h1>
+  <>
+    {crumbs && (
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          {crumbs.map((c, i) => {
+            const isLast = i === crumbs.length - 1;
+            return (
+              <li>
+                {c.href ? (
+                  <a href={c.href}>{c.label}</a>
+                ) : (
+                  <span {...(isLast ? { 'aria-current': 'page' } : {})}>{c.label}</span>
+                )}
+                {!isLast && <span class="sep" aria-hidden="true">/</span>}
+              </li>
+            );
+          })}
+        </ol>
+      </nav>
+    )}
+    <h1 id={PAGE_TITLE_ID}>{title}</h1>
+  </>
 )}
 
 <style>
   h1 {
-    margin-top: 1rem;
+    margin-top: 1.75rem;
     font-size: var(--sl-text-h1);
     line-height: var(--sl-line-height-headings);
     font-weight: 600;
+    color: var(--sl-color-white);
+  }
+
+  .breadcrumbs {
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+    margin-bottom: 0.75rem;
+  }
+  .breadcrumbs ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+  }
+  .breadcrumbs li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+  .breadcrumbs a {
+    color: var(--sl-color-gray-2);
+    text-decoration: none;
+  }
+  .breadcrumbs a:hover {
+    color: var(--sl-color-white);
+    text-decoration: underline;
+  }
+  .breadcrumbs .sep {
+    color: var(--sl-color-gray-4);
+  }
+  .breadcrumbs [aria-current='page'] {
     color: var(--sl-color-white);
   }
 </style>

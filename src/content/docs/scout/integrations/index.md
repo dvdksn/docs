@@ -4,7 +4,7 @@ description: How to setup Docker Scout with other systems.
 keywords: supply chain, security, integrations, registries, ci, environments
 sidebar:
   label: Integrations
-  order: 80
+  order: 7
 ---
 
 By default, Docker Scout integrates with your Docker organization and your

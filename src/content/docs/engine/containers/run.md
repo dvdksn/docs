@@ -971,7 +971,7 @@ use of facilities allowed by the capabilities, so you should not have to adjust 
 
 ## Overriding image defaults
 
-When you build an image from a [Dockerfile](https://docs.docker.com/reference/dockerfile/),
+When you build an image from a [Dockerfile](https://docs.docker.com/build/dockerfile/),
 or when committing it, you can set a number of default parameters that take
 effect when the image starts up as a container. When you run an image, you can
 override those defaults using flags for the `docker run` command.

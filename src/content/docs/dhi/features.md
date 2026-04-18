@@ -3,7 +3,7 @@ title: Docker Hardened Images features
 description: Docker Hardened Images provide total transparency, minimal attack surface, and enterprise-grade security for every application—free and open source.
 sidebar:
   label: Features
-  order: 5
+  order: 3
 ---
 
 Docker Hardened Images (DHI) are minimal, secure, and production-ready container

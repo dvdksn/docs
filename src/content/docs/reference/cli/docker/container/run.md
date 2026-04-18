@@ -965,7 +965,7 @@ This starts an `ubuntu` container with access to the specified CDI device,
   available on the system running the daemon, in one of the configured CDI
   specification directories.
 - The CDI feature has been enabled in the daemon; see [Enable CDI
-  devices](/reference/cli/dockerd/#configure-cdi-devices).
+  devices](/engine/cli/dockerd/#configure-cdi-devices).
 
 ### Attach to STDIN/STDOUT/STDERR (-a, --attach) {#attach}
 
@@ -1286,7 +1286,7 @@ It's conventional to use `host.docker.internal` as the hostname referring to
 `host-gateway`. Docker Desktop automatically resolves this hostname, see
 [Explore networking how-tos on Docker Desktop](/desktop/features/networking/networking-how-tos/#connect-a-container-to-a-service-on-the-host)
 and
-[Configure host gateway IP](/reference/cli/dockerd/#configure-host-gateway-ip).
+[Configure host gateway IP](/engine/cli/dockerd/#configure-host-gateway-ip).
 
 The following example shows how the special `host-gateway` value works. The
 example runs an HTTP server that serves a file from host to container over the
@@ -1401,7 +1401,7 @@ container to exit. This signal can be a signal name in the format `SIG<NAME>`,
 for instance `SIGKILL`, or an unsigned number that matches a position in the
 kernel's syscall table, for instance `9`.
 
-The default value is defined by [`STOPSIGNAL`](/reference/dockerfile/#stopsignal)
+The default value is defined by [`STOPSIGNAL`](/build/dockerfile/#stopsignal)
 in the image, or `SIGTERM` if the image has no `STOPSIGNAL` defined.
 
 ### Optional security options (--security-opt) {#security-opt}

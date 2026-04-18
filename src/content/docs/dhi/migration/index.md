@@ -3,7 +3,7 @@ title: Migration
 description: Learn how to migrate your existing applications to Docker Hardened Images
 keywords: migrate, docker hardened images, dhi, migration guide
 sidebar:
-  order: 18
+  order: 6
 ---
 
 This section provides guidance for migrating your applications to Docker

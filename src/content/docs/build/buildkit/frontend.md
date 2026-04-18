@@ -7,8 +7,8 @@ keywords: build, buildkit, dockerfile, frontend
 ## Dockerfile frontend
 
 BuildKit supports loading frontends dynamically from container images. To use
-an external Dockerfile frontend, the first line of your [Dockerfile](/reference/dockerfile/)
-needs to set the [`syntax` directive](/reference/dockerfile/#syntax)
+an external Dockerfile frontend, the first line of your [Dockerfile](/build/dockerfile/)
+needs to set the [`syntax` directive](/build/dockerfile/#syntax)
 pointing to the specific image you want to use:
 
 ```dockerfile

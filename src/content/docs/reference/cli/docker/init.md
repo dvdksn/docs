@@ -46,8 +46,8 @@ After running `docker init`, you can choose one of the following templates:
 
 After `docker init` has completed, you may need to modify the created files and tailor them to your project. Visit the following topics to learn more about the files:
   
-  * [.dockerignore](/reference/dockerfile.md#dockerignore-file)
-  * [Dockerfile](/reference/dockerfile.md)
+  * [.dockerignore](/build/dockerfile#dockerignore-file)
+  * [Dockerfile](/build/dockerfile)
   * [compose.yaml](/compose/intro/compose-application-model.md)
 
 ## Options

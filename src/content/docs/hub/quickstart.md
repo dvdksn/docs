@@ -4,7 +4,7 @@ description: Learn how to get started using Docker Hub
 keywords: Docker Hub, push image, pull image, repositories
 sidebar:
   label: Quickstart
-  order: 10
+  order: 1
 ---
 
 
@@ -198,7 +198,7 @@ customize your own images to suit specific needs.
 
 ## Step 3: Build and push an image to Docker Hub
 
-1. Create a [Dockerfile](/reference/dockerfile/) to specify your application:
+1. Create a [Dockerfile](/build/dockerfile/) to specify your application:
 
    ```dockerfile
    FROM nginx

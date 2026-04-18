@@ -120,7 +120,7 @@ proxy:
 ### Configure the Docker daemon
 
 Either pass the `--registry-mirror` option when starting `dockerd` manually,
-or edit [`/etc/docker/daemon.json`](/reference/cli/dockerd/#daemon-configuration-file)
+or edit [`/etc/docker/daemon.json`](/engine/cli/dockerd/#daemon-configuration-file)
 and add the `registry-mirrors` key and value, to make the change persistent.
 
 ```json

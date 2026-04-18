@@ -31,7 +31,7 @@ For bridge networks, iptables and nftables have the same functionality.
 
 Docker Engine option `firewall-backend` can be used to select whether
 iptables or nftables is used. See
-[daemon configuration](https://docs.docker.com/reference/cli/dockerd/).
+[daemon configuration](https://docs.docker.com/engine/cli/dockerd/).
 
 ## Docker on a router
 
@@ -58,7 +58,7 @@ To stop Docker from setting the forwarding policy to "drop", include
 ## Prevent Docker from manipulating firewall rules
 
 Setting the `iptables` or `ip6tables` keys to `false` in
-[daemon configuration](https://docs.docker.com/reference/cli/dockerd/), will
+[daemon configuration](https://docs.docker.com/engine/cli/dockerd/), will
 prevent Docker from creating most of its `iptables` or `nftables` rules. But,
 this option is not appropriate for most users, it is likely to break
 container networking for the Docker Engine.

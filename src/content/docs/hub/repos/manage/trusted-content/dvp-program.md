@@ -116,7 +116,7 @@ The insights and analytics service provides usage metrics for how
 the community uses Docker images, granting insight into user behavior.
 
 There is both a [web interface](./insights-analytics/) and an
-[API](/reference/api/dvp/latest/) for accessing the analytics data.
+[API](/hub/api/dvp/latest/) for accessing the analytics data.
 
 The usage metrics show the number of image pulls by tag or by digest,
 geolocation, cloud provider, client, and more.

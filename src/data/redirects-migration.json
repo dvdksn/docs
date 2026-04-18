@@ -4909,27 +4909,27 @@
   },
   {
     "from": "/language/deno/develop/",
-    "to": "/guides/deno/develop/"
+    "to": "/guides/deno/#develop-your-app"
   },
   {
     "from": "/language/deno/deploy/",
-    "to": "/guides/deno/deploy/"
+    "to": "/guides/deno/#test-your-deployment"
   },
   {
     "from": "/language/deno/configure-ci-cd/",
-    "to": "/guides/deno/configure-ci-cd/"
+    "to": "/guides/deno/#configure-ci-cd"
   },
   {
     "from": "/language/deno/containerize/",
-    "to": "/guides/deno/containerize/"
+    "to": "/guides/deno/#containerize-your-app"
   },
   {
     "from": "/guides/use-case/rag-ollama/develop/",
-    "to": "/guides/rag-ollama/develop/"
+    "to": "/guides/rag-ollama/#develop-your-app"
   },
   {
     "from": "/guides/use-case/rag-ollama/containerize/",
-    "to": "/guides/rag-ollama/containerize/"
+    "to": "/guides/rag-ollama/#containerize-your-app"
   },
   {
     "from": "/guides/use-case/rag-ollama/",
@@ -4937,59 +4937,59 @@
   },
   {
     "from": "/language/nodejs/run-tests/",
-    "to": "/guides/nodejs/run-tests/"
+    "to": "/guides/nodejs/#run-your-tests"
   },
   {
     "from": "/guides/language/nodejs/run-tests/",
-    "to": "/guides/nodejs/run-tests/"
+    "to": "/guides/nodejs/#run-your-tests"
   },
   {
     "from": "/get-started/nodejs/develop/",
-    "to": "/guides/nodejs/develop/"
+    "to": "/guides/nodejs/#develop-your-app"
   },
   {
     "from": "/language/nodejs/develop/",
-    "to": "/guides/nodejs/develop/"
+    "to": "/guides/nodejs/#develop-your-app"
   },
   {
     "from": "/guides/language/nodejs/develop/",
-    "to": "/guides/nodejs/develop/"
+    "to": "/guides/nodejs/#develop-your-app"
   },
   {
     "from": "/language/nodejs/configure-ci-cd/",
-    "to": "/guides/nodejs/configure-github-actions/"
+    "to": "/guides/nodejs/#automate-your-builds-with-github-actions"
   },
   {
     "from": "/guides/language/nodejs/configure-ci-cd/",
-    "to": "/guides/nodejs/configure-github-actions/"
+    "to": "/guides/nodejs/#automate-your-builds-with-github-actions"
   },
   {
     "from": "/language/nodejs/deploy/",
-    "to": "/guides/nodejs/deploy/"
+    "to": "/guides/nodejs/#deploy-your-app"
   },
   {
     "from": "/guides/language/nodejs/deploy/",
-    "to": "/guides/nodejs/deploy/"
+    "to": "/guides/nodejs/#deploy-your-app"
   },
   {
     "from": "/get-started/nodejs/build-images/",
-    "to": "/guides/nodejs/containerize/"
+    "to": "/guides/nodejs/#containerize"
   },
   {
     "from": "/language/nodejs/build-images/",
-    "to": "/guides/nodejs/containerize/"
+    "to": "/guides/nodejs/#containerize"
   },
   {
     "from": "/language/nodejs/run-containers/",
-    "to": "/guides/nodejs/containerize/"
+    "to": "/guides/nodejs/#containerize"
   },
   {
     "from": "/language/nodejs/containerize/",
-    "to": "/guides/nodejs/containerize/"
+    "to": "/guides/nodejs/#containerize"
   },
   {
     "from": "/guides/language/nodejs/containerize/",
-    "to": "/guides/nodejs/containerize/"
+    "to": "/guides/nodejs/#containerize"
   },
   {
     "from": "/language/nodejs/",
@@ -5021,51 +5021,51 @@
   },
   {
     "from": "/language/python/lint-format-typing/",
-    "to": "/guides/python/lint-format-typing/"
+    "to": "/guides/python/#linting-and-typing"
   },
   {
     "from": "/language/python/develop/",
-    "to": "/guides/python/develop/"
+    "to": "/guides/python/#develop-your-app"
   },
   {
     "from": "/guides/language/python/develop/",
-    "to": "/guides/python/develop/"
+    "to": "/guides/python/#develop-your-app"
   },
   {
     "from": "/language/python/configure-ci-cd/",
-    "to": "/guides/python/configure-github-actions/"
+    "to": "/guides/python/#automate-your-builds-with-github-actions"
   },
   {
     "from": "/guides/language/python/configure-ci-cd/",
-    "to": "/guides/python/configure-github-actions/"
+    "to": "/guides/python/#automate-your-builds-with-github-actions"
   },
   {
     "from": "/guides/python/configure-ci-cd/",
-    "to": "/guides/python/configure-github-actions/"
+    "to": "/guides/python/#automate-your-builds-with-github-actions"
   },
   {
     "from": "/language/python/deploy/",
-    "to": "/guides/python/deploy/"
+    "to": "/guides/python/#test-your-deployment"
   },
   {
     "from": "/guides/language/python/deploy/",
-    "to": "/guides/python/deploy/"
+    "to": "/guides/python/#test-your-deployment"
   },
   {
     "from": "/language/python/build-images/",
-    "to": "/guides/python/containerize/"
+    "to": "/guides/python/#containerize-your-app"
   },
   {
     "from": "/language/python/run-containers/",
-    "to": "/guides/python/containerize/"
+    "to": "/guides/python/#containerize-your-app"
   },
   {
     "from": "/language/python/containerize/",
-    "to": "/guides/python/containerize/"
+    "to": "/guides/python/#containerize-your-app"
   },
   {
     "from": "/guides/language/python/containerize/",
-    "to": "/guides/python/containerize/"
+    "to": "/guides/python/#containerize-your-app"
   },
   {
     "from": "/language/python/",
@@ -5077,67 +5077,67 @@
   },
   {
     "from": "/get-started/golang/run-tests/",
-    "to": "/guides/golang/run-tests/"
+    "to": "/guides/golang/#run-your-tests"
   },
   {
     "from": "/language/golang/run-tests/",
-    "to": "/guides/golang/run-tests/"
+    "to": "/guides/golang/#run-your-tests"
   },
   {
     "from": "/guides/language/golang/run-tests/",
-    "to": "/guides/golang/run-tests/"
+    "to": "/guides/golang/#run-your-tests"
   },
   {
     "from": "/get-started/golang/develop/",
-    "to": "/guides/golang/develop/"
+    "to": "/guides/golang/#develop-your-app"
   },
   {
     "from": "/language/golang/develop/",
-    "to": "/guides/golang/develop/"
+    "to": "/guides/golang/#develop-your-app"
   },
   {
     "from": "/guides/language/golang/develop/",
-    "to": "/guides/golang/develop/"
+    "to": "/guides/golang/#develop-your-app"
   },
   {
     "from": "/language/golang/deploy/",
-    "to": "/guides/golang/deploy/"
+    "to": "/guides/golang/#test-your-deployment"
   },
   {
     "from": "/guides/language/golang/deploy/",
-    "to": "/guides/golang/deploy/"
+    "to": "/guides/golang/#test-your-deployment"
   },
   {
     "from": "/get-started/golang/run-containers/",
-    "to": "/guides/golang/run-containers/"
+    "to": "/guides/golang/#run-containers"
   },
   {
     "from": "/language/golang/run-containers/",
-    "to": "/guides/golang/run-containers/"
+    "to": "/guides/golang/#run-containers"
   },
   {
     "from": "/guides/language/golang/run-containers/",
-    "to": "/guides/golang/run-containers/"
+    "to": "/guides/golang/#run-containers"
   },
   {
     "from": "/language/golang/configure-ci-cd/",
-    "to": "/guides/golang/configure-ci-cd/"
+    "to": "/guides/golang/#configure-ci-cd"
   },
   {
     "from": "/guides/language/golang/configure-ci-cd/",
-    "to": "/guides/golang/configure-ci-cd/"
+    "to": "/guides/golang/#configure-ci-cd"
   },
   {
     "from": "/get-started/golang/build-images/",
-    "to": "/guides/golang/build-images/"
+    "to": "/guides/golang/#build-images"
   },
   {
     "from": "/language/golang/build-images/",
-    "to": "/guides/golang/build-images/"
+    "to": "/guides/golang/#build-images"
   },
   {
     "from": "/guides/language/golang/build-images/",
-    "to": "/guides/golang/build-images/"
+    "to": "/guides/golang/#build-images"
   },
   {
     "from": "/language/golang/",
@@ -5165,43 +5165,43 @@
   },
   {
     "from": "/language/rust/develop/",
-    "to": "/guides/rust/develop/"
+    "to": "/guides/rust/#develop-your-app"
   },
   {
     "from": "/guides/language/rust/develop/",
-    "to": "/guides/rust/develop/"
+    "to": "/guides/rust/#develop-your-app"
   },
   {
     "from": "/language/rust/deploy/",
-    "to": "/guides/rust/deploy/"
+    "to": "/guides/rust/#test-your-deployment"
   },
   {
     "from": "/guides/language/rust/deploy/",
-    "to": "/guides/rust/deploy/"
+    "to": "/guides/rust/#test-your-deployment"
   },
   {
     "from": "/language/rust/run-containers/",
-    "to": "/guides/rust/run-containers/"
+    "to": "/guides/rust/#run-containers"
   },
   {
     "from": "/guides/language/rust/run-containers/",
-    "to": "/guides/rust/run-containers/"
+    "to": "/guides/rust/#run-containers"
   },
   {
     "from": "/language/rust/configure-ci-cd/",
-    "to": "/guides/rust/configure-ci-cd/"
+    "to": "/guides/rust/#configure-ci-cd"
   },
   {
     "from": "/guides/language/rust/configure-ci-cd/",
-    "to": "/guides/rust/configure-ci-cd/"
+    "to": "/guides/rust/#configure-ci-cd"
   },
   {
     "from": "/language/rust/build-images/",
-    "to": "/guides/rust/build-images/"
+    "to": "/guides/rust/#build-images"
   },
   {
     "from": "/guides/language/rust/build-images/",
-    "to": "/guides/rust/build-images/"
+    "to": "/guides/rust/#build-images"
   },
   {
     "from": "/language/rust/",
@@ -5221,43 +5221,43 @@
   },
   {
     "from": "/language/r/develop/",
-    "to": "/guides/r/develop/"
+    "to": "/guides/r/#develop-your-app"
   },
   {
     "from": "/guides/language/r/develop/",
-    "to": "/guides/r/develop/"
+    "to": "/guides/r/#develop-your-app"
   },
   {
     "from": "/language/r/deploy/",
-    "to": "/guides/r/deploy/"
+    "to": "/guides/r/#test-your-deployment"
   },
   {
     "from": "/guides/language/r/deploy/",
-    "to": "/guides/r/deploy/"
+    "to": "/guides/r/#test-your-deployment"
   },
   {
     "from": "/language/r/configure-ci-cd/",
-    "to": "/guides/r/configure-ci-cd/"
+    "to": "/guides/r/#configure-ci-cd"
   },
   {
     "from": "/guides/language/r/configure-ci-cd/",
-    "to": "/guides/r/configure-ci-cd/"
+    "to": "/guides/r/#configure-ci-cd"
   },
   {
     "from": "/language/R/build-images/",
-    "to": "/guides/r/containerize/"
+    "to": "/guides/r/#containerize-your-app"
   },
   {
     "from": "/language/R/run-containers/",
-    "to": "/guides/r/containerize/"
+    "to": "/guides/r/#containerize-your-app"
   },
   {
     "from": "/language/r/containerize/",
-    "to": "/guides/r/containerize/"
+    "to": "/guides/r/#containerize-your-app"
   },
   {
     "from": "/guides/language/r/containerize/",
-    "to": "/guides/r/containerize/"
+    "to": "/guides/r/#containerize-your-app"
   },
   {
     "from": "/languages/r/",
@@ -5273,51 +5273,51 @@
   },
   {
     "from": "/language/java/run-tests/",
-    "to": "/guides/java/run-tests/"
+    "to": "/guides/java/#run-your-tests"
   },
   {
     "from": "/guides/language/java/run-tests/",
-    "to": "/guides/java/run-tests/"
+    "to": "/guides/java/#run-your-tests"
   },
   {
     "from": "/language/java/develop/",
-    "to": "/guides/java/develop/"
+    "to": "/guides/java/#develop-your-app"
   },
   {
     "from": "/guides/language/java/develop/",
-    "to": "/guides/java/develop/"
+    "to": "/guides/java/#develop-your-app"
   },
   {
     "from": "/language/java/deploy/",
-    "to": "/guides/java/deploy/"
+    "to": "/guides/java/#test-your-deployment"
   },
   {
     "from": "/guides/language/java/deploy/",
-    "to": "/guides/java/deploy/"
+    "to": "/guides/java/#test-your-deployment"
   },
   {
     "from": "/language/java/configure-ci-cd/",
-    "to": "/guides/java/configure-ci-cd/"
+    "to": "/guides/java/#configure-ci-cd"
   },
   {
     "from": "/guides/language/java/configure-ci-cd/",
-    "to": "/guides/java/configure-ci-cd/"
+    "to": "/guides/java/#configure-ci-cd"
   },
   {
     "from": "/language/java/build-images/",
-    "to": "/guides/java/containerize/"
+    "to": "/guides/java/#containerize-your-app"
   },
   {
     "from": "/language/java/run-containers/",
-    "to": "/guides/java/containerize/"
+    "to": "/guides/java/#containerize-your-app"
   },
   {
     "from": "/language/java/containerize/",
-    "to": "/guides/java/containerize/"
+    "to": "/guides/java/#containerize-your-app"
   },
   {
     "from": "/guides/language/java/containerize/",
-    "to": "/guides/java/containerize/"
+    "to": "/guides/java/#containerize-your-app"
   },
   {
     "from": "/language/java/",
@@ -5329,27 +5329,27 @@
   },
   {
     "from": "/language/bun/develop/",
-    "to": "/guides/bun/develop/"
+    "to": "/guides/bun/#develop-your-app"
   },
   {
     "from": "/language/bun/deploy/",
-    "to": "/guides/bun/deploy/"
+    "to": "/guides/bun/#test-your-deployment"
   },
   {
     "from": "/language/bun/configure-ci-cd/",
-    "to": "/guides/bun/configure-ci-cd/"
+    "to": "/guides/bun/#configure-ci-cd"
   },
   {
     "from": "/language/bun/containerize/",
-    "to": "/guides/bun/containerize/"
+    "to": "/guides/bun/#containerize-your-app"
   },
   {
     "from": "/scout/concepts/s3c/",
-    "to": "/guides/docker-scout/s3c/"
+    "to": "/guides/docker-scout/#software-supply-chain-security"
   },
   {
     "from": "/scout/concepts/sbom/",
-    "to": "/guides/docker-scout/sbom/"
+    "to": "/guides/docker-scout/#software-bill-of-materials"
   },
   {
     "from": "/learning-paths/docker-scout/",
@@ -5357,43 +5357,43 @@
   },
   {
     "from": "/language/php/run-tests/",
-    "to": "/guides/php/run-tests/"
+    "to": "/guides/php/#run-your-tests"
   },
   {
     "from": "/guides/language/php/run-tests/",
-    "to": "/guides/php/run-tests/"
+    "to": "/guides/php/#run-your-tests"
   },
   {
     "from": "/language/php/develop/",
-    "to": "/guides/php/develop/"
+    "to": "/guides/php/#develop-your-app"
   },
   {
     "from": "/guides/language/php/develop/",
-    "to": "/guides/php/develop/"
+    "to": "/guides/php/#develop-your-app"
   },
   {
     "from": "/language/php/deploy/",
-    "to": "/guides/php/deploy/"
+    "to": "/guides/php/#test-your-deployment"
   },
   {
     "from": "/guides/language/php/deploy/",
-    "to": "/guides/php/deploy/"
+    "to": "/guides/php/#test-your-deployment"
   },
   {
     "from": "/language/php/configure-ci-cd/",
-    "to": "/guides/php/configure-ci-cd/"
+    "to": "/guides/php/#configure-ci-cd"
   },
   {
     "from": "/guides/language/php/configure-ci-cd/",
-    "to": "/guides/php/configure-ci-cd/"
+    "to": "/guides/php/#configure-ci-cd"
   },
   {
     "from": "/language/php/containerize/",
-    "to": "/guides/php/containerize/"
+    "to": "/guides/php/#containerize-your-app"
   },
   {
     "from": "/guides/language/php/containerize/",
-    "to": "/guides/php/containerize/"
+    "to": "/guides/php/#containerize-your-app"
   },
   {
     "from": "/language/php/",
@@ -5409,51 +5409,51 @@
   },
   {
     "from": "/language/dotnet/run-tests/",
-    "to": "/guides/dotnet/run-tests/"
+    "to": "/guides/dotnet/#run-your-tests"
   },
   {
     "from": "/guides/language/dotnet/run-tests/",
-    "to": "/guides/dotnet/run-tests/"
+    "to": "/guides/dotnet/#run-your-tests"
   },
   {
     "from": "/language/dotnet/develop/",
-    "to": "/guides/dotnet/develop/"
+    "to": "/guides/dotnet/#develop-your-app"
   },
   {
     "from": "/guides/language/dotnet/develop/",
-    "to": "/guides/dotnet/develop/"
+    "to": "/guides/dotnet/#develop-your-app"
   },
   {
     "from": "/language/dotnet/deploy/",
-    "to": "/guides/dotnet/deploy/"
+    "to": "/guides/dotnet/#test-your-deployment"
   },
   {
     "from": "/guides/language/dotnet/deploy/",
-    "to": "/guides/dotnet/deploy/"
+    "to": "/guides/dotnet/#test-your-deployment"
   },
   {
     "from": "/language/dotnet/configure-ci-cd/",
-    "to": "/guides/dotnet/configure-ci-cd/"
+    "to": "/guides/dotnet/#configure-ci-cd"
   },
   {
     "from": "/guides/language/dotnet/configure-ci-cd/",
-    "to": "/guides/dotnet/configure-ci-cd/"
+    "to": "/guides/dotnet/#configure-ci-cd"
   },
   {
     "from": "/language/dotnet/build-images/",
-    "to": "/guides/dotnet/containerize/"
+    "to": "/guides/dotnet/#containerize-your-app"
   },
   {
     "from": "/language/dotnet/run-containers/",
-    "to": "/guides/dotnet/containerize/"
+    "to": "/guides/dotnet/#containerize-your-app"
   },
   {
     "from": "/language/dotnet/containerize/",
-    "to": "/guides/dotnet/containerize/"
+    "to": "/guides/dotnet/#containerize-your-app"
   },
   {
     "from": "/guides/language/dotnet/containerize/",
-    "to": "/guides/dotnet/containerize/"
+    "to": "/guides/dotnet/#containerize-your-app"
   },
   {
     "from": "/language/dotnet/",
@@ -5481,43 +5481,43 @@
   },
   {
     "from": "/language/cpp/develop/",
-    "to": "/guides/cpp/develop/"
+    "to": "/guides/cpp/#develop-your-app"
   },
   {
     "from": "/guides/language/cpp/develop/",
-    "to": "/guides/cpp/develop/"
+    "to": "/guides/cpp/#develop-your-app"
   },
   {
     "from": "/language/cpp/multistage/",
-    "to": "/guides/cpp/multistage/"
+    "to": "/guides/cpp/#containerize-your-app-using-a-multi-stage-build"
   },
   {
     "from": "/guides/language/cpp/multistage/",
-    "to": "/guides/cpp/multistage/"
+    "to": "/guides/cpp/#containerize-your-app-using-a-multi-stage-build"
   },
   {
     "from": "/language/cpp/deploy/",
-    "to": "/guides/cpp/deploy/"
+    "to": "/guides/cpp/#test-your-deployment"
   },
   {
     "from": "/guides/language/cpp/deploy/",
-    "to": "/guides/cpp/deploy/"
+    "to": "/guides/cpp/#test-your-deployment"
   },
   {
     "from": "/language/cpp/configure-ci-cd/",
-    "to": "/guides/cpp/configure-ci-cd/"
+    "to": "/guides/cpp/#configure-ci-cd"
   },
   {
     "from": "/guides/language/cpp/configure-ci-cd/",
-    "to": "/guides/cpp/configure-ci-cd/"
+    "to": "/guides/cpp/#configure-ci-cd"
   },
   {
     "from": "/language/cpp/containerize/",
-    "to": "/guides/cpp/containerize/"
+    "to": "/guides/cpp/#build-and-run-a-c-application-using-docker-compose"
   },
   {
     "from": "/guides/language/cpp/containerize/",
-    "to": "/guides/cpp/containerize/"
+    "to": "/guides/cpp/#build-and-run-a-c-application-using-docker-compose"
   },
   {
     "from": "/language/cpp/",
@@ -5529,11 +5529,11 @@
   },
   {
     "from": "/language/cpp/security/",
-    "to": "/guides/cpp/security/"
+    "to": "/guides/cpp/#supply-chain-security"
   },
   {
     "from": "/guides/language/cpp/security/",
-    "to": "/guides/cpp/security/"
+    "to": "/guides/cpp/#supply-chain-security"
   },
   {
     "from": "/guides/use-case/genai-video-bot/",
@@ -5553,11 +5553,11 @@
   },
   {
     "from": "/guides/use-case/genai-pdf-bot/develop/",
-    "to": "/guides/genai-pdf-bot/develop/"
+    "to": "/guides/genai-pdf-bot/#develop-your-app"
   },
   {
     "from": "/guides/use-case/genai-pdf-bot/containerize/",
-    "to": "/guides/genai-pdf-bot/containerize/"
+    "to": "/guides/genai-pdf-bot/#containerize-your-app"
   },
   {
     "from": "/guides/use-case/genai-pdf-bot/",
@@ -5613,47 +5613,47 @@
   },
   {
     "from": "/language/ruby/develop/",
-    "to": "/guides/ruby/develop/"
+    "to": "/guides/ruby/#develop-your-app"
   },
   {
     "from": "/guides/language/ruby/develop/",
-    "to": "/guides/ruby/develop/"
+    "to": "/guides/ruby/#develop-your-app"
   },
   {
     "from": "/language/ruby/configure-ci-cd/",
-    "to": "/guides/ruby/configure-github-actions/"
+    "to": "/guides/ruby/#automate-your-builds-with-github-actions"
   },
   {
     "from": "/guides/language/ruby/configure-ci-cd/",
-    "to": "/guides/ruby/configure-github-actions/"
+    "to": "/guides/ruby/#automate-your-builds-with-github-actions"
   },
   {
     "from": "/guides/ruby/configure-ci-cd/",
-    "to": "/guides/ruby/configure-github-actions/"
+    "to": "/guides/ruby/#automate-your-builds-with-github-actions"
   },
   {
     "from": "/language/ruby/deploy/",
-    "to": "/guides/ruby/deploy/"
+    "to": "/guides/ruby/#test-your-deployment"
   },
   {
     "from": "/guides/language/ruby/deploy/",
-    "to": "/guides/ruby/deploy/"
+    "to": "/guides/ruby/#test-your-deployment"
   },
   {
     "from": "/language/ruby/build-images/",
-    "to": "/guides/ruby/containerize/"
+    "to": "/guides/ruby/#containerize-your-app"
   },
   {
     "from": "/language/ruby/run-containers/",
-    "to": "/guides/ruby/containerize/"
+    "to": "/guides/ruby/#containerize-your-app"
   },
   {
     "from": "/language/ruby/containerize/",
-    "to": "/guides/ruby/containerize/"
+    "to": "/guides/ruby/#containerize-your-app"
   },
   {
     "from": "/guides/language/ruby/containerize/",
-    "to": "/guides/ruby/containerize/"
+    "to": "/guides/ruby/#containerize-your-app"
   },
   {
     "from": "/language/ruby/",
@@ -6466,5 +6466,745 @@
   {
     "from": "/search/",
     "to": "/"
+  },
+  {
+    "from": "/guides/dotnet/containerize/",
+    "to": "/guides/dotnet/#containerize-your-app"
+  },
+  {
+    "from": "/guides/dotnet/develop/",
+    "to": "/guides/dotnet/#develop-your-app"
+  },
+  {
+    "from": "/guides/dotnet/run-tests/",
+    "to": "/guides/dotnet/#run-your-tests"
+  },
+  {
+    "from": "/guides/dotnet/configure-ci-cd/",
+    "to": "/guides/dotnet/#configure-ci-cd"
+  },
+  {
+    "from": "/guides/dotnet/deploy/",
+    "to": "/guides/dotnet/#test-your-deployment"
+  },
+  {
+    "from": "/guides/admin-set-up/comms-and-info-gathering/",
+    "to": "/guides/admin-set-up/#communication-and-information-gathering"
+  },
+  {
+    "from": "/guides/admin-set-up/finalize-plans-and-setup/",
+    "to": "/guides/admin-set-up/#finalize-plans-and-begin-setup"
+  },
+  {
+    "from": "/guides/admin-set-up/testing/",
+    "to": "/guides/admin-set-up/#testing"
+  },
+  {
+    "from": "/guides/admin-set-up/deploy/",
+    "to": "/guides/admin-set-up/#deploy-your-docker-setup"
+  },
+  {
+    "from": "/guides/admin-user-management/setup/",
+    "to": "/guides/admin-user-management/#setting-up-roles-and-permissions-in-docker"
+  },
+  {
+    "from": "/guides/admin-user-management/onboard/",
+    "to": "/guides/admin-user-management/#onboarding-and-managing-roles-and-permissions-in-docker"
+  },
+  {
+    "from": "/guides/admin-user-management/audit-and-monitor/",
+    "to": "/guides/admin-user-management/#monitoring-and-insights"
+  },
+  {
+    "from": "/guides/angular/containerize/",
+    "to": "/guides/angular/#containerize"
+  },
+  {
+    "from": "/guides/angular/develop/",
+    "to": "/guides/angular/#develop-your-app"
+  },
+  {
+    "from": "/guides/angular/run-tests/",
+    "to": "/guides/angular/#run-your-tests"
+  },
+  {
+    "from": "/guides/angular/configure-github-actions/",
+    "to": "/guides/angular/#automate-your-builds-with-github-actions"
+  },
+  {
+    "from": "/guides/angular/deploy/",
+    "to": "/guides/angular/#test-your-deployment"
+  },
+  {
+    "from": "/guides/bun/containerize/",
+    "to": "/guides/bun/#containerize-your-app"
+  },
+  {
+    "from": "/guides/bun/develop/",
+    "to": "/guides/bun/#develop-your-app"
+  },
+  {
+    "from": "/guides/bun/configure-ci-cd/",
+    "to": "/guides/bun/#configure-ci-cd"
+  },
+  {
+    "from": "/guides/bun/deploy/",
+    "to": "/guides/bun/#test-your-deployment"
+  },
+  {
+    "from": "/guides/cpp/multistage/",
+    "to": "/guides/cpp/#containerize-your-app-using-a-multi-stage-build"
+  },
+  {
+    "from": "/guides/cpp/containerize/",
+    "to": "/guides/cpp/#build-and-run-a-c-application-using-docker-compose"
+  },
+  {
+    "from": "/guides/cpp/develop/",
+    "to": "/guides/cpp/#develop-your-app"
+  },
+  {
+    "from": "/guides/cpp/configure-ci-cd/",
+    "to": "/guides/cpp/#configure-ci-cd"
+  },
+  {
+    "from": "/guides/cpp/deploy/",
+    "to": "/guides/cpp/#test-your-deployment"
+  },
+  {
+    "from": "/guides/cpp/security/",
+    "to": "/guides/cpp/#supply-chain-security"
+  },
+  {
+    "from": "/guides/deno/containerize/",
+    "to": "/guides/deno/#containerize-your-app"
+  },
+  {
+    "from": "/guides/deno/develop/",
+    "to": "/guides/deno/#develop-your-app"
+  },
+  {
+    "from": "/guides/deno/configure-ci-cd/",
+    "to": "/guides/deno/#configure-ci-cd"
+  },
+  {
+    "from": "/guides/deno/deploy/",
+    "to": "/guides/deno/#test-your-deployment"
+  },
+  {
+    "from": "/guides/docker-build-cloud/why/",
+    "to": "/guides/docker-build-cloud/#why-docker-build-cloud"
+  },
+  {
+    "from": "/guides/docker-build-cloud/dev/",
+    "to": "/guides/docker-build-cloud/#demo-set-up-and-use-docker-build-cloud-in-development"
+  },
+  {
+    "from": "/guides/docker-build-cloud/ci/",
+    "to": "/guides/docker-build-cloud/#demo-using-docker-build-cloud-in-ci"
+  },
+  {
+    "from": "/guides/docker-build-cloud/common-questions/",
+    "to": "/guides/docker-build-cloud/#common-challenges-and-questions"
+  },
+  {
+    "from": "/guides/docker-compose/why/",
+    "to": "/guides/docker-compose/#why-docker-compose"
+  },
+  {
+    "from": "/guides/docker-compose/setup/",
+    "to": "/guides/docker-compose/#demo-set-up-and-use-docker-compose"
+  },
+  {
+    "from": "/guides/docker-compose/common-questions/",
+    "to": "/guides/docker-compose/#common-challenges-and-questions"
+  },
+  {
+    "from": "/guides/docker-scout/why/",
+    "to": "/guides/docker-scout/#why-docker-scout"
+  },
+  {
+    "from": "/guides/docker-scout/demo/",
+    "to": "/guides/docker-scout/#demo"
+  },
+  {
+    "from": "/guides/docker-scout/s3c/",
+    "to": "/guides/docker-scout/#software-supply-chain-security"
+  },
+  {
+    "from": "/guides/docker-scout/sbom/",
+    "to": "/guides/docker-scout/#software-bill-of-materials"
+  },
+  {
+    "from": "/guides/docker-scout/attestations/",
+    "to": "/guides/docker-scout/#attestations"
+  },
+  {
+    "from": "/guides/docker-scout/remediation/",
+    "to": "/guides/docker-scout/#remediation"
+  },
+  {
+    "from": "/guides/docker-scout/common-questions/",
+    "to": "/guides/docker-scout/#common-challenges-and-questions"
+  },
+  {
+    "from": "/guides/frameworks/laravel/prerequisites/",
+    "to": "/guides/frameworks/laravel/#prerequisites-for-setting-up-laravel-with-docker-compose"
+  },
+  {
+    "from": "/guides/frameworks/laravel/production-setup/",
+    "to": "/guides/frameworks/laravel/#laravel-production-setup-with-docker-compose"
+  },
+  {
+    "from": "/guides/frameworks/laravel/development-setup/",
+    "to": "/guides/frameworks/laravel/#laravel-development-setup-with-docker-compose"
+  },
+  {
+    "from": "/guides/frameworks/laravel/common-questions/",
+    "to": "/guides/frameworks/laravel/#common-questions-on-using-laravel-with-docker"
+  },
+  {
+    "from": "/guides/genai-pdf-bot/containerize/",
+    "to": "/guides/genai-pdf-bot/#containerize-your-app"
+  },
+  {
+    "from": "/guides/genai-pdf-bot/develop/",
+    "to": "/guides/genai-pdf-bot/#develop-your-app"
+  },
+  {
+    "from": "/guides/github-sonarqube-sandbox/workflow/",
+    "to": "/guides/github-sonarqube-sandbox/#build-workflow"
+  },
+  {
+    "from": "/guides/github-sonarqube-sandbox/customize/",
+    "to": "/guides/github-sonarqube-sandbox/#customize-workflow"
+  },
+  {
+    "from": "/guides/github-sonarqube-sandbox/troubleshoot/",
+    "to": "/guides/github-sonarqube-sandbox/#troubleshoot"
+  },
+  {
+    "from": "/guides/go-prometheus-monitoring/application/",
+    "to": "/guides/go-prometheus-monitoring/#understand-the-application"
+  },
+  {
+    "from": "/guides/go-prometheus-monitoring/containerize/",
+    "to": "/guides/go-prometheus-monitoring/#containerize-your-app"
+  },
+  {
+    "from": "/guides/go-prometheus-monitoring/compose/",
+    "to": "/guides/go-prometheus-monitoring/#connecting-services-with-docker-compose"
+  },
+  {
+    "from": "/guides/go-prometheus-monitoring/develop/",
+    "to": "/guides/go-prometheus-monitoring/#develop-your-app"
+  },
+  {
+    "from": "/guides/golang/build-images/",
+    "to": "/guides/golang/#build-images"
+  },
+  {
+    "from": "/guides/golang/run-containers/",
+    "to": "/guides/golang/#run-containers"
+  },
+  {
+    "from": "/guides/golang/develop/",
+    "to": "/guides/golang/#develop-your-app"
+  },
+  {
+    "from": "/guides/golang/run-tests/",
+    "to": "/guides/golang/#run-your-tests"
+  },
+  {
+    "from": "/guides/golang/configure-ci-cd/",
+    "to": "/guides/golang/#configure-ci-cd"
+  },
+  {
+    "from": "/guides/golang/deploy/",
+    "to": "/guides/golang/#test-your-deployment"
+  },
+  {
+    "from": "/guides/java/containerize/",
+    "to": "/guides/java/#containerize-your-app"
+  },
+  {
+    "from": "/guides/java/develop/",
+    "to": "/guides/java/#develop-your-app"
+  },
+  {
+    "from": "/guides/java/run-tests/",
+    "to": "/guides/java/#run-your-tests"
+  },
+  {
+    "from": "/guides/java/configure-ci-cd/",
+    "to": "/guides/java/#configure-ci-cd"
+  },
+  {
+    "from": "/guides/java/deploy/",
+    "to": "/guides/java/#test-your-deployment"
+  },
+  {
+    "from": "/guides/nextjs/containerize/",
+    "to": "/guides/nextjs/#containerize"
+  },
+  {
+    "from": "/guides/nextjs/develop/",
+    "to": "/guides/nextjs/#develop-your-app"
+  },
+  {
+    "from": "/guides/nextjs/run-tests/",
+    "to": "/guides/nextjs/#run-your-tests-and-lint"
+  },
+  {
+    "from": "/guides/nextjs/configure-github-actions/",
+    "to": "/guides/nextjs/#automate-your-builds-with-github-actions"
+  },
+  {
+    "from": "/guides/nextjs/deploy/",
+    "to": "/guides/nextjs/#test-your-deployment"
+  },
+  {
+    "from": "/guides/nodejs/containerize/",
+    "to": "/guides/nodejs/#containerize"
+  },
+  {
+    "from": "/guides/nodejs/develop/",
+    "to": "/guides/nodejs/#develop-your-app"
+  },
+  {
+    "from": "/guides/nodejs/run-tests/",
+    "to": "/guides/nodejs/#run-your-tests"
+  },
+  {
+    "from": "/guides/nodejs/configure-github-actions/",
+    "to": "/guides/nodejs/#automate-your-builds-with-github-actions"
+  },
+  {
+    "from": "/guides/nodejs/deploy/",
+    "to": "/guides/nodejs/#deploy-your-app"
+  },
+  {
+    "from": "/guides/php/containerize/",
+    "to": "/guides/php/#containerize-your-app"
+  },
+  {
+    "from": "/guides/php/develop/",
+    "to": "/guides/php/#develop-your-app"
+  },
+  {
+    "from": "/guides/php/run-tests/",
+    "to": "/guides/php/#run-your-tests"
+  },
+  {
+    "from": "/guides/php/configure-ci-cd/",
+    "to": "/guides/php/#configure-ci-cd"
+  },
+  {
+    "from": "/guides/php/deploy/",
+    "to": "/guides/php/#test-your-deployment"
+  },
+  {
+    "from": "/guides/postgresql/immediate-setup-and-data-persistence/",
+    "to": "/guides/postgresql/#immediate-setup-data-persistence"
+  },
+  {
+    "from": "/guides/postgresql/advanced-configuration-and-initialization/",
+    "to": "/guides/postgresql/#advanced-configuration-and-initialization"
+  },
+  {
+    "from": "/guides/postgresql/networking-and-connectivity/",
+    "to": "/guides/postgresql/#networking-and-connectivity"
+  },
+  {
+    "from": "/guides/postgresql/companions-for-postgresql/",
+    "to": "/guides/postgresql/#companions-for-postgresql"
+  },
+  {
+    "from": "/guides/python/containerize/",
+    "to": "/guides/python/#containerize-your-app"
+  },
+  {
+    "from": "/guides/python/develop/",
+    "to": "/guides/python/#develop-your-app"
+  },
+  {
+    "from": "/guides/python/lint-format-typing/",
+    "to": "/guides/python/#linting-and-typing"
+  },
+  {
+    "from": "/guides/python/configure-github-actions/",
+    "to": "/guides/python/#automate-your-builds-with-github-actions"
+  },
+  {
+    "from": "/guides/python/deploy/",
+    "to": "/guides/python/#test-your-deployment"
+  },
+  {
+    "from": "/guides/r/containerize/",
+    "to": "/guides/r/#containerize-your-app"
+  },
+  {
+    "from": "/guides/r/develop/",
+    "to": "/guides/r/#develop-your-app"
+  },
+  {
+    "from": "/guides/r/configure-ci-cd/",
+    "to": "/guides/r/#configure-ci-cd"
+  },
+  {
+    "from": "/guides/r/deploy/",
+    "to": "/guides/r/#test-your-deployment"
+  },
+  {
+    "from": "/guides/rag-ollama/containerize/",
+    "to": "/guides/rag-ollama/#containerize-your-app"
+  },
+  {
+    "from": "/guides/rag-ollama/develop/",
+    "to": "/guides/rag-ollama/#develop-your-app"
+  },
+  {
+    "from": "/guides/reactjs/containerize/",
+    "to": "/guides/reactjs/#containerize"
+  },
+  {
+    "from": "/guides/reactjs/develop/",
+    "to": "/guides/reactjs/#develop-your-app"
+  },
+  {
+    "from": "/guides/reactjs/run-tests/",
+    "to": "/guides/reactjs/#run-your-tests"
+  },
+  {
+    "from": "/guides/reactjs/configure-github-actions/",
+    "to": "/guides/reactjs/#automate-your-builds-with-github-actions"
+  },
+  {
+    "from": "/guides/reactjs/deploy/",
+    "to": "/guides/reactjs/#test-your-deployment"
+  },
+  {
+    "from": "/guides/ros2/run-ros2/",
+    "to": "/guides/ros2/#run-ros-2"
+  },
+  {
+    "from": "/guides/ros2/develop/",
+    "to": "/guides/ros2/#set-up-ros-2-workspace"
+  },
+  {
+    "from": "/guides/ros2/turtlesim-example/",
+    "to": "/guides/ros2/#turtlesim-example"
+  },
+  {
+    "from": "/guides/ruby/containerize/",
+    "to": "/guides/ruby/#containerize-your-app"
+  },
+  {
+    "from": "/guides/ruby/configure-github-actions/",
+    "to": "/guides/ruby/#automate-your-builds-with-github-actions"
+  },
+  {
+    "from": "/guides/ruby/develop/",
+    "to": "/guides/ruby/#develop-your-app"
+  },
+  {
+    "from": "/guides/ruby/deploy/",
+    "to": "/guides/ruby/#test-your-deployment"
+  },
+  {
+    "from": "/guides/rust/build-images/",
+    "to": "/guides/rust/#build-images"
+  },
+  {
+    "from": "/guides/rust/run-containers/",
+    "to": "/guides/rust/#run-containers"
+  },
+  {
+    "from": "/guides/rust/develop/",
+    "to": "/guides/rust/#develop-your-app"
+  },
+  {
+    "from": "/guides/rust/configure-ci-cd/",
+    "to": "/guides/rust/#configure-ci-cd"
+  },
+  {
+    "from": "/guides/rust/deploy/",
+    "to": "/guides/rust/#test-your-deployment"
+  },
+  {
+    "from": "/guides/testcontainers-cloud/why/",
+    "to": "/guides/testcontainers-cloud/#why-testcontainers-cloud"
+  },
+  {
+    "from": "/guides/testcontainers-cloud/demo-local/",
+    "to": "/guides/testcontainers-cloud/#setting-up-testcontainers-cloud-by-docker"
+  },
+  {
+    "from": "/guides/testcontainers-cloud/demo-ci/",
+    "to": "/guides/testcontainers-cloud/#configuring-testcontainers-cloud-in-the-ci-pipeline"
+  },
+  {
+    "from": "/guides/testcontainers-cloud/common-questions/",
+    "to": "/guides/testcontainers-cloud/#common-challenges-and-questions"
+  },
+  {
+    "from": "/guides/testcontainers-dotnet-aspnet-core/create-project/",
+    "to": "/guides/testcontainers-dotnet-aspnet-core/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-dotnet-aspnet-core/write-tests/",
+    "to": "/guides/testcontainers-dotnet-aspnet-core/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-dotnet-aspnet-core/run-tests/",
+    "to": "/guides/testcontainers-dotnet-aspnet-core/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-dotnet-getting-started/create-project/",
+    "to": "/guides/testcontainers-dotnet-getting-started/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-dotnet-getting-started/write-tests/",
+    "to": "/guides/testcontainers-dotnet-getting-started/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-dotnet-getting-started/run-tests/",
+    "to": "/guides/testcontainers-dotnet-getting-started/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-go-getting-started/create-project/",
+    "to": "/guides/testcontainers-go-getting-started/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-go-getting-started/write-tests/",
+    "to": "/guides/testcontainers-go-getting-started/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-go-getting-started/test-suites/",
+    "to": "/guides/testcontainers-go-getting-started/#test-suites"
+  },
+  {
+    "from": "/guides/testcontainers-go-getting-started/run-tests/",
+    "to": "/guides/testcontainers-go-getting-started/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-aws-localstack/create-project/",
+    "to": "/guides/testcontainers-java-aws-localstack/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-aws-localstack/write-tests/",
+    "to": "/guides/testcontainers-java-aws-localstack/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-aws-localstack/run-tests/",
+    "to": "/guides/testcontainers-java-aws-localstack/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-getting-started/create-project/",
+    "to": "/guides/testcontainers-java-getting-started/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-getting-started/write-tests/",
+    "to": "/guides/testcontainers-java-getting-started/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-getting-started/run-tests/",
+    "to": "/guides/testcontainers-java-getting-started/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-jooq-flyway/create-project/",
+    "to": "/guides/testcontainers-java-jooq-flyway/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-jooq-flyway/write-tests/",
+    "to": "/guides/testcontainers-java-jooq-flyway/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-jooq-flyway/run-tests/",
+    "to": "/guides/testcontainers-java-jooq-flyway/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-keycloak-spring-boot/create-project/",
+    "to": "/guides/testcontainers-java-keycloak-spring-boot/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-keycloak-spring-boot/write-tests/",
+    "to": "/guides/testcontainers-java-keycloak-spring-boot/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-keycloak-spring-boot/run-tests/",
+    "to": "/guides/testcontainers-java-keycloak-spring-boot/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-lifecycle/create-project/",
+    "to": "/guides/testcontainers-java-lifecycle/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-lifecycle/lifecycle-callbacks/",
+    "to": "/guides/testcontainers-java-lifecycle/#lifecycle-callbacks"
+  },
+  {
+    "from": "/guides/testcontainers-java-lifecycle/extension-annotations/",
+    "to": "/guides/testcontainers-java-lifecycle/#extension-annotations"
+  },
+  {
+    "from": "/guides/testcontainers-java-lifecycle/singleton-containers/",
+    "to": "/guides/testcontainers-java-lifecycle/#singleton-containers"
+  },
+  {
+    "from": "/guides/testcontainers-java-micronaut-kafka/create-project/",
+    "to": "/guides/testcontainers-java-micronaut-kafka/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-micronaut-kafka/write-tests/",
+    "to": "/guides/testcontainers-java-micronaut-kafka/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-micronaut-kafka/run-tests/",
+    "to": "/guides/testcontainers-java-micronaut-kafka/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-micronaut-wiremock/create-project/",
+    "to": "/guides/testcontainers-java-micronaut-wiremock/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-micronaut-wiremock/write-tests/",
+    "to": "/guides/testcontainers-java-micronaut-wiremock/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-micronaut-wiremock/run-tests/",
+    "to": "/guides/testcontainers-java-micronaut-wiremock/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-mockserver/create-project/",
+    "to": "/guides/testcontainers-java-mockserver/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-mockserver/write-tests/",
+    "to": "/guides/testcontainers-java-mockserver/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-mockserver/run-tests/",
+    "to": "/guides/testcontainers-java-mockserver/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-quarkus/create-project/",
+    "to": "/guides/testcontainers-java-quarkus/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-quarkus/write-tests/",
+    "to": "/guides/testcontainers-java-quarkus/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-quarkus/run-tests/",
+    "to": "/guides/testcontainers-java-quarkus/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-replace-h2/problem-with-h2/",
+    "to": "/guides/testcontainers-java-replace-h2/#the-h2-problem"
+  },
+  {
+    "from": "/guides/testcontainers-java-replace-h2/jdbc-url-approach/",
+    "to": "/guides/testcontainers-java-replace-h2/#jdbc-url-approach"
+  },
+  {
+    "from": "/guides/testcontainers-java-replace-h2/junit-extension-approach/",
+    "to": "/guides/testcontainers-java-replace-h2/#junit-5-extension"
+  },
+  {
+    "from": "/guides/testcontainers-java-service-configuration/copy-files/",
+    "to": "/guides/testcontainers-java-service-configuration/#copy-files"
+  },
+  {
+    "from": "/guides/testcontainers-java-service-configuration/exec-in-container/",
+    "to": "/guides/testcontainers-java-service-configuration/#execute-commands"
+  },
+  {
+    "from": "/guides/testcontainers-java-spring-boot-kafka/create-project/",
+    "to": "/guides/testcontainers-java-spring-boot-kafka/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-spring-boot-kafka/write-tests/",
+    "to": "/guides/testcontainers-java-spring-boot-kafka/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-spring-boot-kafka/run-tests/",
+    "to": "/guides/testcontainers-java-spring-boot-kafka/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-spring-boot-rest-api/create-project/",
+    "to": "/guides/testcontainers-java-spring-boot-rest-api/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-spring-boot-rest-api/write-tests/",
+    "to": "/guides/testcontainers-java-spring-boot-rest-api/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-spring-boot-rest-api/run-tests/",
+    "to": "/guides/testcontainers-java-spring-boot-rest-api/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-wiremock/create-project/",
+    "to": "/guides/testcontainers-java-wiremock/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-java-wiremock/write-tests/",
+    "to": "/guides/testcontainers-java-wiremock/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-java-wiremock/run-tests/",
+    "to": "/guides/testcontainers-java-wiremock/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-nodejs-getting-started/create-project/",
+    "to": "/guides/testcontainers-nodejs-getting-started/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-nodejs-getting-started/write-tests/",
+    "to": "/guides/testcontainers-nodejs-getting-started/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-nodejs-getting-started/run-tests/",
+    "to": "/guides/testcontainers-nodejs-getting-started/#run-tests"
+  },
+  {
+    "from": "/guides/testcontainers-python-getting-started/create-project/",
+    "to": "/guides/testcontainers-python-getting-started/#create-the-project"
+  },
+  {
+    "from": "/guides/testcontainers-python-getting-started/write-tests/",
+    "to": "/guides/testcontainers-python-getting-started/#write-tests"
+  },
+  {
+    "from": "/guides/testcontainers-python-getting-started/run-tests/",
+    "to": "/guides/testcontainers-python-getting-started/#run-tests"
+  },
+  {
+    "from": "/guides/vuejs/containerize/",
+    "to": "/guides/vuejs/#containerize"
+  },
+  {
+    "from": "/guides/vuejs/develop/",
+    "to": "/guides/vuejs/#develop-your-app"
+  },
+  {
+    "from": "/guides/vuejs/run-tests/",
+    "to": "/guides/vuejs/#run-your-tests"
+  },
+  {
+    "from": "/guides/vuejs/configure-github-actions/",
+    "to": "/guides/vuejs/#automate-your-builds-with-github-actions"
+  },
+  {
+    "from": "/guides/vuejs/deploy/",
+    "to": "/guides/vuejs/#test-your-deployment"
+  },
+  {
+    "from": "/guides/frameworks/laravel/",
+    "to": "/guides/laravel/"
+  },
+  {
+    "from": "/guides/genai-claude-code-mcp/claude-code-mcp-guide/",
+    "to": "/guides/genai-claude-code-mcp/"
   }
 ]

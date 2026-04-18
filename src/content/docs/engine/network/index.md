@@ -4,7 +4,7 @@ description: Learn how networking works from the container's point of view
 keywords: networking, container, standalone, IP address, DNS resolution
 sidebar:
   label: Networking
-  order: 30
+  order: 3
 ---
 
 Container networking refers to the ability for containers to connect to and

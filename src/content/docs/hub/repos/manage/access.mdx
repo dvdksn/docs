@@ -162,14 +162,14 @@ Distributor members (used for gated distribution) can only be invited using the 
 
 To invite distributor members:
 
-1. Use the [Authentication API](https://docs.docker.com/reference/api/hub/latest/#tag/authentication-api/operation/AuthCreateAccessToken) to generate a bearer token for your Docker Hub account.
+1. Use the [Authentication API](https://docs.docker.com/hub/api/latest/#tag/authentication-api/operation/AuthCreateAccessToken) to generate a bearer token for your Docker Hub account.
 
-2. Create a team in the Hub UI or use the [Teams API](https://docs.docker.com/reference/api/hub/latest/#tag/groups/paths/~1v2~1orgs~1%7Borg_name%7D~1groups/post).
+2. Create a team in the Hub UI or use the [Teams API](https://docs.docker.com/hub/api/latest/#tag/groups/paths/~1v2~1orgs~1%7Borg_name%7D~1groups/post).
 
 3. Grant repository access to the team:
    - In the Hub UI: Navigate to your repository settings and add the team with "Read-only" permissions
-   - Using the [Repository Teams API](https://docs.docker.com/reference/api/hub/latest/#tag/repositories/paths/~1v2~1repositories~1%7Bnamespace%7D~1%7Brepository%7D~1groups/post): Assign the team to your repositories with "read-only" access level
+   - Using the [Repository Teams API](https://docs.docker.com/hub/api/latest/#tag/repositories/paths/~1v2~1repositories~1%7Bnamespace%7D~1%7Brepository%7D~1groups/post): Assign the team to your repositories with "read-only" access level
 
-4. Use the [Bulk create invites endpoint](https://docs.docker.com/reference/api/hub/latest/#tag/invites/paths/~1v2~1invites~1bulk/post) to send email invites with the distributor member role. In the request body, set the "role" field to "distributor_member".
+4. Use the [Bulk create invites endpoint](https://docs.docker.com/hub/api/latest/#tag/invites/paths/~1v2~1invites~1bulk/post) to send email invites with the distributor member role. In the request body, set the "role" field to "distributor_member".
 
 5. The invited user will receive an email with a link to accept the invite. After signing in with their Docker ID, they'll be granted pull-only access to the specified private repository as a distributor member.

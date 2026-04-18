@@ -166,7 +166,7 @@ Allow extra privileged entitlement. List of entitlements:
 
 - `network.host` - Allows executions with host networking.
 - `security.insecure` - Allows executions without sandbox. See
-  [related Dockerfile extensions](/reference/dockerfile/#run---security).
+  [related Dockerfile extensions](/build/dockerfile/#run---security).
 - `device` - Allows access to Container Device Interface (CDI) devices.
    - `--allow device` - Grants access to all devices.
    - `--allow device=kind|name` - Grants access to a specific device.
@@ -204,7 +204,7 @@ Using this flag doesn't alter the output you see when the build process echoes t
 Dockerfile.
 
 For detailed information on using `ARG` and `ENV` instructions, see the
-[Dockerfile reference](/reference/dockerfile/).
+[Dockerfile reference](/build/dockerfile/).
 
 You can also use the `--build-arg` flag without a value, in which case the daemon
 propagates the value from the local environment into the Docker container it's building:
@@ -227,7 +227,7 @@ There are also useful built-in build arguments, such as:
 $ docker buildx build --build-arg BUILDKIT_MULTI_PLATFORM=1 .
 ```
 
-Learn more about the built-in build arguments in the [Dockerfile reference docs](/reference/dockerfile/#buildkit-built-in-build-args).
+Learn more about the built-in build arguments in the [Dockerfile reference docs](/build/dockerfile/#buildkit-built-in-build-args).
 
 ### Additional build contexts (--build-context) {#build-context}
 
@@ -389,7 +389,7 @@ or generate alternative outputs from a build.
 
 The `--call` flag for `docker buildx build` lets you specify the frontend
 method that you want to execute. If this flag is unspecified, it defaults to
-executing the build and evaluating [build checks](/reference/build-checks/).
+executing the build and evaluating [build checks](/build/checks/).
 
 For Dockerfiles, the available methods are:
 
@@ -639,7 +639,7 @@ Available options for the networking mode are:
 - `none`: Run with no network access.
 - `host`: Run in the host’s network environment.
 
-Find more details in the [Dockerfile reference](/reference/dockerfile/#run---network).
+Find more details in the [Dockerfile reference](/build/dockerfile/#run---network).
 
 ### Ignore build cache for specific stages (--no-cache-filter) {#no-cache-filter}
 
@@ -845,7 +845,7 @@ and `arm` architectures. You can see what runtime platforms your current builder
 instance supports by running `docker buildx inspect --bootstrap`.
 
 Inside a `Dockerfile`, you can access the current platform value through
-`TARGETPLATFORM` build argument. Refer to the [Dockerfile reference](/reference/dockerfile/#automatic-platform-args-in-the-global-scope)
+`TARGETPLATFORM` build argument. Refer to the [Dockerfile reference](/build/dockerfile/#automatic-platform-args-in-the-global-scope)
 for the full description of automatic platform argument variants .
 
 You can find the formatting definition for the platform specifier in the
@@ -945,7 +945,7 @@ For more information, see [here](/build/metadata/attestations/sbom/).
 
 Exposes secrets (authentication credentials, tokens) to the build.
 A secret can be mounted into the build using a `RUN --mount=type=secret` mount in the
-[Dockerfile](/reference/dockerfile/#run---mounttypesecret).
+[Dockerfile](/build/dockerfile/#run---mounttypesecret).
 For more information about how to use build secrets, see
 [Build secrets](/build/building/secrets/).
 
@@ -1071,7 +1071,7 @@ This can be useful when some commands in your Dockerfile need specific SSH
 authentication (e.g., cloning a private repository).
 
 `--ssh` exposes SSH agent socket or keys to the build and can be used with the
-[`RUN --mount=type=ssh` mount](/reference/dockerfile/#run---mounttypessh).
+[`RUN --mount=type=ssh` mount](/build/dockerfile/#run---mounttypessh).
 
 Example to access Gitlab using an SSH agent socket:
 

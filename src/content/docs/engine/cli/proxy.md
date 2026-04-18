@@ -173,7 +173,7 @@ $ docker run --env HTTP_PROXY="http://proxy.example.com:3128" redis
 
 For a list of all the proxy-related build arguments that you can use with the
 `docker build` command, see
-[Predefined ARGs](/reference/dockerfile/#predefined-args).
+[Predefined ARGs](/build/dockerfile/#predefined-args).
 These proxy values are only available in the build container.
 They're not included in the build output.
 

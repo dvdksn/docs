@@ -4,7 +4,7 @@ description: Using Docker for continuous integration
 keywords: ci, build
 sidebar:
   label: CI
-  order: 70
+  order: 8
 ---
 
 Continuous Integration (CI) is the part of the development process where you're

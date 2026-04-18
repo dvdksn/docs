@@ -3,7 +3,7 @@ title: Subscription
 description: Learn about Docker subscription features and how to manage your subscription
 keywords: docker subscription, pricing, billing, pro, team, business, subscription management
 sidebar:
-  order: 50
+  order: 3
 group: Platform
 ---
 

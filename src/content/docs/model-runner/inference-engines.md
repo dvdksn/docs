@@ -3,7 +3,7 @@ title: Inference engines
 description: Learn about the llama.cpp, vLLM, and Diffusers inference engines in Docker Model Runner.
 keywords: Docker, ai, model runner, llama.cpp, vllm, diffusers, inference, gguf, safetensors, cuda, gpu, image generation, stable diffusion
 sidebar:
-  order: 50
+  order: 3
 ---
 
 Docker Model Runner supports three inference engines: **llama.cpp**, **vLLM**, and **Diffusers**.

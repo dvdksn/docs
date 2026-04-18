@@ -2,7 +2,7 @@
 title: Core concepts
 description: Learn the core concepts behind Docker Hardened Images, including security metadata, vulnerability management, image structure, and verification.
 sidebar:
-  order: 30
+  order: 2
 ---
 
 Docker Hardened Images (DHIs) are built on a foundation of secure software

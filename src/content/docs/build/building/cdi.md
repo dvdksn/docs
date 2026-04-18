@@ -22,7 +22,7 @@ variables, host mounts (such as shared objects), and executable hooks.
 ## Getting started
 
 To get started with CDI, you need to have a compatible environment set up. This
-includes having Docker v27+ installed with [CDI configured](/reference/cli/dockerd/#configure-cdi-devices)
+includes having Docker v27+ installed with [CDI configured](/engine/cli/dockerd/#configure-cdi-devices)
 and Buildx v0.22+.
 
 You also need to create the [device specifications using JSON or YAML files](https://github.com/cncf-tags/container-device-interface/blob/main/SPEC.md#cdi-json-specification)
@@ -36,7 +36,7 @@ in one of the following locations:
 > Location can be changed by setting the `specDirs` option in the `cdi` section
 > of the [`buildkitd.toml` configuration file](../buildkit/configure/) if you
 > are using BuildKit directly. If you're building using the Docker Daemon with
-> the `docker` driver, see [Configure CDI devices](/reference/cli/dockerd/#configure-cdi-devices)
+> the `docker` driver, see [Configure CDI devices](/engine/cli/dockerd/#configure-cdi-devices)
 > documentation.
 
 > [!NOTE]
@@ -111,13 +111,13 @@ RUN --device=vendor1.com/device \
   env | grep ^FOO=
 ```
 
-Here we use the [`RUN --device` command](/reference/dockerfile/#run---device)
+Here we use the [`RUN --device` command](/build/dockerfile/#run---device)
 and set `vendor1.com/device` which requests the first device available in the
 specification. In this case it uses `foo`, which is the first device in
 `/etc/cdi/foo.yaml`.
 
 > [!NOTE]
-> [`RUN --device` command](/reference/dockerfile/#run---device) is only
+> [`RUN --device` command](/build/dockerfile/#run---device) is only
 > featured in [`labs` channel](../buildkit/frontend/#labs-channel) since
 > [Dockerfile frontend v1.14.0-labs](https://github.com/moby/buildkit/releases/tag/dockerfile%2F1.14.0-labs)
 > and not yet available in stable syntax.

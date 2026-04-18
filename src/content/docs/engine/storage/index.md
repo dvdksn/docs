@@ -3,7 +3,7 @@ title: Storage
 description: Overview of persisting data in containers
 keywords: storage, persistence, data persistence, volumes, mounts, bind mounts, tmpfs
 sidebar:
-  order: 20
+  order: 4
 ---
 
 Docker storage covers two different concepts:

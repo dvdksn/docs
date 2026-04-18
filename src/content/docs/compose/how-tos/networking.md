@@ -80,14 +80,14 @@ services:
     image: postgres:18
 ```
 
-See the [links reference](/reference/compose-file/services/#links) for more information.
+See the [links reference](/compose/compose-file/services/#links) for more information.
 
 ## Multi-host networking
 
 When deploying a Compose application on a Docker Engine with [Swarm mode enabled](/engine/swarm/),
 you can make use of the built-in `overlay` driver to enable multi-host communication.
 
-Overlay networks are always created as `attachable`. You can optionally set the [`attachable`](/reference/compose-file/networks/#attachable) property to `false`.
+Overlay networks are always created as `attachable`. You can optionally set the [`attachable`](/compose/compose-file/networks/#attachable) property to `false`.
 
 Consult the [Swarm mode section](/engine/swarm/) to see how to set up
 a Swarm cluster, and the [overlay network driver documentation](/engine/network/drivers/overlay/)
@@ -128,9 +128,9 @@ networks:
     driver: custom-driver
 ```
 
-Networks can be configured with static IP addresses by setting the [ipv4_address and/or ipv6_address](/reference/compose-file/services/#ipv4_address-ipv6_address) for each attached network.
+Networks can be configured with static IP addresses by setting the [ipv4_address and/or ipv6_address](/compose/compose-file/services/#ipv4_address-ipv6_address) for each attached network.
 
-Networks can also be given a [custom name](/reference/compose-file/networks/#name):
+Networks can also be given a [custom name](/compose/compose-file/networks/#name):
 
 ```yaml
 services:
@@ -164,7 +164,7 @@ networks:
 
 If you've manually created a bridge network outside of Compose using the `docker network create` command, you can connect your Compose services to it by marking the network as `external`.
 
-If you want your containers to join a pre-existing network, use the [`external` option](/reference/compose-file/networks/#external)
+If you want your containers to join a pre-existing network, use the [`external` option](/compose/compose-file/networks/#external)
 
 ```yaml
 services:
@@ -181,5 +181,5 @@ Instead of attempting to create a network called `[projectname]_default`, Compos
 
 For full details of the network configuration options available, see the following references:
 
-- [Top-level `networks` element](/reference/compose-file/networks/)
-- [Service-level `networks` attribute](/reference/compose-file/services/#networks)
+- [Top-level `networks` element](/compose/compose-file/networks/)
+- [Service-level `networks` attribute](/compose/compose-file/services/#networks)

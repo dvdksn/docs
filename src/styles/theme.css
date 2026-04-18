@@ -346,11 +346,18 @@ body {
    sidebar reads as one voice; distinction comes from size, weight,
    case, and color rather than swapping font families. */
 .sidebar-content details > summary .large {
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: var(--sl-color-gray-3);
+}
+
+/* Top-level page links share scale with nested links so the sidebar
+   doesn't read as two castes. Color + weight still mark them as
+   top-level. Starlight's default bumps these to --sl-text-base. */
+.sidebar-content a.large {
+  font-size: var(--sl-text-sm);
 }
 
 /* Active page — left-accent rule, no fill */
@@ -560,6 +567,190 @@ body {
 /* Group label — already mono-ified elsewhere; tighten spacing */
 .sidebar-content details > summary {
   padding-block: 0.35rem;
+}
+
+/* ══════════════════════════════════════════════════════════
+ *  Left sidebar — custom Sidebar.astro overrides
+ *
+ *  Global rules because the markup lives under Starlight's own
+ *  SidebarSublist subtree — Astro scoped styles can't traverse
+ *  into that component, and :where() wrapping caused Starlight's
+ *  base `.sidebar-content ul li a` rules to win over scoped ones.
+ * ══════════════════════════════════════════════════════════ */
+
+.sidebar-scope {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.sidebar-content .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--sl-font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--sl-color-gray-3);
+  text-decoration: none;
+  padding: 0.15rem 0;
+}
+
+.sidebar-content .back-link:hover {
+  color: var(--sl-color-text-accent);
+}
+
+/* In a scoped sidebar (deep inside a product), Starlight's autogenerate
+   puts the product's index link at the top of the tree. Promote that
+   first top-level link to serve as the visible section title. */
+.sidebar-tree.is-scoped .sidebar-content > ul > li:first-child > a {
+  font-size: var(--sl-text-lg);
+  font-weight: 650;
+  color: var(--sl-color-white);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  padding-block: 0.35rem 0.6rem;
+  margin-bottom: 0.35rem;
+  border-bottom: 1px solid var(--sl-color-hairline-light);
+}
+
+.sidebar-tree.is-scoped .sidebar-content > ul > li:first-child > a:hover {
+  color: var(--sl-color-text-accent);
+}
+
+@media (min-width: 50rem) {
+  .sidebar-tree.is-scoped .sidebar-content > ul > li:first-child > a {
+    font-size: var(--sl-text-base);
+  }
+}
+
+/* ── CLI tabbed sidebar ── */
+
+.cli-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cli-sidebar .cli-title {
+  font-family: var(--sl-font-mono);
+  font-size: var(--sl-text-lg);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  color: var(--sl-color-white);
+  margin: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--sl-color-hairline-light);
+}
+
+.cli-sidebar .cli-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.cli-sidebar .cli-title a:hover {
+  color: var(--sl-color-text-accent);
+}
+
+.cli-sidebar .cli-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.cli-sidebar .cli-tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.6rem;
+  border-radius: 4px;
+  font-family: var(--sl-font-mono);
+  font-size: 0.72rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--sl-color-gray-2);
+  text-decoration: none;
+  background: transparent;
+  border: 1px solid var(--sl-color-hairline-light);
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+}
+
+.cli-sidebar .cli-tab:hover {
+  background: var(--sl-color-gray-6);
+  color: var(--sl-color-white);
+  border-color: var(--sl-color-gray-5);
+}
+
+.cli-sidebar .cli-tab.is-active,
+.cli-sidebar .cli-tab.is-active:hover {
+  background: var(--d-blue-600);
+  color: #ffffff;
+  border-color: var(--d-blue-500);
+}
+
+/* ── Custom CLI tree (CliSublist.astro) ──
+   Rendered in place of Starlight's SidebarSublist. All entries are command
+   paths, so everything is mono. Groups are clickable links (heading to the
+   management command's own index), not <details> toggles. */
+
+.cli-tree-wrap {
+  margin-top: 0.25rem;
+}
+
+.cli-tree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--sl-font-mono);
+}
+
+.cli-tree .cli-tree {
+  /* nested subtree — indent and add a hairline rail */
+  margin-left: 0.5rem;
+  padding-left: 0.6rem;
+  border-left: 1px solid var(--sl-color-hairline-light);
+}
+
+.cli-tree li {
+  margin: 0;
+  padding: 0;
+}
+
+.cli-tree a,
+.cli-tree .cli-group-heading {
+  display: block;
+  padding: 0.18rem 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--sl-color-gray-2);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.cli-tree a:hover {
+  color: var(--sl-color-text-accent);
+}
+
+.cli-tree a[aria-current="page"] {
+  color: var(--sl-color-text-accent);
+  font-variation-settings: var(--d-vf-emphasis);
+}
+
+/* Group heading — a link to the management command's index. Slightly
+   heavier than its children so the hierarchy reads at a glance. */
+.cli-tree .cli-group > .cli-group-heading {
+  color: var(--sl-color-white);
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+
+.cli-tree .cli-group > .cli-group-heading:hover {
+  color: var(--sl-color-text-accent);
+}
+
+/* At the outermost level, first group heading doesn't need a top margin. */
+.cli-tree-depth-0 > .cli-group:first-child > .cli-group-heading {
+  margin-top: 0;
 }
 
 /* ══════════════════════════════════════════════════════════

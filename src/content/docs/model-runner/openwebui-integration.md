@@ -3,7 +3,7 @@ title: Open WebUI integration
 description: Set up Open WebUI as a ChatGPT-like interface for Docker Model Runner.
 keywords: Docker, ai, model runner, open webui, openwebui, chat interface, ollama, ui
 sidebar:
-  order: 45
+  order: 5
 ---
 
 [Open WebUI](https://github.com/open-webui/open-webui) is an open-source,

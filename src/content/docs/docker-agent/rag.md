@@ -8,7 +8,7 @@ keywords:
   - embeddings
   - semantic search
 sidebar:
-  order: 70
+  order: 4
 ---
 
 When you configure a RAG source in Docker Agent, your agent automatically gains a

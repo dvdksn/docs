@@ -7,7 +7,7 @@ sidebar:
   order: 20
 ---
 
-Docker Compose's [`extends` attribute](/reference/compose-file/services/#extends)
+Docker Compose's [`extends` attribute](/compose/compose-file/services/#extends)
 lets you share common configurations among different files, or even different
 projects entirely.
 
@@ -191,4 +191,4 @@ services:
 
 ## Reference information
 
-- [`extends`](/reference/compose-file/services/#extends)
+- [`extends`](/compose/compose-file/services/#extends)

@@ -4,7 +4,7 @@ description: Follow a quickstart guide to explore and run a Docker Hardened Imag
 keywords: docker hardened images quickstart, run secure image
 sidebar:
   label: Quickstart
-  order: 2
+  order: 1
 ---
 
 This guide shows you how to go from zero to running a Docker Hardened Image

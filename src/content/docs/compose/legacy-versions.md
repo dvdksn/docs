@@ -1,6 +1,8 @@
 ---
 title: Legacy versions
 keywords: fig, composition, compose, versions, upgrading, docker, version 3, docker compose 3
+sidebar:
+  order: 10
 ---
 
 The legacy versions of the Compose file reference has moved to the [V1 branch of the Compose repository](https://github.com/docker/compose/tree/v1/docs). They are no longer being actively maintained. 

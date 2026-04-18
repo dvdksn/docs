@@ -41,7 +41,7 @@ syscall table, for instance `9`. Refer to [signal(7)](https://man7.org/linux/man
 for available signals.
 
 The default signal to use is defined by the image's [`StopSignal`](https://github.com/opencontainers/image-spec/blob/v1.1.0/config.md),
-which can be set through the [`STOPSIGNAL`](/reference/dockerfile/#stopsignal)
+which can be set through the [`STOPSIGNAL`](/build/dockerfile/#stopsignal)
 Dockerfile instruction when building the image, or configured using the
 [`--stop-signal`](/reference/cli/docker/container/run/#stop-signal)
 option when creating the container. If no signal is configured for the

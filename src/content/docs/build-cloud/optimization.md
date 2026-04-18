@@ -4,7 +4,7 @@ description: Building remotely is different from building locally. Here's how to
 keywords: build, cloud build, optimize, remote, local, cloud
 sidebar:
   label: Optimization
-  order: 40
+  order: 4
 ---
 
 Docker Build Cloud runs your builds remotely, and not on the machine where you
@@ -84,7 +84,7 @@ Docker Build Cloud server directly is better, because it will likely be faster
 than transferring the files with the build context.
 
 You can fetch remote files during the build using the
-[Dockerfile `ADD` instruction](/reference/dockerfile/#add),
+[Dockerfile `ADD` instruction](/build/dockerfile/#add),
 or in your `RUN` instructions with tools like `wget` and `rsync`.
 
 ### Multi-threaded tools

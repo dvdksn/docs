@@ -573,9 +573,9 @@ Entitlements are permissions that the build process requires to run.
 
 Currently supported entitlements are:
 
-- `network.host`: Allows the build to use commands that access the host network. In Dockerfile, use [`RUN --network=host`](https://docs.docker.com/reference/dockerfile/#run---networkhost) to run a command with host network enabled.
+- `network.host`: Allows the build to use commands that access the host network. In Dockerfile, use [`RUN --network=host`](https://docs.docker.com/build/dockerfile/#run---networkhost) to run a command with host network enabled.
 
-- `security.insecure`: Allows the build to run commands in privileged containers that are not limited by the default security sandbox. Such container may potentially access and modify system resources. In Dockerfile, use [`RUN --security=insecure`](https://docs.docker.com/reference/dockerfile/#run---security) to run a command in a privileged container.
+- `security.insecure`: Allows the build to run commands in privileged containers that are not limited by the default security sandbox. Such container may potentially access and modify system resources. In Dockerfile, use [`RUN --security=insecure`](https://docs.docker.com/build/dockerfile/#run---security) to run a command in a privileged container.
 
 ```hcl
 target "integration-tests" {
@@ -1476,7 +1476,7 @@ target "webapp-dev" {
 [hcl-funcs]: https://docs.docker.com/build/bake/hcl-funcs/
 [output]: https://docs.docker.com/reference/cli/docker/buildx/build/#output
 [platform]: https://docs.docker.com/reference/cli/docker/buildx/build/#platform
-[run_mount_secret]: https://docs.docker.com/reference/dockerfile/#run---mounttypesecret
+[run_mount_secret]: https://docs.docker.com/build/dockerfile/#run---mounttypesecret
 [secret]: https://docs.docker.com/reference/cli/docker/buildx/build/#secret
 [ssh]: https://docs.docker.com/reference/cli/docker/buildx/build/#ssh
 [tag]: https://docs.docker.com/reference/cli/docker/image/build/#tag

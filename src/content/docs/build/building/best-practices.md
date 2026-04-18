@@ -266,7 +266,7 @@ automatically build and tag a Docker image and test it.
 
 ## Dockerfile instructions
 
-Follow these recommendations on how to properly use the [Dockerfile instructions](/reference/dockerfile/)
+Follow these recommendations on how to properly use the [Dockerfile instructions](/build/dockerfile/)
 to create an efficient and maintainable Dockerfile.
 
 > [!TIP]
@@ -281,7 +281,7 @@ images. Docker recommends the [Alpine image](https://hub.docker.com/_/alpine/) a
 is tightly controlled and small in size (under 6 MB), while still
 being a full Linux distribution.
 
-For more information about the `FROM` instruction, see [Dockerfile reference for the FROM instruction](/reference/dockerfile/#from).
+For more information about the `FROM` instruction, see [Dockerfile reference for the FROM instruction](/build/dockerfile/#from).
 
 ### LABEL
 
@@ -327,7 +327,7 @@ See [Understanding object labels](/engine/manage-resources/labels/)
 for guidelines about acceptable label keys and values. For information about
 querying labels, refer to the items related to filtering in
 [Managing labels on objects](/engine/manage-resources/labels/#manage-labels-on-objects).
-See also [LABEL](/reference/dockerfile/#label) in the Dockerfile reference.
+See also [LABEL](/build/dockerfile/#label) in the Dockerfile reference.
 
 ### RUN
 
@@ -346,7 +346,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ```
 
 By default, backslash escapes a newline character, but you can change it with
-the [`escape` directive](/reference/dockerfile/#escape).
+the [`escape` directive](/build/dockerfile/#escape).
 
 You can also use here documents to run multiple commands without chaining them
 with a pipeline operator:
@@ -361,7 +361,7 @@ apt-get install -y --no-install-recommends \
 EOF
 ```
 
-For more information about `RUN`, see [Dockerfile reference for the RUN instruction](/reference/dockerfile/#run).
+For more information about `RUN`, see [Dockerfile reference for the RUN instruction](/build/dockerfile/#run).
 
 #### apt-get
 
@@ -503,11 +503,11 @@ Python and perl. For example, `CMD ["perl", "-de0"]`, `CMD ["python"]`, or `CMD
 ["php", "-a"]`. Using this form means that when you execute something like
 `docker run -it python`, you’ll get dropped into a usable shell, ready to go.
 `CMD` should rarely be used in the manner of `CMD ["param", "param"]` in
-conjunction with [`ENTRYPOINT`](/reference/dockerfile/#entrypoint), unless
+conjunction with [`ENTRYPOINT`](/build/dockerfile/#entrypoint), unless
 you and your expected users are already quite familiar with how `ENTRYPOINT`
 works.
 
-For more information about `CMD`, see [Dockerfile reference for the CMD instruction](/reference/dockerfile/#cmd).
+For more information about `CMD`, see [Dockerfile reference for the CMD instruction](/build/dockerfile/#cmd).
 
 ### EXPOSE
 
@@ -522,7 +522,7 @@ how to map the specified port to the port of their choice.
 For container linking, Docker provides environment variables for the path from
 the recipient container back to the source (for example, `MYSQL_PORT_3306_TCP`).
 
-For more information about `EXPOSE`, see [Dockerfile reference for the EXPOSE instruction](/reference/dockerfile/#expose).
+For more information about `EXPOSE`, see [Dockerfile reference for the EXPOSE instruction](/build/dockerfile/#expose).
 
 ### ENV
 
@@ -590,7 +590,7 @@ $ docker run --rm test sh -c 'echo $ADMIN_USER'
 
 ```
 
-For more information about `ENV`, see [Dockerfile reference for the ENV instruction](/reference/dockerfile/#env).
+For more information about `ENV`, see [Dockerfile reference for the ENV instruction](/build/dockerfile/#env).
 
 ### ADD or COPY
 
@@ -652,8 +652,8 @@ RUN ln -s /usr/share/dotnet/dotnet /usr/bin/dotnet
 
 For more information about `ADD` or `COPY`, see the following:
 
-- [Dockerfile reference for the ADD instruction](/reference/dockerfile/#add)
-- [Dockerfile reference for the COPY instruction](/reference/dockerfile/#copy)
+- [Dockerfile reference for the ADD instruction](/build/dockerfile/#add)
+- [Dockerfile reference for the COPY instruction](/build/dockerfile/#copy)
 
 ### ENTRYPOINT
 
@@ -707,7 +707,7 @@ fi
 exec "$@"
 ```
 
-This script uses [the `exec` Bash command](https://wiki.bash-hackers.org/commands/builtin/exec) so that the final running application becomes the container's PID 1. This allows the application to receive any Unix signals sent to the container. For more information, see the [`ENTRYPOINT` reference](/reference/dockerfile/#entrypoint).
+This script uses [the `exec` Bash command](https://wiki.bash-hackers.org/commands/builtin/exec) so that the final running application becomes the container's PID 1. This allows the application to receive any Unix signals sent to the container. For more information, see the [`ENTRYPOINT` reference](/build/dockerfile/#entrypoint).
 
 In the following example, a helper script is copied into the container and run via `ENTRYPOINT` on
 container start:
@@ -738,7 +738,7 @@ Lastly, you can use it to start a totally different tool, such as Bash:
 $ docker run --rm -it postgres bash
 ```
 
-For more information about `ENTRYPOINT`, see [Dockerfile reference for the ENTRYPOINT instruction](/reference/dockerfile/#entrypoint).
+For more information about `ENTRYPOINT`, see [Dockerfile reference for the ENTRYPOINT instruction](/build/dockerfile/#entrypoint).
 
 ### VOLUME
 
@@ -747,7 +747,7 @@ configuration storage, or files and folders created by your Docker container. Yo
 are strongly encouraged to use `VOLUME` for any combination of mutable or user-serviceable
 parts of your image.
 
-For more information about `VOLUME`, see [Dockerfile reference for the VOLUME instruction](/reference/dockerfile/#volume).
+For more information about `VOLUME`, see [Dockerfile reference for the VOLUME instruction](/build/dockerfile/#volume).
 
 ### USER
 
@@ -784,7 +784,7 @@ running it as non-`root`, consider using [“gosu”](https://github.com/tianon/
 Lastly, to reduce layers and complexity, avoid switching `USER` back and forth
 frequently.
 
-For more information about `USER`, see [Dockerfile reference for the USER instruction](/reference/dockerfile/#user).
+For more information about `USER`, see [Dockerfile reference for the USER instruction](/build/dockerfile/#user).
 
 ### WORKDIR
 
@@ -793,7 +793,7 @@ For clarity and reliability, you should always use absolute paths for your
 like `RUN cd … && do-something`, which are hard to read, troubleshoot, and
 maintain.
 
-For more information about `WORKDIR`, see [Dockerfile reference for the `WORKDIR` instruction](/reference/dockerfile/#workdir).
+For more information about `WORKDIR`, see [Dockerfile reference for the `WORKDIR` instruction](/build/dockerfile/#workdir).
 
 ### ONBUILD
 
@@ -818,4 +818,4 @@ fails catastrophically if the new build's context is missing the resource being
 added. Adding a separate tag, as recommended above, helps mitigate this by
 allowing the Dockerfile author to make a choice.
 
-For more information about `ONBUILD`, see [Dockerfile reference for the ONBUILD instruction](/reference/dockerfile/#onbuild).
+For more information about `ONBUILD`, see [Dockerfile reference for the ONBUILD instruction](/build/dockerfile/#onbuild).

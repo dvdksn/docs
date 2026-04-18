@@ -4,7 +4,7 @@ description: Secure your Docker builds by validating images, Git repositories, a
 keywords: build policies, opa, rego, docker security, supply chain, attestations
 sidebar:
   label: Validating builds
-  order: 70
+  order: 13
   badge:
     text: Experimental
     variant: note

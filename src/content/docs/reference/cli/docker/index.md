@@ -45,7 +45,7 @@ The following environment variables control the behavior of the `docker` command
 | Variable                      | Description                                                                                                                                                                                                                                                       |
 | :---------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `DOCKER_API_VERSION`          | Override the negotiated API version to use for debugging (e.g. `1.19`)                                                                                                                                                                                            |
-| `DOCKER_CERT_PATH`            | Location of your authentication keys. This variable is used both by the `docker` CLI and the [`dockerd` daemon](/reference/cli/dockerd/)                                                                                                   |
+| `DOCKER_CERT_PATH`            | Location of your authentication keys. This variable is used both by the `docker` CLI and the [`dockerd` daemon](/engine/cli/dockerd/)                                                                                                   |
 | `DOCKER_CONFIG`               | The location of your client configuration files.                                                                                                                                                                                                                  |
 | `DOCKER_CONTEXT`              | Name of the `docker context` to use (overrides `DOCKER_HOST` env var and default context set with `docker context use`)                                                                                                                                           |
 | `DOCKER_CUSTOM_HEADERS`       | (Experimental) Configure [custom HTTP headers](#custom-http-headers) to be sent by the client. Headers must be provided as a comma-separated list of `name=value` pairs. This is the equivalent to the `HttpHeaders` field in the configuration file.             |
@@ -53,7 +53,7 @@ The following environment variables control the behavior of the `docker` command
 | `DOCKER_HIDE_LEGACY_COMMANDS` | When set, Docker hides "legacy" top-level commands (such as `docker rm`, and `docker pull`) in `docker help` output, and only `Management commands` per object-type (e.g., `docker container`) are printed. This may become the default in a future release.      |
 | `DOCKER_HOST`                 | Daemon socket to connect to.                                                                                                                                                                                                                                      |
 | `DOCKER_TLS`                  | Enable TLS for connections made by the `docker` CLI (equivalent of the `--tls` command-line option). Set to a non-empty value to enable TLS. Note that TLS is enabled automatically if any of the other TLS options are set.                                      |
-| `DOCKER_TLS_VERIFY`           | When set Docker uses TLS and verifies the remote. This variable is used both by the `docker` CLI and the [`dockerd` daemon](/reference/cli/dockerd/)                                                                                       |
+| `DOCKER_TLS_VERIFY`           | When set Docker uses TLS and verifies the remote. This variable is used both by the `docker` CLI and the [`dockerd` daemon](/engine/cli/dockerd/)                                                                                       |
 | `BUILDKIT_PROGRESS`           | Set type of progress output (`auto`, `plain`, `tty`, `rawjson`) when [building](/reference/cli/docker/image/build/) with [BuildKit backend](/build/buildkit/). Use plain to show container output (default `auto`). |
 | `NO_COLOR`                    | Disable any ANSI escape codes in the output in accordance with https://no-color.org/
                                                                                                              |
@@ -453,7 +453,7 @@ or alternatively, use the
 [`DOCKER_HOST` environment variable](#environment-variables).
 
 For more information about the `-H` flag, see
-[Daemon socket option](/reference/cli/dockerd/#daemon-socket-option).
+[Daemon socket option](/engine/cli/dockerd/#daemon-socket-option).
 
 #### Using TCP sockets
 

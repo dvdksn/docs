@@ -1,9 +1,10 @@
 ---
 title: Docker Engine managed plugin system
 description: Develop and use a plugin with the managed plugin system
-keywords: "API, Usage, plugins, documentation, developer"
+keywords: API, Usage, plugins, documentation, developer
 sidebar:
-  label: "Docker Engine plugins"
+  label: Docker Engine plugins
+  order: 12
 ---
 
 - [Installing and using a plugin](index.md#installing-and-using-a-plugin)

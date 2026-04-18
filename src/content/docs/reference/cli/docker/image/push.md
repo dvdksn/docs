@@ -34,7 +34,7 @@ Registry credentials are managed by [docker login](/reference/cli/docker/login/)
 By default the Docker daemon will push five layers of an image at a time.
 If you are on a low bandwidth connection this may cause timeout issues and you may want to lower
 this via the `--max-concurrent-uploads` daemon option. See the
-[daemon documentation](/reference/cli/dockerd/) for more details.
+[daemon documentation](/engine/cli/dockerd/) for more details.
 
 ## Options
 

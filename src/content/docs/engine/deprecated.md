@@ -1,9 +1,10 @@
 ---
 title: Deprecated Docker Engine features
-description: "Deprecated Features."
-keywords: "docker, documentation, about, technology, deprecate"
+description: Deprecated Features.
+keywords: docker, documentation, about, technology, deprecate
 sidebar:
-  label: "Deprecated features"
+  label: Deprecated features
+  order: 95
 ---
 
 <!-- This file is maintained within the docker/cli GitHub

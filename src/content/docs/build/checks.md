@@ -4,7 +4,7 @@ description: Learn how to use build checks to validate your build configuration.
 keywords: build, buildx, buildkit, checks, validate, configuration, lint
 sidebar:
   label: Build checks
-  order: 20
+  order: 12
 ---
 
 
@@ -16,7 +16,7 @@ build. Think of it as an advanced form of linting for your Dockerfile and build
 options, or a dry-run mode for builds.
 
 You can find the list of checks available, and a description of each, in the
-[Build checks reference](/reference/build-checks/).
+[Rules](#rules) section below.
 
 ## How build checks work
 
@@ -61,7 +61,7 @@ $ docker build .
 ```
 
 In this example, the build ran successfully, but a
-[JSONArgsRecommended](/reference/build-checks/json-args-recommended/) warning
+[JSONArgsRecommended](/build/checks/json-args-recommended/) warning
 was reported, because `CMD` instructions should use JSON array syntax.
 
 With the GitHub Actions, the checks display in the diff view of pull requests.
@@ -244,8 +244,8 @@ $ docker build --check --build-arg "BUILDKIT_DOCKERFILE_CHECK=skip=JSONArgsRecom
 ## Experimental checks
 
 Before checks are promoted to stable, they may be available as experimental
-checks. Experimental checks are disabled by default. To see the list of
-experimental checks available, refer to the [Build checks reference](/reference/build-checks/).
+checks. Experimental checks are disabled by default. See the [Rules](#rules)
+section below for the full list — experimental checks are marked as such.
 
 To enable all experimental checks, set the `BUILDKIT_DOCKERFILE_CHECK` build
 argument to `experimental=all`:
@@ -281,9 +281,32 @@ experimental checks, the experimental checks will still run:
 # check=skip=all;experimental=all
 ```
 
+## Rules
+
+| Name | Description |
+| --- | --- |
+| [StageNameCasing](/build/checks/stage-name-casing/) | Stage names should be lowercase |
+| [FromAsCasing](/build/checks/from-as-casing/) | The 'as' keyword should match the case of the 'from' keyword |
+| [NoEmptyContinuation](/build/checks/no-empty-continuation/) | Empty continuation lines will become errors in a future release |
+| [ConsistentInstructionCasing](/build/checks/consistent-instruction-casing/) | All commands within the Dockerfile should use the same casing (either upper or lower) |
+| [DuplicateStageName](/build/checks/duplicate-stage-name/) | Stage names should be unique |
+| [ReservedStageName](/build/checks/reserved-stage-name/) | Reserved words should not be used as stage names |
+| [JSONArgsRecommended](/build/checks/json-args-recommended/) | JSON arguments recommended for ENTRYPOINT/CMD to prevent unintended behavior related to OS signals |
+| [MaintainerDeprecated](/build/checks/maintainer-deprecated/) | The MAINTAINER instruction is deprecated, use a label instead to define an image author |
+| [UndefinedArgInFrom](/build/checks/undefined-arg-in-from/) | FROM command must use declared ARGs |
+| [WorkdirRelativePath](/build/checks/workdir-relative-path/) | Relative workdir without an absolute workdir declared within the build can have unexpected results if the base image changes |
+| [UndefinedVar](/build/checks/undefined-var/) | Variables should be defined before their use |
+| [MultipleInstructionsDisallowed](/build/checks/multiple-instructions-disallowed/) | Multiple instructions of the same type should not be used in the same stage |
+| [LegacyKeyValueFormat](/build/checks/legacy-key-value-format/) | Legacy key/value format with whitespace separator should not be used |
+| [RedundantTargetPlatform](/build/checks/redundant-target-platform/) | Setting platform to predefined $TARGETPLATFORM in FROM is redundant as this is the default behavior |
+| [SecretsUsedInArgOrEnv](/build/checks/secrets-used-in-arg-or-env/) | Sensitive data should not be used in the ARG or ENV commands |
+| [InvalidDefaultArgInFrom](/build/checks/invalid-default-arg-in-from/) | Default value for global ARG results in an empty or invalid base image name |
+| [FromPlatformFlagConstDisallowed](/build/checks/from-platform-flag-const-disallowed/) | FROM --platform flag should not use a constant value |
+| [CopyIgnoredFile](/build/checks/copy-ignored-file/) | Attempting to Copy file that is excluded by .dockerignore |
+| [InvalidDefinitionDescription](/build/checks/invalid-definition-description/) (experimental) | Comment for build stage or argument should follow the format: `# <arg/stage name> <description>`. |
+| [ExposeProtoCasing](/build/checks/expose-proto-casing/) | Protocol in EXPOSE instruction should be lowercase |
+| [ExposeInvalidFormat](/build/checks/expose-invalid-format/) | IP address and host-port mapping should not be used in EXPOSE instruction. This will become an error in a future release |
+
 ## Further reading
 
-For more information about using build checks, see:
-
-- [Build checks reference](/reference/build-checks/)
 - [Validating build configuration with GitHub Actions](/build/ci/github-actions/checks/)

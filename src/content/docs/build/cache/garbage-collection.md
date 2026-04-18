@@ -80,7 +80,7 @@ you will use different configuration files to change the builder's GC settings:
 ### Docker daemon configuration file
 
 If you're using the default [`docker` driver](../builders/drivers/docker/),
-GC is configured in the [`daemon.json` configuration file](/reference/cli/dockerd/#daemon-configuration-file),
+GC is configured in the [`daemon.json` configuration file](/engine/cli/dockerd/#daemon-configuration-file),
 or if you use Docker Desktop, in [**Settings > Docker Engine**](/desktop/settings-and-maintenance/settings/).
 
 The following snippet shows the default builder configuration for the `docker`

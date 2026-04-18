@@ -16,11 +16,11 @@ necessary.
 
 The default storage limit for Docker Engine on Windows is 127GB. To use a
 different storage size, set the `size` option for the windowsfilter storage
-driver. See [windowsfilter options](/reference/cli/dockerd/#windowsfilter-options).
+driver. See [windowsfilter options](/engine/cli/dockerd/#windowsfilter-options).
 
 Data is stored on the Docker host in `image` and `windowsfilter` subdirectories
 within `C:\ProgramData\docker` by default. You can change the storage location
-by configuring the `data-root` option in the [Daemon configuration file](/reference/cli/dockerd/#on-windows):
+by configuring the `data-root` option in the [Daemon configuration file](/engine/cli/dockerd/#on-windows):
 
 ```json
 {

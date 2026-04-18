@@ -95,7 +95,7 @@ services:
 
 #### Additional information 
 
-- If you define a variable in your `.env` file, you can reference it directly in your `compose.yaml` with the [`environment` attribute](/reference/compose-file/services/#environment). For example, if your `.env` file contains the environment variable `DEBUG=1` and your `compose.yaml` file looks like this:
+- If you define a variable in your `.env` file, you can reference it directly in your `compose.yaml` with the [`environment` attribute](/compose/compose-file/services/#environment). For example, if your `.env` file contains the environment variable `DEBUG=1` and your `compose.yaml` file looks like this:
    ```yaml
     services:
       webapp:

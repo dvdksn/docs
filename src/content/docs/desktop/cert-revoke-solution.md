@@ -4,7 +4,7 @@ description: Learn how to resolve issues affecting macOS users of Docker Desktop
 keywords: Docker desktop, fix, mac, troubleshooting, macos, false malware warning, patch, upgrade solution
 sidebar:
   label: Fix startup issue for Mac
-  order: 220
+  order: 92
 ---
 
 This guide provides steps to address a recent issue affecting some macOS users of Docker Desktop. The issue may prevent Docker Desktop from starting and in some cases, may also trigger inaccurate malware warnings. For more details about the incident, see the [blog post](https://www.docker.com/blog/incident-update-docker-desktop-for-mac/).

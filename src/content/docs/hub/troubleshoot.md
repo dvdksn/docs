@@ -4,7 +4,7 @@ description: Learn how to troubleshoot common Docker Hub issues.
 keywords: hub, troubleshoot
 sidebar:
   label: Troubleshoot
-  order: 60
+  order: 90
 ---
 
 If you experience issues with Docker Hub, refer to the following solutions.

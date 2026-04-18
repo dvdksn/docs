@@ -182,7 +182,7 @@ Configure the Docker daemon using a JSON configuration file.
 The file is located at `$HOME/.docker/daemon.json`. Edit it directly in the Docker Desktop Dashboard or in a text editor.
 
 To see the full list of possible configuration options, see the
-[dockerd command reference](/reference/cli/dockerd/).
+[dockerd command reference](/engine/cli/dockerd/).
 
 ## Builders
 
@@ -286,7 +286,7 @@ Enable Docker Extensions and control which extensions are available to install a
 | **Allow only extensions distributed through the Docker Marketplace** | Restrict extensions to Marketplace-approved sources only. |
 | **Show Docker Extensions system containers** | Show containers used by Docker Extensions. |
 
-For more information about Docker extensions, see [Docker Extensions](/extensions/).
+For more information about Docker extensions, see [Docker Extensions](/desktop/extensions/).
 
 ## Beta features
 

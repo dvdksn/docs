@@ -3,7 +3,7 @@ title: Docker Hardened Images resources
 description: Additional resources including product information, blog posts, and GitHub repositories for Docker Hardened Images
 sidebar:
   label: Additional resources
-  order: 999
+  order: 90
 ---
 
 This page provides links to additional resources related to Docker Hardened

@@ -13,7 +13,7 @@ The examples in the following sections focus specifically on providing service c
 
 ## Enabling GPU access to service containers
 
-GPUs are referenced in a `compose.yaml` file using the [device](/reference/compose-file/deploy/#devices) attribute from the Compose Deploy specification, within your services that need them.
+GPUs are referenced in a `compose.yaml` file using the [device](/compose/compose-file/deploy/#devices) attribute from the Compose Deploy specification, within your services that need them.
 
 This provides more granular control over a GPU reservation as custom values can be set for the following device properties: 
 
@@ -32,7 +32,7 @@ This provides more granular control over a GPU reservation as custom values can 
 >
 > `count` and `device_ids` are mutually exclusive. You must only define one field at a time.
 
-For more information on these properties, see the [Compose Deploy Specification](/reference/compose-file/deploy/#devices).
+For more information on these properties, see the [Compose Deploy Specification](/compose/compose-file/deploy/#devices).
 
 ### Example of a Compose file for running a service with access to 1 GPU device
 

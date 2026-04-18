@@ -1,6 +1,6 @@
 ---
 title: Release notes
 sidebar:
-  order: 90
+  order: 99
 ---
 

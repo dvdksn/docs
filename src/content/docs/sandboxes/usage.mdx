@@ -2,7 +2,7 @@
 title: Usage
 description: Common patterns for working with sandboxes.
 sidebar:
-  order: 20
+  order: 3
 ---
 
 import SummaryBar from "@components/SummaryBar.astro";
@@ -11,10 +11,10 @@ import SummaryBar from "@components/SummaryBar.astro";
 
 ## Working with sandboxes
 
-The basic workflow is [`run`](/reference/cli/sbx/run/) to start,
-[`ls`](/reference/cli/sbx/ls/) to check status,
-[`stop`](/reference/cli/sbx/stop/) to pause, and
-[`rm`](/reference/cli/sbx/rm/) to clean up:
+The basic workflow is [`run`](/sandboxes/cli/sbx/run/) to start,
+[`ls`](/sandboxes/cli/sbx/ls/) to check status,
+[`stop`](/sandboxes/cli/sbx/stop/) to pause, and
+[`rm`](/sandboxes/cli/sbx/rm/) to clean up:
 
 ```console
 $ sbx run claude                    # start an agent
@@ -197,7 +197,7 @@ $ sbx run claude --name my-project
 
 ## Creating without attaching
 
-[`sbx run`](/reference/cli/sbx/run/) creates the sandbox and attaches you to
+[`sbx run`](/sandboxes/cli/sbx/run/) creates the sandbox and attaches you to
 the agent. To create a sandbox in the background without attaching:
 
 ```console
@@ -253,7 +253,7 @@ inside it are deleted with it.
 
 Sandboxes are [network-isolated](security/isolation/) — your browser or local
 tools can't reach a server running inside one by default. Use
-[`sbx ports`](/reference/cli/sbx/ports/) to forward traffic from your host into
+[`sbx ports`](/sandboxes/cli/sbx/ports/) to forward traffic from your host into
 a running sandbox.
 
 The common case: an agent has started a dev server or API, and you want to open

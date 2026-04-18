@@ -4,7 +4,7 @@ description: Configuring the Docker daemon
 keywords: docker, daemon, configuration
 sidebar:
   label: Daemon
-  order: 60
+  order: 5
 ---
 
 This page shows you how to customize the Docker daemon, `dockerd`.
@@ -45,7 +45,7 @@ You can also explicitly specify the location of the configuration file on
 startup, using the `dockerd --config-file` flag.
 
 Learn about the available configuration options in the
-[dockerd reference docs](/reference/cli/dockerd/#daemon-configuration-file)
+[dockerd reference docs](/engine/cli/dockerd/#daemon-configuration-file)
 
 ### Configuration using flags
 
@@ -64,7 +64,7 @@ $ dockerd --debug \
 ```
 
 Learn about the available configuration options in the
-[dockerd reference docs](/reference/cli/dockerd/), or by
+[dockerd reference docs](/engine/cli/dockerd/), or by
 running:
 
 ```console

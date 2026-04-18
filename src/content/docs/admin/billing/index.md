@@ -4,7 +4,7 @@ description: Find information about managing billing and payments for Docker sub
 keywords: billing, invoice, payment, subscription, Docker billing, update payment method, billing history, invoices, payment verification, tax exemption
 sidebar:
   label: Billing
-  order: 10
+  order: 4
 group: Platform
 ---
 
