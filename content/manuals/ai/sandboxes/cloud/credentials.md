@@ -47,7 +47,7 @@ After configuring the credential, launch the agent:
 $ sbx --cloud run claude --name cloud-project
 ```
 
-## Avoid in-sandbox credential files
+## Keep credentials out of the sandbox filesystem
 
 > [!IMPORTANT]
 >
@@ -66,8 +66,9 @@ When a cloud-managed OAuth flow is available, use it instead of the agent's
 $ sbx --cloud secret set anthropic --oauth
 ```
 
-The cloud secret store supplies the credential without relying on a credential
-file inside the sandbox.
+The actual credential remains in the cloud secret store. Agent credential files
+can contain non-secret sentinel values that direct requests through the
+credential proxy.
 
 If you already signed in from inside an agent, follow the provider's sign-out
 guidance and remove the in-sandbox credential before configuring the
@@ -96,8 +97,8 @@ the sandbox starts. OAuth credentials can't use sandbox scope.
 
 Cloud secrets support these service identifiers:
 
-`anthropic`, `aws`, `cursor`, `droid`, `github`, `google`, `groq`, `mistral`,
-`nebius`, `openai`, and `xai`.
+`anthropic`, `droid`, `github`, `google`, `groq`, `mistral`, `nebius`, `openai`,
+and `xai`.
 
 Registry credentials, dynamic `--ref` values, and host-run `--command`
 resolvers aren't cloud secret workflows.

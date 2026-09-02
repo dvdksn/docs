@@ -74,6 +74,4 @@ $ sbx --cloud attach cloud-project
   sandbox-level network access
 - [Move a sandbox](move.md) explains filesystem transfers between local and
   cloud environments
-- [`sbx` CLI reference](/reference/cli/sbx/) lists commands and options; run
-  `sbx --cloud --help` to see the cloud-supported commands in your installed
-  version
+- [`sbx` CLI reference](/reference/cli/sbx/) lists commands and options

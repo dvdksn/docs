@@ -37,6 +37,12 @@ transfer:
 
 Changes made to either sandbox after the move aren't synchronized.
 
+The snapshot retains the source sandbox's platform. The destination must
+support the same platform because `sbx move` doesn't convert between
+`linux/amd64` and `linux/arm64`. For a local-to-cloud move, your cloud account
+must support the local sandbox's platform. For a cloud-to-local move, create
+the cloud sandbox with the platform used by your local sandbox runtime.
+
 ## Move from local to cloud
 
 Move a local sandbox to the cloud:

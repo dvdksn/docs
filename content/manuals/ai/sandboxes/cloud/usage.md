@@ -139,6 +139,9 @@ Stopping and restarting cloud sandboxes requires the corresponding account
 entitlement. Compute isn't billed while a sandbox is stopped. Attach to or run
 the sandbox again to resume it.
 
+Volume-backed sandboxes can't be stopped. Remove a volume-backed sandbox to end
+it and save the volume snapshot.
+
 Remove a sandbox when you no longer need its state:
 
 ```console
@@ -156,6 +159,14 @@ Create a volume, then attach it at sandbox creation:
 $ sbx --cloud volume create dependency-cache
 $ sbx --cloud create --name cloud-project \
     --volume dependency-cache:/workspace/cache claude
+```
+
+The root directory of a newly created volume is owned by `root`. Change its
+ownership after attaching it so the agent can write to it:
+
+```console
+$ sbx --cloud exec cloud-project \
+    sudo chown agent:agent /workspace/cache
 ```
 
 Volume data is saved as a snapshot when a sandbox exits, not continuously. If

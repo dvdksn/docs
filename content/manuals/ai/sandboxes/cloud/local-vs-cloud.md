@@ -36,7 +36,6 @@ following local features don't apply in cloud mode:
 - Host-backed agent skills and the full local MCP management workflow
 
 The CLI rejects local-only flags used with `--cloud` instead of ignoring them.
-Run `sbx --cloud --help` to see which commands your installed version supports.
 
 ## Separate resources
 
